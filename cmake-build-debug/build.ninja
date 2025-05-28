@@ -41,6 +41,39 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/
 # =============================================================================
+# Object build statements for EXECUTABLE target Edit-Distance
+
+
+#############################################
+# Order-only phony target for Edit-Distance
+
+build cmake_object_order_depends_target_Edit-Distance: phony || .
+
+build CMakeFiles/Edit-Distance.dir/Dynamic_Programming/Edit-Distance.cpp.obj: CXX_COMPILER__Edit-Distance_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic$ Programming/Edit-Distance.cpp || cmake_object_order_depends_target_Edit-Distance
+  DEP_FILE = CMakeFiles\Edit-Distance.dir\Dynamic_Programming\Edit-Distance.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Edit-Distance.dir
+  OBJECT_FILE_DIR = CMakeFiles\Edit-Distance.dir\Dynamic_Programming
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Edit-Distance
+
+
+#############################################
+# Link the executable Edit-Distance.exe
+
+build Edit-Distance.exe: CXX_EXECUTABLE_LINKER__Edit-Distance_Debug CMakeFiles/Edit-Distance.dir/Dynamic_Programming/Edit-Distance.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Edit-Distance.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Edit-Distance.exe
+  TARGET_IMPLIB = libEdit-Distance.dll.a
+  TARGET_PDB = Edit-Distance.exe.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target Apple-Division
 
 
@@ -54,8 +87,6 @@ build CMakeFiles/Apple-Division.dir/Introductory_Problems/Apple-Division.cpp.obj
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Apple-Division.dir
   OBJECT_FILE_DIR = CMakeFiles\Apple-Division.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Apple-Division.dir\
-  TARGET_PDB = Apple-Division.pdb
 
 
 # =============================================================================
@@ -71,10 +102,9 @@ build Apple-Division.exe: CXX_EXECUTABLE_LINKER__Apple-Division_Debug CMakeFiles
   OBJECT_DIR = CMakeFiles\Apple-Division.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Apple-Division.dir\
   TARGET_FILE = Apple-Division.exe
   TARGET_IMPLIB = libApple-Division.dll.a
-  TARGET_PDB = Apple-Division.pdb
+  TARGET_PDB = Apple-Division.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Bit-Strings
@@ -90,8 +120,6 @@ build CMakeFiles/Bit-Strings.dir/Introductory_Problems/Bit-Strings.cpp.obj: CXX_
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Bit-Strings.dir
   OBJECT_FILE_DIR = CMakeFiles\Bit-Strings.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Bit-Strings.dir\
-  TARGET_PDB = Bit-Strings.pdb
 
 
 # =============================================================================
@@ -107,10 +135,9 @@ build Bit-Strings.exe: CXX_EXECUTABLE_LINKER__Bit-Strings_Debug CMakeFiles/Bit-S
   OBJECT_DIR = CMakeFiles\Bit-Strings.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Bit-Strings.dir\
   TARGET_FILE = Bit-Strings.exe
   TARGET_IMPLIB = libBit-Strings.dll.a
-  TARGET_PDB = Bit-Strings.pdb
+  TARGET_PDB = Bit-Strings.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Chessboard-And-Queens
@@ -126,8 +153,6 @@ build CMakeFiles/Chessboard-And-Queens.dir/Introductory_Problems/Chessboard-And-
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Chessboard-And-Queens.dir
   OBJECT_FILE_DIR = CMakeFiles\Chessboard-And-Queens.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Chessboard-And-Queens.dir\
-  TARGET_PDB = Chessboard-And-Queens.pdb
 
 
 # =============================================================================
@@ -143,10 +168,9 @@ build Chessboard-And-Queens.exe: CXX_EXECUTABLE_LINKER__Chessboard-And-Queens_De
   OBJECT_DIR = CMakeFiles\Chessboard-And-Queens.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Chessboard-And-Queens.dir\
   TARGET_FILE = Chessboard-And-Queens.exe
   TARGET_IMPLIB = libChessboard-And-Queens.dll.a
-  TARGET_PDB = Chessboard-And-Queens.pdb
+  TARGET_PDB = Chessboard-And-Queens.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Coin-Piles
@@ -162,8 +186,6 @@ build CMakeFiles/Coin-Piles.dir/Introductory_Problems/Coin-Piles.cpp.obj: CXX_CO
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Coin-Piles.dir
   OBJECT_FILE_DIR = CMakeFiles\Coin-Piles.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Coin-Piles.dir\
-  TARGET_PDB = Coin-Piles.pdb
 
 
 # =============================================================================
@@ -179,10 +201,9 @@ build Coin-Piles.exe: CXX_EXECUTABLE_LINKER__Coin-Piles_Debug CMakeFiles/Coin-Pi
   OBJECT_DIR = CMakeFiles\Coin-Piles.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Coin-Piles.dir\
   TARGET_FILE = Coin-Piles.exe
   TARGET_IMPLIB = libCoin-Piles.dll.a
-  TARGET_PDB = Coin-Piles.pdb
+  TARGET_PDB = Coin-Piles.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Creating-Strings
@@ -198,8 +219,6 @@ build CMakeFiles/Creating-Strings.dir/Introductory_Problems/Creating-Strings.cpp
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Creating-Strings.dir
   OBJECT_FILE_DIR = CMakeFiles\Creating-Strings.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Creating-Strings.dir\
-  TARGET_PDB = Creating-Strings.pdb
 
 
 # =============================================================================
@@ -215,10 +234,9 @@ build Creating-Strings.exe: CXX_EXECUTABLE_LINKER__Creating-Strings_Debug CMakeF
   OBJECT_DIR = CMakeFiles\Creating-Strings.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Creating-Strings.dir\
   TARGET_FILE = Creating-Strings.exe
   TARGET_IMPLIB = libCreating-Strings.dll.a
-  TARGET_PDB = Creating-Strings.pdb
+  TARGET_PDB = Creating-Strings.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Digit-Queries
@@ -234,8 +252,6 @@ build CMakeFiles/Digit-Queries.dir/Introductory_Problems/Digit-Queries.cpp.obj: 
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Digit-Queries.dir
   OBJECT_FILE_DIR = CMakeFiles\Digit-Queries.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Digit-Queries.dir\
-  TARGET_PDB = Digit-Queries.pdb
 
 
 # =============================================================================
@@ -251,10 +267,9 @@ build Digit-Queries.exe: CXX_EXECUTABLE_LINKER__Digit-Queries_Debug CMakeFiles/D
   OBJECT_DIR = CMakeFiles\Digit-Queries.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Digit-Queries.dir\
   TARGET_FILE = Digit-Queries.exe
   TARGET_IMPLIB = libDigit-Queries.dll.a
-  TARGET_PDB = Digit-Queries.pdb
+  TARGET_PDB = Digit-Queries.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Gray-Code
@@ -270,8 +285,6 @@ build CMakeFiles/Gray-Code.dir/Introductory_Problems/Gray-Code.cpp.obj: CXX_COMP
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Gray-Code.dir
   OBJECT_FILE_DIR = CMakeFiles\Gray-Code.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Gray-Code.dir\
-  TARGET_PDB = Gray-Code.pdb
 
 
 # =============================================================================
@@ -287,10 +300,9 @@ build Gray-Code.exe: CXX_EXECUTABLE_LINKER__Gray-Code_Debug CMakeFiles/Gray-Code
   OBJECT_DIR = CMakeFiles\Gray-Code.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Gray-Code.dir\
   TARGET_FILE = Gray-Code.exe
   TARGET_IMPLIB = libGray-Code.dll.a
-  TARGET_PDB = Gray-Code.pdb
+  TARGET_PDB = Gray-Code.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Increasing-Array
@@ -306,8 +318,6 @@ build CMakeFiles/Increasing-Array.dir/Introductory_Problems/Increasing-Array.cpp
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Increasing-Array.dir
   OBJECT_FILE_DIR = CMakeFiles\Increasing-Array.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Increasing-Array.dir\
-  TARGET_PDB = Increasing-Array.pdb
 
 
 # =============================================================================
@@ -323,10 +333,9 @@ build Increasing-Array.exe: CXX_EXECUTABLE_LINKER__Increasing-Array_Debug CMakeF
   OBJECT_DIR = CMakeFiles\Increasing-Array.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Increasing-Array.dir\
   TARGET_FILE = Increasing-Array.exe
   TARGET_IMPLIB = libIncreasing-Array.dll.a
-  TARGET_PDB = Increasing-Array.pdb
+  TARGET_PDB = Increasing-Array.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Missing-Number
@@ -342,8 +351,6 @@ build CMakeFiles/Missing-Number.dir/Introductory_Problems/Missing-Number.cpp.obj
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Missing-Number.dir
   OBJECT_FILE_DIR = CMakeFiles\Missing-Number.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Missing-Number.dir\
-  TARGET_PDB = Missing-Number.pdb
 
 
 # =============================================================================
@@ -359,10 +366,9 @@ build Missing-Number.exe: CXX_EXECUTABLE_LINKER__Missing-Number_Debug CMakeFiles
   OBJECT_DIR = CMakeFiles\Missing-Number.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Missing-Number.dir\
   TARGET_FILE = Missing-Number.exe
   TARGET_IMPLIB = libMissing-Number.dll.a
-  TARGET_PDB = Missing-Number.pdb
+  TARGET_PDB = Missing-Number.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Number-Spiral
@@ -378,8 +384,6 @@ build CMakeFiles/Number-Spiral.dir/Introductory_Problems/Number-Spiral.cpp.obj: 
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Number-Spiral.dir
   OBJECT_FILE_DIR = CMakeFiles\Number-Spiral.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Number-Spiral.dir\
-  TARGET_PDB = Number-Spiral.pdb
 
 
 # =============================================================================
@@ -395,10 +399,9 @@ build Number-Spiral.exe: CXX_EXECUTABLE_LINKER__Number-Spiral_Debug CMakeFiles/N
   OBJECT_DIR = CMakeFiles\Number-Spiral.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Number-Spiral.dir\
   TARGET_FILE = Number-Spiral.exe
   TARGET_IMPLIB = libNumber-Spiral.dll.a
-  TARGET_PDB = Number-Spiral.pdb
+  TARGET_PDB = Number-Spiral.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Palindrome-Reorder
@@ -414,8 +417,6 @@ build CMakeFiles/Palindrome-Reorder.dir/Introductory_Problems/Palindrome-Reorder
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Palindrome-Reorder.dir
   OBJECT_FILE_DIR = CMakeFiles\Palindrome-Reorder.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Palindrome-Reorder.dir\
-  TARGET_PDB = Palindrome-Reorder.pdb
 
 
 # =============================================================================
@@ -431,10 +432,9 @@ build Palindrome-Reorder.exe: CXX_EXECUTABLE_LINKER__Palindrome-Reorder_Debug CM
   OBJECT_DIR = CMakeFiles\Palindrome-Reorder.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Palindrome-Reorder.dir\
   TARGET_FILE = Palindrome-Reorder.exe
   TARGET_IMPLIB = libPalindrome-Reorder.dll.a
-  TARGET_PDB = Palindrome-Reorder.pdb
+  TARGET_PDB = Palindrome-Reorder.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Permutations
@@ -450,8 +450,6 @@ build CMakeFiles/Permutations.dir/Introductory_Problems/Permutations.cpp.obj: CX
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Permutations.dir
   OBJECT_FILE_DIR = CMakeFiles\Permutations.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Permutations.dir\
-  TARGET_PDB = Permutations.pdb
 
 
 # =============================================================================
@@ -467,10 +465,9 @@ build Permutations.exe: CXX_EXECUTABLE_LINKER__Permutations_Debug CMakeFiles/Per
   OBJECT_DIR = CMakeFiles\Permutations.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Permutations.dir\
   TARGET_FILE = Permutations.exe
   TARGET_IMPLIB = libPermutations.dll.a
-  TARGET_PDB = Permutations.pdb
+  TARGET_PDB = Permutations.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Raab-Game-I
@@ -486,8 +483,6 @@ build CMakeFiles/Raab-Game-I.dir/Introductory_Problems/Raab-Game-I.cpp.obj: CXX_
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Raab-Game-I.dir
   OBJECT_FILE_DIR = CMakeFiles\Raab-Game-I.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Raab-Game-I.dir\
-  TARGET_PDB = Raab-Game-I.pdb
 
 
 # =============================================================================
@@ -503,10 +498,9 @@ build Raab-Game-I.exe: CXX_EXECUTABLE_LINKER__Raab-Game-I_Debug CMakeFiles/Raab-
   OBJECT_DIR = CMakeFiles\Raab-Game-I.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Raab-Game-I.dir\
   TARGET_FILE = Raab-Game-I.exe
   TARGET_IMPLIB = libRaab-Game-I.dll.a
-  TARGET_PDB = Raab-Game-I.pdb
+  TARGET_PDB = Raab-Game-I.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Repititions
@@ -522,8 +516,6 @@ build CMakeFiles/Repititions.dir/Introductory_Problems/Repititions.cpp.obj: CXX_
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Repititions.dir
   OBJECT_FILE_DIR = CMakeFiles\Repititions.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Repititions.dir\
-  TARGET_PDB = Repititions.pdb
 
 
 # =============================================================================
@@ -539,10 +531,9 @@ build Repititions.exe: CXX_EXECUTABLE_LINKER__Repititions_Debug CMakeFiles/Repit
   OBJECT_DIR = CMakeFiles\Repititions.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Repititions.dir\
   TARGET_FILE = Repititions.exe
   TARGET_IMPLIB = libRepititions.dll.a
-  TARGET_PDB = Repititions.pdb
+  TARGET_PDB = Repititions.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target String-Reorder
@@ -558,8 +549,6 @@ build CMakeFiles/String-Reorder.dir/Introductory_Problems/String-Reorder.cpp.obj
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\String-Reorder.dir
   OBJECT_FILE_DIR = CMakeFiles\String-Reorder.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\String-Reorder.dir\
-  TARGET_PDB = String-Reorder.pdb
 
 
 # =============================================================================
@@ -575,10 +564,9 @@ build String-Reorder.exe: CXX_EXECUTABLE_LINKER__String-Reorder_Debug CMakeFiles
   OBJECT_DIR = CMakeFiles\String-Reorder.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\String-Reorder.dir\
   TARGET_FILE = String-Reorder.exe
   TARGET_IMPLIB = libString-Reorder.dll.a
-  TARGET_PDB = String-Reorder.pdb
+  TARGET_PDB = String-Reorder.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Tower-Of-Hanoi
@@ -594,8 +582,6 @@ build CMakeFiles/Tower-Of-Hanoi.dir/Introductory_Problems/Tower-Of-Hanoi.cpp.obj
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Tower-Of-Hanoi.dir
   OBJECT_FILE_DIR = CMakeFiles\Tower-Of-Hanoi.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Tower-Of-Hanoi.dir\
-  TARGET_PDB = Tower-Of-Hanoi.pdb
 
 
 # =============================================================================
@@ -611,10 +597,9 @@ build Tower-Of-Hanoi.exe: CXX_EXECUTABLE_LINKER__Tower-Of-Hanoi_Debug CMakeFiles
   OBJECT_DIR = CMakeFiles\Tower-Of-Hanoi.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Tower-Of-Hanoi.dir\
   TARGET_FILE = Tower-Of-Hanoi.exe
   TARGET_IMPLIB = libTower-Of-Hanoi.dll.a
-  TARGET_PDB = Tower-Of-Hanoi.pdb
+  TARGET_PDB = Tower-Of-Hanoi.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Trailing-Zeros
@@ -630,8 +615,6 @@ build CMakeFiles/Trailing-Zeros.dir/Introductory_Problems/Trailing-Zeros.cpp.obj
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Trailing-Zeros.dir
   OBJECT_FILE_DIR = CMakeFiles\Trailing-Zeros.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Trailing-Zeros.dir\
-  TARGET_PDB = Trailing-Zeros.pdb
 
 
 # =============================================================================
@@ -647,10 +630,9 @@ build Trailing-Zeros.exe: CXX_EXECUTABLE_LINKER__Trailing-Zeros_Debug CMakeFiles
   OBJECT_DIR = CMakeFiles\Trailing-Zeros.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Trailing-Zeros.dir\
   TARGET_FILE = Trailing-Zeros.exe
   TARGET_IMPLIB = libTrailing-Zeros.dll.a
-  TARGET_PDB = Trailing-Zeros.pdb
+  TARGET_PDB = Trailing-Zeros.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Two-Knights
@@ -666,8 +648,6 @@ build CMakeFiles/Two-Knights.dir/Introductory_Problems/Two-Knights.cpp.obj: CXX_
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Two-Knights.dir
   OBJECT_FILE_DIR = CMakeFiles\Two-Knights.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Two-Knights.dir\
-  TARGET_PDB = Two-Knights.pdb
 
 
 # =============================================================================
@@ -683,10 +663,9 @@ build Two-Knights.exe: CXX_EXECUTABLE_LINKER__Two-Knights_Debug CMakeFiles/Two-K
   OBJECT_DIR = CMakeFiles\Two-Knights.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Two-Knights.dir\
   TARGET_FILE = Two-Knights.exe
   TARGET_IMPLIB = libTwo-Knights.dll.a
-  TARGET_PDB = Two-Knights.pdb
+  TARGET_PDB = Two-Knights.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Two-Sets
@@ -702,8 +681,6 @@ build CMakeFiles/Two-Sets.dir/Introductory_Problems/Two-Sets.cpp.obj: CXX_COMPIL
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Two-Sets.dir
   OBJECT_FILE_DIR = CMakeFiles\Two-Sets.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Two-Sets.dir\
-  TARGET_PDB = Two-Sets.pdb
 
 
 # =============================================================================
@@ -719,10 +696,9 @@ build Two-Sets.exe: CXX_EXECUTABLE_LINKER__Two-Sets_Debug CMakeFiles/Two-Sets.di
   OBJECT_DIR = CMakeFiles\Two-Sets.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Two-Sets.dir\
   TARGET_FILE = Two-Sets.exe
   TARGET_IMPLIB = libTwo-Sets.dll.a
-  TARGET_PDB = Two-Sets.pdb
+  TARGET_PDB = Two-Sets.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Weird-Algorithm
@@ -738,8 +714,6 @@ build CMakeFiles/Weird-Algorithm.dir/Introductory_Problems/Weird-Algorithm.cpp.o
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Weird-Algorithm.dir
   OBJECT_FILE_DIR = CMakeFiles\Weird-Algorithm.dir\Introductory_Problems
-  TARGET_COMPILE_PDB = CMakeFiles\Weird-Algorithm.dir\
-  TARGET_PDB = Weird-Algorithm.pdb
 
 
 # =============================================================================
@@ -755,10 +729,9 @@ build Weird-Algorithm.exe: CXX_EXECUTABLE_LINKER__Weird-Algorithm_Debug CMakeFil
   OBJECT_DIR = CMakeFiles\Weird-Algorithm.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Weird-Algorithm.dir\
   TARGET_FILE = Weird-Algorithm.exe
   TARGET_IMPLIB = libWeird-Algorithm.dll.a
-  TARGET_PDB = Weird-Algorithm.pdb
+  TARGET_PDB = Weird-Algorithm.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target CMakeCXXCompilerId
@@ -774,8 +747,6 @@ build CMakeFiles/CMakeCXXCompilerId.dir/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXX
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\CMakeCXXCompilerId.dir
   OBJECT_FILE_DIR = CMakeFiles\CMakeCXXCompilerId.dir\CMakeFiles\3.29.6\CompilerIdCXX
-  TARGET_COMPILE_PDB = CMakeFiles\CMakeCXXCompilerId.dir\
-  TARGET_PDB = CMakeCXXCompilerId.pdb
 
 
 # =============================================================================
@@ -791,10 +762,9 @@ build CMakeCXXCompilerId.exe: CXX_EXECUTABLE_LINKER__CMakeCXXCompilerId_Debug CM
   OBJECT_DIR = CMakeFiles\CMakeCXXCompilerId.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\CMakeCXXCompilerId.dir\
   TARGET_FILE = CMakeCXXCompilerId.exe
   TARGET_IMPLIB = libCMakeCXXCompilerId.dll.a
-  TARGET_PDB = CMakeCXXCompilerId.pdb
+  TARGET_PDB = CMakeCXXCompilerId.exe.dbg
 
 
 #############################################
@@ -836,6 +806,8 @@ build Creating-Strings: phony Creating-Strings.exe
 
 build Digit-Queries: phony Digit-Queries.exe
 
+build Edit-Distance: phony Edit-Distance.exe
+
 build Gray-Code: phony Gray-Code.exe
 
 build Increasing-Array: phony Increasing-Array.exe
@@ -872,7 +844,7 @@ build Weird-Algorithm: phony Weird-Algorithm.exe
 #############################################
 # Folder: C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug
 
-build all: phony Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Increasing-Array.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe CMakeCXXCompilerId.exe
+build all: phony Edit-Distance.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Increasing-Array.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe CMakeCXXCompilerId.exe
 
 # =============================================================================
 # Built-in targets
@@ -881,14 +853,14 @@ build all: phony Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Co
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Users/jacks/CLionProjects/CSES_Solutions/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCCompiler.cmake.in D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCCompilerABI.c D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXCompiler.cmake.in D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCompilerIdDetection.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineRCCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeParseImplicitIncludeInfo.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeParseImplicitLinkInfo.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeParseLibraryArchitecture.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCCompiler.cmake.in D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystem.cmake.in D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestRCCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/ADSP-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/ARMCC-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/ARMClang-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/AppleClang-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Borland-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Bruce-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompilerInternal.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Compaq-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Cray-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CrayClang-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Embarcadero-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Fujitsu-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GHS-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-FindBinUtils.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/HP-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/HP-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IAR-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Intel-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/LCC-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/MSVC-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/NVHPC-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/NVIDIA-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/OrangeC-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/PGI-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/PathScale-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/SCO-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/SDCC-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/SunPro-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/TI-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/TIClang-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Tasking-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Watcom-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/XL-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/XL-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/XLClang-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/zOS-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Determine-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | C$:/Users/jacks/CLionProjects/CSES_Solutions/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/jacks/CLionProjects/CSES_Solutions/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCCompiler.cmake.in D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCCompilerABI.c D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXCompiler.cmake.in D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCompilerIdDetection.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineRCCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeFindBinUtils.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeParseImplicitIncludeInfo.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeParseImplicitLinkInfo.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeParseLibraryArchitecture.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCCompiler.cmake.in D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystem.cmake.in D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestCompilerCommon.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestRCCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/ADSP-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/ARMCC-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/ARMClang-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/AppleClang-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Borland-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Bruce-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Clang-DetermineCompilerInternal.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Compaq-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Cray-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CrayClang-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Embarcadero-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Fujitsu-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GHS-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-FindBinUtils.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/HP-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/HP-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IAR-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Intel-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/LCC-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/MSVC-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/NVHPC-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/NVIDIA-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/OrangeC-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/PGI-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/PathScale-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/SCO-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/SDCC-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/SunPro-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/TI-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/TIClang-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Tasking-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/Watcom-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/XL-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/XL-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/XLClang-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/zOS-C-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Determine-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake: phony
+build C$:/Users/jacks/CLionProjects/CSES_Solutions/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake: phony
 
 
 #############################################
