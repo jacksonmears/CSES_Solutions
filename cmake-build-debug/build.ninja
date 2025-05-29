@@ -41,6 +41,39 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/
 # =============================================================================
+# Object build statements for EXECUTABLE target exe
+
+
+#############################################
+# Order-only phony target for exe
+
+build cmake_object_order_depends_target_exe: phony || .
+
+build CMakeFiles/exe.dir/main.cpp.obj: CXX_COMPILER__exe_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/main.cpp || cmake_object_order_depends_target_exe
+  DEP_FILE = CMakeFiles\exe.dir\main.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\exe.dir
+  OBJECT_FILE_DIR = CMakeFiles\exe.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target exe
+
+
+#############################################
+# Link the executable exe.exe
+
+build exe.exe: CXX_EXECUTABLE_LINKER__exe_Debug CMakeFiles/exe.dir/main.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\exe.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = exe.exe
+  TARGET_IMPLIB = libexe.dll.a
+  TARGET_PDB = exe.exe.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target Edit-Distance
 
 
@@ -836,6 +869,8 @@ build Two-Sets: phony Two-Sets.exe
 
 build Weird-Algorithm: phony Weird-Algorithm.exe
 
+build exe: phony exe.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -844,7 +879,7 @@ build Weird-Algorithm: phony Weird-Algorithm.exe
 #############################################
 # Folder: C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug
 
-build all: phony Edit-Distance.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Increasing-Array.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe CMakeCXXCompilerId.exe
+build all: phony exe.exe Edit-Distance.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Increasing-Array.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe CMakeCXXCompilerId.exe
 
 # =============================================================================
 # Built-in targets

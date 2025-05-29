@@ -3,6 +3,8 @@ project(CSES)
 
 set(CMAKE_CXX_STANDARD 20)
 
+add_executable(exe main.cpp)
+
 file(GLOB_RECURSE SOURCES "*/**.cpp")
 foreach(src ${SOURCES})
     get_filename_component(exe ${src} NAME_WE)
