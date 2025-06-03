@@ -107,6 +107,39 @@ build Edit-Distance.exe: CXX_EXECUTABLE_LINKER__Edit-Distance_Debug CMakeFiles/E
   TARGET_PDB = Edit-Distance.exe.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target Grid-Paths-I
+
+
+#############################################
+# Order-only phony target for Grid-Paths-I
+
+build cmake_object_order_depends_target_Grid-Paths-I: phony || .
+
+build CMakeFiles/Grid-Paths-I.dir/Dynamic_Programming/Grid-Paths-I.cpp.obj: CXX_COMPILER__Grid-Paths-I_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic$ Programming/Grid-Paths-I.cpp || cmake_object_order_depends_target_Grid-Paths-I
+  DEP_FILE = CMakeFiles\Grid-Paths-I.dir\Dynamic_Programming\Grid-Paths-I.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Grid-Paths-I.dir
+  OBJECT_FILE_DIR = CMakeFiles\Grid-Paths-I.dir\Dynamic_Programming
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Grid-Paths-I
+
+
+#############################################
+# Link the executable Grid-Paths-I.exe
+
+build Grid-Paths-I.exe: CXX_EXECUTABLE_LINKER__Grid-Paths-I_Debug CMakeFiles/Grid-Paths-I.dir/Dynamic_Programming/Grid-Paths-I.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Grid-Paths-I.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Grid-Paths-I.exe
+  TARGET_IMPLIB = libGrid-Paths-I.dll.a
+  TARGET_PDB = Grid-Paths-I.exe.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target Removing-Digits
 
 
@@ -876,6 +909,8 @@ build Edit-Distance: phony Edit-Distance.exe
 
 build Gray-Code: phony Gray-Code.exe
 
+build Grid-Paths-I: phony Grid-Paths-I.exe
+
 build Increasing-Array: phony Increasing-Array.exe
 
 build Missing-Number: phony Missing-Number.exe
@@ -914,7 +949,7 @@ build exe: phony exe.exe
 #############################################
 # Folder: C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug
 
-build all: phony exe.exe Edit-Distance.exe Removing-Digits.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Increasing-Array.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe CMakeCXXCompilerId.exe
+build all: phony exe.exe Edit-Distance.exe Grid-Paths-I.exe Removing-Digits.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Increasing-Array.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe CMakeCXXCompilerId.exe
 
 # =============================================================================
 # Built-in targets
