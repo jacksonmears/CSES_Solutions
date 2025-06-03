@@ -23,9 +23,8 @@ int main() {
 
     ll n, x; cin >> n >> x;
     vector<ll> coins(n); REP(i, 0, n-1) cin >> coins[i];
-
     vector<ll> dynamicProgramming(x+1, 0); dynamicProgramming[0] = 1;
-
+    // do coins in order to x that way you can't do 3+2 because once you do 2+x the two is stuck in first position forever.
     REP(i, 0, n-1) {
         ll coin = coins[i];
         REP(sum, coin, x) {
