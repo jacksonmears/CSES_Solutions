@@ -15,45 +15,61 @@ constexpr ll MOD = 1e9 + 7;
 #define REP(i,a,b) for (ll i = a; i <= b; i++)
 
 
-ll gcd(ll a, ll b) {
-    while (b) {
-        ll t = b;
-        b = a % b;
-        a = t;
+set<string> results;
+vector<pair<char, char>> queries;
+
+void dfs(string s, int idx) {
+    if (idx == queries.size()) {
+        results.insert(s);
+        return;
     }
-    return a;
+
+    char x = queries[idx].first;
+    char y = queries[idx].second;
+
+    dfs(s, idx + 1);
+
+    for (int i = 0; i < s.size(); ++i) {
+        if (s[i] == x) {
+            string new_s = s;
+            new_s[i] = y;
+            dfs(new_s, idx + 1);
+            break;
+        }
+    }
+
 }
+
+void solve() {
+    results.clear();
+    queries.clear();
+
+    ll n, q;
+    string s;
+    cin >> n >> q >> s;
+
+    REP(i, 0, q - 1) {
+        char x, y;
+        cin >> x >> y;
+        queries.emplace_back(x, y);
+    }
+
+    dfs(s, 0);
+    cout << *results.begin() << '\n';
+}
+
+
+
 
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
+
+
     ll t; cin >> t;
     while (t--) {
-        ll n; cin >> n; vl v(n);
-        ll g = 0;
-        REP(i, 0, n-1) {
-            cin >> v[i];
-            g = (i == 0) ? v[i] : gcd(g, v[i]);
-        }
-
-        int mn = INT_MAX;
-        for (int i = 0; i < n; ++i) {
-            ll cg = 0;
-            for (int j = i; j < n; ++j) {
-                cg = gcd(cg, v[j]);
-                if (cg == g) {
-                    mn = min(mn, j - i + 1);
-                    break;
-                }
-            }
-        }
-
-        int cnt = 0;
-        for (int i = 0; i < n; ++i) if (v[i] == g) ++cnt;
-
-        if (mn == INT_MAX) mn = n;
-
-
-        (cnt > 0) ? cout << (n - cnt) << '\n' : cout << n + mn - 2 << '\n';
+        solve();
     }
+
+
     return 0;
 }
