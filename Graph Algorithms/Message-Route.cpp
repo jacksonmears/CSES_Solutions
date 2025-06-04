@@ -15,9 +15,6 @@ constexpr ll MOD = 1e9 + 7;
 #define REP(i,a,b) for (ll i = a; i <= b; i++)
 
 
-vector<vl> connections;
-vl parent;
-vector<bool> visited;
 
 
 
@@ -26,9 +23,10 @@ int main() {
 
     ll n, m; cin >> n >> m;
 
-    connections.resize(n + 1);
-    parent.resize(n + 1, -1);
-    visited.resize(n + 1, false);
+    vector<vl> connections(n + 1);
+    vl parent(n + 1);
+    vector<bool> visited(n + 1);
+
 
     REP(i, 0, m - 1) {
         ll a, b; cin >> a >> b;
@@ -50,10 +48,8 @@ int main() {
         }
     }
 
-    if (!visited[n]) {
-        cout << "IMPOSSIBLE\n";
-        return 0;
-    }
+    if (!visited[n]) return cout << "IMPOSSIBLE", 0;
+
 
     vector<ll> path;
     for (ll v = n; v != -1; v = parent[v]) path.push_back(v);

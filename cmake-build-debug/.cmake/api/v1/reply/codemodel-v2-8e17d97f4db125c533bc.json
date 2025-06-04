@@ -44,7 +44,8 @@
 						26,
 						27,
 						28,
-						29
+						29,
+						30
 					]
 				}
 			],
@@ -88,12 +89,20 @@
 						26,
 						27,
 						28,
-						29
+						29,
+						30
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Apartments::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Apartments-Debug-cb3b51979cc4b7f87d50.json",
+					"name" : "Apartments",
+					"projectIndex" : 0
+				},
 				{
 					"directoryIndex" : 0,
 					"id" : "Apple-Division::@6890427a1f51a3e7e1df",
