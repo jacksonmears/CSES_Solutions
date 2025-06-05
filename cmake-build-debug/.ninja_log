@@ -25,6 +25,7 @@
 11	1309	7702002507582879	CMakeFiles/Two-Knights.dir/Introductory_Problems/Two-Knights.cpp.obj	2714ac0d28966b7e
 12	1348	7702017436842767	CMakeFiles/Two-Sets.dir/Introductory_Problems/Two-Sets.cpp.obj	f73a33db0d47c8c4
 1349	1406	7702017450216824	Two-Sets.exe	23991aa114e27312
+11	1436	7708601974728357	CMakeFiles/Maximum-Subarray_Sum.dir/Sorting_and_Searching/Maximum-Subarray_Sum.cpp.obj	451fcdd25dd46a88
 18	1479	7706716517977580	CMakeFiles/exe.dir/main.cpp.obj	b0f582ee678a685f
 1462	1529	7706901972966445	Distinct-Numbers.exe	4baa48cfd4f0da53
 1479	1554	7706716532607625	exe.exe	c042e239db6af590
@@ -57,9 +58,6 @@
 16	2842	7708072889941069	CMakeFiles/Concert-Tickets.dir/Sorting_and_Searching/Concert-Tickets.cpp.obj	5c015dc1ed1fdea0
 2842	3522	7708072918196253	Concert-Tickets.exe	1e196fb4c1c7d6d6
 2978	4179	7708582629112136	Restaurant-Customers.exe	620603929e179441
-2	1284	7708600810385791	CMakeFiles/Maximum-Subarray_Sum.dir/Sorting_and_Searching/Maximum-Subarray_Sum.cpp.obj	451fcdd25dd46a88
-1284	1348	7708600823206065	Maximum-Subarray_Sum.exe	adb6e976631f6328
-11	1347	7708601727876605	CMakeFiles/Maximum-Subarray_Sum.dir/Sorting_and_Searching/Maximum-Subarray_Sum.cpp.obj	451fcdd25dd46a88
-1348	1409	7708601741232616	Maximum-Subarray_Sum.exe	adb6e976631f6328
-11	1436	7708601974728357	CMakeFiles/Maximum-Subarray_Sum.dir/Sorting_and_Searching/Maximum-Subarray_Sum.cpp.obj	451fcdd25dd46a88
 1437	1495	7708601988988482	Maximum-Subarray_Sum.exe	adb6e976631f6328
+3	2237	7708698380665640	CMakeFiles/Stick-Lengths.dir/Sorting_and_Searching/Stick-Lengths.cpp.obj	4aec08c6ee5ae1b0
+2237	3442	7708698403005131	Stick-Lengths.exe	244d18bf6400c333

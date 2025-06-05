@@ -1229,6 +1229,39 @@ build Restaurant-Customers.exe: CXX_EXECUTABLE_LINKER__Restaurant-Customers_Debu
   TARGET_PDB = Restaurant-Customers.exe.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target Stick-Lengths
+
+
+#############################################
+# Order-only phony target for Stick-Lengths
+
+build cmake_object_order_depends_target_Stick-Lengths: phony || .
+
+build CMakeFiles/Stick-Lengths.dir/Sorting_and_Searching/Stick-Lengths.cpp.obj: CXX_COMPILER__Stick-Lengths_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Stick-Lengths.cpp || cmake_object_order_depends_target_Stick-Lengths
+  DEP_FILE = CMakeFiles\Stick-Lengths.dir\Sorting_and_Searching\Stick-Lengths.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Stick-Lengths.dir
+  OBJECT_FILE_DIR = CMakeFiles\Stick-Lengths.dir\Sorting_and_Searching
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Stick-Lengths
+
+
+#############################################
+# Link the executable Stick-Lengths.exe
+
+build Stick-Lengths.exe: CXX_EXECUTABLE_LINKER__Stick-Lengths_Debug CMakeFiles/Stick-Lengths.dir/Sorting_and_Searching/Stick-Lengths.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Stick-Lengths.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Stick-Lengths.exe
+  TARGET_IMPLIB = libStick-Lengths.dll.a
+  TARGET_PDB = Stick-Lengths.exe.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target Sum-Of-Two-Values
 
 
@@ -1380,6 +1413,8 @@ build Repititions: phony Repititions.exe
 
 build Restaurant-Customers: phony Restaurant-Customers.exe
 
+build Stick-Lengths: phony Stick-Lengths.exe
+
 build String-Reorder: phony String-Reorder.exe
 
 build Sum-Of-Two-Values: phony Sum-Of-Two-Values.exe
@@ -1404,7 +1439,7 @@ build exe: phony exe.exe
 #############################################
 # Folder: C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug
 
-build all: phony exe.exe Array_Description.exe Book-Shop.exe Coin-Combinations_II.exe Edit-Distance.exe Grid-Paths-I.exe Removing-Digits.exe Counting-Rooms.exe Message-Route.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Increasing-Array.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe Apartments.exe Concert-Tickets.exe Distinct-Numbers.exe Ferris-Wheel.exe Maximum-Subarray_Sum.exe Movie-Festival.exe Restaurant-Customers.exe Sum-Of-Two-Values.exe CMakeCXXCompilerId.exe
+build all: phony exe.exe Array_Description.exe Book-Shop.exe Coin-Combinations_II.exe Edit-Distance.exe Grid-Paths-I.exe Removing-Digits.exe Counting-Rooms.exe Message-Route.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Increasing-Array.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe Apartments.exe Concert-Tickets.exe Distinct-Numbers.exe Ferris-Wheel.exe Maximum-Subarray_Sum.exe Movie-Festival.exe Restaurant-Customers.exe Stick-Lengths.exe Sum-Of-Two-Values.exe CMakeCXXCompilerId.exe
 
 # =============================================================================
 # Built-in targets
