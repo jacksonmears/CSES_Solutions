@@ -1,4 +1,5 @@
 # ninja log v6
+12	2977	7708582599444686	CMakeFiles/Restaurant-Customers.dir/Sorting_and_Searching/Restaurant-Customers.cpp.obj	e5123cb6670ae909
 4	1369	7706233245829848	CMakeFiles/Apple-Division.dir/Introductory_Problems/Apple-Division.cpp.obj	b21a403561a2eeb8
 1363	1445	7706209487640801	Tower-Of-Hanoi.exe	45e86cd9fbb41f62
 1297	1355	7701696623020140	Weird-Algorithm.exe	ff18024799662c56
@@ -55,5 +56,4 @@
 1428	1498	7707854525842045	Ferris-Wheel.exe	6257121a1cfc291
 16	2842	7708072889941069	CMakeFiles/Concert-Tickets.dir/Sorting_and_Searching/Concert-Tickets.cpp.obj	5c015dc1ed1fdea0
 2842	3522	7708072918196253	Concert-Tickets.exe	1e196fb4c1c7d6d6
-12	2977	7708582599444686	CMakeFiles/Restaurant-Customers.dir/Sorting_and_Searching/Restaurant-Customers.cpp.obj	e5123cb6670ae909
 2978	4179	7708582629112136	Restaurant-Customers.exe	620603929e179441
