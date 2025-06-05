@@ -49,6 +49,7 @@
 1348	1407	7706233393625676	Raab-Game-I.exe	f5d28caa8e3e6ee2
 10	1421	7706239102281971	CMakeFiles/Digit-Queries.dir/Introductory_Problems/Digit-Queries.cpp.obj	9c43f1a5d4a883e7
 12	1448	7706252426392877	CMakeFiles/Removing-Digits.dir/Dynamic_Programming/Removing-Digits.cpp.obj	f7d01d44e3e4d775
+3	2237	7708698380665640	CMakeFiles/Stick-Lengths.dir/Sorting_and_Searching/Stick-Lengths.cpp.obj	4aec08c6ee5ae1b0
 1448	1515	7706252440757317	Removing-Digits.exe	73e2369e2180f34a
 1545	1618	7706275934181209	Grid-Paths-I.exe	e3b5cc170e8ec9af
 1382	1447	7706894610704342	Book-Shop.exe	e6344ead60cf5aae
@@ -59,5 +60,8 @@
 2842	3522	7708072918196253	Concert-Tickets.exe	1e196fb4c1c7d6d6
 2978	4179	7708582629112136	Restaurant-Customers.exe	620603929e179441
 1437	1495	7708601988988482	Maximum-Subarray_Sum.exe	adb6e976631f6328
-3	2237	7708698380665640	CMakeFiles/Stick-Lengths.dir/Sorting_and_Searching/Stick-Lengths.cpp.obj	4aec08c6ee5ae1b0
 2237	3442	7708698403005131	Stick-Lengths.exe	244d18bf6400c333
+10	1628	7708703133611657	CMakeFiles/Missing-Coin-Sum.dir/Sorting_and_Searching/Missing-Coin-Sum.cpp.obj	66aa8962ada8b3ff
+1628	1701	7708703149789300	Missing-Coin-Sum.exe	1579adf97a882ef5
+12	1467	7708703657088426	CMakeFiles/Missing-Coin-Sum.dir/Sorting_and_Searching/Missing-Coin-Sum.cpp.obj	66aa8962ada8b3ff
+1467	1539	7708703671638085	Missing-Coin-Sum.exe	1579adf97a882ef5
