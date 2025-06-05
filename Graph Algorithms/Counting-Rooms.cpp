@@ -14,36 +14,39 @@ constexpr ll MOD = 1e9 + 7;
 #define MP make_pair
 #define REP(i,a,b) for (ll i = a; i <= b; i++)
 
-void dfs(const ll x, const ll y, vector<vl>& v, const ll height, const ll length){
-    if (x < 0 || x >= length || y < 0 || y >= height || !v[y][x]) return;
 
-    v[y][x] = 0;
-    dfs(x+1, y, v, height, length);
-    dfs(x-1, y, v, height, length);
-    dfs(x, y+1, v, height, length);
-    dfs(x, y-1, v, height, length);
+ll n, m;
+
+void dfs(const ll row, const ll column, vector<vl>& mapOfBuilding){
+    if (column < 0 || column >= m || row < 0 || row >= n || !mapOfBuilding[row][column]) return;
+
+    mapOfBuilding[row][column] = 0;
+    dfs(row+1, column, mapOfBuilding);
+    dfs(row-1, column, mapOfBuilding);
+    dfs(row, column+1, mapOfBuilding);
+    dfs(row, column-1, mapOfBuilding);
 }
 
 
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll n,m; cin >> n >> m;
-    vector<vl> v(n, vl(m,0));
+    cin >> n >> m;
+    vector<vl> mapOfBuilding(n, vl(m,0));
 
     REP(i, 0, n-1){
         REP(j, 0, m-1){
             char inp; cin >> inp;
-            if (inp == '.') v[i][j] = 1;
+            if (inp == '.') mapOfBuilding[i][j] = 1;
         }
     }
     ll count = 0;
 
     REP(i, 0, n-1){
         REP(j, 0, m-1){
-            if (v[i][j] == 1){
+            if (mapOfBuilding[i][j] == 1){
                 count++;
-                dfs(j,i,v,n,m);
+                dfs(i,j,mapOfBuilding);
             }
         }
     }
