@@ -29,6 +29,7 @@
 18	1479	7706716517977580	CMakeFiles/exe.dir/main.cpp.obj	b0f582ee678a685f
 1462	1529	7706901972966445	Distinct-Numbers.exe	4baa48cfd4f0da53
 1479	1554	7706716532607625	exe.exe	c042e239db6af590
+12	1467	7708703657088426	CMakeFiles/Missing-Coin-Sum.dir/Sorting_and_Searching/Missing-Coin-Sum.cpp.obj	66aa8962ada8b3ff
 26	1566	7702416455327358	CMakeFiles/Bit-Strings.dir/Introductory_Problems/Bit-Strings.cpp.obj	8053a2f50c46617f
 4	1503	7705927194742703	CMakeFiles/Coin-Piles.dir/Introductory_Problems/Coin-Piles.cpp.obj	224c1f4da818e622
 1504	1579	7705927209737114	Coin-Piles.exe	e1d8545c0cd71066
@@ -56,12 +57,11 @@
 12	5270	7707004651137430	CMakeFiles/Array_Description.dir/Dynamic_Programming/Array_Description.cpp.obj	759cd97900775563
 5271	5339	7707004703722193	Array_Description.exe	b8833bf38fb340f6
 1428	1498	7707854525842045	Ferris-Wheel.exe	6257121a1cfc291
+1467	1539	7708703671638085	Missing-Coin-Sum.exe	1579adf97a882ef5
 16	2842	7708072889941069	CMakeFiles/Concert-Tickets.dir/Sorting_and_Searching/Concert-Tickets.cpp.obj	5c015dc1ed1fdea0
 2842	3522	7708072918196253	Concert-Tickets.exe	1e196fb4c1c7d6d6
 2978	4179	7708582629112136	Restaurant-Customers.exe	620603929e179441
 1437	1495	7708601988988482	Maximum-Subarray_Sum.exe	adb6e976631f6328
 2237	3442	7708698403005131	Stick-Lengths.exe	244d18bf6400c333
-10	1628	7708703133611657	CMakeFiles/Missing-Coin-Sum.dir/Sorting_and_Searching/Missing-Coin-Sum.cpp.obj	66aa8962ada8b3ff
-1628	1701	7708703149789300	Missing-Coin-Sum.exe	1579adf97a882ef5
-12	1467	7708703657088426	CMakeFiles/Missing-Coin-Sum.dir/Sorting_and_Searching/Missing-Coin-Sum.cpp.obj	66aa8962ada8b3ff
-1467	1539	7708703671638085	Missing-Coin-Sum.exe	1579adf97a882ef5
+15	2573	7709276727653284	CMakeFiles/Collecting-Numbers.dir/Sorting_and_Searching/Collecting-Numbers.cpp.obj	91bc1f85e28e5906
+2574	3706	7709276753238749	Collecting-Numbers.exe	27532b939ce38fda
