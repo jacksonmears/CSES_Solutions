@@ -33,8 +33,8 @@
 26	1566	7702416455327358	CMakeFiles/Bit-Strings.dir/Introductory_Problems/Bit-Strings.cpp.obj	8053a2f50c46617f
 4	1503	7705927194742703	CMakeFiles/Coin-Piles.dir/Introductory_Problems/Coin-Piles.cpp.obj	224c1f4da818e622
 1504	1579	7705927209737114	Coin-Piles.exe	e1d8545c0cd71066
-4	1442	7705929871980740	CMakeFiles/Palindrome-Reorder.dir/Introductory_Problems/Palindrome-Reorder.cpp.obj	740aa0341b8302a6
 10	1381	7706894596993088	CMakeFiles/Book-Shop.dir/Dynamic_Programming/Book-Shop.cpp.obj	21c969d12a47bb5d
+4	1442	7705929871980740	CMakeFiles/Palindrome-Reorder.dir/Introductory_Problems/Palindrome-Reorder.cpp.obj	740aa0341b8302a6
 19	1428	7707854511749692	CMakeFiles/Ferris-Wheel.dir/Sorting_and_Searching/Ferris-Wheel.cpp.obj	1efc908605395edc
 1443	1517	7705929886367137	Palindrome-Reorder.exe	5c0076ba13a0241f
 11	1377	7706323088042861	CMakeFiles/Coin-Combinations_II.dir/Dynamic_Programming/Coin-Combinations_II.cpp.obj	b8e6a5079a00157f
@@ -65,3 +65,17 @@
 2237	3442	7708698403005131	Stick-Lengths.exe	244d18bf6400c333
 15	2573	7709276727653284	CMakeFiles/Collecting-Numbers.dir/Sorting_and_Searching/Collecting-Numbers.cpp.obj	91bc1f85e28e5906
 2574	3706	7709276753238749	Collecting-Numbers.exe	27532b939ce38fda
+11	1457	7709289527870285	CMakeFiles/Collecting-Numbers.dir/Sorting_and_Searching/Collecting-Numbers.cpp.obj	91bc1f85e28e5906
+1458	1535	7709289542334377	Collecting-Numbers.exe	27532b939ce38fda
+11	1426	7709289615311273	CMakeFiles/Collecting-Numbers-II.dir/Sorting_and_Searching/Collecting-Numbers-II.cpp.obj	927877e126f95044
+1426	1517	7709289629447626	Collecting-Numbers-II.exe	ba584f1c4857508
+11	1366	7709290178408676	CMakeFiles/Collecting-Numbers-II.dir/Sorting_and_Searching/Collecting-Numbers-II.cpp.obj	927877e126f95044
+1366	1430	7709290191963201	Collecting-Numbers-II.exe	ba584f1c4857508
+11	1352	7709290323508873	CMakeFiles/Collecting-Numbers-II.dir/Sorting_and_Searching/Collecting-Numbers-II.cpp.obj	927877e126f95044
+1352	1415	7709290336916589	Collecting-Numbers-II.exe	ba584f1c4857508
+11	1353	7709290462839244	CMakeFiles/Collecting-Numbers-II.dir/Sorting_and_Searching/Collecting-Numbers-II.cpp.obj	927877e126f95044
+1353	1416	7709290476247639	Collecting-Numbers-II.exe	ba584f1c4857508
+10	1372	7709291741213846	CMakeFiles/Collecting-Numbers-II.dir/Sorting_and_Searching/Collecting-Numbers-II.cpp.obj	927877e126f95044
+1373	1435	7709291754827212	Collecting-Numbers-II.exe	ba584f1c4857508
+10	1407	7709293319227259	CMakeFiles/Collecting-Numbers-II.dir/Sorting_and_Searching/Collecting-Numbers-II.cpp.obj	927877e126f95044
+1408	1472	7709293333184765	Collecting-Numbers-II.exe	ba584f1c4857508
