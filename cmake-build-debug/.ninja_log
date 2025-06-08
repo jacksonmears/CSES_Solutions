@@ -44,7 +44,7 @@
 10	1461	7706901958457132	CMakeFiles/Distinct-Numbers.dir/Sorting_and_Searching/Distinct-Numbers.cpp.obj	846342abf49acde2
 11	1410	7706223208538285	CMakeFiles/Creating-Strings.dir/Introductory_Problems/Creating-Strings.cpp.obj	2ab45a06b21787f7
 2154	2766	7707843644174813	Message-Route.exe	6b46ef80f17cabef
-11	1480	7709317658204473	CMakeFiles/Playlist.dir/Sorting_and_Searching/Playlist.cpp.obj	fe8a742d252cbb74
+16	1646	7711285566721363	CMakeFiles/Playlist.dir/Sorting_and_Searching/Playlist.cpp.obj	fe8a742d252cbb74
 1411	1495	7706223222522586	Creating-Strings.exe	b58b4d09f805f37b
 11	1347	7706233380264457	CMakeFiles/Raab-Game-I.dir/Introductory_Problems/Raab-Game-I.cpp.obj	b74017d669d03513
 13	2153	7707843622760303	CMakeFiles/Message-Route.dir/Graph_Algorithms/Message-Route.cpp.obj	3b4444ab242d0ead
@@ -68,8 +68,10 @@
 1458	1535	7709289542334377	Collecting-Numbers.exe	27532b939ce38fda
 11	1460	7709308216826585	CMakeFiles/Collecting-Numbers-II.dir/Sorting_and_Searching/Collecting-Numbers-II.cpp.obj	927877e126f95044
 1460	1537	7709308231323140	Collecting-Numbers-II.exe	ba584f1c4857508
-1481	1556	7709317672905071	Playlist.exe	3dfaa4916534552f
-16	1646	7711285566721363	CMakeFiles/Playlist.dir/Sorting_and_Searching/Playlist.cpp.obj	fe8a742d252cbb74
 1646	2285	7711285583016941	Playlist.exe	3dfaa4916534552f
 15	1489	7711285676844444	CMakeFiles/Towers.dir/Sorting_and_Searching/Towers.cpp.obj	f512641e7b42fb2b
 1489	1568	7711285691583281	Towers.exe	2cb957298a884108
+9	1491	7711288370954504	CMakeFiles/Traffic-Lights.dir/Sorting_and_Searching/Traffic-Lights.cpp.obj	d6185b763437a524
+1491	1563	7711288385770109	Traffic-Lights.exe	cd050bd2919d43ff
+10	1423	7711288504568903	CMakeFiles/Traffic-Lights.dir/Sorting_and_Searching/Traffic-Lights.cpp.obj	d6185b763437a524
+1424	1491	7711288518710174	Traffic-Lights.exe	cd050bd2919d43ff
