@@ -81,9 +81,13 @@
 1382	1451	7711906170649458	Josephus-Problem.exe	4c7061865009311d
 9	1312	7711907290481090	CMakeFiles/Josephus-Problem-I.dir/Sorting_and_Searching/Josephus-Problem-I.cpp.obj	a3049b5436e8dbda
 1312	1373	7711907303524090	Josephus-Problem-I.exe	d507da40c4568360
-8	1575	7711916058548847	CMakeFiles/Money-Sums.dir/Dynamic_Programming/Money-Sums.cpp.obj	b97ccde3d43034d5
-1576	1658	7711916074219131	Money-Sums.exe	59a14d340976c977
-11	1468	7711916665737260	CMakeFiles/Money-Sums.dir/Dynamic_Programming/Money-Sums.cpp.obj	b97ccde3d43034d5
-1468	1543	7711916680321568	Money-Sums.exe	59a14d340976c977
 11	1376	7711917444624375	CMakeFiles/Money-Sums.dir/Dynamic_Programming/Money-Sums.cpp.obj	b97ccde3d43034d5
 1376	1443	7711917458269049	Money-Sums.exe	59a14d340976c977
+8	1819	7712011539288510	CMakeFiles/Building-Teams.dir/Graph_Algorithms/Building-Teams.cpp.obj	150859b66abd7b0c
+1820	2264	7712011557402962	Building-Teams.exe	86168913d625bf00
+11	1389	7712012192808618	CMakeFiles/Building-Teams.dir/Graph_Algorithms/Building-Teams.cpp.obj	150859b66abd7b0c
+1390	1454	7712012206592095	Building-Teams.exe	86168913d625bf00
+11	1409	7712012612769419	CMakeFiles/Building-Teams.dir/Graph_Algorithms/Building-Teams.cpp.obj	150859b66abd7b0c
+1410	1472	7712012626747878	Building-Teams.exe	86168913d625bf00
+13	1460	7712015665526514	CMakeFiles/Building-Teams.dir/Graph_Algorithms/Building-Teams.cpp.obj	150859b66abd7b0c
+1460	1528	7712015679995176	Building-Teams.exe	86168913d625bf00
