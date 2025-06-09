@@ -4,7 +4,7 @@ using namespace std;
 typedef long long ll;
 typedef vector<ll> vl;
 typedef pair<ll,ll> pl;
-const int maxN = 1e5+1;
+const int maxOfN = 1e5+1;
 constexpr ll MOD = 1e9 + 7;
 
 #define F first
@@ -16,8 +16,8 @@ constexpr ll MOD = 1e9 + 7;
 
 
 
-bool possible, visited[maxN], team[maxN];
-vl connections[maxN];
+bool possible, visited[maxOfN], team[maxOfN];
+vl connections[maxOfN];
 
 void dfs(ll currentNode){
     for(ll friendNode : connections[currentNode]){
