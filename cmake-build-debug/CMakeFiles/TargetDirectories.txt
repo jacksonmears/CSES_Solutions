@@ -17,6 +17,7 @@ C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Creatin
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Digit-Queries.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Gray-Code.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Increasing-Array.dir
+C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Knight-Moves-Grid.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Mex-Grid-Construction.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Missing-Number.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Number-Spiral.dir
