@@ -36,6 +36,7 @@
 10	1381	7706894596993088	CMakeFiles/Book-Shop.dir/Dynamic_Programming/Book-Shop.cpp.obj	21c969d12a47bb5d
 4	1442	7705929871980740	CMakeFiles/Palindrome-Reorder.dir/Introductory_Problems/Palindrome-Reorder.cpp.obj	740aa0341b8302a6
 19	1428	7707854511749692	CMakeFiles/Ferris-Wheel.dir/Sorting_and_Searching/Ferris-Wheel.cpp.obj	1efc908605395edc
+1605	1692	7713018024585813	Movie-Festival-II.exe	86eee77abefab9a0
 1443	1517	7705929886367137	Palindrome-Reorder.exe	5c0076ba13a0241f
 11	1377	7706323088042861	CMakeFiles/Coin-Combinations_II.dir/Dynamic_Programming/Coin-Combinations_II.cpp.obj	b8e6a5079a00157f
 303	2543	7706208072625129	CMakeFiles/Gray-Code.dir/Introductory_Problems/Gray-Code.cpp.obj	cbd8eebba68921ad
@@ -93,9 +94,12 @@
 12	1425	7712372555166458	CMakeFiles/Grid-Coloring-I.dir/Introductory_Problems/Grid-Coloring-I.cpp.obj	a8c00a84ee069b3b
 1425	1494	7712372569310124	Grid-Coloring-I.exe	d1feb6ba93b60838
 1446	1518	7712398574998001	Grid-Path-Description.exe	842118789881a2a9
-28	3338	7713007524131042	CMakeFiles/Movie-Festival-II.dir/Sorting_and_Searching/Movie-Festival-II.cpp.obj	133e2899c1b969b7
-3339	4024	7713007557231644	Movie-Festival-II.exe	86eee77abefab9a0
-17	1408	7713007723670132	CMakeFiles/Movie-Festival-II.dir/Sorting_and_Searching/Movie-Festival-II.cpp.obj	133e2899c1b969b7
-1408	1471	7713007737588476	Movie-Festival-II.exe	86eee77abefab9a0
 18	1604	7713018008719625	CMakeFiles/Movie-Festival-II.dir/Sorting_and_Searching/Movie-Festival-II.cpp.obj	133e2899c1b969b7
-1605	1692	7713018024585813	Movie-Festival-II.exe	86eee77abefab9a0
+12	1630	7713168364625128	CMakeFiles/Movie-Festival-II.dir/Sorting_and_Searching/Movie-Festival-II.cpp.obj	133e2899c1b969b7
+1630	1717	7713168380807997	Movie-Festival-II.exe	86eee77abefab9a0
+10	1310	7713168519228586	CMakeFiles/Maximum-Subarray-Sum-II.dir/Sorting_and_Searching/Maximum-Subarray-Sum-II.cpp.obj	9c0284165c32242
+1311	1371	7713168532229188	Maximum-Subarray-Sum-II.exe	3ea9872310740c04
+13	1539	7713172510712356	CMakeFiles/Maximum-Subarray-Sum-II.dir/Sorting_and_Searching/Maximum-Subarray-Sum-II.cpp.obj	9c0284165c32242
+1539	1607	7713172525969457	Maximum-Subarray-Sum-II.exe	3ea9872310740c04
+11	1475	7713176670594617	CMakeFiles/Maximum-Subarray-Sum-II.dir/Sorting_and_Searching/Maximum-Subarray-Sum-II.cpp.obj	9c0284165c32242
+1475	1542	7713176685244416	Maximum-Subarray-Sum-II.exe	3ea9872310740c04

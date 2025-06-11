@@ -1493,6 +1493,39 @@ build Josephus-Problem-I.exe: CXX_EXECUTABLE_LINKER__Josephus-Problem-I_Debug CM
   TARGET_PDB = Josephus-Problem-I.exe.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target Maximum-Subarray-Sum-II
+
+
+#############################################
+# Order-only phony target for Maximum-Subarray-Sum-II
+
+build cmake_object_order_depends_target_Maximum-Subarray-Sum-II: phony || .
+
+build CMakeFiles/Maximum-Subarray-Sum-II.dir/Sorting_and_Searching/Maximum-Subarray-Sum-II.cpp.obj: CXX_COMPILER__Maximum-Subarray-Sum-II_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Maximum-Subarray-Sum-II.cpp || cmake_object_order_depends_target_Maximum-Subarray-Sum-II
+  DEP_FILE = CMakeFiles\Maximum-Subarray-Sum-II.dir\Sorting_and_Searching\Maximum-Subarray-Sum-II.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Maximum-Subarray-Sum-II.dir
+  OBJECT_FILE_DIR = CMakeFiles\Maximum-Subarray-Sum-II.dir\Sorting_and_Searching
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Maximum-Subarray-Sum-II
+
+
+#############################################
+# Link the executable Maximum-Subarray-Sum-II.exe
+
+build Maximum-Subarray-Sum-II.exe: CXX_EXECUTABLE_LINKER__Maximum-Subarray-Sum-II_Debug CMakeFiles/Maximum-Subarray-Sum-II.dir/Sorting_and_Searching/Maximum-Subarray-Sum-II.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Maximum-Subarray-Sum-II.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Maximum-Subarray-Sum-II.exe
+  TARGET_IMPLIB = libMaximum-Subarray-Sum-II.dll.a
+  TARGET_PDB = Maximum-Subarray-Sum-II.exe.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target Maximum-Subarray_Sum
 
 
@@ -1937,6 +1970,8 @@ build Josephus-Problem-I: phony Josephus-Problem-I.exe
 
 build Knight-Moves-Grid: phony Knight-Moves-Grid.exe
 
+build Maximum-Subarray-Sum-II: phony Maximum-Subarray-Sum-II.exe
+
 build Maximum-Subarray_Sum: phony Maximum-Subarray_Sum.exe
 
 build Message-Route: phony Message-Route.exe
@@ -1999,7 +2034,7 @@ build exe: phony exe.exe
 #############################################
 # Folder: C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug
 
-build all: phony exe.exe Array_Description.exe Book-Shop.exe Coin-Combinations_II.exe Edit-Distance.exe Grid-Paths-I.exe Money-Sums.exe Removing-Digits.exe Building-Teams.exe Counting-Rooms.exe Message-Route.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Grid-Coloring-I.exe Grid-Path-Description.exe Increasing-Array.exe Knight-Moves-Grid.exe Mex-Grid-Construction.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe Apartments.exe Collecting-Numbers-II.exe Collecting-Numbers.exe Concert-Tickets.exe Distinct-Numbers.exe Distinct-Value-Subsequences.exe Distinct-Values-Subarrays.exe Ferris-Wheel.exe Josephus-Problem-I.exe Maximum-Subarray_Sum.exe Missing-Coin-Sum.exe Movie-Festival-II.exe Movie-Festival.exe Playlist.exe Restaurant-Customers.exe Stick-Lengths.exe Sum-Of-Two-Values.exe Towers.exe Traffic-Lights.exe CMakeCXXCompilerId.exe
+build all: phony exe.exe Array_Description.exe Book-Shop.exe Coin-Combinations_II.exe Edit-Distance.exe Grid-Paths-I.exe Money-Sums.exe Removing-Digits.exe Building-Teams.exe Counting-Rooms.exe Message-Route.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Grid-Coloring-I.exe Grid-Path-Description.exe Increasing-Array.exe Knight-Moves-Grid.exe Mex-Grid-Construction.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe Apartments.exe Collecting-Numbers-II.exe Collecting-Numbers.exe Concert-Tickets.exe Distinct-Numbers.exe Distinct-Value-Subsequences.exe Distinct-Values-Subarrays.exe Ferris-Wheel.exe Josephus-Problem-I.exe Maximum-Subarray-Sum-II.exe Maximum-Subarray_Sum.exe Missing-Coin-Sum.exe Movie-Festival-II.exe Movie-Festival.exe Playlist.exe Restaurant-Customers.exe Stick-Lengths.exe Sum-Of-Two-Values.exe Towers.exe Traffic-Lights.exe CMakeCXXCompilerId.exe
 
 # =============================================================================
 # Built-in targets
