@@ -35,8 +35,5 @@ int main() {
     ll inverse_of_2 = (MOD + 1) / 2;
     cout << (dp[targetValue] * inverse_of_2) % MOD << "\n";
 
-
-
-
     return 0;
 }
