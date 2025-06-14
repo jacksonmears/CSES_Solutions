@@ -2,6 +2,7 @@ C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/exe.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Array_Description.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Book-Shop.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Coin-Combinations_II.dir
+C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Counting-Towers.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Edit-Distance.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Grid-Paths-I.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Longest-Common-Subsequence.dir
