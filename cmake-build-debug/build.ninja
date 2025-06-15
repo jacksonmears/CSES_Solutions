@@ -569,6 +569,39 @@ build Message-Route.exe: CXX_EXECUTABLE_LINKER__Message-Route_Debug CMakeFiles/M
   TARGET_PDB = Message-Route.exe.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target Round-Trip
+
+
+#############################################
+# Order-only phony target for Round-Trip
+
+build cmake_object_order_depends_target_Round-Trip: phony || .
+
+build CMakeFiles/Round-Trip.dir/Graph_Algorithms/Round-Trip.cpp.obj: CXX_COMPILER__Round-Trip_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Round-Trip.cpp || cmake_object_order_depends_target_Round-Trip
+  DEP_FILE = CMakeFiles\Round-Trip.dir\Graph_Algorithms\Round-Trip.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Round-Trip.dir
+  OBJECT_FILE_DIR = CMakeFiles\Round-Trip.dir\Graph_Algorithms
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Round-Trip
+
+
+#############################################
+# Link the executable Round-Trip.exe
+
+build Round-Trip.exe: CXX_EXECUTABLE_LINKER__Round-Trip_Debug CMakeFiles/Round-Trip.dir/Graph_Algorithms/Round-Trip.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Round-Trip.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Round-Trip.exe
+  TARGET_IMPLIB = libRound-Trip.dll.a
+  TARGET_PDB = Round-Trip.exe.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target Apple-Division
 
 
@@ -2247,6 +2280,8 @@ build Repititions: phony Repititions.exe
 
 build Restaurant-Customers: phony Restaurant-Customers.exe
 
+build Round-Trip: phony Round-Trip.exe
+
 build Stick-Lengths: phony Stick-Lengths.exe
 
 build String-Reorder: phony String-Reorder.exe
@@ -2279,7 +2314,7 @@ build exe: phony exe.exe
 #############################################
 # Folder: C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug
 
-build all: phony exe.exe Array_Description.exe Book-Shop.exe Coin-Combinations_II.exe Counting-Towers.exe Edit-Distance.exe Grid-Paths-I.exe Longest-Common-Subsequence.exe Money-Sums.exe Rectangle-Cutting.exe Removing-Digits.exe Two-Sets-II.exe Building-Roads.exe Building-Teams.exe Counting-Rooms.exe Message-Route.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Grid-Coloring-I.exe Grid-Path-Description.exe Increasing-Array.exe Knight-Moves-Grid.exe Mex-Grid-Construction.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe Apartments.exe Collecting-Numbers-II.exe Collecting-Numbers.exe Concert-Tickets.exe Distinct-Numbers.exe Distinct-Value-Subsequences.exe Distinct-Values-Subarrays.exe Factory-Machines.exe Ferris-Wheel.exe Josephus-Problem-I.exe Maximum-Subarray-Sum-II.exe Maximum-Subarray_Sum.exe Missing-Coin-Sum.exe Movie-Festival-II.exe Movie-Festival.exe Playlist.exe Reading-Books.exe Restaurant-Customers.exe Stick-Lengths.exe Sum-Of-Two-Values.exe Towers.exe Traffic-Lights.exe CMakeCXXCompilerId.exe
+build all: phony exe.exe Array_Description.exe Book-Shop.exe Coin-Combinations_II.exe Counting-Towers.exe Edit-Distance.exe Grid-Paths-I.exe Longest-Common-Subsequence.exe Money-Sums.exe Rectangle-Cutting.exe Removing-Digits.exe Two-Sets-II.exe Building-Roads.exe Building-Teams.exe Counting-Rooms.exe Message-Route.exe Round-Trip.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Grid-Coloring-I.exe Grid-Path-Description.exe Increasing-Array.exe Knight-Moves-Grid.exe Mex-Grid-Construction.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe Apartments.exe Collecting-Numbers-II.exe Collecting-Numbers.exe Concert-Tickets.exe Distinct-Numbers.exe Distinct-Value-Subsequences.exe Distinct-Values-Subarrays.exe Factory-Machines.exe Ferris-Wheel.exe Josephus-Problem-I.exe Maximum-Subarray-Sum-II.exe Maximum-Subarray_Sum.exe Missing-Coin-Sum.exe Movie-Festival-II.exe Movie-Festival.exe Playlist.exe Reading-Books.exe Restaurant-Customers.exe Stick-Lengths.exe Sum-Of-Two-Values.exe Towers.exe Traffic-Lights.exe CMakeCXXCompilerId.exe
 
 # =============================================================================
 # Built-in targets
