@@ -9,6 +9,7 @@ C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Longest
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Minimal-Grid-Path.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Money-Sums.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Rectangle-Cutting.dir
+C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Removal-Game.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Removing-Digits.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Two-Sets-II.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Building-Roads.dir
