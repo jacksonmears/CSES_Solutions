@@ -25,7 +25,7 @@ struct SegmentTree {
     SegmentTree(ll n) {
         size = 1;
         while (size < n) size *= 2;
-        tree.assign(2 * size, 0);
+        tree = vl(2*size, 0);
     }
 
     void update(ll idx, ll val) {
@@ -60,7 +60,7 @@ int main() {
     Right = vl(n, n);
 
     stack<ll> height_stack;
-    for (ll i = 0; i < n; ++i) {
+    REP(i, 0, n-1) {
         while (!height_stack.empty() && mountains[height_stack.top()] <= mountains[i]) height_stack.pop();
         if (!height_stack.empty()) Left[i] = height_stack.top();
         height_stack.push(i);
