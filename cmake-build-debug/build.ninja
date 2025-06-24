@@ -635,6 +635,72 @@ build Counting-Rooms.exe: CXX_EXECUTABLE_LINKER__Counting-Rooms_Debug CMakeFiles
   TARGET_PDB = Counting-Rooms.exe.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target Course-Schedule
+
+
+#############################################
+# Order-only phony target for Course-Schedule
+
+build cmake_object_order_depends_target_Course-Schedule: phony || .
+
+build CMakeFiles/Course-Schedule.dir/Graph_Algorithms/Course-Schedule.cpp.obj: CXX_COMPILER__Course-Schedule_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Course-Schedule.cpp || cmake_object_order_depends_target_Course-Schedule
+  DEP_FILE = CMakeFiles\Course-Schedule.dir\Graph_Algorithms\Course-Schedule.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Course-Schedule.dir
+  OBJECT_FILE_DIR = CMakeFiles\Course-Schedule.dir\Graph_Algorithms
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Course-Schedule
+
+
+#############################################
+# Link the executable Course-Schedule.exe
+
+build Course-Schedule.exe: CXX_EXECUTABLE_LINKER__Course-Schedule_Debug CMakeFiles/Course-Schedule.dir/Graph_Algorithms/Course-Schedule.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Course-Schedule.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Course-Schedule.exe
+  TARGET_IMPLIB = libCourse-Schedule.dll.a
+  TARGET_PDB = Course-Schedule.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Longest-Flight-Route
+
+
+#############################################
+# Order-only phony target for Longest-Flight-Route
+
+build cmake_object_order_depends_target_Longest-Flight-Route: phony || .
+
+build CMakeFiles/Longest-Flight-Route.dir/Graph_Algorithms/Longest-Flight-Route.cpp.obj: CXX_COMPILER__Longest-Flight-Route_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Longest-Flight-Route.cpp || cmake_object_order_depends_target_Longest-Flight-Route
+  DEP_FILE = CMakeFiles\Longest-Flight-Route.dir\Graph_Algorithms\Longest-Flight-Route.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Longest-Flight-Route.dir
+  OBJECT_FILE_DIR = CMakeFiles\Longest-Flight-Route.dir\Graph_Algorithms
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Longest-Flight-Route
+
+
+#############################################
+# Link the executable Longest-Flight-Route.exe
+
+build Longest-Flight-Route.exe: CXX_EXECUTABLE_LINKER__Longest-Flight-Route_Debug CMakeFiles/Longest-Flight-Route.dir/Graph_Algorithms/Longest-Flight-Route.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Longest-Flight-Route.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Longest-Flight-Route.exe
+  TARGET_IMPLIB = libLongest-Flight-Route.dll.a
+  TARGET_PDB = Longest-Flight-Route.exe.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target Message-Route
 
 
@@ -2474,6 +2540,8 @@ build Counting-Rooms: phony Counting-Rooms.exe
 
 build Counting-Towers: phony Counting-Towers.exe
 
+build Course-Schedule: phony Course-Schedule.exe
+
 build Creating-Strings: phony Creating-Strings.exe
 
 build Digit-Queries: phony Digit-Queries.exe
@@ -2505,6 +2573,8 @@ build Josephus-Problem-I: phony Josephus-Problem-I.exe
 build Knight-Moves-Grid: phony Knight-Moves-Grid.exe
 
 build Longest-Common-Subsequence: phony Longest-Common-Subsequence.exe
+
+build Longest-Flight-Route: phony Longest-Flight-Route.exe
 
 build Maximum-Subarray-Sum-II: phony Maximum-Subarray-Sum-II.exe
 
@@ -2594,7 +2664,7 @@ build exe: phony exe.exe
 #############################################
 # Folder: C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug
 
-build all: phony exe.exe Array_Description.exe Book-Shop.exe Coin-Combinations_II.exe Counting-Towers.exe Edit-Distance.exe Grid-Paths-I.exe Longest-Common-Subsequence.exe Minimal-Grid-Path.exe Money-Sums.exe Mountain-Range.exe Rectangle-Cutting.exe Removal-Game.exe Removing-Digits.exe Two-Sets-II.exe Building-Roads.exe Building-Teams.exe Counting-Rooms.exe Message-Route.exe Road-Construction.exe Round-Trip.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Grid-Coloring-I.exe Grid-Path-Description.exe Increasing-Array.exe Knight-Moves-Grid.exe Mex-Grid-Construction.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe Sliding-Window-Sum.exe Apartments.exe Collecting-Numbers-II.exe Collecting-Numbers.exe Concert-Tickets.exe Distinct-Numbers.exe Distinct-Value-Subsequences.exe Distinct-Values-Subarrays.exe Factory-Machines.exe Ferris-Wheel.exe Josephus-Problem-I.exe Maximum-Subarray-Sum-II.exe Maximum-Subarray_Sum.exe Missing-Coin-Sum.exe Movie-Festival-II.exe Movie-Festival.exe Playlist.exe Reading-Books.exe Restaurant-Customers.exe Stick-Lengths.exe Sum-Of-Two-Values.exe Towers.exe Traffic-Lights.exe Tree-Diameter.exe Tree-Distances-I.exe Tree-Distances-II.exe CMakeCXXCompilerId.exe
+build all: phony exe.exe Array_Description.exe Book-Shop.exe Coin-Combinations_II.exe Counting-Towers.exe Edit-Distance.exe Grid-Paths-I.exe Longest-Common-Subsequence.exe Minimal-Grid-Path.exe Money-Sums.exe Mountain-Range.exe Rectangle-Cutting.exe Removal-Game.exe Removing-Digits.exe Two-Sets-II.exe Building-Roads.exe Building-Teams.exe Counting-Rooms.exe Course-Schedule.exe Longest-Flight-Route.exe Message-Route.exe Road-Construction.exe Round-Trip.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Grid-Coloring-I.exe Grid-Path-Description.exe Increasing-Array.exe Knight-Moves-Grid.exe Mex-Grid-Construction.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe Sliding-Window-Sum.exe Apartments.exe Collecting-Numbers-II.exe Collecting-Numbers.exe Concert-Tickets.exe Distinct-Numbers.exe Distinct-Value-Subsequences.exe Distinct-Values-Subarrays.exe Factory-Machines.exe Ferris-Wheel.exe Josephus-Problem-I.exe Maximum-Subarray-Sum-II.exe Maximum-Subarray_Sum.exe Missing-Coin-Sum.exe Movie-Festival-II.exe Movie-Festival.exe Playlist.exe Reading-Books.exe Restaurant-Customers.exe Stick-Lengths.exe Sum-Of-Two-Values.exe Towers.exe Traffic-Lights.exe Tree-Diameter.exe Tree-Distances-I.exe Tree-Distances-II.exe CMakeCXXCompilerId.exe
 
 # =============================================================================
 # Built-in targets
