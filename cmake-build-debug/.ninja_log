@@ -27,6 +27,7 @@
 17	1364	7701999939033693	CMakeFiles/Number-Spiral.dir/Introductory_Problems/Number-Spiral.cpp.obj	bc6f6c35f67e0348
 1365	1424	7701999952510824	Number-Spiral.exe	36931776837e87e3
 2543	3716	7706208095040195	Gray-Code.exe	c94f58b55ca3d631
+13	1389	7726083014906575	CMakeFiles/Exponentiation.dir/Mathematics/Exponentiation.cpp.obj	31d6a7ec64098cb7
 11	1309	7702002507582879	CMakeFiles/Two-Knights.dir/Introductory_Problems/Two-Knights.cpp.obj	2714ac0d28966b7e
 12	1348	7702017436842767	CMakeFiles/Two-Sets.dir/Introductory_Problems/Two-Sets.cpp.obj	f73a33db0d47c8c4
 1349	1406	7702017450216824	Two-Sets.exe	23991aa114e27312
@@ -137,11 +138,10 @@
 1617	2237	7726076083590284	Next-Prime.exe	83a9c2a767f95213
 22	1473	7726079670244380	CMakeFiles/Counting-Divisors.dir/Mathematics/Counting-Divisors.cpp.obj	b2e7b76dbd3080c5
 1473	1539	7726079684747403	Counting-Divisors.exe	54647a4d7373331b
-9	1338	7726081522555051	CMakeFiles/Exponentiation.dir/Mathematics/Exponentiation.cpp.obj	31d6a7ec64098cb7
-1338	1401	7726081535836135	Exponentiation.exe	2d9cfb6bf243a8f8
-11	1336	7726081749624086	CMakeFiles/Exponentiation.dir/Mathematics/Exponentiation.cpp.obj	31d6a7ec64098cb7
-1336	1398	7726081762865479	Exponentiation.exe	2d9cfb6bf243a8f8
-11	1303	7726081828099761	CMakeFiles/Exponentiation.dir/Mathematics/Exponentiation.cpp.obj	31d6a7ec64098cb7
-1303	1363	7726081841022611	Exponentiation.exe	2d9cfb6bf243a8f8
-13	1389	7726083014906575	CMakeFiles/Exponentiation.dir/Mathematics/Exponentiation.cpp.obj	31d6a7ec64098cb7
 1389	1450	7726083028668273	Exponentiation.exe	2d9cfb6bf243a8f8
+12	1356	7726085835609695	CMakeFiles/Exponentiation.dir/Mathematics/Exponentiation.cpp.obj	31d6a7ec64098cb7
+1356	1415	7726085849047134	Exponentiation.exe	2d9cfb6bf243a8f8
+10	1387	7726086240294116	CMakeFiles/Exponentiation-II.dir/Mathematics/Exponentiation-II.cpp.obj	6e77612e897f2e6f
+1387	1445	7726086254056788	Exponentiation-II.exe	bb720d423feb3d56
+12	1437	7726086649394502	CMakeFiles/Exponentiation-II.dir/Mathematics/Exponentiation-II.cpp.obj	6e77612e897f2e6f
+1437	1496	7726086663634804	Exponentiation-II.exe	bb720d423feb3d56
