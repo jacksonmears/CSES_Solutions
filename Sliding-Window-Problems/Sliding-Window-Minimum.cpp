@@ -18,10 +18,10 @@ deque<ll> minimumStack;
 vl inputArray;
 
 void updateStack(const ll i) {
-    while (!minimumStack.empty() && inputArray[minimumStack.back()] >= inputArray[i]) {
+    while (!minimumStack.empty() && minimumStack.back() > inputArray[i]) {
         minimumStack.pop_back();
     }
-    minimumStack.push_back(i);
+    minimumStack.push_back(inputArray[i]);
 }
 
 
@@ -34,12 +34,12 @@ int main() {
 
 
     REP(i, 0, n-1) updateStack(i);
-    ll xorMinimum = inputArray[minimumStack.front()];
+    ll xorMinimum = minimumStack.front();
 
     REP(i, 0, k-n-1) {
-        if (!minimumStack.empty() && minimumStack.front() <= i) minimumStack.pop_front();
+        if (!minimumStack.empty() && minimumStack.front() == inputArray[i]) minimumStack.pop_front();
         updateStack(i+n);
-        xorMinimum ^= inputArray[minimumStack.front()];
+        xorMinimum ^= minimumStack.front();
     }
 
     cout << xorMinimum;
