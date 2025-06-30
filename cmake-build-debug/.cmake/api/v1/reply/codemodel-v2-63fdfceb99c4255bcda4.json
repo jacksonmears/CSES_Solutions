@@ -99,7 +99,8 @@
 						81,
 						82,
 						83,
-						84
+						84,
+						85
 					]
 				}
 			],
@@ -198,7 +199,8 @@
 						81,
 						82,
 						83,
-						84
+						84,
+						85
 					]
 				}
 			],
@@ -496,6 +498,13 @@
 					"id" : "Maximum-Subarray_Sum::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-Maximum-Subarray_Sum-Debug-d8c64f3f84d3c3bb3cbf.json",
 					"name" : "Maximum-Subarray_Sum",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Maximum-Xor-Subarray::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Maximum-Xor-Subarray-Debug-da0187eeae45384bd654.json",
+					"name" : "Maximum-Xor-Subarray",
 					"projectIndex" : 0
 				},
 				{
