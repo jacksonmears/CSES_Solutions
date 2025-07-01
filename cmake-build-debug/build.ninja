@@ -965,6 +965,39 @@ build Message-Route.exe: CXX_EXECUTABLE_LINKER__Message-Route_Debug CMakeFiles/M
   TARGET_PDB = Message-Route.exe.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target Monsters
+
+
+#############################################
+# Order-only phony target for Monsters
+
+build cmake_object_order_depends_target_Monsters: phony || .
+
+build CMakeFiles/Monsters.dir/Graph_Algorithms/Monsters.cpp.obj: CXX_COMPILER__Monsters_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Monsters.cpp || cmake_object_order_depends_target_Monsters
+  DEP_FILE = CMakeFiles\Monsters.dir\Graph_Algorithms\Monsters.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Monsters.dir
+  OBJECT_FILE_DIR = CMakeFiles\Monsters.dir\Graph_Algorithms
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Monsters
+
+
+#############################################
+# Link the executable Monsters.exe
+
+build Monsters.exe: CXX_EXECUTABLE_LINKER__Monsters_Debug CMakeFiles/Monsters.dir/Graph_Algorithms/Monsters.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Monsters.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Monsters.exe
+  TARGET_IMPLIB = libMonsters.dll.a
+  TARGET_PDB = Monsters.exe.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target Planets-And-Kingdoms
 
 
@@ -3037,6 +3070,8 @@ build Missing-Number: phony Missing-Number.exe
 
 build Money-Sums: phony Money-Sums.exe
 
+build Monsters: phony Monsters.exe
+
 build Mountain-Range: phony Mountain-Range.exe
 
 build Movie-Festival: phony Movie-Festival.exe
@@ -3119,7 +3154,7 @@ build exe: phony exe.exe
 #############################################
 # Folder: C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug
 
-build all: phony exe.exe Counting-Bits.exe Maximum-Xor-Subarray.exe Maximum-Xor-Subset.exe Array_Description.exe Book-Shop.exe Coin-Combinations_II.exe Counting-Towers.exe Edit-Distance.exe Grid-Paths-I.exe Longest-Common-Subsequence.exe Minimal-Grid-Path.exe Money-Sums.exe Mountain-Range.exe Rectangle-Cutting.exe Removal-Game.exe Removing-Digits.exe Two-Sets-II.exe Point-Location-Test.exe Building-Roads.exe Building-Teams.exe Counting-Rooms.exe Course-Schedule.exe Flight-Routes-Check.exe Game-Routes.exe Investigation.exe Longest-Flight-Route.exe Message-Route.exe Planets-And-Kingdoms.exe Road-Construction.exe Round-Trip.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Grid-Coloring-I.exe Grid-Path-Description.exe Increasing-Array.exe Knight-Moves-Grid.exe Mex-Grid-Construction.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe Counting-Divisors.exe Exponentiation.exe Next-Prime.exe Sliding-Window-Cost.exe Sliding-Window-Minimum.exe Sliding-Window-Sum.exe Apartments.exe Collecting-Numbers-II.exe Collecting-Numbers.exe Concert-Tickets.exe Distinct-Numbers.exe Distinct-Value-Subsequences.exe Distinct-Values-Subarrays.exe Factory-Machines.exe Ferris-Wheel.exe Josephus-Problem-I.exe Maximum-Subarray-Sum-II.exe Maximum-Subarray_Sum.exe Missing-Coin-Sum.exe Movie-Festival-II.exe Movie-Festival.exe Playlist.exe Reading-Books.exe Restaurant-Customers.exe Stick-Lengths.exe Sum-Of-Two-Values.exe Towers.exe Traffic-Lights.exe Tree-Diameter.exe Tree-Distances-I.exe Tree-Distances-II.exe CMakeCXXCompilerId.exe
+build all: phony exe.exe Counting-Bits.exe Maximum-Xor-Subarray.exe Maximum-Xor-Subset.exe Array_Description.exe Book-Shop.exe Coin-Combinations_II.exe Counting-Towers.exe Edit-Distance.exe Grid-Paths-I.exe Longest-Common-Subsequence.exe Minimal-Grid-Path.exe Money-Sums.exe Mountain-Range.exe Rectangle-Cutting.exe Removal-Game.exe Removing-Digits.exe Two-Sets-II.exe Point-Location-Test.exe Building-Roads.exe Building-Teams.exe Counting-Rooms.exe Course-Schedule.exe Flight-Routes-Check.exe Game-Routes.exe Investigation.exe Longest-Flight-Route.exe Message-Route.exe Monsters.exe Planets-And-Kingdoms.exe Road-Construction.exe Round-Trip.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Grid-Coloring-I.exe Grid-Path-Description.exe Increasing-Array.exe Knight-Moves-Grid.exe Mex-Grid-Construction.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe Counting-Divisors.exe Exponentiation.exe Next-Prime.exe Sliding-Window-Cost.exe Sliding-Window-Minimum.exe Sliding-Window-Sum.exe Apartments.exe Collecting-Numbers-II.exe Collecting-Numbers.exe Concert-Tickets.exe Distinct-Numbers.exe Distinct-Value-Subsequences.exe Distinct-Values-Subarrays.exe Factory-Machines.exe Ferris-Wheel.exe Josephus-Problem-I.exe Maximum-Subarray-Sum-II.exe Maximum-Subarray_Sum.exe Missing-Coin-Sum.exe Movie-Festival-II.exe Movie-Festival.exe Playlist.exe Reading-Books.exe Restaurant-Customers.exe Stick-Lengths.exe Sum-Of-Two-Values.exe Towers.exe Traffic-Lights.exe Tree-Diameter.exe Tree-Distances-I.exe Tree-Distances-II.exe CMakeCXXCompilerId.exe
 
 # =============================================================================
 # Built-in targets

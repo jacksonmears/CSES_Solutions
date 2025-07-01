@@ -101,7 +101,8 @@
 						83,
 						84,
 						85,
-						86
+						86,
+						87
 					]
 				}
 			],
@@ -202,7 +203,8 @@
 						83,
 						84,
 						85,
-						86
+						86,
+						87
 					]
 				}
 			],
@@ -556,6 +558,13 @@
 					"id" : "Money-Sums::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-Money-Sums-Debug-5247042ed517287ce1b4.json",
 					"name" : "Money-Sums",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Monsters::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Monsters-Debug-2f838e3f8a729f9286ad.json",
+					"name" : "Monsters",
 					"projectIndex" : 0
 				},
 				{
