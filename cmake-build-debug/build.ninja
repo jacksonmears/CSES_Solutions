@@ -18,7 +18,7 @@
 #############################################
 # Minimal version of Ninja required by this file
 
-ninja_required_version = 1.5
+ninja_required_version = 1.8
 
 
 #############################################
@@ -41,37 +41,37 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target exe
+# Object build statements for EXECUTABLE target main
 
 
 #############################################
-# Order-only phony target for exe
+# Order-only phony target for main
 
-build cmake_object_order_depends_target_exe: phony || .
+build cmake_object_order_depends_target_main: phony || .
 
-build CMakeFiles/exe.dir/main.cpp.obj: CXX_COMPILER__exe_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/main.cpp || cmake_object_order_depends_target_exe
-  DEP_FILE = CMakeFiles\exe.dir\main.cpp.obj.d
+build CMakeFiles/main.dir/main.cpp.obj: CXX_COMPILER__main_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/main.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles\main.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\exe.dir
-  OBJECT_FILE_DIR = CMakeFiles\exe.dir
+  OBJECT_DIR = CMakeFiles\main.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target exe
+# Link build statements for EXECUTABLE target main
 
 
 #############################################
-# Link the executable exe.exe
+# Link the executable main.exe
 
-build exe.exe: CXX_EXECUTABLE_LINKER__exe_Debug CMakeFiles/exe.dir/main.cpp.obj
+build main.exe: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\exe.dir
+  OBJECT_DIR = CMakeFiles\main.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = exe.exe
-  TARGET_IMPLIB = libexe.dll.a
-  TARGET_PDB = exe.exe.dbg
+  TARGET_FILE = main.exe
+  TARGET_IMPLIB = libmain.dll.a
+  TARGET_PDB = main.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target All-Subarray-Xors
@@ -206,37 +206,37 @@ build Maximum-Xor-Subset.exe: CXX_EXECUTABLE_LINKER__Maximum-Xor-Subset_Debug CM
   TARGET_PDB = Maximum-Xor-Subset.exe.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target Array_Description
+# Object build statements for EXECUTABLE target Array-Description
 
 
 #############################################
-# Order-only phony target for Array_Description
+# Order-only phony target for Array-Description
 
-build cmake_object_order_depends_target_Array_Description: phony || .
+build cmake_object_order_depends_target_Array-Description: phony || .
 
-build CMakeFiles/Array_Description.dir/Dynamic_Programming/Array_Description.cpp.obj: CXX_COMPILER__Array_Description_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic$ Programming/Array_Description.cpp || cmake_object_order_depends_target_Array_Description
-  DEP_FILE = CMakeFiles\Array_Description.dir\Dynamic_Programming\Array_Description.cpp.obj.d
+build CMakeFiles/Array-Description.dir/Dynamic-Programming/Array-Description.cpp.obj: CXX_COMPILER__Array-Description_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Array-Description.cpp || cmake_object_order_depends_target_Array-Description
+  DEP_FILE = CMakeFiles\Array-Description.dir\Dynamic-Programming\Array-Description.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Array_Description.dir
-  OBJECT_FILE_DIR = CMakeFiles\Array_Description.dir\Dynamic_Programming
+  OBJECT_DIR = CMakeFiles\Array-Description.dir
+  OBJECT_FILE_DIR = CMakeFiles\Array-Description.dir\Dynamic-Programming
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Array_Description
+# Link build statements for EXECUTABLE target Array-Description
 
 
 #############################################
-# Link the executable Array_Description.exe
+# Link the executable Array-Description.exe
 
-build Array_Description.exe: CXX_EXECUTABLE_LINKER__Array_Description_Debug CMakeFiles/Array_Description.dir/Dynamic_Programming/Array_Description.cpp.obj
+build Array-Description.exe: CXX_EXECUTABLE_LINKER__Array-Description_Debug CMakeFiles/Array-Description.dir/Dynamic-Programming/Array-Description.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\Array_Description.dir
+  OBJECT_DIR = CMakeFiles\Array-Description.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = Array_Description.exe
-  TARGET_IMPLIB = libArray_Description.dll.a
-  TARGET_PDB = Array_Description.exe.dbg
+  TARGET_FILE = Array-Description.exe
+  TARGET_IMPLIB = libArray-Description.dll.a
+  TARGET_PDB = Array-Description.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Book-Shop
@@ -247,11 +247,11 @@ build Array_Description.exe: CXX_EXECUTABLE_LINKER__Array_Description_Debug CMak
 
 build cmake_object_order_depends_target_Book-Shop: phony || .
 
-build CMakeFiles/Book-Shop.dir/Dynamic_Programming/Book-Shop.cpp.obj: CXX_COMPILER__Book-Shop_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic$ Programming/Book-Shop.cpp || cmake_object_order_depends_target_Book-Shop
-  DEP_FILE = CMakeFiles\Book-Shop.dir\Dynamic_Programming\Book-Shop.cpp.obj.d
+build CMakeFiles/Book-Shop.dir/Dynamic-Programming/Book-Shop.cpp.obj: CXX_COMPILER__Book-Shop_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Book-Shop.cpp || cmake_object_order_depends_target_Book-Shop
+  DEP_FILE = CMakeFiles\Book-Shop.dir\Dynamic-Programming\Book-Shop.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Book-Shop.dir
-  OBJECT_FILE_DIR = CMakeFiles\Book-Shop.dir\Dynamic_Programming
+  OBJECT_FILE_DIR = CMakeFiles\Book-Shop.dir\Dynamic-Programming
 
 
 # =============================================================================
@@ -261,7 +261,7 @@ build CMakeFiles/Book-Shop.dir/Dynamic_Programming/Book-Shop.cpp.obj: CXX_COMPIL
 #############################################
 # Link the executable Book-Shop.exe
 
-build Book-Shop.exe: CXX_EXECUTABLE_LINKER__Book-Shop_Debug CMakeFiles/Book-Shop.dir/Dynamic_Programming/Book-Shop.cpp.obj
+build Book-Shop.exe: CXX_EXECUTABLE_LINKER__Book-Shop_Debug CMakeFiles/Book-Shop.dir/Dynamic-Programming/Book-Shop.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Book-Shop.dir
@@ -280,11 +280,11 @@ build Book-Shop.exe: CXX_EXECUTABLE_LINKER__Book-Shop_Debug CMakeFiles/Book-Shop
 
 build cmake_object_order_depends_target_Coin-Combinations_II: phony || .
 
-build CMakeFiles/Coin-Combinations_II.dir/Dynamic_Programming/Coin-Combinations_II.cpp.obj: CXX_COMPILER__Coin-Combinations_II_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic$ Programming/Coin-Combinations_II.cpp || cmake_object_order_depends_target_Coin-Combinations_II
-  DEP_FILE = CMakeFiles\Coin-Combinations_II.dir\Dynamic_Programming\Coin-Combinations_II.cpp.obj.d
+build CMakeFiles/Coin-Combinations_II.dir/Dynamic-Programming/Coin-Combinations_II.cpp.obj: CXX_COMPILER__Coin-Combinations_II_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Coin-Combinations_II.cpp || cmake_object_order_depends_target_Coin-Combinations_II
+  DEP_FILE = CMakeFiles\Coin-Combinations_II.dir\Dynamic-Programming\Coin-Combinations_II.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Coin-Combinations_II.dir
-  OBJECT_FILE_DIR = CMakeFiles\Coin-Combinations_II.dir\Dynamic_Programming
+  OBJECT_FILE_DIR = CMakeFiles\Coin-Combinations_II.dir\Dynamic-Programming
 
 
 # =============================================================================
@@ -294,7 +294,7 @@ build CMakeFiles/Coin-Combinations_II.dir/Dynamic_Programming/Coin-Combinations_
 #############################################
 # Link the executable Coin-Combinations_II.exe
 
-build Coin-Combinations_II.exe: CXX_EXECUTABLE_LINKER__Coin-Combinations_II_Debug CMakeFiles/Coin-Combinations_II.dir/Dynamic_Programming/Coin-Combinations_II.cpp.obj
+build Coin-Combinations_II.exe: CXX_EXECUTABLE_LINKER__Coin-Combinations_II_Debug CMakeFiles/Coin-Combinations_II.dir/Dynamic-Programming/Coin-Combinations_II.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Coin-Combinations_II.dir
@@ -313,11 +313,11 @@ build Coin-Combinations_II.exe: CXX_EXECUTABLE_LINKER__Coin-Combinations_II_Debu
 
 build cmake_object_order_depends_target_Counting-Towers: phony || .
 
-build CMakeFiles/Counting-Towers.dir/Dynamic_Programming/Counting-Towers.cpp.obj: CXX_COMPILER__Counting-Towers_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic$ Programming/Counting-Towers.cpp || cmake_object_order_depends_target_Counting-Towers
-  DEP_FILE = CMakeFiles\Counting-Towers.dir\Dynamic_Programming\Counting-Towers.cpp.obj.d
+build CMakeFiles/Counting-Towers.dir/Dynamic-Programming/Counting-Towers.cpp.obj: CXX_COMPILER__Counting-Towers_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Counting-Towers.cpp || cmake_object_order_depends_target_Counting-Towers
+  DEP_FILE = CMakeFiles\Counting-Towers.dir\Dynamic-Programming\Counting-Towers.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Counting-Towers.dir
-  OBJECT_FILE_DIR = CMakeFiles\Counting-Towers.dir\Dynamic_Programming
+  OBJECT_FILE_DIR = CMakeFiles\Counting-Towers.dir\Dynamic-Programming
 
 
 # =============================================================================
@@ -327,7 +327,7 @@ build CMakeFiles/Counting-Towers.dir/Dynamic_Programming/Counting-Towers.cpp.obj
 #############################################
 # Link the executable Counting-Towers.exe
 
-build Counting-Towers.exe: CXX_EXECUTABLE_LINKER__Counting-Towers_Debug CMakeFiles/Counting-Towers.dir/Dynamic_Programming/Counting-Towers.cpp.obj
+build Counting-Towers.exe: CXX_EXECUTABLE_LINKER__Counting-Towers_Debug CMakeFiles/Counting-Towers.dir/Dynamic-Programming/Counting-Towers.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Counting-Towers.dir
@@ -346,11 +346,11 @@ build Counting-Towers.exe: CXX_EXECUTABLE_LINKER__Counting-Towers_Debug CMakeFil
 
 build cmake_object_order_depends_target_Edit-Distance: phony || .
 
-build CMakeFiles/Edit-Distance.dir/Dynamic_Programming/Edit-Distance.cpp.obj: CXX_COMPILER__Edit-Distance_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic$ Programming/Edit-Distance.cpp || cmake_object_order_depends_target_Edit-Distance
-  DEP_FILE = CMakeFiles\Edit-Distance.dir\Dynamic_Programming\Edit-Distance.cpp.obj.d
+build CMakeFiles/Edit-Distance.dir/Dynamic-Programming/Edit-Distance.cpp.obj: CXX_COMPILER__Edit-Distance_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Edit-Distance.cpp || cmake_object_order_depends_target_Edit-Distance
+  DEP_FILE = CMakeFiles\Edit-Distance.dir\Dynamic-Programming\Edit-Distance.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Edit-Distance.dir
-  OBJECT_FILE_DIR = CMakeFiles\Edit-Distance.dir\Dynamic_Programming
+  OBJECT_FILE_DIR = CMakeFiles\Edit-Distance.dir\Dynamic-Programming
 
 
 # =============================================================================
@@ -360,7 +360,7 @@ build CMakeFiles/Edit-Distance.dir/Dynamic_Programming/Edit-Distance.cpp.obj: CX
 #############################################
 # Link the executable Edit-Distance.exe
 
-build Edit-Distance.exe: CXX_EXECUTABLE_LINKER__Edit-Distance_Debug CMakeFiles/Edit-Distance.dir/Dynamic_Programming/Edit-Distance.cpp.obj
+build Edit-Distance.exe: CXX_EXECUTABLE_LINKER__Edit-Distance_Debug CMakeFiles/Edit-Distance.dir/Dynamic-Programming/Edit-Distance.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Edit-Distance.dir
@@ -379,11 +379,11 @@ build Edit-Distance.exe: CXX_EXECUTABLE_LINKER__Edit-Distance_Debug CMakeFiles/E
 
 build cmake_object_order_depends_target_Grid-Paths-I: phony || .
 
-build CMakeFiles/Grid-Paths-I.dir/Dynamic_Programming/Grid-Paths-I.cpp.obj: CXX_COMPILER__Grid-Paths-I_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic$ Programming/Grid-Paths-I.cpp || cmake_object_order_depends_target_Grid-Paths-I
-  DEP_FILE = CMakeFiles\Grid-Paths-I.dir\Dynamic_Programming\Grid-Paths-I.cpp.obj.d
+build CMakeFiles/Grid-Paths-I.dir/Dynamic-Programming/Grid-Paths-I.cpp.obj: CXX_COMPILER__Grid-Paths-I_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Grid-Paths-I.cpp || cmake_object_order_depends_target_Grid-Paths-I
+  DEP_FILE = CMakeFiles\Grid-Paths-I.dir\Dynamic-Programming\Grid-Paths-I.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Grid-Paths-I.dir
-  OBJECT_FILE_DIR = CMakeFiles\Grid-Paths-I.dir\Dynamic_Programming
+  OBJECT_FILE_DIR = CMakeFiles\Grid-Paths-I.dir\Dynamic-Programming
 
 
 # =============================================================================
@@ -393,7 +393,7 @@ build CMakeFiles/Grid-Paths-I.dir/Dynamic_Programming/Grid-Paths-I.cpp.obj: CXX_
 #############################################
 # Link the executable Grid-Paths-I.exe
 
-build Grid-Paths-I.exe: CXX_EXECUTABLE_LINKER__Grid-Paths-I_Debug CMakeFiles/Grid-Paths-I.dir/Dynamic_Programming/Grid-Paths-I.cpp.obj
+build Grid-Paths-I.exe: CXX_EXECUTABLE_LINKER__Grid-Paths-I_Debug CMakeFiles/Grid-Paths-I.dir/Dynamic-Programming/Grid-Paths-I.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Grid-Paths-I.dir
@@ -412,11 +412,11 @@ build Grid-Paths-I.exe: CXX_EXECUTABLE_LINKER__Grid-Paths-I_Debug CMakeFiles/Gri
 
 build cmake_object_order_depends_target_Longest-Common-Subsequence: phony || .
 
-build CMakeFiles/Longest-Common-Subsequence.dir/Dynamic_Programming/Longest-Common-Subsequence.cpp.obj: CXX_COMPILER__Longest-Common-Subsequence_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic$ Programming/Longest-Common-Subsequence.cpp || cmake_object_order_depends_target_Longest-Common-Subsequence
-  DEP_FILE = CMakeFiles\Longest-Common-Subsequence.dir\Dynamic_Programming\Longest-Common-Subsequence.cpp.obj.d
+build CMakeFiles/Longest-Common-Subsequence.dir/Dynamic-Programming/Longest-Common-Subsequence.cpp.obj: CXX_COMPILER__Longest-Common-Subsequence_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Longest-Common-Subsequence.cpp || cmake_object_order_depends_target_Longest-Common-Subsequence
+  DEP_FILE = CMakeFiles\Longest-Common-Subsequence.dir\Dynamic-Programming\Longest-Common-Subsequence.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Longest-Common-Subsequence.dir
-  OBJECT_FILE_DIR = CMakeFiles\Longest-Common-Subsequence.dir\Dynamic_Programming
+  OBJECT_FILE_DIR = CMakeFiles\Longest-Common-Subsequence.dir\Dynamic-Programming
 
 
 # =============================================================================
@@ -426,7 +426,7 @@ build CMakeFiles/Longest-Common-Subsequence.dir/Dynamic_Programming/Longest-Comm
 #############################################
 # Link the executable Longest-Common-Subsequence.exe
 
-build Longest-Common-Subsequence.exe: CXX_EXECUTABLE_LINKER__Longest-Common-Subsequence_Debug CMakeFiles/Longest-Common-Subsequence.dir/Dynamic_Programming/Longest-Common-Subsequence.cpp.obj
+build Longest-Common-Subsequence.exe: CXX_EXECUTABLE_LINKER__Longest-Common-Subsequence_Debug CMakeFiles/Longest-Common-Subsequence.dir/Dynamic-Programming/Longest-Common-Subsequence.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Longest-Common-Subsequence.dir
@@ -445,11 +445,11 @@ build Longest-Common-Subsequence.exe: CXX_EXECUTABLE_LINKER__Longest-Common-Subs
 
 build cmake_object_order_depends_target_Minimal-Grid-Path: phony || .
 
-build CMakeFiles/Minimal-Grid-Path.dir/Dynamic_Programming/Minimal-Grid-Path.cpp.obj: CXX_COMPILER__Minimal-Grid-Path_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic$ Programming/Minimal-Grid-Path.cpp || cmake_object_order_depends_target_Minimal-Grid-Path
-  DEP_FILE = CMakeFiles\Minimal-Grid-Path.dir\Dynamic_Programming\Minimal-Grid-Path.cpp.obj.d
+build CMakeFiles/Minimal-Grid-Path.dir/Dynamic-Programming/Minimal-Grid-Path.cpp.obj: CXX_COMPILER__Minimal-Grid-Path_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Minimal-Grid-Path.cpp || cmake_object_order_depends_target_Minimal-Grid-Path
+  DEP_FILE = CMakeFiles\Minimal-Grid-Path.dir\Dynamic-Programming\Minimal-Grid-Path.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Minimal-Grid-Path.dir
-  OBJECT_FILE_DIR = CMakeFiles\Minimal-Grid-Path.dir\Dynamic_Programming
+  OBJECT_FILE_DIR = CMakeFiles\Minimal-Grid-Path.dir\Dynamic-Programming
 
 
 # =============================================================================
@@ -459,7 +459,7 @@ build CMakeFiles/Minimal-Grid-Path.dir/Dynamic_Programming/Minimal-Grid-Path.cpp
 #############################################
 # Link the executable Minimal-Grid-Path.exe
 
-build Minimal-Grid-Path.exe: CXX_EXECUTABLE_LINKER__Minimal-Grid-Path_Debug CMakeFiles/Minimal-Grid-Path.dir/Dynamic_Programming/Minimal-Grid-Path.cpp.obj
+build Minimal-Grid-Path.exe: CXX_EXECUTABLE_LINKER__Minimal-Grid-Path_Debug CMakeFiles/Minimal-Grid-Path.dir/Dynamic-Programming/Minimal-Grid-Path.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Minimal-Grid-Path.dir
@@ -478,11 +478,11 @@ build Minimal-Grid-Path.exe: CXX_EXECUTABLE_LINKER__Minimal-Grid-Path_Debug CMak
 
 build cmake_object_order_depends_target_Money-Sums: phony || .
 
-build CMakeFiles/Money-Sums.dir/Dynamic_Programming/Money-Sums.cpp.obj: CXX_COMPILER__Money-Sums_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic$ Programming/Money-Sums.cpp || cmake_object_order_depends_target_Money-Sums
-  DEP_FILE = CMakeFiles\Money-Sums.dir\Dynamic_Programming\Money-Sums.cpp.obj.d
+build CMakeFiles/Money-Sums.dir/Dynamic-Programming/Money-Sums.cpp.obj: CXX_COMPILER__Money-Sums_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Money-Sums.cpp || cmake_object_order_depends_target_Money-Sums
+  DEP_FILE = CMakeFiles\Money-Sums.dir\Dynamic-Programming\Money-Sums.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Money-Sums.dir
-  OBJECT_FILE_DIR = CMakeFiles\Money-Sums.dir\Dynamic_Programming
+  OBJECT_FILE_DIR = CMakeFiles\Money-Sums.dir\Dynamic-Programming
 
 
 # =============================================================================
@@ -492,7 +492,7 @@ build CMakeFiles/Money-Sums.dir/Dynamic_Programming/Money-Sums.cpp.obj: CXX_COMP
 #############################################
 # Link the executable Money-Sums.exe
 
-build Money-Sums.exe: CXX_EXECUTABLE_LINKER__Money-Sums_Debug CMakeFiles/Money-Sums.dir/Dynamic_Programming/Money-Sums.cpp.obj
+build Money-Sums.exe: CXX_EXECUTABLE_LINKER__Money-Sums_Debug CMakeFiles/Money-Sums.dir/Dynamic-Programming/Money-Sums.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Money-Sums.dir
@@ -511,11 +511,11 @@ build Money-Sums.exe: CXX_EXECUTABLE_LINKER__Money-Sums_Debug CMakeFiles/Money-S
 
 build cmake_object_order_depends_target_Mountain-Range: phony || .
 
-build CMakeFiles/Mountain-Range.dir/Dynamic_Programming/Mountain-Range.cpp.obj: CXX_COMPILER__Mountain-Range_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic$ Programming/Mountain-Range.cpp || cmake_object_order_depends_target_Mountain-Range
-  DEP_FILE = CMakeFiles\Mountain-Range.dir\Dynamic_Programming\Mountain-Range.cpp.obj.d
+build CMakeFiles/Mountain-Range.dir/Dynamic-Programming/Mountain-Range.cpp.obj: CXX_COMPILER__Mountain-Range_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Mountain-Range.cpp || cmake_object_order_depends_target_Mountain-Range
+  DEP_FILE = CMakeFiles\Mountain-Range.dir\Dynamic-Programming\Mountain-Range.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Mountain-Range.dir
-  OBJECT_FILE_DIR = CMakeFiles\Mountain-Range.dir\Dynamic_Programming
+  OBJECT_FILE_DIR = CMakeFiles\Mountain-Range.dir\Dynamic-Programming
 
 
 # =============================================================================
@@ -525,7 +525,7 @@ build CMakeFiles/Mountain-Range.dir/Dynamic_Programming/Mountain-Range.cpp.obj: 
 #############################################
 # Link the executable Mountain-Range.exe
 
-build Mountain-Range.exe: CXX_EXECUTABLE_LINKER__Mountain-Range_Debug CMakeFiles/Mountain-Range.dir/Dynamic_Programming/Mountain-Range.cpp.obj
+build Mountain-Range.exe: CXX_EXECUTABLE_LINKER__Mountain-Range_Debug CMakeFiles/Mountain-Range.dir/Dynamic-Programming/Mountain-Range.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Mountain-Range.dir
@@ -544,11 +544,11 @@ build Mountain-Range.exe: CXX_EXECUTABLE_LINKER__Mountain-Range_Debug CMakeFiles
 
 build cmake_object_order_depends_target_Rectangle-Cutting: phony || .
 
-build CMakeFiles/Rectangle-Cutting.dir/Dynamic_Programming/Rectangle-Cutting.cpp.obj: CXX_COMPILER__Rectangle-Cutting_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic$ Programming/Rectangle-Cutting.cpp || cmake_object_order_depends_target_Rectangle-Cutting
-  DEP_FILE = CMakeFiles\Rectangle-Cutting.dir\Dynamic_Programming\Rectangle-Cutting.cpp.obj.d
+build CMakeFiles/Rectangle-Cutting.dir/Dynamic-Programming/Rectangle-Cutting.cpp.obj: CXX_COMPILER__Rectangle-Cutting_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Rectangle-Cutting.cpp || cmake_object_order_depends_target_Rectangle-Cutting
+  DEP_FILE = CMakeFiles\Rectangle-Cutting.dir\Dynamic-Programming\Rectangle-Cutting.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Rectangle-Cutting.dir
-  OBJECT_FILE_DIR = CMakeFiles\Rectangle-Cutting.dir\Dynamic_Programming
+  OBJECT_FILE_DIR = CMakeFiles\Rectangle-Cutting.dir\Dynamic-Programming
 
 
 # =============================================================================
@@ -558,7 +558,7 @@ build CMakeFiles/Rectangle-Cutting.dir/Dynamic_Programming/Rectangle-Cutting.cpp
 #############################################
 # Link the executable Rectangle-Cutting.exe
 
-build Rectangle-Cutting.exe: CXX_EXECUTABLE_LINKER__Rectangle-Cutting_Debug CMakeFiles/Rectangle-Cutting.dir/Dynamic_Programming/Rectangle-Cutting.cpp.obj
+build Rectangle-Cutting.exe: CXX_EXECUTABLE_LINKER__Rectangle-Cutting_Debug CMakeFiles/Rectangle-Cutting.dir/Dynamic-Programming/Rectangle-Cutting.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Rectangle-Cutting.dir
@@ -577,11 +577,11 @@ build Rectangle-Cutting.exe: CXX_EXECUTABLE_LINKER__Rectangle-Cutting_Debug CMak
 
 build cmake_object_order_depends_target_Removal-Game: phony || .
 
-build CMakeFiles/Removal-Game.dir/Dynamic_Programming/Removal-Game.cpp.obj: CXX_COMPILER__Removal-Game_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic$ Programming/Removal-Game.cpp || cmake_object_order_depends_target_Removal-Game
-  DEP_FILE = CMakeFiles\Removal-Game.dir\Dynamic_Programming\Removal-Game.cpp.obj.d
+build CMakeFiles/Removal-Game.dir/Dynamic-Programming/Removal-Game.cpp.obj: CXX_COMPILER__Removal-Game_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Removal-Game.cpp || cmake_object_order_depends_target_Removal-Game
+  DEP_FILE = CMakeFiles\Removal-Game.dir\Dynamic-Programming\Removal-Game.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Removal-Game.dir
-  OBJECT_FILE_DIR = CMakeFiles\Removal-Game.dir\Dynamic_Programming
+  OBJECT_FILE_DIR = CMakeFiles\Removal-Game.dir\Dynamic-Programming
 
 
 # =============================================================================
@@ -591,7 +591,7 @@ build CMakeFiles/Removal-Game.dir/Dynamic_Programming/Removal-Game.cpp.obj: CXX_
 #############################################
 # Link the executable Removal-Game.exe
 
-build Removal-Game.exe: CXX_EXECUTABLE_LINKER__Removal-Game_Debug CMakeFiles/Removal-Game.dir/Dynamic_Programming/Removal-Game.cpp.obj
+build Removal-Game.exe: CXX_EXECUTABLE_LINKER__Removal-Game_Debug CMakeFiles/Removal-Game.dir/Dynamic-Programming/Removal-Game.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Removal-Game.dir
@@ -610,11 +610,11 @@ build Removal-Game.exe: CXX_EXECUTABLE_LINKER__Removal-Game_Debug CMakeFiles/Rem
 
 build cmake_object_order_depends_target_Removing-Digits: phony || .
 
-build CMakeFiles/Removing-Digits.dir/Dynamic_Programming/Removing-Digits.cpp.obj: CXX_COMPILER__Removing-Digits_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic$ Programming/Removing-Digits.cpp || cmake_object_order_depends_target_Removing-Digits
-  DEP_FILE = CMakeFiles\Removing-Digits.dir\Dynamic_Programming\Removing-Digits.cpp.obj.d
+build CMakeFiles/Removing-Digits.dir/Dynamic-Programming/Removing-Digits.cpp.obj: CXX_COMPILER__Removing-Digits_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Removing-Digits.cpp || cmake_object_order_depends_target_Removing-Digits
+  DEP_FILE = CMakeFiles\Removing-Digits.dir\Dynamic-Programming\Removing-Digits.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Removing-Digits.dir
-  OBJECT_FILE_DIR = CMakeFiles\Removing-Digits.dir\Dynamic_Programming
+  OBJECT_FILE_DIR = CMakeFiles\Removing-Digits.dir\Dynamic-Programming
 
 
 # =============================================================================
@@ -624,7 +624,7 @@ build CMakeFiles/Removing-Digits.dir/Dynamic_Programming/Removing-Digits.cpp.obj
 #############################################
 # Link the executable Removing-Digits.exe
 
-build Removing-Digits.exe: CXX_EXECUTABLE_LINKER__Removing-Digits_Debug CMakeFiles/Removing-Digits.dir/Dynamic_Programming/Removing-Digits.cpp.obj
+build Removing-Digits.exe: CXX_EXECUTABLE_LINKER__Removing-Digits_Debug CMakeFiles/Removing-Digits.dir/Dynamic-Programming/Removing-Digits.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Removing-Digits.dir
@@ -643,11 +643,11 @@ build Removing-Digits.exe: CXX_EXECUTABLE_LINKER__Removing-Digits_Debug CMakeFil
 
 build cmake_object_order_depends_target_Two-Sets-II: phony || .
 
-build CMakeFiles/Two-Sets-II.dir/Dynamic_Programming/Two-Sets-II.cpp.obj: CXX_COMPILER__Two-Sets-II_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic$ Programming/Two-Sets-II.cpp || cmake_object_order_depends_target_Two-Sets-II
-  DEP_FILE = CMakeFiles\Two-Sets-II.dir\Dynamic_Programming\Two-Sets-II.cpp.obj.d
+build CMakeFiles/Two-Sets-II.dir/Dynamic-Programming/Two-Sets-II.cpp.obj: CXX_COMPILER__Two-Sets-II_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Two-Sets-II.cpp || cmake_object_order_depends_target_Two-Sets-II
+  DEP_FILE = CMakeFiles\Two-Sets-II.dir\Dynamic-Programming\Two-Sets-II.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Two-Sets-II.dir
-  OBJECT_FILE_DIR = CMakeFiles\Two-Sets-II.dir\Dynamic_Programming
+  OBJECT_FILE_DIR = CMakeFiles\Two-Sets-II.dir\Dynamic-Programming
 
 
 # =============================================================================
@@ -657,7 +657,7 @@ build CMakeFiles/Two-Sets-II.dir/Dynamic_Programming/Two-Sets-II.cpp.obj: CXX_CO
 #############################################
 # Link the executable Two-Sets-II.exe
 
-build Two-Sets-II.exe: CXX_EXECUTABLE_LINKER__Two-Sets-II_Debug CMakeFiles/Two-Sets-II.dir/Dynamic_Programming/Two-Sets-II.cpp.obj
+build Two-Sets-II.exe: CXX_EXECUTABLE_LINKER__Two-Sets-II_Debug CMakeFiles/Two-Sets-II.dir/Dynamic-Programming/Two-Sets-II.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Two-Sets-II.dir
@@ -709,11 +709,11 @@ build Point-Location-Test.exe: CXX_EXECUTABLE_LINKER__Point-Location-Test_Debug 
 
 build cmake_object_order_depends_target_Building-Roads: phony || .
 
-build CMakeFiles/Building-Roads.dir/Graph_Algorithms/Building-Roads.cpp.obj: CXX_COMPILER__Building-Roads_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Building-Roads.cpp || cmake_object_order_depends_target_Building-Roads
-  DEP_FILE = CMakeFiles\Building-Roads.dir\Graph_Algorithms\Building-Roads.cpp.obj.d
+build CMakeFiles/Building-Roads.dir/Graph-Algorithms/Building-Roads.cpp.obj: CXX_COMPILER__Building-Roads_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Building-Roads.cpp || cmake_object_order_depends_target_Building-Roads
+  DEP_FILE = CMakeFiles\Building-Roads.dir\Graph-Algorithms\Building-Roads.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Building-Roads.dir
-  OBJECT_FILE_DIR = CMakeFiles\Building-Roads.dir\Graph_Algorithms
+  OBJECT_FILE_DIR = CMakeFiles\Building-Roads.dir\Graph-Algorithms
 
 
 # =============================================================================
@@ -723,7 +723,7 @@ build CMakeFiles/Building-Roads.dir/Graph_Algorithms/Building-Roads.cpp.obj: CXX
 #############################################
 # Link the executable Building-Roads.exe
 
-build Building-Roads.exe: CXX_EXECUTABLE_LINKER__Building-Roads_Debug CMakeFiles/Building-Roads.dir/Graph_Algorithms/Building-Roads.cpp.obj
+build Building-Roads.exe: CXX_EXECUTABLE_LINKER__Building-Roads_Debug CMakeFiles/Building-Roads.dir/Graph-Algorithms/Building-Roads.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Building-Roads.dir
@@ -742,11 +742,11 @@ build Building-Roads.exe: CXX_EXECUTABLE_LINKER__Building-Roads_Debug CMakeFiles
 
 build cmake_object_order_depends_target_Building-Teams: phony || .
 
-build CMakeFiles/Building-Teams.dir/Graph_Algorithms/Building-Teams.cpp.obj: CXX_COMPILER__Building-Teams_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Building-Teams.cpp || cmake_object_order_depends_target_Building-Teams
-  DEP_FILE = CMakeFiles\Building-Teams.dir\Graph_Algorithms\Building-Teams.cpp.obj.d
+build CMakeFiles/Building-Teams.dir/Graph-Algorithms/Building-Teams.cpp.obj: CXX_COMPILER__Building-Teams_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Building-Teams.cpp || cmake_object_order_depends_target_Building-Teams
+  DEP_FILE = CMakeFiles\Building-Teams.dir\Graph-Algorithms\Building-Teams.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Building-Teams.dir
-  OBJECT_FILE_DIR = CMakeFiles\Building-Teams.dir\Graph_Algorithms
+  OBJECT_FILE_DIR = CMakeFiles\Building-Teams.dir\Graph-Algorithms
 
 
 # =============================================================================
@@ -756,7 +756,7 @@ build CMakeFiles/Building-Teams.dir/Graph_Algorithms/Building-Teams.cpp.obj: CXX
 #############################################
 # Link the executable Building-Teams.exe
 
-build Building-Teams.exe: CXX_EXECUTABLE_LINKER__Building-Teams_Debug CMakeFiles/Building-Teams.dir/Graph_Algorithms/Building-Teams.cpp.obj
+build Building-Teams.exe: CXX_EXECUTABLE_LINKER__Building-Teams_Debug CMakeFiles/Building-Teams.dir/Graph-Algorithms/Building-Teams.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Building-Teams.dir
@@ -775,11 +775,11 @@ build Building-Teams.exe: CXX_EXECUTABLE_LINKER__Building-Teams_Debug CMakeFiles
 
 build cmake_object_order_depends_target_Counting-Rooms: phony || .
 
-build CMakeFiles/Counting-Rooms.dir/Graph_Algorithms/Counting-Rooms.cpp.obj: CXX_COMPILER__Counting-Rooms_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Counting-Rooms.cpp || cmake_object_order_depends_target_Counting-Rooms
-  DEP_FILE = CMakeFiles\Counting-Rooms.dir\Graph_Algorithms\Counting-Rooms.cpp.obj.d
+build CMakeFiles/Counting-Rooms.dir/Graph-Algorithms/Counting-Rooms.cpp.obj: CXX_COMPILER__Counting-Rooms_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Counting-Rooms.cpp || cmake_object_order_depends_target_Counting-Rooms
+  DEP_FILE = CMakeFiles\Counting-Rooms.dir\Graph-Algorithms\Counting-Rooms.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Counting-Rooms.dir
-  OBJECT_FILE_DIR = CMakeFiles\Counting-Rooms.dir\Graph_Algorithms
+  OBJECT_FILE_DIR = CMakeFiles\Counting-Rooms.dir\Graph-Algorithms
 
 
 # =============================================================================
@@ -789,7 +789,7 @@ build CMakeFiles/Counting-Rooms.dir/Graph_Algorithms/Counting-Rooms.cpp.obj: CXX
 #############################################
 # Link the executable Counting-Rooms.exe
 
-build Counting-Rooms.exe: CXX_EXECUTABLE_LINKER__Counting-Rooms_Debug CMakeFiles/Counting-Rooms.dir/Graph_Algorithms/Counting-Rooms.cpp.obj
+build Counting-Rooms.exe: CXX_EXECUTABLE_LINKER__Counting-Rooms_Debug CMakeFiles/Counting-Rooms.dir/Graph-Algorithms/Counting-Rooms.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Counting-Rooms.dir
@@ -808,11 +808,11 @@ build Counting-Rooms.exe: CXX_EXECUTABLE_LINKER__Counting-Rooms_Debug CMakeFiles
 
 build cmake_object_order_depends_target_Course-Schedule: phony || .
 
-build CMakeFiles/Course-Schedule.dir/Graph_Algorithms/Course-Schedule.cpp.obj: CXX_COMPILER__Course-Schedule_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Course-Schedule.cpp || cmake_object_order_depends_target_Course-Schedule
-  DEP_FILE = CMakeFiles\Course-Schedule.dir\Graph_Algorithms\Course-Schedule.cpp.obj.d
+build CMakeFiles/Course-Schedule.dir/Graph-Algorithms/Course-Schedule.cpp.obj: CXX_COMPILER__Course-Schedule_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Course-Schedule.cpp || cmake_object_order_depends_target_Course-Schedule
+  DEP_FILE = CMakeFiles\Course-Schedule.dir\Graph-Algorithms\Course-Schedule.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Course-Schedule.dir
-  OBJECT_FILE_DIR = CMakeFiles\Course-Schedule.dir\Graph_Algorithms
+  OBJECT_FILE_DIR = CMakeFiles\Course-Schedule.dir\Graph-Algorithms
 
 
 # =============================================================================
@@ -822,7 +822,7 @@ build CMakeFiles/Course-Schedule.dir/Graph_Algorithms/Course-Schedule.cpp.obj: C
 #############################################
 # Link the executable Course-Schedule.exe
 
-build Course-Schedule.exe: CXX_EXECUTABLE_LINKER__Course-Schedule_Debug CMakeFiles/Course-Schedule.dir/Graph_Algorithms/Course-Schedule.cpp.obj
+build Course-Schedule.exe: CXX_EXECUTABLE_LINKER__Course-Schedule_Debug CMakeFiles/Course-Schedule.dir/Graph-Algorithms/Course-Schedule.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Course-Schedule.dir
@@ -841,11 +841,11 @@ build Course-Schedule.exe: CXX_EXECUTABLE_LINKER__Course-Schedule_Debug CMakeFil
 
 build cmake_object_order_depends_target_Flight-Routes-Check: phony || .
 
-build CMakeFiles/Flight-Routes-Check.dir/Graph_Algorithms/Flight-Routes-Check.cpp.obj: CXX_COMPILER__Flight-Routes-Check_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Flight-Routes-Check.cpp || cmake_object_order_depends_target_Flight-Routes-Check
-  DEP_FILE = CMakeFiles\Flight-Routes-Check.dir\Graph_Algorithms\Flight-Routes-Check.cpp.obj.d
+build CMakeFiles/Flight-Routes-Check.dir/Graph-Algorithms/Flight-Routes-Check.cpp.obj: CXX_COMPILER__Flight-Routes-Check_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Flight-Routes-Check.cpp || cmake_object_order_depends_target_Flight-Routes-Check
+  DEP_FILE = CMakeFiles\Flight-Routes-Check.dir\Graph-Algorithms\Flight-Routes-Check.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Flight-Routes-Check.dir
-  OBJECT_FILE_DIR = CMakeFiles\Flight-Routes-Check.dir\Graph_Algorithms
+  OBJECT_FILE_DIR = CMakeFiles\Flight-Routes-Check.dir\Graph-Algorithms
 
 
 # =============================================================================
@@ -855,7 +855,7 @@ build CMakeFiles/Flight-Routes-Check.dir/Graph_Algorithms/Flight-Routes-Check.cp
 #############################################
 # Link the executable Flight-Routes-Check.exe
 
-build Flight-Routes-Check.exe: CXX_EXECUTABLE_LINKER__Flight-Routes-Check_Debug CMakeFiles/Flight-Routes-Check.dir/Graph_Algorithms/Flight-Routes-Check.cpp.obj
+build Flight-Routes-Check.exe: CXX_EXECUTABLE_LINKER__Flight-Routes-Check_Debug CMakeFiles/Flight-Routes-Check.dir/Graph-Algorithms/Flight-Routes-Check.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Flight-Routes-Check.dir
@@ -874,11 +874,11 @@ build Flight-Routes-Check.exe: CXX_EXECUTABLE_LINKER__Flight-Routes-Check_Debug 
 
 build cmake_object_order_depends_target_Game-Routes: phony || .
 
-build CMakeFiles/Game-Routes.dir/Graph_Algorithms/Game-Routes.cpp.obj: CXX_COMPILER__Game-Routes_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Game-Routes.cpp || cmake_object_order_depends_target_Game-Routes
-  DEP_FILE = CMakeFiles\Game-Routes.dir\Graph_Algorithms\Game-Routes.cpp.obj.d
+build CMakeFiles/Game-Routes.dir/Graph-Algorithms/Game-Routes.cpp.obj: CXX_COMPILER__Game-Routes_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Game-Routes.cpp || cmake_object_order_depends_target_Game-Routes
+  DEP_FILE = CMakeFiles\Game-Routes.dir\Graph-Algorithms\Game-Routes.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Game-Routes.dir
-  OBJECT_FILE_DIR = CMakeFiles\Game-Routes.dir\Graph_Algorithms
+  OBJECT_FILE_DIR = CMakeFiles\Game-Routes.dir\Graph-Algorithms
 
 
 # =============================================================================
@@ -888,7 +888,7 @@ build CMakeFiles/Game-Routes.dir/Graph_Algorithms/Game-Routes.cpp.obj: CXX_COMPI
 #############################################
 # Link the executable Game-Routes.exe
 
-build Game-Routes.exe: CXX_EXECUTABLE_LINKER__Game-Routes_Debug CMakeFiles/Game-Routes.dir/Graph_Algorithms/Game-Routes.cpp.obj
+build Game-Routes.exe: CXX_EXECUTABLE_LINKER__Game-Routes_Debug CMakeFiles/Game-Routes.dir/Graph-Algorithms/Game-Routes.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Game-Routes.dir
@@ -907,11 +907,11 @@ build Game-Routes.exe: CXX_EXECUTABLE_LINKER__Game-Routes_Debug CMakeFiles/Game-
 
 build cmake_object_order_depends_target_Investigation: phony || .
 
-build CMakeFiles/Investigation.dir/Graph_Algorithms/Investigation.cpp.obj: CXX_COMPILER__Investigation_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Investigation.cpp || cmake_object_order_depends_target_Investigation
-  DEP_FILE = CMakeFiles\Investigation.dir\Graph_Algorithms\Investigation.cpp.obj.d
+build CMakeFiles/Investigation.dir/Graph-Algorithms/Investigation.cpp.obj: CXX_COMPILER__Investigation_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Investigation.cpp || cmake_object_order_depends_target_Investigation
+  DEP_FILE = CMakeFiles\Investigation.dir\Graph-Algorithms\Investigation.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Investigation.dir
-  OBJECT_FILE_DIR = CMakeFiles\Investigation.dir\Graph_Algorithms
+  OBJECT_FILE_DIR = CMakeFiles\Investigation.dir\Graph-Algorithms
 
 
 # =============================================================================
@@ -921,7 +921,7 @@ build CMakeFiles/Investigation.dir/Graph_Algorithms/Investigation.cpp.obj: CXX_C
 #############################################
 # Link the executable Investigation.exe
 
-build Investigation.exe: CXX_EXECUTABLE_LINKER__Investigation_Debug CMakeFiles/Investigation.dir/Graph_Algorithms/Investigation.cpp.obj
+build Investigation.exe: CXX_EXECUTABLE_LINKER__Investigation_Debug CMakeFiles/Investigation.dir/Graph-Algorithms/Investigation.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Investigation.dir
@@ -940,11 +940,11 @@ build Investigation.exe: CXX_EXECUTABLE_LINKER__Investigation_Debug CMakeFiles/I
 
 build cmake_object_order_depends_target_Longest-Flight-Route: phony || .
 
-build CMakeFiles/Longest-Flight-Route.dir/Graph_Algorithms/Longest-Flight-Route.cpp.obj: CXX_COMPILER__Longest-Flight-Route_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Longest-Flight-Route.cpp || cmake_object_order_depends_target_Longest-Flight-Route
-  DEP_FILE = CMakeFiles\Longest-Flight-Route.dir\Graph_Algorithms\Longest-Flight-Route.cpp.obj.d
+build CMakeFiles/Longest-Flight-Route.dir/Graph-Algorithms/Longest-Flight-Route.cpp.obj: CXX_COMPILER__Longest-Flight-Route_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Longest-Flight-Route.cpp || cmake_object_order_depends_target_Longest-Flight-Route
+  DEP_FILE = CMakeFiles\Longest-Flight-Route.dir\Graph-Algorithms\Longest-Flight-Route.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Longest-Flight-Route.dir
-  OBJECT_FILE_DIR = CMakeFiles\Longest-Flight-Route.dir\Graph_Algorithms
+  OBJECT_FILE_DIR = CMakeFiles\Longest-Flight-Route.dir\Graph-Algorithms
 
 
 # =============================================================================
@@ -954,7 +954,7 @@ build CMakeFiles/Longest-Flight-Route.dir/Graph_Algorithms/Longest-Flight-Route.
 #############################################
 # Link the executable Longest-Flight-Route.exe
 
-build Longest-Flight-Route.exe: CXX_EXECUTABLE_LINKER__Longest-Flight-Route_Debug CMakeFiles/Longest-Flight-Route.dir/Graph_Algorithms/Longest-Flight-Route.cpp.obj
+build Longest-Flight-Route.exe: CXX_EXECUTABLE_LINKER__Longest-Flight-Route_Debug CMakeFiles/Longest-Flight-Route.dir/Graph-Algorithms/Longest-Flight-Route.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Longest-Flight-Route.dir
@@ -973,11 +973,11 @@ build Longest-Flight-Route.exe: CXX_EXECUTABLE_LINKER__Longest-Flight-Route_Debu
 
 build cmake_object_order_depends_target_Message-Route: phony || .
 
-build CMakeFiles/Message-Route.dir/Graph_Algorithms/Message-Route.cpp.obj: CXX_COMPILER__Message-Route_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Message-Route.cpp || cmake_object_order_depends_target_Message-Route
-  DEP_FILE = CMakeFiles\Message-Route.dir\Graph_Algorithms\Message-Route.cpp.obj.d
+build CMakeFiles/Message-Route.dir/Graph-Algorithms/Message-Route.cpp.obj: CXX_COMPILER__Message-Route_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Message-Route.cpp || cmake_object_order_depends_target_Message-Route
+  DEP_FILE = CMakeFiles\Message-Route.dir\Graph-Algorithms\Message-Route.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Message-Route.dir
-  OBJECT_FILE_DIR = CMakeFiles\Message-Route.dir\Graph_Algorithms
+  OBJECT_FILE_DIR = CMakeFiles\Message-Route.dir\Graph-Algorithms
 
 
 # =============================================================================
@@ -987,7 +987,7 @@ build CMakeFiles/Message-Route.dir/Graph_Algorithms/Message-Route.cpp.obj: CXX_C
 #############################################
 # Link the executable Message-Route.exe
 
-build Message-Route.exe: CXX_EXECUTABLE_LINKER__Message-Route_Debug CMakeFiles/Message-Route.dir/Graph_Algorithms/Message-Route.cpp.obj
+build Message-Route.exe: CXX_EXECUTABLE_LINKER__Message-Route_Debug CMakeFiles/Message-Route.dir/Graph-Algorithms/Message-Route.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Message-Route.dir
@@ -1006,11 +1006,11 @@ build Message-Route.exe: CXX_EXECUTABLE_LINKER__Message-Route_Debug CMakeFiles/M
 
 build cmake_object_order_depends_target_Monsters: phony || .
 
-build CMakeFiles/Monsters.dir/Graph_Algorithms/Monsters.cpp.obj: CXX_COMPILER__Monsters_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Monsters.cpp || cmake_object_order_depends_target_Monsters
-  DEP_FILE = CMakeFiles\Monsters.dir\Graph_Algorithms\Monsters.cpp.obj.d
+build CMakeFiles/Monsters.dir/Graph-Algorithms/Monsters.cpp.obj: CXX_COMPILER__Monsters_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Monsters.cpp || cmake_object_order_depends_target_Monsters
+  DEP_FILE = CMakeFiles\Monsters.dir\Graph-Algorithms\Monsters.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Monsters.dir
-  OBJECT_FILE_DIR = CMakeFiles\Monsters.dir\Graph_Algorithms
+  OBJECT_FILE_DIR = CMakeFiles\Monsters.dir\Graph-Algorithms
 
 
 # =============================================================================
@@ -1020,7 +1020,7 @@ build CMakeFiles/Monsters.dir/Graph_Algorithms/Monsters.cpp.obj: CXX_COMPILER__M
 #############################################
 # Link the executable Monsters.exe
 
-build Monsters.exe: CXX_EXECUTABLE_LINKER__Monsters_Debug CMakeFiles/Monsters.dir/Graph_Algorithms/Monsters.cpp.obj
+build Monsters.exe: CXX_EXECUTABLE_LINKER__Monsters_Debug CMakeFiles/Monsters.dir/Graph-Algorithms/Monsters.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Monsters.dir
@@ -1039,11 +1039,11 @@ build Monsters.exe: CXX_EXECUTABLE_LINKER__Monsters_Debug CMakeFiles/Monsters.di
 
 build cmake_object_order_depends_target_Planets-And-Kingdoms: phony || .
 
-build CMakeFiles/Planets-And-Kingdoms.dir/Graph_Algorithms/Planets-And-Kingdoms.cpp.obj: CXX_COMPILER__Planets-And-Kingdoms_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Planets-And-Kingdoms.cpp || cmake_object_order_depends_target_Planets-And-Kingdoms
-  DEP_FILE = CMakeFiles\Planets-And-Kingdoms.dir\Graph_Algorithms\Planets-And-Kingdoms.cpp.obj.d
+build CMakeFiles/Planets-And-Kingdoms.dir/Graph-Algorithms/Planets-And-Kingdoms.cpp.obj: CXX_COMPILER__Planets-And-Kingdoms_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Planets-And-Kingdoms.cpp || cmake_object_order_depends_target_Planets-And-Kingdoms
+  DEP_FILE = CMakeFiles\Planets-And-Kingdoms.dir\Graph-Algorithms\Planets-And-Kingdoms.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Planets-And-Kingdoms.dir
-  OBJECT_FILE_DIR = CMakeFiles\Planets-And-Kingdoms.dir\Graph_Algorithms
+  OBJECT_FILE_DIR = CMakeFiles\Planets-And-Kingdoms.dir\Graph-Algorithms
 
 
 # =============================================================================
@@ -1053,7 +1053,7 @@ build CMakeFiles/Planets-And-Kingdoms.dir/Graph_Algorithms/Planets-And-Kingdoms.
 #############################################
 # Link the executable Planets-And-Kingdoms.exe
 
-build Planets-And-Kingdoms.exe: CXX_EXECUTABLE_LINKER__Planets-And-Kingdoms_Debug CMakeFiles/Planets-And-Kingdoms.dir/Graph_Algorithms/Planets-And-Kingdoms.cpp.obj
+build Planets-And-Kingdoms.exe: CXX_EXECUTABLE_LINKER__Planets-And-Kingdoms_Debug CMakeFiles/Planets-And-Kingdoms.dir/Graph-Algorithms/Planets-And-Kingdoms.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Planets-And-Kingdoms.dir
@@ -1072,11 +1072,11 @@ build Planets-And-Kingdoms.exe: CXX_EXECUTABLE_LINKER__Planets-And-Kingdoms_Debu
 
 build cmake_object_order_depends_target_Road-Construction: phony || .
 
-build CMakeFiles/Road-Construction.dir/Graph_Algorithms/Road-Construction.cpp.obj: CXX_COMPILER__Road-Construction_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Road-Construction.cpp || cmake_object_order_depends_target_Road-Construction
-  DEP_FILE = CMakeFiles\Road-Construction.dir\Graph_Algorithms\Road-Construction.cpp.obj.d
+build CMakeFiles/Road-Construction.dir/Graph-Algorithms/Road-Construction.cpp.obj: CXX_COMPILER__Road-Construction_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Road-Construction.cpp || cmake_object_order_depends_target_Road-Construction
+  DEP_FILE = CMakeFiles\Road-Construction.dir\Graph-Algorithms\Road-Construction.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Road-Construction.dir
-  OBJECT_FILE_DIR = CMakeFiles\Road-Construction.dir\Graph_Algorithms
+  OBJECT_FILE_DIR = CMakeFiles\Road-Construction.dir\Graph-Algorithms
 
 
 # =============================================================================
@@ -1086,7 +1086,7 @@ build CMakeFiles/Road-Construction.dir/Graph_Algorithms/Road-Construction.cpp.ob
 #############################################
 # Link the executable Road-Construction.exe
 
-build Road-Construction.exe: CXX_EXECUTABLE_LINKER__Road-Construction_Debug CMakeFiles/Road-Construction.dir/Graph_Algorithms/Road-Construction.cpp.obj
+build Road-Construction.exe: CXX_EXECUTABLE_LINKER__Road-Construction_Debug CMakeFiles/Road-Construction.dir/Graph-Algorithms/Road-Construction.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Road-Construction.dir
@@ -1105,11 +1105,11 @@ build Road-Construction.exe: CXX_EXECUTABLE_LINKER__Road-Construction_Debug CMak
 
 build cmake_object_order_depends_target_Round-Trip: phony || .
 
-build CMakeFiles/Round-Trip.dir/Graph_Algorithms/Round-Trip.cpp.obj: CXX_COMPILER__Round-Trip_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Round-Trip.cpp || cmake_object_order_depends_target_Round-Trip
-  DEP_FILE = CMakeFiles\Round-Trip.dir\Graph_Algorithms\Round-Trip.cpp.obj.d
+build CMakeFiles/Round-Trip.dir/Graph-Algorithms/Round-Trip.cpp.obj: CXX_COMPILER__Round-Trip_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Round-Trip.cpp || cmake_object_order_depends_target_Round-Trip
+  DEP_FILE = CMakeFiles\Round-Trip.dir\Graph-Algorithms\Round-Trip.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Round-Trip.dir
-  OBJECT_FILE_DIR = CMakeFiles\Round-Trip.dir\Graph_Algorithms
+  OBJECT_FILE_DIR = CMakeFiles\Round-Trip.dir\Graph-Algorithms
 
 
 # =============================================================================
@@ -1119,7 +1119,7 @@ build CMakeFiles/Round-Trip.dir/Graph_Algorithms/Round-Trip.cpp.obj: CXX_COMPILE
 #############################################
 # Link the executable Round-Trip.exe
 
-build Round-Trip.exe: CXX_EXECUTABLE_LINKER__Round-Trip_Debug CMakeFiles/Round-Trip.dir/Graph_Algorithms/Round-Trip.cpp.obj
+build Round-Trip.exe: CXX_EXECUTABLE_LINKER__Round-Trip_Debug CMakeFiles/Round-Trip.dir/Graph-Algorithms/Round-Trip.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Round-Trip.dir
@@ -1138,11 +1138,11 @@ build Round-Trip.exe: CXX_EXECUTABLE_LINKER__Round-Trip_Debug CMakeFiles/Round-T
 
 build cmake_object_order_depends_target_Shortest-Routes-I: phony || .
 
-build CMakeFiles/Shortest-Routes-I.dir/Graph_Algorithms/Shortest-Routes-I.cpp.obj: CXX_COMPILER__Shortest-Routes-I_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Shortest-Routes-I.cpp || cmake_object_order_depends_target_Shortest-Routes-I
-  DEP_FILE = CMakeFiles\Shortest-Routes-I.dir\Graph_Algorithms\Shortest-Routes-I.cpp.obj.d
+build CMakeFiles/Shortest-Routes-I.dir/Graph-Algorithms/Shortest-Routes-I.cpp.obj: CXX_COMPILER__Shortest-Routes-I_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Shortest-Routes-I.cpp || cmake_object_order_depends_target_Shortest-Routes-I
+  DEP_FILE = CMakeFiles\Shortest-Routes-I.dir\Graph-Algorithms\Shortest-Routes-I.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Shortest-Routes-I.dir
-  OBJECT_FILE_DIR = CMakeFiles\Shortest-Routes-I.dir\Graph_Algorithms
+  OBJECT_FILE_DIR = CMakeFiles\Shortest-Routes-I.dir\Graph-Algorithms
 
 
 # =============================================================================
@@ -1152,7 +1152,7 @@ build CMakeFiles/Shortest-Routes-I.dir/Graph_Algorithms/Shortest-Routes-I.cpp.ob
 #############################################
 # Link the executable Shortest-Routes-I.exe
 
-build Shortest-Routes-I.exe: CXX_EXECUTABLE_LINKER__Shortest-Routes-I_Debug CMakeFiles/Shortest-Routes-I.dir/Graph_Algorithms/Shortest-Routes-I.cpp.obj
+build Shortest-Routes-I.exe: CXX_EXECUTABLE_LINKER__Shortest-Routes-I_Debug CMakeFiles/Shortest-Routes-I.dir/Graph-Algorithms/Shortest-Routes-I.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Shortest-Routes-I.dir
@@ -1171,11 +1171,11 @@ build Shortest-Routes-I.exe: CXX_EXECUTABLE_LINKER__Shortest-Routes-I_Debug CMak
 
 build cmake_object_order_depends_target_Shortest-Routes-II: phony || .
 
-build CMakeFiles/Shortest-Routes-II.dir/Graph_Algorithms/Shortest-Routes-II.cpp.obj: CXX_COMPILER__Shortest-Routes-II_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph$ Algorithms/Shortest-Routes-II.cpp || cmake_object_order_depends_target_Shortest-Routes-II
-  DEP_FILE = CMakeFiles\Shortest-Routes-II.dir\Graph_Algorithms\Shortest-Routes-II.cpp.obj.d
+build CMakeFiles/Shortest-Routes-II.dir/Graph-Algorithms/Shortest-Routes-II.cpp.obj: CXX_COMPILER__Shortest-Routes-II_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Shortest-Routes-II.cpp || cmake_object_order_depends_target_Shortest-Routes-II
+  DEP_FILE = CMakeFiles\Shortest-Routes-II.dir\Graph-Algorithms\Shortest-Routes-II.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Shortest-Routes-II.dir
-  OBJECT_FILE_DIR = CMakeFiles\Shortest-Routes-II.dir\Graph_Algorithms
+  OBJECT_FILE_DIR = CMakeFiles\Shortest-Routes-II.dir\Graph-Algorithms
 
 
 # =============================================================================
@@ -1185,7 +1185,7 @@ build CMakeFiles/Shortest-Routes-II.dir/Graph_Algorithms/Shortest-Routes-II.cpp.
 #############################################
 # Link the executable Shortest-Routes-II.exe
 
-build Shortest-Routes-II.exe: CXX_EXECUTABLE_LINKER__Shortest-Routes-II_Debug CMakeFiles/Shortest-Routes-II.dir/Graph_Algorithms/Shortest-Routes-II.cpp.obj
+build Shortest-Routes-II.exe: CXX_EXECUTABLE_LINKER__Shortest-Routes-II_Debug CMakeFiles/Shortest-Routes-II.dir/Graph-Algorithms/Shortest-Routes-II.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Shortest-Routes-II.dir
@@ -1204,11 +1204,11 @@ build Shortest-Routes-II.exe: CXX_EXECUTABLE_LINKER__Shortest-Routes-II_Debug CM
 
 build cmake_object_order_depends_target_Apple-Division: phony || .
 
-build CMakeFiles/Apple-Division.dir/Introductory_Problems/Apple-Division.cpp.obj: CXX_COMPILER__Apple-Division_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Apple-Division.cpp || cmake_object_order_depends_target_Apple-Division
-  DEP_FILE = CMakeFiles\Apple-Division.dir\Introductory_Problems\Apple-Division.cpp.obj.d
+build CMakeFiles/Apple-Division.dir/Introductory-Problems/Apple-Division.cpp.obj: CXX_COMPILER__Apple-Division_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Apple-Division.cpp || cmake_object_order_depends_target_Apple-Division
+  DEP_FILE = CMakeFiles\Apple-Division.dir\Introductory-Problems\Apple-Division.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Apple-Division.dir
-  OBJECT_FILE_DIR = CMakeFiles\Apple-Division.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Apple-Division.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1218,7 +1218,7 @@ build CMakeFiles/Apple-Division.dir/Introductory_Problems/Apple-Division.cpp.obj
 #############################################
 # Link the executable Apple-Division.exe
 
-build Apple-Division.exe: CXX_EXECUTABLE_LINKER__Apple-Division_Debug CMakeFiles/Apple-Division.dir/Introductory_Problems/Apple-Division.cpp.obj
+build Apple-Division.exe: CXX_EXECUTABLE_LINKER__Apple-Division_Debug CMakeFiles/Apple-Division.dir/Introductory-Problems/Apple-Division.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Apple-Division.dir
@@ -1237,11 +1237,11 @@ build Apple-Division.exe: CXX_EXECUTABLE_LINKER__Apple-Division_Debug CMakeFiles
 
 build cmake_object_order_depends_target_Bit-Strings: phony || .
 
-build CMakeFiles/Bit-Strings.dir/Introductory_Problems/Bit-Strings.cpp.obj: CXX_COMPILER__Bit-Strings_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Bit-Strings.cpp || cmake_object_order_depends_target_Bit-Strings
-  DEP_FILE = CMakeFiles\Bit-Strings.dir\Introductory_Problems\Bit-Strings.cpp.obj.d
+build CMakeFiles/Bit-Strings.dir/Introductory-Problems/Bit-Strings.cpp.obj: CXX_COMPILER__Bit-Strings_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Bit-Strings.cpp || cmake_object_order_depends_target_Bit-Strings
+  DEP_FILE = CMakeFiles\Bit-Strings.dir\Introductory-Problems\Bit-Strings.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Bit-Strings.dir
-  OBJECT_FILE_DIR = CMakeFiles\Bit-Strings.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Bit-Strings.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1251,7 +1251,7 @@ build CMakeFiles/Bit-Strings.dir/Introductory_Problems/Bit-Strings.cpp.obj: CXX_
 #############################################
 # Link the executable Bit-Strings.exe
 
-build Bit-Strings.exe: CXX_EXECUTABLE_LINKER__Bit-Strings_Debug CMakeFiles/Bit-Strings.dir/Introductory_Problems/Bit-Strings.cpp.obj
+build Bit-Strings.exe: CXX_EXECUTABLE_LINKER__Bit-Strings_Debug CMakeFiles/Bit-Strings.dir/Introductory-Problems/Bit-Strings.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Bit-Strings.dir
@@ -1270,11 +1270,11 @@ build Bit-Strings.exe: CXX_EXECUTABLE_LINKER__Bit-Strings_Debug CMakeFiles/Bit-S
 
 build cmake_object_order_depends_target_Chessboard-And-Queens: phony || .
 
-build CMakeFiles/Chessboard-And-Queens.dir/Introductory_Problems/Chessboard-And-Queens.cpp.obj: CXX_COMPILER__Chessboard-And-Queens_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Chessboard-And-Queens.cpp || cmake_object_order_depends_target_Chessboard-And-Queens
-  DEP_FILE = CMakeFiles\Chessboard-And-Queens.dir\Introductory_Problems\Chessboard-And-Queens.cpp.obj.d
+build CMakeFiles/Chessboard-And-Queens.dir/Introductory-Problems/Chessboard-And-Queens.cpp.obj: CXX_COMPILER__Chessboard-And-Queens_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Chessboard-And-Queens.cpp || cmake_object_order_depends_target_Chessboard-And-Queens
+  DEP_FILE = CMakeFiles\Chessboard-And-Queens.dir\Introductory-Problems\Chessboard-And-Queens.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Chessboard-And-Queens.dir
-  OBJECT_FILE_DIR = CMakeFiles\Chessboard-And-Queens.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Chessboard-And-Queens.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1284,7 +1284,7 @@ build CMakeFiles/Chessboard-And-Queens.dir/Introductory_Problems/Chessboard-And-
 #############################################
 # Link the executable Chessboard-And-Queens.exe
 
-build Chessboard-And-Queens.exe: CXX_EXECUTABLE_LINKER__Chessboard-And-Queens_Debug CMakeFiles/Chessboard-And-Queens.dir/Introductory_Problems/Chessboard-And-Queens.cpp.obj
+build Chessboard-And-Queens.exe: CXX_EXECUTABLE_LINKER__Chessboard-And-Queens_Debug CMakeFiles/Chessboard-And-Queens.dir/Introductory-Problems/Chessboard-And-Queens.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Chessboard-And-Queens.dir
@@ -1303,11 +1303,11 @@ build Chessboard-And-Queens.exe: CXX_EXECUTABLE_LINKER__Chessboard-And-Queens_De
 
 build cmake_object_order_depends_target_Coin-Piles: phony || .
 
-build CMakeFiles/Coin-Piles.dir/Introductory_Problems/Coin-Piles.cpp.obj: CXX_COMPILER__Coin-Piles_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Coin-Piles.cpp || cmake_object_order_depends_target_Coin-Piles
-  DEP_FILE = CMakeFiles\Coin-Piles.dir\Introductory_Problems\Coin-Piles.cpp.obj.d
+build CMakeFiles/Coin-Piles.dir/Introductory-Problems/Coin-Piles.cpp.obj: CXX_COMPILER__Coin-Piles_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Coin-Piles.cpp || cmake_object_order_depends_target_Coin-Piles
+  DEP_FILE = CMakeFiles\Coin-Piles.dir\Introductory-Problems\Coin-Piles.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Coin-Piles.dir
-  OBJECT_FILE_DIR = CMakeFiles\Coin-Piles.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Coin-Piles.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1317,7 +1317,7 @@ build CMakeFiles/Coin-Piles.dir/Introductory_Problems/Coin-Piles.cpp.obj: CXX_CO
 #############################################
 # Link the executable Coin-Piles.exe
 
-build Coin-Piles.exe: CXX_EXECUTABLE_LINKER__Coin-Piles_Debug CMakeFiles/Coin-Piles.dir/Introductory_Problems/Coin-Piles.cpp.obj
+build Coin-Piles.exe: CXX_EXECUTABLE_LINKER__Coin-Piles_Debug CMakeFiles/Coin-Piles.dir/Introductory-Problems/Coin-Piles.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Coin-Piles.dir
@@ -1336,11 +1336,11 @@ build Coin-Piles.exe: CXX_EXECUTABLE_LINKER__Coin-Piles_Debug CMakeFiles/Coin-Pi
 
 build cmake_object_order_depends_target_Creating-Strings: phony || .
 
-build CMakeFiles/Creating-Strings.dir/Introductory_Problems/Creating-Strings.cpp.obj: CXX_COMPILER__Creating-Strings_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Creating-Strings.cpp || cmake_object_order_depends_target_Creating-Strings
-  DEP_FILE = CMakeFiles\Creating-Strings.dir\Introductory_Problems\Creating-Strings.cpp.obj.d
+build CMakeFiles/Creating-Strings.dir/Introductory-Problems/Creating-Strings.cpp.obj: CXX_COMPILER__Creating-Strings_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Creating-Strings.cpp || cmake_object_order_depends_target_Creating-Strings
+  DEP_FILE = CMakeFiles\Creating-Strings.dir\Introductory-Problems\Creating-Strings.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Creating-Strings.dir
-  OBJECT_FILE_DIR = CMakeFiles\Creating-Strings.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Creating-Strings.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1350,7 +1350,7 @@ build CMakeFiles/Creating-Strings.dir/Introductory_Problems/Creating-Strings.cpp
 #############################################
 # Link the executable Creating-Strings.exe
 
-build Creating-Strings.exe: CXX_EXECUTABLE_LINKER__Creating-Strings_Debug CMakeFiles/Creating-Strings.dir/Introductory_Problems/Creating-Strings.cpp.obj
+build Creating-Strings.exe: CXX_EXECUTABLE_LINKER__Creating-Strings_Debug CMakeFiles/Creating-Strings.dir/Introductory-Problems/Creating-Strings.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Creating-Strings.dir
@@ -1369,11 +1369,11 @@ build Creating-Strings.exe: CXX_EXECUTABLE_LINKER__Creating-Strings_Debug CMakeF
 
 build cmake_object_order_depends_target_Digit-Queries: phony || .
 
-build CMakeFiles/Digit-Queries.dir/Introductory_Problems/Digit-Queries.cpp.obj: CXX_COMPILER__Digit-Queries_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Digit-Queries.cpp || cmake_object_order_depends_target_Digit-Queries
-  DEP_FILE = CMakeFiles\Digit-Queries.dir\Introductory_Problems\Digit-Queries.cpp.obj.d
+build CMakeFiles/Digit-Queries.dir/Introductory-Problems/Digit-Queries.cpp.obj: CXX_COMPILER__Digit-Queries_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Digit-Queries.cpp || cmake_object_order_depends_target_Digit-Queries
+  DEP_FILE = CMakeFiles\Digit-Queries.dir\Introductory-Problems\Digit-Queries.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Digit-Queries.dir
-  OBJECT_FILE_DIR = CMakeFiles\Digit-Queries.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Digit-Queries.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1383,7 +1383,7 @@ build CMakeFiles/Digit-Queries.dir/Introductory_Problems/Digit-Queries.cpp.obj: 
 #############################################
 # Link the executable Digit-Queries.exe
 
-build Digit-Queries.exe: CXX_EXECUTABLE_LINKER__Digit-Queries_Debug CMakeFiles/Digit-Queries.dir/Introductory_Problems/Digit-Queries.cpp.obj
+build Digit-Queries.exe: CXX_EXECUTABLE_LINKER__Digit-Queries_Debug CMakeFiles/Digit-Queries.dir/Introductory-Problems/Digit-Queries.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Digit-Queries.dir
@@ -1402,11 +1402,11 @@ build Digit-Queries.exe: CXX_EXECUTABLE_LINKER__Digit-Queries_Debug CMakeFiles/D
 
 build cmake_object_order_depends_target_Gray-Code: phony || .
 
-build CMakeFiles/Gray-Code.dir/Introductory_Problems/Gray-Code.cpp.obj: CXX_COMPILER__Gray-Code_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Gray-Code.cpp || cmake_object_order_depends_target_Gray-Code
-  DEP_FILE = CMakeFiles\Gray-Code.dir\Introductory_Problems\Gray-Code.cpp.obj.d
+build CMakeFiles/Gray-Code.dir/Introductory-Problems/Gray-Code.cpp.obj: CXX_COMPILER__Gray-Code_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Gray-Code.cpp || cmake_object_order_depends_target_Gray-Code
+  DEP_FILE = CMakeFiles\Gray-Code.dir\Introductory-Problems\Gray-Code.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Gray-Code.dir
-  OBJECT_FILE_DIR = CMakeFiles\Gray-Code.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Gray-Code.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1416,7 +1416,7 @@ build CMakeFiles/Gray-Code.dir/Introductory_Problems/Gray-Code.cpp.obj: CXX_COMP
 #############################################
 # Link the executable Gray-Code.exe
 
-build Gray-Code.exe: CXX_EXECUTABLE_LINKER__Gray-Code_Debug CMakeFiles/Gray-Code.dir/Introductory_Problems/Gray-Code.cpp.obj
+build Gray-Code.exe: CXX_EXECUTABLE_LINKER__Gray-Code_Debug CMakeFiles/Gray-Code.dir/Introductory-Problems/Gray-Code.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Gray-Code.dir
@@ -1435,11 +1435,11 @@ build Gray-Code.exe: CXX_EXECUTABLE_LINKER__Gray-Code_Debug CMakeFiles/Gray-Code
 
 build cmake_object_order_depends_target_Grid-Coloring-I: phony || .
 
-build CMakeFiles/Grid-Coloring-I.dir/Introductory_Problems/Grid-Coloring-I.cpp.obj: CXX_COMPILER__Grid-Coloring-I_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Grid-Coloring-I.cpp || cmake_object_order_depends_target_Grid-Coloring-I
-  DEP_FILE = CMakeFiles\Grid-Coloring-I.dir\Introductory_Problems\Grid-Coloring-I.cpp.obj.d
+build CMakeFiles/Grid-Coloring-I.dir/Introductory-Problems/Grid-Coloring-I.cpp.obj: CXX_COMPILER__Grid-Coloring-I_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Grid-Coloring-I.cpp || cmake_object_order_depends_target_Grid-Coloring-I
+  DEP_FILE = CMakeFiles\Grid-Coloring-I.dir\Introductory-Problems\Grid-Coloring-I.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Grid-Coloring-I.dir
-  OBJECT_FILE_DIR = CMakeFiles\Grid-Coloring-I.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Grid-Coloring-I.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1449,7 +1449,7 @@ build CMakeFiles/Grid-Coloring-I.dir/Introductory_Problems/Grid-Coloring-I.cpp.o
 #############################################
 # Link the executable Grid-Coloring-I.exe
 
-build Grid-Coloring-I.exe: CXX_EXECUTABLE_LINKER__Grid-Coloring-I_Debug CMakeFiles/Grid-Coloring-I.dir/Introductory_Problems/Grid-Coloring-I.cpp.obj
+build Grid-Coloring-I.exe: CXX_EXECUTABLE_LINKER__Grid-Coloring-I_Debug CMakeFiles/Grid-Coloring-I.dir/Introductory-Problems/Grid-Coloring-I.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Grid-Coloring-I.dir
@@ -1468,11 +1468,11 @@ build Grid-Coloring-I.exe: CXX_EXECUTABLE_LINKER__Grid-Coloring-I_Debug CMakeFil
 
 build cmake_object_order_depends_target_Grid-Path-Description: phony || .
 
-build CMakeFiles/Grid-Path-Description.dir/Introductory_Problems/Grid-Path-Description.cpp.obj: CXX_COMPILER__Grid-Path-Description_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Grid-Path-Description.cpp || cmake_object_order_depends_target_Grid-Path-Description
-  DEP_FILE = CMakeFiles\Grid-Path-Description.dir\Introductory_Problems\Grid-Path-Description.cpp.obj.d
+build CMakeFiles/Grid-Path-Description.dir/Introductory-Problems/Grid-Path-Description.cpp.obj: CXX_COMPILER__Grid-Path-Description_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Grid-Path-Description.cpp || cmake_object_order_depends_target_Grid-Path-Description
+  DEP_FILE = CMakeFiles\Grid-Path-Description.dir\Introductory-Problems\Grid-Path-Description.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Grid-Path-Description.dir
-  OBJECT_FILE_DIR = CMakeFiles\Grid-Path-Description.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Grid-Path-Description.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1482,7 +1482,7 @@ build CMakeFiles/Grid-Path-Description.dir/Introductory_Problems/Grid-Path-Descr
 #############################################
 # Link the executable Grid-Path-Description.exe
 
-build Grid-Path-Description.exe: CXX_EXECUTABLE_LINKER__Grid-Path-Description_Debug CMakeFiles/Grid-Path-Description.dir/Introductory_Problems/Grid-Path-Description.cpp.obj
+build Grid-Path-Description.exe: CXX_EXECUTABLE_LINKER__Grid-Path-Description_Debug CMakeFiles/Grid-Path-Description.dir/Introductory-Problems/Grid-Path-Description.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Grid-Path-Description.dir
@@ -1501,11 +1501,11 @@ build Grid-Path-Description.exe: CXX_EXECUTABLE_LINKER__Grid-Path-Description_De
 
 build cmake_object_order_depends_target_Increasing-Array: phony || .
 
-build CMakeFiles/Increasing-Array.dir/Introductory_Problems/Increasing-Array.cpp.obj: CXX_COMPILER__Increasing-Array_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Increasing-Array.cpp || cmake_object_order_depends_target_Increasing-Array
-  DEP_FILE = CMakeFiles\Increasing-Array.dir\Introductory_Problems\Increasing-Array.cpp.obj.d
+build CMakeFiles/Increasing-Array.dir/Introductory-Problems/Increasing-Array.cpp.obj: CXX_COMPILER__Increasing-Array_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Increasing-Array.cpp || cmake_object_order_depends_target_Increasing-Array
+  DEP_FILE = CMakeFiles\Increasing-Array.dir\Introductory-Problems\Increasing-Array.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Increasing-Array.dir
-  OBJECT_FILE_DIR = CMakeFiles\Increasing-Array.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Increasing-Array.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1515,7 +1515,7 @@ build CMakeFiles/Increasing-Array.dir/Introductory_Problems/Increasing-Array.cpp
 #############################################
 # Link the executable Increasing-Array.exe
 
-build Increasing-Array.exe: CXX_EXECUTABLE_LINKER__Increasing-Array_Debug CMakeFiles/Increasing-Array.dir/Introductory_Problems/Increasing-Array.cpp.obj
+build Increasing-Array.exe: CXX_EXECUTABLE_LINKER__Increasing-Array_Debug CMakeFiles/Increasing-Array.dir/Introductory-Problems/Increasing-Array.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Increasing-Array.dir
@@ -1534,11 +1534,11 @@ build Increasing-Array.exe: CXX_EXECUTABLE_LINKER__Increasing-Array_Debug CMakeF
 
 build cmake_object_order_depends_target_Knight-Moves-Grid: phony || .
 
-build CMakeFiles/Knight-Moves-Grid.dir/Introductory_Problems/Knight-Moves-Grid.cpp.obj: CXX_COMPILER__Knight-Moves-Grid_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Knight-Moves-Grid.cpp || cmake_object_order_depends_target_Knight-Moves-Grid
-  DEP_FILE = CMakeFiles\Knight-Moves-Grid.dir\Introductory_Problems\Knight-Moves-Grid.cpp.obj.d
+build CMakeFiles/Knight-Moves-Grid.dir/Introductory-Problems/Knight-Moves-Grid.cpp.obj: CXX_COMPILER__Knight-Moves-Grid_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Knight-Moves-Grid.cpp || cmake_object_order_depends_target_Knight-Moves-Grid
+  DEP_FILE = CMakeFiles\Knight-Moves-Grid.dir\Introductory-Problems\Knight-Moves-Grid.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Knight-Moves-Grid.dir
-  OBJECT_FILE_DIR = CMakeFiles\Knight-Moves-Grid.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Knight-Moves-Grid.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1548,7 +1548,7 @@ build CMakeFiles/Knight-Moves-Grid.dir/Introductory_Problems/Knight-Moves-Grid.c
 #############################################
 # Link the executable Knight-Moves-Grid.exe
 
-build Knight-Moves-Grid.exe: CXX_EXECUTABLE_LINKER__Knight-Moves-Grid_Debug CMakeFiles/Knight-Moves-Grid.dir/Introductory_Problems/Knight-Moves-Grid.cpp.obj
+build Knight-Moves-Grid.exe: CXX_EXECUTABLE_LINKER__Knight-Moves-Grid_Debug CMakeFiles/Knight-Moves-Grid.dir/Introductory-Problems/Knight-Moves-Grid.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Knight-Moves-Grid.dir
@@ -1567,11 +1567,11 @@ build Knight-Moves-Grid.exe: CXX_EXECUTABLE_LINKER__Knight-Moves-Grid_Debug CMak
 
 build cmake_object_order_depends_target_Mex-Grid-Construction: phony || .
 
-build CMakeFiles/Mex-Grid-Construction.dir/Introductory_Problems/Mex-Grid-Construction.cpp.obj: CXX_COMPILER__Mex-Grid-Construction_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Mex-Grid-Construction.cpp || cmake_object_order_depends_target_Mex-Grid-Construction
-  DEP_FILE = CMakeFiles\Mex-Grid-Construction.dir\Introductory_Problems\Mex-Grid-Construction.cpp.obj.d
+build CMakeFiles/Mex-Grid-Construction.dir/Introductory-Problems/Mex-Grid-Construction.cpp.obj: CXX_COMPILER__Mex-Grid-Construction_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Mex-Grid-Construction.cpp || cmake_object_order_depends_target_Mex-Grid-Construction
+  DEP_FILE = CMakeFiles\Mex-Grid-Construction.dir\Introductory-Problems\Mex-Grid-Construction.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Mex-Grid-Construction.dir
-  OBJECT_FILE_DIR = CMakeFiles\Mex-Grid-Construction.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Mex-Grid-Construction.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1581,7 +1581,7 @@ build CMakeFiles/Mex-Grid-Construction.dir/Introductory_Problems/Mex-Grid-Constr
 #############################################
 # Link the executable Mex-Grid-Construction.exe
 
-build Mex-Grid-Construction.exe: CXX_EXECUTABLE_LINKER__Mex-Grid-Construction_Debug CMakeFiles/Mex-Grid-Construction.dir/Introductory_Problems/Mex-Grid-Construction.cpp.obj
+build Mex-Grid-Construction.exe: CXX_EXECUTABLE_LINKER__Mex-Grid-Construction_Debug CMakeFiles/Mex-Grid-Construction.dir/Introductory-Problems/Mex-Grid-Construction.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Mex-Grid-Construction.dir
@@ -1600,11 +1600,11 @@ build Mex-Grid-Construction.exe: CXX_EXECUTABLE_LINKER__Mex-Grid-Construction_De
 
 build cmake_object_order_depends_target_Missing-Number: phony || .
 
-build CMakeFiles/Missing-Number.dir/Introductory_Problems/Missing-Number.cpp.obj: CXX_COMPILER__Missing-Number_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Missing-Number.cpp || cmake_object_order_depends_target_Missing-Number
-  DEP_FILE = CMakeFiles\Missing-Number.dir\Introductory_Problems\Missing-Number.cpp.obj.d
+build CMakeFiles/Missing-Number.dir/Introductory-Problems/Missing-Number.cpp.obj: CXX_COMPILER__Missing-Number_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Missing-Number.cpp || cmake_object_order_depends_target_Missing-Number
+  DEP_FILE = CMakeFiles\Missing-Number.dir\Introductory-Problems\Missing-Number.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Missing-Number.dir
-  OBJECT_FILE_DIR = CMakeFiles\Missing-Number.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Missing-Number.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1614,7 +1614,7 @@ build CMakeFiles/Missing-Number.dir/Introductory_Problems/Missing-Number.cpp.obj
 #############################################
 # Link the executable Missing-Number.exe
 
-build Missing-Number.exe: CXX_EXECUTABLE_LINKER__Missing-Number_Debug CMakeFiles/Missing-Number.dir/Introductory_Problems/Missing-Number.cpp.obj
+build Missing-Number.exe: CXX_EXECUTABLE_LINKER__Missing-Number_Debug CMakeFiles/Missing-Number.dir/Introductory-Problems/Missing-Number.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Missing-Number.dir
@@ -1633,11 +1633,11 @@ build Missing-Number.exe: CXX_EXECUTABLE_LINKER__Missing-Number_Debug CMakeFiles
 
 build cmake_object_order_depends_target_Number-Spiral: phony || .
 
-build CMakeFiles/Number-Spiral.dir/Introductory_Problems/Number-Spiral.cpp.obj: CXX_COMPILER__Number-Spiral_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Number-Spiral.cpp || cmake_object_order_depends_target_Number-Spiral
-  DEP_FILE = CMakeFiles\Number-Spiral.dir\Introductory_Problems\Number-Spiral.cpp.obj.d
+build CMakeFiles/Number-Spiral.dir/Introductory-Problems/Number-Spiral.cpp.obj: CXX_COMPILER__Number-Spiral_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Number-Spiral.cpp || cmake_object_order_depends_target_Number-Spiral
+  DEP_FILE = CMakeFiles\Number-Spiral.dir\Introductory-Problems\Number-Spiral.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Number-Spiral.dir
-  OBJECT_FILE_DIR = CMakeFiles\Number-Spiral.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Number-Spiral.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1647,7 +1647,7 @@ build CMakeFiles/Number-Spiral.dir/Introductory_Problems/Number-Spiral.cpp.obj: 
 #############################################
 # Link the executable Number-Spiral.exe
 
-build Number-Spiral.exe: CXX_EXECUTABLE_LINKER__Number-Spiral_Debug CMakeFiles/Number-Spiral.dir/Introductory_Problems/Number-Spiral.cpp.obj
+build Number-Spiral.exe: CXX_EXECUTABLE_LINKER__Number-Spiral_Debug CMakeFiles/Number-Spiral.dir/Introductory-Problems/Number-Spiral.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Number-Spiral.dir
@@ -1666,11 +1666,11 @@ build Number-Spiral.exe: CXX_EXECUTABLE_LINKER__Number-Spiral_Debug CMakeFiles/N
 
 build cmake_object_order_depends_target_Palindrome-Reorder: phony || .
 
-build CMakeFiles/Palindrome-Reorder.dir/Introductory_Problems/Palindrome-Reorder.cpp.obj: CXX_COMPILER__Palindrome-Reorder_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Palindrome-Reorder.cpp || cmake_object_order_depends_target_Palindrome-Reorder
-  DEP_FILE = CMakeFiles\Palindrome-Reorder.dir\Introductory_Problems\Palindrome-Reorder.cpp.obj.d
+build CMakeFiles/Palindrome-Reorder.dir/Introductory-Problems/Palindrome-Reorder.cpp.obj: CXX_COMPILER__Palindrome-Reorder_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Palindrome-Reorder.cpp || cmake_object_order_depends_target_Palindrome-Reorder
+  DEP_FILE = CMakeFiles\Palindrome-Reorder.dir\Introductory-Problems\Palindrome-Reorder.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Palindrome-Reorder.dir
-  OBJECT_FILE_DIR = CMakeFiles\Palindrome-Reorder.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Palindrome-Reorder.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1680,7 +1680,7 @@ build CMakeFiles/Palindrome-Reorder.dir/Introductory_Problems/Palindrome-Reorder
 #############################################
 # Link the executable Palindrome-Reorder.exe
 
-build Palindrome-Reorder.exe: CXX_EXECUTABLE_LINKER__Palindrome-Reorder_Debug CMakeFiles/Palindrome-Reorder.dir/Introductory_Problems/Palindrome-Reorder.cpp.obj
+build Palindrome-Reorder.exe: CXX_EXECUTABLE_LINKER__Palindrome-Reorder_Debug CMakeFiles/Palindrome-Reorder.dir/Introductory-Problems/Palindrome-Reorder.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Palindrome-Reorder.dir
@@ -1699,11 +1699,11 @@ build Palindrome-Reorder.exe: CXX_EXECUTABLE_LINKER__Palindrome-Reorder_Debug CM
 
 build cmake_object_order_depends_target_Permutations: phony || .
 
-build CMakeFiles/Permutations.dir/Introductory_Problems/Permutations.cpp.obj: CXX_COMPILER__Permutations_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Permutations.cpp || cmake_object_order_depends_target_Permutations
-  DEP_FILE = CMakeFiles\Permutations.dir\Introductory_Problems\Permutations.cpp.obj.d
+build CMakeFiles/Permutations.dir/Introductory-Problems/Permutations.cpp.obj: CXX_COMPILER__Permutations_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Permutations.cpp || cmake_object_order_depends_target_Permutations
+  DEP_FILE = CMakeFiles\Permutations.dir\Introductory-Problems\Permutations.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Permutations.dir
-  OBJECT_FILE_DIR = CMakeFiles\Permutations.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Permutations.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1713,7 +1713,7 @@ build CMakeFiles/Permutations.dir/Introductory_Problems/Permutations.cpp.obj: CX
 #############################################
 # Link the executable Permutations.exe
 
-build Permutations.exe: CXX_EXECUTABLE_LINKER__Permutations_Debug CMakeFiles/Permutations.dir/Introductory_Problems/Permutations.cpp.obj
+build Permutations.exe: CXX_EXECUTABLE_LINKER__Permutations_Debug CMakeFiles/Permutations.dir/Introductory-Problems/Permutations.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Permutations.dir
@@ -1732,11 +1732,11 @@ build Permutations.exe: CXX_EXECUTABLE_LINKER__Permutations_Debug CMakeFiles/Per
 
 build cmake_object_order_depends_target_Raab-Game-I: phony || .
 
-build CMakeFiles/Raab-Game-I.dir/Introductory_Problems/Raab-Game-I.cpp.obj: CXX_COMPILER__Raab-Game-I_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Raab-Game-I.cpp || cmake_object_order_depends_target_Raab-Game-I
-  DEP_FILE = CMakeFiles\Raab-Game-I.dir\Introductory_Problems\Raab-Game-I.cpp.obj.d
+build CMakeFiles/Raab-Game-I.dir/Introductory-Problems/Raab-Game-I.cpp.obj: CXX_COMPILER__Raab-Game-I_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Raab-Game-I.cpp || cmake_object_order_depends_target_Raab-Game-I
+  DEP_FILE = CMakeFiles\Raab-Game-I.dir\Introductory-Problems\Raab-Game-I.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Raab-Game-I.dir
-  OBJECT_FILE_DIR = CMakeFiles\Raab-Game-I.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Raab-Game-I.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1746,7 +1746,7 @@ build CMakeFiles/Raab-Game-I.dir/Introductory_Problems/Raab-Game-I.cpp.obj: CXX_
 #############################################
 # Link the executable Raab-Game-I.exe
 
-build Raab-Game-I.exe: CXX_EXECUTABLE_LINKER__Raab-Game-I_Debug CMakeFiles/Raab-Game-I.dir/Introductory_Problems/Raab-Game-I.cpp.obj
+build Raab-Game-I.exe: CXX_EXECUTABLE_LINKER__Raab-Game-I_Debug CMakeFiles/Raab-Game-I.dir/Introductory-Problems/Raab-Game-I.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Raab-Game-I.dir
@@ -1765,11 +1765,11 @@ build Raab-Game-I.exe: CXX_EXECUTABLE_LINKER__Raab-Game-I_Debug CMakeFiles/Raab-
 
 build cmake_object_order_depends_target_Repititions: phony || .
 
-build CMakeFiles/Repititions.dir/Introductory_Problems/Repititions.cpp.obj: CXX_COMPILER__Repititions_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Repititions.cpp || cmake_object_order_depends_target_Repititions
-  DEP_FILE = CMakeFiles\Repititions.dir\Introductory_Problems\Repititions.cpp.obj.d
+build CMakeFiles/Repititions.dir/Introductory-Problems/Repititions.cpp.obj: CXX_COMPILER__Repititions_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Repititions.cpp || cmake_object_order_depends_target_Repititions
+  DEP_FILE = CMakeFiles\Repititions.dir\Introductory-Problems\Repititions.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Repititions.dir
-  OBJECT_FILE_DIR = CMakeFiles\Repititions.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Repititions.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1779,7 +1779,7 @@ build CMakeFiles/Repititions.dir/Introductory_Problems/Repititions.cpp.obj: CXX_
 #############################################
 # Link the executable Repititions.exe
 
-build Repititions.exe: CXX_EXECUTABLE_LINKER__Repititions_Debug CMakeFiles/Repititions.dir/Introductory_Problems/Repititions.cpp.obj
+build Repititions.exe: CXX_EXECUTABLE_LINKER__Repititions_Debug CMakeFiles/Repititions.dir/Introductory-Problems/Repititions.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Repititions.dir
@@ -1798,11 +1798,11 @@ build Repititions.exe: CXX_EXECUTABLE_LINKER__Repititions_Debug CMakeFiles/Repit
 
 build cmake_object_order_depends_target_String-Reorder: phony || .
 
-build CMakeFiles/String-Reorder.dir/Introductory_Problems/String-Reorder.cpp.obj: CXX_COMPILER__String-Reorder_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/String-Reorder.cpp || cmake_object_order_depends_target_String-Reorder
-  DEP_FILE = CMakeFiles\String-Reorder.dir\Introductory_Problems\String-Reorder.cpp.obj.d
+build CMakeFiles/String-Reorder.dir/Introductory-Problems/String-Reorder.cpp.obj: CXX_COMPILER__String-Reorder_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/String-Reorder.cpp || cmake_object_order_depends_target_String-Reorder
+  DEP_FILE = CMakeFiles\String-Reorder.dir\Introductory-Problems\String-Reorder.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\String-Reorder.dir
-  OBJECT_FILE_DIR = CMakeFiles\String-Reorder.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\String-Reorder.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1812,7 +1812,7 @@ build CMakeFiles/String-Reorder.dir/Introductory_Problems/String-Reorder.cpp.obj
 #############################################
 # Link the executable String-Reorder.exe
 
-build String-Reorder.exe: CXX_EXECUTABLE_LINKER__String-Reorder_Debug CMakeFiles/String-Reorder.dir/Introductory_Problems/String-Reorder.cpp.obj
+build String-Reorder.exe: CXX_EXECUTABLE_LINKER__String-Reorder_Debug CMakeFiles/String-Reorder.dir/Introductory-Problems/String-Reorder.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\String-Reorder.dir
@@ -1831,11 +1831,11 @@ build String-Reorder.exe: CXX_EXECUTABLE_LINKER__String-Reorder_Debug CMakeFiles
 
 build cmake_object_order_depends_target_Tower-Of-Hanoi: phony || .
 
-build CMakeFiles/Tower-Of-Hanoi.dir/Introductory_Problems/Tower-Of-Hanoi.cpp.obj: CXX_COMPILER__Tower-Of-Hanoi_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Tower-Of-Hanoi.cpp || cmake_object_order_depends_target_Tower-Of-Hanoi
-  DEP_FILE = CMakeFiles\Tower-Of-Hanoi.dir\Introductory_Problems\Tower-Of-Hanoi.cpp.obj.d
+build CMakeFiles/Tower-Of-Hanoi.dir/Introductory-Problems/Tower-Of-Hanoi.cpp.obj: CXX_COMPILER__Tower-Of-Hanoi_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Tower-Of-Hanoi.cpp || cmake_object_order_depends_target_Tower-Of-Hanoi
+  DEP_FILE = CMakeFiles\Tower-Of-Hanoi.dir\Introductory-Problems\Tower-Of-Hanoi.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Tower-Of-Hanoi.dir
-  OBJECT_FILE_DIR = CMakeFiles\Tower-Of-Hanoi.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Tower-Of-Hanoi.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1845,7 +1845,7 @@ build CMakeFiles/Tower-Of-Hanoi.dir/Introductory_Problems/Tower-Of-Hanoi.cpp.obj
 #############################################
 # Link the executable Tower-Of-Hanoi.exe
 
-build Tower-Of-Hanoi.exe: CXX_EXECUTABLE_LINKER__Tower-Of-Hanoi_Debug CMakeFiles/Tower-Of-Hanoi.dir/Introductory_Problems/Tower-Of-Hanoi.cpp.obj
+build Tower-Of-Hanoi.exe: CXX_EXECUTABLE_LINKER__Tower-Of-Hanoi_Debug CMakeFiles/Tower-Of-Hanoi.dir/Introductory-Problems/Tower-Of-Hanoi.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Tower-Of-Hanoi.dir
@@ -1864,11 +1864,11 @@ build Tower-Of-Hanoi.exe: CXX_EXECUTABLE_LINKER__Tower-Of-Hanoi_Debug CMakeFiles
 
 build cmake_object_order_depends_target_Trailing-Zeros: phony || .
 
-build CMakeFiles/Trailing-Zeros.dir/Introductory_Problems/Trailing-Zeros.cpp.obj: CXX_COMPILER__Trailing-Zeros_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Trailing-Zeros.cpp || cmake_object_order_depends_target_Trailing-Zeros
-  DEP_FILE = CMakeFiles\Trailing-Zeros.dir\Introductory_Problems\Trailing-Zeros.cpp.obj.d
+build CMakeFiles/Trailing-Zeros.dir/Introductory-Problems/Trailing-Zeros.cpp.obj: CXX_COMPILER__Trailing-Zeros_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Trailing-Zeros.cpp || cmake_object_order_depends_target_Trailing-Zeros
+  DEP_FILE = CMakeFiles\Trailing-Zeros.dir\Introductory-Problems\Trailing-Zeros.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Trailing-Zeros.dir
-  OBJECT_FILE_DIR = CMakeFiles\Trailing-Zeros.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Trailing-Zeros.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1878,7 +1878,7 @@ build CMakeFiles/Trailing-Zeros.dir/Introductory_Problems/Trailing-Zeros.cpp.obj
 #############################################
 # Link the executable Trailing-Zeros.exe
 
-build Trailing-Zeros.exe: CXX_EXECUTABLE_LINKER__Trailing-Zeros_Debug CMakeFiles/Trailing-Zeros.dir/Introductory_Problems/Trailing-Zeros.cpp.obj
+build Trailing-Zeros.exe: CXX_EXECUTABLE_LINKER__Trailing-Zeros_Debug CMakeFiles/Trailing-Zeros.dir/Introductory-Problems/Trailing-Zeros.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Trailing-Zeros.dir
@@ -1897,11 +1897,11 @@ build Trailing-Zeros.exe: CXX_EXECUTABLE_LINKER__Trailing-Zeros_Debug CMakeFiles
 
 build cmake_object_order_depends_target_Two-Knights: phony || .
 
-build CMakeFiles/Two-Knights.dir/Introductory_Problems/Two-Knights.cpp.obj: CXX_COMPILER__Two-Knights_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Two-Knights.cpp || cmake_object_order_depends_target_Two-Knights
-  DEP_FILE = CMakeFiles\Two-Knights.dir\Introductory_Problems\Two-Knights.cpp.obj.d
+build CMakeFiles/Two-Knights.dir/Introductory-Problems/Two-Knights.cpp.obj: CXX_COMPILER__Two-Knights_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Two-Knights.cpp || cmake_object_order_depends_target_Two-Knights
+  DEP_FILE = CMakeFiles\Two-Knights.dir\Introductory-Problems\Two-Knights.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Two-Knights.dir
-  OBJECT_FILE_DIR = CMakeFiles\Two-Knights.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Two-Knights.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1911,7 +1911,7 @@ build CMakeFiles/Two-Knights.dir/Introductory_Problems/Two-Knights.cpp.obj: CXX_
 #############################################
 # Link the executable Two-Knights.exe
 
-build Two-Knights.exe: CXX_EXECUTABLE_LINKER__Two-Knights_Debug CMakeFiles/Two-Knights.dir/Introductory_Problems/Two-Knights.cpp.obj
+build Two-Knights.exe: CXX_EXECUTABLE_LINKER__Two-Knights_Debug CMakeFiles/Two-Knights.dir/Introductory-Problems/Two-Knights.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Two-Knights.dir
@@ -1930,11 +1930,11 @@ build Two-Knights.exe: CXX_EXECUTABLE_LINKER__Two-Knights_Debug CMakeFiles/Two-K
 
 build cmake_object_order_depends_target_Two-Sets: phony || .
 
-build CMakeFiles/Two-Sets.dir/Introductory_Problems/Two-Sets.cpp.obj: CXX_COMPILER__Two-Sets_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Two-Sets.cpp || cmake_object_order_depends_target_Two-Sets
-  DEP_FILE = CMakeFiles\Two-Sets.dir\Introductory_Problems\Two-Sets.cpp.obj.d
+build CMakeFiles/Two-Sets.dir/Introductory-Problems/Two-Sets.cpp.obj: CXX_COMPILER__Two-Sets_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Two-Sets.cpp || cmake_object_order_depends_target_Two-Sets
+  DEP_FILE = CMakeFiles\Two-Sets.dir\Introductory-Problems\Two-Sets.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Two-Sets.dir
-  OBJECT_FILE_DIR = CMakeFiles\Two-Sets.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Two-Sets.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1944,7 +1944,7 @@ build CMakeFiles/Two-Sets.dir/Introductory_Problems/Two-Sets.cpp.obj: CXX_COMPIL
 #############################################
 # Link the executable Two-Sets.exe
 
-build Two-Sets.exe: CXX_EXECUTABLE_LINKER__Two-Sets_Debug CMakeFiles/Two-Sets.dir/Introductory_Problems/Two-Sets.cpp.obj
+build Two-Sets.exe: CXX_EXECUTABLE_LINKER__Two-Sets_Debug CMakeFiles/Two-Sets.dir/Introductory-Problems/Two-Sets.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Two-Sets.dir
@@ -1963,11 +1963,11 @@ build Two-Sets.exe: CXX_EXECUTABLE_LINKER__Two-Sets_Debug CMakeFiles/Two-Sets.di
 
 build cmake_object_order_depends_target_Weird-Algorithm: phony || .
 
-build CMakeFiles/Weird-Algorithm.dir/Introductory_Problems/Weird-Algorithm.cpp.obj: CXX_COMPILER__Weird-Algorithm_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory$ Problems/Weird-Algorithm.cpp || cmake_object_order_depends_target_Weird-Algorithm
-  DEP_FILE = CMakeFiles\Weird-Algorithm.dir\Introductory_Problems\Weird-Algorithm.cpp.obj.d
+build CMakeFiles/Weird-Algorithm.dir/Introductory-Problems/Weird-Algorithm.cpp.obj: CXX_COMPILER__Weird-Algorithm_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Weird-Algorithm.cpp || cmake_object_order_depends_target_Weird-Algorithm
+  DEP_FILE = CMakeFiles\Weird-Algorithm.dir\Introductory-Problems\Weird-Algorithm.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Weird-Algorithm.dir
-  OBJECT_FILE_DIR = CMakeFiles\Weird-Algorithm.dir\Introductory_Problems
+  OBJECT_FILE_DIR = CMakeFiles\Weird-Algorithm.dir\Introductory-Problems
 
 
 # =============================================================================
@@ -1977,7 +1977,7 @@ build CMakeFiles/Weird-Algorithm.dir/Introductory_Problems/Weird-Algorithm.cpp.o
 #############################################
 # Link the executable Weird-Algorithm.exe
 
-build Weird-Algorithm.exe: CXX_EXECUTABLE_LINKER__Weird-Algorithm_Debug CMakeFiles/Weird-Algorithm.dir/Introductory_Problems/Weird-Algorithm.cpp.obj
+build Weird-Algorithm.exe: CXX_EXECUTABLE_LINKER__Weird-Algorithm_Debug CMakeFiles/Weird-Algorithm.dir/Introductory-Problems/Weird-Algorithm.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Weird-Algorithm.dir
@@ -2194,11 +2194,11 @@ build Sliding-Window-Sum.exe: CXX_EXECUTABLE_LINKER__Sliding-Window-Sum_Debug CM
 
 build cmake_object_order_depends_target_Apartments: phony || .
 
-build CMakeFiles/Apartments.dir/Sorting_and_Searching/Apartments.cpp.obj: CXX_COMPILER__Apartments_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Apartments.cpp || cmake_object_order_depends_target_Apartments
-  DEP_FILE = CMakeFiles\Apartments.dir\Sorting_and_Searching\Apartments.cpp.obj.d
+build CMakeFiles/Apartments.dir/Sorting-and-Searching/Apartments.cpp.obj: CXX_COMPILER__Apartments_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Apartments.cpp || cmake_object_order_depends_target_Apartments
+  DEP_FILE = CMakeFiles\Apartments.dir\Sorting-and-Searching\Apartments.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Apartments.dir
-  OBJECT_FILE_DIR = CMakeFiles\Apartments.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Apartments.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2208,7 +2208,7 @@ build CMakeFiles/Apartments.dir/Sorting_and_Searching/Apartments.cpp.obj: CXX_CO
 #############################################
 # Link the executable Apartments.exe
 
-build Apartments.exe: CXX_EXECUTABLE_LINKER__Apartments_Debug CMakeFiles/Apartments.dir/Sorting_and_Searching/Apartments.cpp.obj
+build Apartments.exe: CXX_EXECUTABLE_LINKER__Apartments_Debug CMakeFiles/Apartments.dir/Sorting-and-Searching/Apartments.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Apartments.dir
@@ -2227,11 +2227,11 @@ build Apartments.exe: CXX_EXECUTABLE_LINKER__Apartments_Debug CMakeFiles/Apartme
 
 build cmake_object_order_depends_target_Collecting-Numbers-II: phony || .
 
-build CMakeFiles/Collecting-Numbers-II.dir/Sorting_and_Searching/Collecting-Numbers-II.cpp.obj: CXX_COMPILER__Collecting-Numbers-II_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Collecting-Numbers-II.cpp || cmake_object_order_depends_target_Collecting-Numbers-II
-  DEP_FILE = CMakeFiles\Collecting-Numbers-II.dir\Sorting_and_Searching\Collecting-Numbers-II.cpp.obj.d
+build CMakeFiles/Collecting-Numbers-II.dir/Sorting-and-Searching/Collecting-Numbers-II.cpp.obj: CXX_COMPILER__Collecting-Numbers-II_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Collecting-Numbers-II.cpp || cmake_object_order_depends_target_Collecting-Numbers-II
+  DEP_FILE = CMakeFiles\Collecting-Numbers-II.dir\Sorting-and-Searching\Collecting-Numbers-II.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Collecting-Numbers-II.dir
-  OBJECT_FILE_DIR = CMakeFiles\Collecting-Numbers-II.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Collecting-Numbers-II.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2241,7 +2241,7 @@ build CMakeFiles/Collecting-Numbers-II.dir/Sorting_and_Searching/Collecting-Numb
 #############################################
 # Link the executable Collecting-Numbers-II.exe
 
-build Collecting-Numbers-II.exe: CXX_EXECUTABLE_LINKER__Collecting-Numbers-II_Debug CMakeFiles/Collecting-Numbers-II.dir/Sorting_and_Searching/Collecting-Numbers-II.cpp.obj
+build Collecting-Numbers-II.exe: CXX_EXECUTABLE_LINKER__Collecting-Numbers-II_Debug CMakeFiles/Collecting-Numbers-II.dir/Sorting-and-Searching/Collecting-Numbers-II.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Collecting-Numbers-II.dir
@@ -2260,11 +2260,11 @@ build Collecting-Numbers-II.exe: CXX_EXECUTABLE_LINKER__Collecting-Numbers-II_De
 
 build cmake_object_order_depends_target_Collecting-Numbers: phony || .
 
-build CMakeFiles/Collecting-Numbers.dir/Sorting_and_Searching/Collecting-Numbers.cpp.obj: CXX_COMPILER__Collecting-Numbers_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Collecting-Numbers.cpp || cmake_object_order_depends_target_Collecting-Numbers
-  DEP_FILE = CMakeFiles\Collecting-Numbers.dir\Sorting_and_Searching\Collecting-Numbers.cpp.obj.d
+build CMakeFiles/Collecting-Numbers.dir/Sorting-and-Searching/Collecting-Numbers.cpp.obj: CXX_COMPILER__Collecting-Numbers_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Collecting-Numbers.cpp || cmake_object_order_depends_target_Collecting-Numbers
+  DEP_FILE = CMakeFiles\Collecting-Numbers.dir\Sorting-and-Searching\Collecting-Numbers.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Collecting-Numbers.dir
-  OBJECT_FILE_DIR = CMakeFiles\Collecting-Numbers.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Collecting-Numbers.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2274,7 +2274,7 @@ build CMakeFiles/Collecting-Numbers.dir/Sorting_and_Searching/Collecting-Numbers
 #############################################
 # Link the executable Collecting-Numbers.exe
 
-build Collecting-Numbers.exe: CXX_EXECUTABLE_LINKER__Collecting-Numbers_Debug CMakeFiles/Collecting-Numbers.dir/Sorting_and_Searching/Collecting-Numbers.cpp.obj
+build Collecting-Numbers.exe: CXX_EXECUTABLE_LINKER__Collecting-Numbers_Debug CMakeFiles/Collecting-Numbers.dir/Sorting-and-Searching/Collecting-Numbers.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Collecting-Numbers.dir
@@ -2293,11 +2293,11 @@ build Collecting-Numbers.exe: CXX_EXECUTABLE_LINKER__Collecting-Numbers_Debug CM
 
 build cmake_object_order_depends_target_Concert-Tickets: phony || .
 
-build CMakeFiles/Concert-Tickets.dir/Sorting_and_Searching/Concert-Tickets.cpp.obj: CXX_COMPILER__Concert-Tickets_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Concert-Tickets.cpp || cmake_object_order_depends_target_Concert-Tickets
-  DEP_FILE = CMakeFiles\Concert-Tickets.dir\Sorting_and_Searching\Concert-Tickets.cpp.obj.d
+build CMakeFiles/Concert-Tickets.dir/Sorting-and-Searching/Concert-Tickets.cpp.obj: CXX_COMPILER__Concert-Tickets_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Concert-Tickets.cpp || cmake_object_order_depends_target_Concert-Tickets
+  DEP_FILE = CMakeFiles\Concert-Tickets.dir\Sorting-and-Searching\Concert-Tickets.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Concert-Tickets.dir
-  OBJECT_FILE_DIR = CMakeFiles\Concert-Tickets.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Concert-Tickets.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2307,7 +2307,7 @@ build CMakeFiles/Concert-Tickets.dir/Sorting_and_Searching/Concert-Tickets.cpp.o
 #############################################
 # Link the executable Concert-Tickets.exe
 
-build Concert-Tickets.exe: CXX_EXECUTABLE_LINKER__Concert-Tickets_Debug CMakeFiles/Concert-Tickets.dir/Sorting_and_Searching/Concert-Tickets.cpp.obj
+build Concert-Tickets.exe: CXX_EXECUTABLE_LINKER__Concert-Tickets_Debug CMakeFiles/Concert-Tickets.dir/Sorting-and-Searching/Concert-Tickets.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Concert-Tickets.dir
@@ -2326,11 +2326,11 @@ build Concert-Tickets.exe: CXX_EXECUTABLE_LINKER__Concert-Tickets_Debug CMakeFil
 
 build cmake_object_order_depends_target_Distinct-Numbers: phony || .
 
-build CMakeFiles/Distinct-Numbers.dir/Sorting_and_Searching/Distinct-Numbers.cpp.obj: CXX_COMPILER__Distinct-Numbers_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Distinct-Numbers.cpp || cmake_object_order_depends_target_Distinct-Numbers
-  DEP_FILE = CMakeFiles\Distinct-Numbers.dir\Sorting_and_Searching\Distinct-Numbers.cpp.obj.d
+build CMakeFiles/Distinct-Numbers.dir/Sorting-and-Searching/Distinct-Numbers.cpp.obj: CXX_COMPILER__Distinct-Numbers_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Distinct-Numbers.cpp || cmake_object_order_depends_target_Distinct-Numbers
+  DEP_FILE = CMakeFiles\Distinct-Numbers.dir\Sorting-and-Searching\Distinct-Numbers.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Distinct-Numbers.dir
-  OBJECT_FILE_DIR = CMakeFiles\Distinct-Numbers.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Distinct-Numbers.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2340,7 +2340,7 @@ build CMakeFiles/Distinct-Numbers.dir/Sorting_and_Searching/Distinct-Numbers.cpp
 #############################################
 # Link the executable Distinct-Numbers.exe
 
-build Distinct-Numbers.exe: CXX_EXECUTABLE_LINKER__Distinct-Numbers_Debug CMakeFiles/Distinct-Numbers.dir/Sorting_and_Searching/Distinct-Numbers.cpp.obj
+build Distinct-Numbers.exe: CXX_EXECUTABLE_LINKER__Distinct-Numbers_Debug CMakeFiles/Distinct-Numbers.dir/Sorting-and-Searching/Distinct-Numbers.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Distinct-Numbers.dir
@@ -2359,11 +2359,11 @@ build Distinct-Numbers.exe: CXX_EXECUTABLE_LINKER__Distinct-Numbers_Debug CMakeF
 
 build cmake_object_order_depends_target_Distinct-Value-Subsequences: phony || .
 
-build CMakeFiles/Distinct-Value-Subsequences.dir/Sorting_and_Searching/Distinct-Value-Subsequences.cpp.obj: CXX_COMPILER__Distinct-Value-Subsequences_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Distinct-Value-Subsequences.cpp || cmake_object_order_depends_target_Distinct-Value-Subsequences
-  DEP_FILE = CMakeFiles\Distinct-Value-Subsequences.dir\Sorting_and_Searching\Distinct-Value-Subsequences.cpp.obj.d
+build CMakeFiles/Distinct-Value-Subsequences.dir/Sorting-and-Searching/Distinct-Value-Subsequences.cpp.obj: CXX_COMPILER__Distinct-Value-Subsequences_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Distinct-Value-Subsequences.cpp || cmake_object_order_depends_target_Distinct-Value-Subsequences
+  DEP_FILE = CMakeFiles\Distinct-Value-Subsequences.dir\Sorting-and-Searching\Distinct-Value-Subsequences.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Distinct-Value-Subsequences.dir
-  OBJECT_FILE_DIR = CMakeFiles\Distinct-Value-Subsequences.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Distinct-Value-Subsequences.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2373,7 +2373,7 @@ build CMakeFiles/Distinct-Value-Subsequences.dir/Sorting_and_Searching/Distinct-
 #############################################
 # Link the executable Distinct-Value-Subsequences.exe
 
-build Distinct-Value-Subsequences.exe: CXX_EXECUTABLE_LINKER__Distinct-Value-Subsequences_Debug CMakeFiles/Distinct-Value-Subsequences.dir/Sorting_and_Searching/Distinct-Value-Subsequences.cpp.obj
+build Distinct-Value-Subsequences.exe: CXX_EXECUTABLE_LINKER__Distinct-Value-Subsequences_Debug CMakeFiles/Distinct-Value-Subsequences.dir/Sorting-and-Searching/Distinct-Value-Subsequences.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Distinct-Value-Subsequences.dir
@@ -2392,11 +2392,11 @@ build Distinct-Value-Subsequences.exe: CXX_EXECUTABLE_LINKER__Distinct-Value-Sub
 
 build cmake_object_order_depends_target_Distinct-Values-Subarrays: phony || .
 
-build CMakeFiles/Distinct-Values-Subarrays.dir/Sorting_and_Searching/Distinct-Values-Subarrays.cpp.obj: CXX_COMPILER__Distinct-Values-Subarrays_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Distinct-Values-Subarrays.cpp || cmake_object_order_depends_target_Distinct-Values-Subarrays
-  DEP_FILE = CMakeFiles\Distinct-Values-Subarrays.dir\Sorting_and_Searching\Distinct-Values-Subarrays.cpp.obj.d
+build CMakeFiles/Distinct-Values-Subarrays.dir/Sorting-and-Searching/Distinct-Values-Subarrays.cpp.obj: CXX_COMPILER__Distinct-Values-Subarrays_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Distinct-Values-Subarrays.cpp || cmake_object_order_depends_target_Distinct-Values-Subarrays
+  DEP_FILE = CMakeFiles\Distinct-Values-Subarrays.dir\Sorting-and-Searching\Distinct-Values-Subarrays.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Distinct-Values-Subarrays.dir
-  OBJECT_FILE_DIR = CMakeFiles\Distinct-Values-Subarrays.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Distinct-Values-Subarrays.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2406,7 +2406,7 @@ build CMakeFiles/Distinct-Values-Subarrays.dir/Sorting_and_Searching/Distinct-Va
 #############################################
 # Link the executable Distinct-Values-Subarrays.exe
 
-build Distinct-Values-Subarrays.exe: CXX_EXECUTABLE_LINKER__Distinct-Values-Subarrays_Debug CMakeFiles/Distinct-Values-Subarrays.dir/Sorting_and_Searching/Distinct-Values-Subarrays.cpp.obj
+build Distinct-Values-Subarrays.exe: CXX_EXECUTABLE_LINKER__Distinct-Values-Subarrays_Debug CMakeFiles/Distinct-Values-Subarrays.dir/Sorting-and-Searching/Distinct-Values-Subarrays.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Distinct-Values-Subarrays.dir
@@ -2425,11 +2425,11 @@ build Distinct-Values-Subarrays.exe: CXX_EXECUTABLE_LINKER__Distinct-Values-Suba
 
 build cmake_object_order_depends_target_Factory-Machines: phony || .
 
-build CMakeFiles/Factory-Machines.dir/Sorting_and_Searching/Factory-Machines.cpp.obj: CXX_COMPILER__Factory-Machines_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Factory-Machines.cpp || cmake_object_order_depends_target_Factory-Machines
-  DEP_FILE = CMakeFiles\Factory-Machines.dir\Sorting_and_Searching\Factory-Machines.cpp.obj.d
+build CMakeFiles/Factory-Machines.dir/Sorting-and-Searching/Factory-Machines.cpp.obj: CXX_COMPILER__Factory-Machines_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Factory-Machines.cpp || cmake_object_order_depends_target_Factory-Machines
+  DEP_FILE = CMakeFiles\Factory-Machines.dir\Sorting-and-Searching\Factory-Machines.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Factory-Machines.dir
-  OBJECT_FILE_DIR = CMakeFiles\Factory-Machines.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Factory-Machines.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2439,7 +2439,7 @@ build CMakeFiles/Factory-Machines.dir/Sorting_and_Searching/Factory-Machines.cpp
 #############################################
 # Link the executable Factory-Machines.exe
 
-build Factory-Machines.exe: CXX_EXECUTABLE_LINKER__Factory-Machines_Debug CMakeFiles/Factory-Machines.dir/Sorting_and_Searching/Factory-Machines.cpp.obj
+build Factory-Machines.exe: CXX_EXECUTABLE_LINKER__Factory-Machines_Debug CMakeFiles/Factory-Machines.dir/Sorting-and-Searching/Factory-Machines.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Factory-Machines.dir
@@ -2458,11 +2458,11 @@ build Factory-Machines.exe: CXX_EXECUTABLE_LINKER__Factory-Machines_Debug CMakeF
 
 build cmake_object_order_depends_target_Ferris-Wheel: phony || .
 
-build CMakeFiles/Ferris-Wheel.dir/Sorting_and_Searching/Ferris-Wheel.cpp.obj: CXX_COMPILER__Ferris-Wheel_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Ferris-Wheel.cpp || cmake_object_order_depends_target_Ferris-Wheel
-  DEP_FILE = CMakeFiles\Ferris-Wheel.dir\Sorting_and_Searching\Ferris-Wheel.cpp.obj.d
+build CMakeFiles/Ferris-Wheel.dir/Sorting-and-Searching/Ferris-Wheel.cpp.obj: CXX_COMPILER__Ferris-Wheel_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Ferris-Wheel.cpp || cmake_object_order_depends_target_Ferris-Wheel
+  DEP_FILE = CMakeFiles\Ferris-Wheel.dir\Sorting-and-Searching\Ferris-Wheel.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Ferris-Wheel.dir
-  OBJECT_FILE_DIR = CMakeFiles\Ferris-Wheel.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Ferris-Wheel.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2472,7 +2472,7 @@ build CMakeFiles/Ferris-Wheel.dir/Sorting_and_Searching/Ferris-Wheel.cpp.obj: CX
 #############################################
 # Link the executable Ferris-Wheel.exe
 
-build Ferris-Wheel.exe: CXX_EXECUTABLE_LINKER__Ferris-Wheel_Debug CMakeFiles/Ferris-Wheel.dir/Sorting_and_Searching/Ferris-Wheel.cpp.obj
+build Ferris-Wheel.exe: CXX_EXECUTABLE_LINKER__Ferris-Wheel_Debug CMakeFiles/Ferris-Wheel.dir/Sorting-and-Searching/Ferris-Wheel.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Ferris-Wheel.dir
@@ -2491,11 +2491,11 @@ build Ferris-Wheel.exe: CXX_EXECUTABLE_LINKER__Ferris-Wheel_Debug CMakeFiles/Fer
 
 build cmake_object_order_depends_target_Josephus-Problem-I: phony || .
 
-build CMakeFiles/Josephus-Problem-I.dir/Sorting_and_Searching/Josephus-Problem-I.cpp.obj: CXX_COMPILER__Josephus-Problem-I_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Josephus-Problem-I.cpp || cmake_object_order_depends_target_Josephus-Problem-I
-  DEP_FILE = CMakeFiles\Josephus-Problem-I.dir\Sorting_and_Searching\Josephus-Problem-I.cpp.obj.d
+build CMakeFiles/Josephus-Problem-I.dir/Sorting-and-Searching/Josephus-Problem-I.cpp.obj: CXX_COMPILER__Josephus-Problem-I_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Josephus-Problem-I.cpp || cmake_object_order_depends_target_Josephus-Problem-I
+  DEP_FILE = CMakeFiles\Josephus-Problem-I.dir\Sorting-and-Searching\Josephus-Problem-I.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Josephus-Problem-I.dir
-  OBJECT_FILE_DIR = CMakeFiles\Josephus-Problem-I.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Josephus-Problem-I.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2505,7 +2505,7 @@ build CMakeFiles/Josephus-Problem-I.dir/Sorting_and_Searching/Josephus-Problem-I
 #############################################
 # Link the executable Josephus-Problem-I.exe
 
-build Josephus-Problem-I.exe: CXX_EXECUTABLE_LINKER__Josephus-Problem-I_Debug CMakeFiles/Josephus-Problem-I.dir/Sorting_and_Searching/Josephus-Problem-I.cpp.obj
+build Josephus-Problem-I.exe: CXX_EXECUTABLE_LINKER__Josephus-Problem-I_Debug CMakeFiles/Josephus-Problem-I.dir/Sorting-and-Searching/Josephus-Problem-I.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Josephus-Problem-I.dir
@@ -2524,11 +2524,11 @@ build Josephus-Problem-I.exe: CXX_EXECUTABLE_LINKER__Josephus-Problem-I_Debug CM
 
 build cmake_object_order_depends_target_Maximum-Subarray-Sum-II: phony || .
 
-build CMakeFiles/Maximum-Subarray-Sum-II.dir/Sorting_and_Searching/Maximum-Subarray-Sum-II.cpp.obj: CXX_COMPILER__Maximum-Subarray-Sum-II_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Maximum-Subarray-Sum-II.cpp || cmake_object_order_depends_target_Maximum-Subarray-Sum-II
-  DEP_FILE = CMakeFiles\Maximum-Subarray-Sum-II.dir\Sorting_and_Searching\Maximum-Subarray-Sum-II.cpp.obj.d
+build CMakeFiles/Maximum-Subarray-Sum-II.dir/Sorting-and-Searching/Maximum-Subarray-Sum-II.cpp.obj: CXX_COMPILER__Maximum-Subarray-Sum-II_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Maximum-Subarray-Sum-II.cpp || cmake_object_order_depends_target_Maximum-Subarray-Sum-II
+  DEP_FILE = CMakeFiles\Maximum-Subarray-Sum-II.dir\Sorting-and-Searching\Maximum-Subarray-Sum-II.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Maximum-Subarray-Sum-II.dir
-  OBJECT_FILE_DIR = CMakeFiles\Maximum-Subarray-Sum-II.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Maximum-Subarray-Sum-II.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2538,7 +2538,7 @@ build CMakeFiles/Maximum-Subarray-Sum-II.dir/Sorting_and_Searching/Maximum-Subar
 #############################################
 # Link the executable Maximum-Subarray-Sum-II.exe
 
-build Maximum-Subarray-Sum-II.exe: CXX_EXECUTABLE_LINKER__Maximum-Subarray-Sum-II_Debug CMakeFiles/Maximum-Subarray-Sum-II.dir/Sorting_and_Searching/Maximum-Subarray-Sum-II.cpp.obj
+build Maximum-Subarray-Sum-II.exe: CXX_EXECUTABLE_LINKER__Maximum-Subarray-Sum-II_Debug CMakeFiles/Maximum-Subarray-Sum-II.dir/Sorting-and-Searching/Maximum-Subarray-Sum-II.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Maximum-Subarray-Sum-II.dir
@@ -2557,11 +2557,11 @@ build Maximum-Subarray-Sum-II.exe: CXX_EXECUTABLE_LINKER__Maximum-Subarray-Sum-I
 
 build cmake_object_order_depends_target_Maximum-Subarray_Sum: phony || .
 
-build CMakeFiles/Maximum-Subarray_Sum.dir/Sorting_and_Searching/Maximum-Subarray_Sum.cpp.obj: CXX_COMPILER__Maximum-Subarray_Sum_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Maximum-Subarray_Sum.cpp || cmake_object_order_depends_target_Maximum-Subarray_Sum
-  DEP_FILE = CMakeFiles\Maximum-Subarray_Sum.dir\Sorting_and_Searching\Maximum-Subarray_Sum.cpp.obj.d
+build CMakeFiles/Maximum-Subarray_Sum.dir/Sorting-and-Searching/Maximum-Subarray_Sum.cpp.obj: CXX_COMPILER__Maximum-Subarray_Sum_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Maximum-Subarray_Sum.cpp || cmake_object_order_depends_target_Maximum-Subarray_Sum
+  DEP_FILE = CMakeFiles\Maximum-Subarray_Sum.dir\Sorting-and-Searching\Maximum-Subarray_Sum.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Maximum-Subarray_Sum.dir
-  OBJECT_FILE_DIR = CMakeFiles\Maximum-Subarray_Sum.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Maximum-Subarray_Sum.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2571,7 +2571,7 @@ build CMakeFiles/Maximum-Subarray_Sum.dir/Sorting_and_Searching/Maximum-Subarray
 #############################################
 # Link the executable Maximum-Subarray_Sum.exe
 
-build Maximum-Subarray_Sum.exe: CXX_EXECUTABLE_LINKER__Maximum-Subarray_Sum_Debug CMakeFiles/Maximum-Subarray_Sum.dir/Sorting_and_Searching/Maximum-Subarray_Sum.cpp.obj
+build Maximum-Subarray_Sum.exe: CXX_EXECUTABLE_LINKER__Maximum-Subarray_Sum_Debug CMakeFiles/Maximum-Subarray_Sum.dir/Sorting-and-Searching/Maximum-Subarray_Sum.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Maximum-Subarray_Sum.dir
@@ -2590,11 +2590,11 @@ build Maximum-Subarray_Sum.exe: CXX_EXECUTABLE_LINKER__Maximum-Subarray_Sum_Debu
 
 build cmake_object_order_depends_target_Missing-Coin-Sum: phony || .
 
-build CMakeFiles/Missing-Coin-Sum.dir/Sorting_and_Searching/Missing-Coin-Sum.cpp.obj: CXX_COMPILER__Missing-Coin-Sum_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Missing-Coin-Sum.cpp || cmake_object_order_depends_target_Missing-Coin-Sum
-  DEP_FILE = CMakeFiles\Missing-Coin-Sum.dir\Sorting_and_Searching\Missing-Coin-Sum.cpp.obj.d
+build CMakeFiles/Missing-Coin-Sum.dir/Sorting-and-Searching/Missing-Coin-Sum.cpp.obj: CXX_COMPILER__Missing-Coin-Sum_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Missing-Coin-Sum.cpp || cmake_object_order_depends_target_Missing-Coin-Sum
+  DEP_FILE = CMakeFiles\Missing-Coin-Sum.dir\Sorting-and-Searching\Missing-Coin-Sum.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Missing-Coin-Sum.dir
-  OBJECT_FILE_DIR = CMakeFiles\Missing-Coin-Sum.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Missing-Coin-Sum.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2604,7 +2604,7 @@ build CMakeFiles/Missing-Coin-Sum.dir/Sorting_and_Searching/Missing-Coin-Sum.cpp
 #############################################
 # Link the executable Missing-Coin-Sum.exe
 
-build Missing-Coin-Sum.exe: CXX_EXECUTABLE_LINKER__Missing-Coin-Sum_Debug CMakeFiles/Missing-Coin-Sum.dir/Sorting_and_Searching/Missing-Coin-Sum.cpp.obj
+build Missing-Coin-Sum.exe: CXX_EXECUTABLE_LINKER__Missing-Coin-Sum_Debug CMakeFiles/Missing-Coin-Sum.dir/Sorting-and-Searching/Missing-Coin-Sum.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Missing-Coin-Sum.dir
@@ -2623,11 +2623,11 @@ build Missing-Coin-Sum.exe: CXX_EXECUTABLE_LINKER__Missing-Coin-Sum_Debug CMakeF
 
 build cmake_object_order_depends_target_Movie-Festival-II: phony || .
 
-build CMakeFiles/Movie-Festival-II.dir/Sorting_and_Searching/Movie-Festival-II.cpp.obj: CXX_COMPILER__Movie-Festival-II_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Movie-Festival-II.cpp || cmake_object_order_depends_target_Movie-Festival-II
-  DEP_FILE = CMakeFiles\Movie-Festival-II.dir\Sorting_and_Searching\Movie-Festival-II.cpp.obj.d
+build CMakeFiles/Movie-Festival-II.dir/Sorting-and-Searching/Movie-Festival-II.cpp.obj: CXX_COMPILER__Movie-Festival-II_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Movie-Festival-II.cpp || cmake_object_order_depends_target_Movie-Festival-II
+  DEP_FILE = CMakeFiles\Movie-Festival-II.dir\Sorting-and-Searching\Movie-Festival-II.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Movie-Festival-II.dir
-  OBJECT_FILE_DIR = CMakeFiles\Movie-Festival-II.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Movie-Festival-II.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2637,7 +2637,7 @@ build CMakeFiles/Movie-Festival-II.dir/Sorting_and_Searching/Movie-Festival-II.c
 #############################################
 # Link the executable Movie-Festival-II.exe
 
-build Movie-Festival-II.exe: CXX_EXECUTABLE_LINKER__Movie-Festival-II_Debug CMakeFiles/Movie-Festival-II.dir/Sorting_and_Searching/Movie-Festival-II.cpp.obj
+build Movie-Festival-II.exe: CXX_EXECUTABLE_LINKER__Movie-Festival-II_Debug CMakeFiles/Movie-Festival-II.dir/Sorting-and-Searching/Movie-Festival-II.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Movie-Festival-II.dir
@@ -2656,11 +2656,11 @@ build Movie-Festival-II.exe: CXX_EXECUTABLE_LINKER__Movie-Festival-II_Debug CMak
 
 build cmake_object_order_depends_target_Movie-Festival: phony || .
 
-build CMakeFiles/Movie-Festival.dir/Sorting_and_Searching/Movie-Festival.cpp.obj: CXX_COMPILER__Movie-Festival_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Movie-Festival.cpp || cmake_object_order_depends_target_Movie-Festival
-  DEP_FILE = CMakeFiles\Movie-Festival.dir\Sorting_and_Searching\Movie-Festival.cpp.obj.d
+build CMakeFiles/Movie-Festival.dir/Sorting-and-Searching/Movie-Festival.cpp.obj: CXX_COMPILER__Movie-Festival_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Movie-Festival.cpp || cmake_object_order_depends_target_Movie-Festival
+  DEP_FILE = CMakeFiles\Movie-Festival.dir\Sorting-and-Searching\Movie-Festival.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Movie-Festival.dir
-  OBJECT_FILE_DIR = CMakeFiles\Movie-Festival.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Movie-Festival.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2670,7 +2670,7 @@ build CMakeFiles/Movie-Festival.dir/Sorting_and_Searching/Movie-Festival.cpp.obj
 #############################################
 # Link the executable Movie-Festival.exe
 
-build Movie-Festival.exe: CXX_EXECUTABLE_LINKER__Movie-Festival_Debug CMakeFiles/Movie-Festival.dir/Sorting_and_Searching/Movie-Festival.cpp.obj
+build Movie-Festival.exe: CXX_EXECUTABLE_LINKER__Movie-Festival_Debug CMakeFiles/Movie-Festival.dir/Sorting-and-Searching/Movie-Festival.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Movie-Festival.dir
@@ -2689,11 +2689,11 @@ build Movie-Festival.exe: CXX_EXECUTABLE_LINKER__Movie-Festival_Debug CMakeFiles
 
 build cmake_object_order_depends_target_Playlist: phony || .
 
-build CMakeFiles/Playlist.dir/Sorting_and_Searching/Playlist.cpp.obj: CXX_COMPILER__Playlist_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Playlist.cpp || cmake_object_order_depends_target_Playlist
-  DEP_FILE = CMakeFiles\Playlist.dir\Sorting_and_Searching\Playlist.cpp.obj.d
+build CMakeFiles/Playlist.dir/Sorting-and-Searching/Playlist.cpp.obj: CXX_COMPILER__Playlist_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Playlist.cpp || cmake_object_order_depends_target_Playlist
+  DEP_FILE = CMakeFiles\Playlist.dir\Sorting-and-Searching\Playlist.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Playlist.dir
-  OBJECT_FILE_DIR = CMakeFiles\Playlist.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Playlist.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2703,7 +2703,7 @@ build CMakeFiles/Playlist.dir/Sorting_and_Searching/Playlist.cpp.obj: CXX_COMPIL
 #############################################
 # Link the executable Playlist.exe
 
-build Playlist.exe: CXX_EXECUTABLE_LINKER__Playlist_Debug CMakeFiles/Playlist.dir/Sorting_and_Searching/Playlist.cpp.obj
+build Playlist.exe: CXX_EXECUTABLE_LINKER__Playlist_Debug CMakeFiles/Playlist.dir/Sorting-and-Searching/Playlist.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Playlist.dir
@@ -2722,11 +2722,11 @@ build Playlist.exe: CXX_EXECUTABLE_LINKER__Playlist_Debug CMakeFiles/Playlist.di
 
 build cmake_object_order_depends_target_Reading-Books: phony || .
 
-build CMakeFiles/Reading-Books.dir/Sorting_and_Searching/Reading-Books.cpp.obj: CXX_COMPILER__Reading-Books_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Reading-Books.cpp || cmake_object_order_depends_target_Reading-Books
-  DEP_FILE = CMakeFiles\Reading-Books.dir\Sorting_and_Searching\Reading-Books.cpp.obj.d
+build CMakeFiles/Reading-Books.dir/Sorting-and-Searching/Reading-Books.cpp.obj: CXX_COMPILER__Reading-Books_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Reading-Books.cpp || cmake_object_order_depends_target_Reading-Books
+  DEP_FILE = CMakeFiles\Reading-Books.dir\Sorting-and-Searching\Reading-Books.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Reading-Books.dir
-  OBJECT_FILE_DIR = CMakeFiles\Reading-Books.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Reading-Books.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2736,7 +2736,7 @@ build CMakeFiles/Reading-Books.dir/Sorting_and_Searching/Reading-Books.cpp.obj: 
 #############################################
 # Link the executable Reading-Books.exe
 
-build Reading-Books.exe: CXX_EXECUTABLE_LINKER__Reading-Books_Debug CMakeFiles/Reading-Books.dir/Sorting_and_Searching/Reading-Books.cpp.obj
+build Reading-Books.exe: CXX_EXECUTABLE_LINKER__Reading-Books_Debug CMakeFiles/Reading-Books.dir/Sorting-and-Searching/Reading-Books.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Reading-Books.dir
@@ -2755,11 +2755,11 @@ build Reading-Books.exe: CXX_EXECUTABLE_LINKER__Reading-Books_Debug CMakeFiles/R
 
 build cmake_object_order_depends_target_Restaurant-Customers: phony || .
 
-build CMakeFiles/Restaurant-Customers.dir/Sorting_and_Searching/Restaurant-Customers.cpp.obj: CXX_COMPILER__Restaurant-Customers_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Restaurant-Customers.cpp || cmake_object_order_depends_target_Restaurant-Customers
-  DEP_FILE = CMakeFiles\Restaurant-Customers.dir\Sorting_and_Searching\Restaurant-Customers.cpp.obj.d
+build CMakeFiles/Restaurant-Customers.dir/Sorting-and-Searching/Restaurant-Customers.cpp.obj: CXX_COMPILER__Restaurant-Customers_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Restaurant-Customers.cpp || cmake_object_order_depends_target_Restaurant-Customers
+  DEP_FILE = CMakeFiles\Restaurant-Customers.dir\Sorting-and-Searching\Restaurant-Customers.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Restaurant-Customers.dir
-  OBJECT_FILE_DIR = CMakeFiles\Restaurant-Customers.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Restaurant-Customers.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2769,7 +2769,7 @@ build CMakeFiles/Restaurant-Customers.dir/Sorting_and_Searching/Restaurant-Custo
 #############################################
 # Link the executable Restaurant-Customers.exe
 
-build Restaurant-Customers.exe: CXX_EXECUTABLE_LINKER__Restaurant-Customers_Debug CMakeFiles/Restaurant-Customers.dir/Sorting_and_Searching/Restaurant-Customers.cpp.obj
+build Restaurant-Customers.exe: CXX_EXECUTABLE_LINKER__Restaurant-Customers_Debug CMakeFiles/Restaurant-Customers.dir/Sorting-and-Searching/Restaurant-Customers.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Restaurant-Customers.dir
@@ -2788,11 +2788,11 @@ build Restaurant-Customers.exe: CXX_EXECUTABLE_LINKER__Restaurant-Customers_Debu
 
 build cmake_object_order_depends_target_Stick-Lengths: phony || .
 
-build CMakeFiles/Stick-Lengths.dir/Sorting_and_Searching/Stick-Lengths.cpp.obj: CXX_COMPILER__Stick-Lengths_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Stick-Lengths.cpp || cmake_object_order_depends_target_Stick-Lengths
-  DEP_FILE = CMakeFiles\Stick-Lengths.dir\Sorting_and_Searching\Stick-Lengths.cpp.obj.d
+build CMakeFiles/Stick-Lengths.dir/Sorting-and-Searching/Stick-Lengths.cpp.obj: CXX_COMPILER__Stick-Lengths_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Stick-Lengths.cpp || cmake_object_order_depends_target_Stick-Lengths
+  DEP_FILE = CMakeFiles\Stick-Lengths.dir\Sorting-and-Searching\Stick-Lengths.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Stick-Lengths.dir
-  OBJECT_FILE_DIR = CMakeFiles\Stick-Lengths.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Stick-Lengths.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2802,7 +2802,7 @@ build CMakeFiles/Stick-Lengths.dir/Sorting_and_Searching/Stick-Lengths.cpp.obj: 
 #############################################
 # Link the executable Stick-Lengths.exe
 
-build Stick-Lengths.exe: CXX_EXECUTABLE_LINKER__Stick-Lengths_Debug CMakeFiles/Stick-Lengths.dir/Sorting_and_Searching/Stick-Lengths.cpp.obj
+build Stick-Lengths.exe: CXX_EXECUTABLE_LINKER__Stick-Lengths_Debug CMakeFiles/Stick-Lengths.dir/Sorting-and-Searching/Stick-Lengths.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Stick-Lengths.dir
@@ -2821,11 +2821,11 @@ build Stick-Lengths.exe: CXX_EXECUTABLE_LINKER__Stick-Lengths_Debug CMakeFiles/S
 
 build cmake_object_order_depends_target_Sum-Of-Four-Values: phony || .
 
-build CMakeFiles/Sum-Of-Four-Values.dir/Sorting_and_Searching/Sum-Of-Four-Values.cpp.obj: CXX_COMPILER__Sum-Of-Four-Values_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Sum-Of-Four-Values.cpp || cmake_object_order_depends_target_Sum-Of-Four-Values
-  DEP_FILE = CMakeFiles\Sum-Of-Four-Values.dir\Sorting_and_Searching\Sum-Of-Four-Values.cpp.obj.d
+build CMakeFiles/Sum-Of-Four-Values.dir/Sorting-and-Searching/Sum-Of-Four-Values.cpp.obj: CXX_COMPILER__Sum-Of-Four-Values_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Sum-Of-Four-Values.cpp || cmake_object_order_depends_target_Sum-Of-Four-Values
+  DEP_FILE = CMakeFiles\Sum-Of-Four-Values.dir\Sorting-and-Searching\Sum-Of-Four-Values.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Sum-Of-Four-Values.dir
-  OBJECT_FILE_DIR = CMakeFiles\Sum-Of-Four-Values.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Sum-Of-Four-Values.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2835,7 +2835,7 @@ build CMakeFiles/Sum-Of-Four-Values.dir/Sorting_and_Searching/Sum-Of-Four-Values
 #############################################
 # Link the executable Sum-Of-Four-Values.exe
 
-build Sum-Of-Four-Values.exe: CXX_EXECUTABLE_LINKER__Sum-Of-Four-Values_Debug CMakeFiles/Sum-Of-Four-Values.dir/Sorting_and_Searching/Sum-Of-Four-Values.cpp.obj
+build Sum-Of-Four-Values.exe: CXX_EXECUTABLE_LINKER__Sum-Of-Four-Values_Debug CMakeFiles/Sum-Of-Four-Values.dir/Sorting-and-Searching/Sum-Of-Four-Values.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Sum-Of-Four-Values.dir
@@ -2854,11 +2854,11 @@ build Sum-Of-Four-Values.exe: CXX_EXECUTABLE_LINKER__Sum-Of-Four-Values_Debug CM
 
 build cmake_object_order_depends_target_Sum-Of-Three-Values: phony || .
 
-build CMakeFiles/Sum-Of-Three-Values.dir/Sorting_and_Searching/Sum-Of-Three-Values.cpp.obj: CXX_COMPILER__Sum-Of-Three-Values_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Sum-Of-Three-Values.cpp || cmake_object_order_depends_target_Sum-Of-Three-Values
-  DEP_FILE = CMakeFiles\Sum-Of-Three-Values.dir\Sorting_and_Searching\Sum-Of-Three-Values.cpp.obj.d
+build CMakeFiles/Sum-Of-Three-Values.dir/Sorting-and-Searching/Sum-Of-Three-Values.cpp.obj: CXX_COMPILER__Sum-Of-Three-Values_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Sum-Of-Three-Values.cpp || cmake_object_order_depends_target_Sum-Of-Three-Values
+  DEP_FILE = CMakeFiles\Sum-Of-Three-Values.dir\Sorting-and-Searching\Sum-Of-Three-Values.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Sum-Of-Three-Values.dir
-  OBJECT_FILE_DIR = CMakeFiles\Sum-Of-Three-Values.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Sum-Of-Three-Values.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2868,7 +2868,7 @@ build CMakeFiles/Sum-Of-Three-Values.dir/Sorting_and_Searching/Sum-Of-Three-Valu
 #############################################
 # Link the executable Sum-Of-Three-Values.exe
 
-build Sum-Of-Three-Values.exe: CXX_EXECUTABLE_LINKER__Sum-Of-Three-Values_Debug CMakeFiles/Sum-Of-Three-Values.dir/Sorting_and_Searching/Sum-Of-Three-Values.cpp.obj
+build Sum-Of-Three-Values.exe: CXX_EXECUTABLE_LINKER__Sum-Of-Three-Values_Debug CMakeFiles/Sum-Of-Three-Values.dir/Sorting-and-Searching/Sum-Of-Three-Values.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Sum-Of-Three-Values.dir
@@ -2887,11 +2887,11 @@ build Sum-Of-Three-Values.exe: CXX_EXECUTABLE_LINKER__Sum-Of-Three-Values_Debug 
 
 build cmake_object_order_depends_target_Sum-Of-Two-Values: phony || .
 
-build CMakeFiles/Sum-Of-Two-Values.dir/Sorting_and_Searching/Sum-Of-Two-Values.cpp.obj: CXX_COMPILER__Sum-Of-Two-Values_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Sum-Of-Two-Values.cpp || cmake_object_order_depends_target_Sum-Of-Two-Values
-  DEP_FILE = CMakeFiles\Sum-Of-Two-Values.dir\Sorting_and_Searching\Sum-Of-Two-Values.cpp.obj.d
+build CMakeFiles/Sum-Of-Two-Values.dir/Sorting-and-Searching/Sum-Of-Two-Values.cpp.obj: CXX_COMPILER__Sum-Of-Two-Values_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Sum-Of-Two-Values.cpp || cmake_object_order_depends_target_Sum-Of-Two-Values
+  DEP_FILE = CMakeFiles\Sum-Of-Two-Values.dir\Sorting-and-Searching\Sum-Of-Two-Values.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Sum-Of-Two-Values.dir
-  OBJECT_FILE_DIR = CMakeFiles\Sum-Of-Two-Values.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Sum-Of-Two-Values.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2901,7 +2901,7 @@ build CMakeFiles/Sum-Of-Two-Values.dir/Sorting_and_Searching/Sum-Of-Two-Values.c
 #############################################
 # Link the executable Sum-Of-Two-Values.exe
 
-build Sum-Of-Two-Values.exe: CXX_EXECUTABLE_LINKER__Sum-Of-Two-Values_Debug CMakeFiles/Sum-Of-Two-Values.dir/Sorting_and_Searching/Sum-Of-Two-Values.cpp.obj
+build Sum-Of-Two-Values.exe: CXX_EXECUTABLE_LINKER__Sum-Of-Two-Values_Debug CMakeFiles/Sum-Of-Two-Values.dir/Sorting-and-Searching/Sum-Of-Two-Values.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Sum-Of-Two-Values.dir
@@ -2920,11 +2920,11 @@ build Sum-Of-Two-Values.exe: CXX_EXECUTABLE_LINKER__Sum-Of-Two-Values_Debug CMak
 
 build cmake_object_order_depends_target_Towers: phony || .
 
-build CMakeFiles/Towers.dir/Sorting_and_Searching/Towers.cpp.obj: CXX_COMPILER__Towers_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Towers.cpp || cmake_object_order_depends_target_Towers
-  DEP_FILE = CMakeFiles\Towers.dir\Sorting_and_Searching\Towers.cpp.obj.d
+build CMakeFiles/Towers.dir/Sorting-and-Searching/Towers.cpp.obj: CXX_COMPILER__Towers_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Towers.cpp || cmake_object_order_depends_target_Towers
+  DEP_FILE = CMakeFiles\Towers.dir\Sorting-and-Searching\Towers.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Towers.dir
-  OBJECT_FILE_DIR = CMakeFiles\Towers.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Towers.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2934,7 +2934,7 @@ build CMakeFiles/Towers.dir/Sorting_and_Searching/Towers.cpp.obj: CXX_COMPILER__
 #############################################
 # Link the executable Towers.exe
 
-build Towers.exe: CXX_EXECUTABLE_LINKER__Towers_Debug CMakeFiles/Towers.dir/Sorting_and_Searching/Towers.cpp.obj
+build Towers.exe: CXX_EXECUTABLE_LINKER__Towers_Debug CMakeFiles/Towers.dir/Sorting-and-Searching/Towers.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Towers.dir
@@ -2953,11 +2953,11 @@ build Towers.exe: CXX_EXECUTABLE_LINKER__Towers_Debug CMakeFiles/Towers.dir/Sort
 
 build cmake_object_order_depends_target_Traffic-Lights: phony || .
 
-build CMakeFiles/Traffic-Lights.dir/Sorting_and_Searching/Traffic-Lights.cpp.obj: CXX_COMPILER__Traffic-Lights_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting$ and$ Searching/Traffic-Lights.cpp || cmake_object_order_depends_target_Traffic-Lights
-  DEP_FILE = CMakeFiles\Traffic-Lights.dir\Sorting_and_Searching\Traffic-Lights.cpp.obj.d
+build CMakeFiles/Traffic-Lights.dir/Sorting-and-Searching/Traffic-Lights.cpp.obj: CXX_COMPILER__Traffic-Lights_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Traffic-Lights.cpp || cmake_object_order_depends_target_Traffic-Lights
+  DEP_FILE = CMakeFiles\Traffic-Lights.dir\Sorting-and-Searching\Traffic-Lights.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Traffic-Lights.dir
-  OBJECT_FILE_DIR = CMakeFiles\Traffic-Lights.dir\Sorting_and_Searching
+  OBJECT_FILE_DIR = CMakeFiles\Traffic-Lights.dir\Sorting-and-Searching
 
 
 # =============================================================================
@@ -2967,7 +2967,7 @@ build CMakeFiles/Traffic-Lights.dir/Sorting_and_Searching/Traffic-Lights.cpp.obj
 #############################################
 # Link the executable Traffic-Lights.exe
 
-build Traffic-Lights.exe: CXX_EXECUTABLE_LINKER__Traffic-Lights_Debug CMakeFiles/Traffic-Lights.dir/Sorting_and_Searching/Traffic-Lights.cpp.obj
+build Traffic-Lights.exe: CXX_EXECUTABLE_LINKER__Traffic-Lights_Debug CMakeFiles/Traffic-Lights.dir/Sorting-and-Searching/Traffic-Lights.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Traffic-Lights.dir
@@ -3076,39 +3076,6 @@ build Tree-Distances-II.exe: CXX_EXECUTABLE_LINKER__Tree-Distances-II_Debug CMak
   TARGET_IMPLIB = libTree-Distances-II.dll.a
   TARGET_PDB = Tree-Distances-II.exe.dbg
 
-# =============================================================================
-# Object build statements for EXECUTABLE target CMakeCXXCompilerId
-
-
-#############################################
-# Order-only phony target for CMakeCXXCompilerId
-
-build cmake_object_order_depends_target_CMakeCXXCompilerId: phony || .
-
-build CMakeFiles/CMakeCXXCompilerId.dir/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.obj: CXX_COMPILER__CMakeCXXCompilerId_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp || cmake_object_order_depends_target_CMakeCXXCompilerId
-  DEP_FILE = CMakeFiles\CMakeCXXCompilerId.dir\CMakeFiles\3.29.6\CompilerIdCXX\CMakeCXXCompilerId.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\CMakeCXXCompilerId.dir
-  OBJECT_FILE_DIR = CMakeFiles\CMakeCXXCompilerId.dir\CMakeFiles\3.29.6\CompilerIdCXX
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target CMakeCXXCompilerId
-
-
-#############################################
-# Link the executable CMakeCXXCompilerId.exe
-
-build CMakeCXXCompilerId.exe: CXX_EXECUTABLE_LINKER__CMakeCXXCompilerId_Debug CMakeFiles/CMakeCXXCompilerId.dir/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.obj
-  FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\CMakeCXXCompilerId.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = CMakeCXXCompilerId.exe
-  TARGET_IMPLIB = libCMakeCXXCompilerId.dll.a
-  TARGET_PDB = CMakeCXXCompilerId.exe.dbg
-
 
 #############################################
 # Utility command for edit_cache
@@ -3141,7 +3108,7 @@ build Apartments: phony Apartments.exe
 
 build Apple-Division: phony Apple-Division.exe
 
-build Array_Description: phony Array_Description.exe
+build Array-Description: phony Array-Description.exe
 
 build Bit-Strings: phony Bit-Strings.exe
 
@@ -3150,8 +3117,6 @@ build Book-Shop: phony Book-Shop.exe
 build Building-Roads: phony Building-Roads.exe
 
 build Building-Teams: phony Building-Teams.exe
-
-build CMakeCXXCompilerId: phony CMakeCXXCompilerId.exe
 
 build Chessboard-And-Queens: phony Chessboard-And-Queens.exe
 
@@ -3319,7 +3284,7 @@ build Two-Sets-II: phony Two-Sets-II.exe
 
 build Weird-Algorithm: phony Weird-Algorithm.exe
 
-build exe: phony exe.exe
+build main: phony main.exe
 
 # =============================================================================
 # Folder targets.
@@ -3329,23 +3294,37 @@ build exe: phony exe.exe
 #############################################
 # Folder: C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug
 
-build all: phony exe.exe All-Subarray-Xors.exe Counting-Bits.exe Maximum-Xor-Subarray.exe Maximum-Xor-Subset.exe Array_Description.exe Book-Shop.exe Coin-Combinations_II.exe Counting-Towers.exe Edit-Distance.exe Grid-Paths-I.exe Longest-Common-Subsequence.exe Minimal-Grid-Path.exe Money-Sums.exe Mountain-Range.exe Rectangle-Cutting.exe Removal-Game.exe Removing-Digits.exe Two-Sets-II.exe Point-Location-Test.exe Building-Roads.exe Building-Teams.exe Counting-Rooms.exe Course-Schedule.exe Flight-Routes-Check.exe Game-Routes.exe Investigation.exe Longest-Flight-Route.exe Message-Route.exe Monsters.exe Planets-And-Kingdoms.exe Road-Construction.exe Round-Trip.exe Shortest-Routes-I.exe Shortest-Routes-II.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Grid-Coloring-I.exe Grid-Path-Description.exe Increasing-Array.exe Knight-Moves-Grid.exe Mex-Grid-Construction.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe Counting-Divisors.exe Exponentiation.exe Next-Prime.exe Sliding-Window-Cost.exe Sliding-Window-Minimum.exe Sliding-Window-Sum.exe Apartments.exe Collecting-Numbers-II.exe Collecting-Numbers.exe Concert-Tickets.exe Distinct-Numbers.exe Distinct-Value-Subsequences.exe Distinct-Values-Subarrays.exe Factory-Machines.exe Ferris-Wheel.exe Josephus-Problem-I.exe Maximum-Subarray-Sum-II.exe Maximum-Subarray_Sum.exe Missing-Coin-Sum.exe Movie-Festival-II.exe Movie-Festival.exe Playlist.exe Reading-Books.exe Restaurant-Customers.exe Stick-Lengths.exe Sum-Of-Four-Values.exe Sum-Of-Three-Values.exe Sum-Of-Two-Values.exe Towers.exe Traffic-Lights.exe Tree-Diameter.exe Tree-Distances-I.exe Tree-Distances-II.exe CMakeCXXCompilerId.exe
+build all: phony main.exe All-Subarray-Xors.exe Counting-Bits.exe Maximum-Xor-Subarray.exe Maximum-Xor-Subset.exe Array-Description.exe Book-Shop.exe Coin-Combinations_II.exe Counting-Towers.exe Edit-Distance.exe Grid-Paths-I.exe Longest-Common-Subsequence.exe Minimal-Grid-Path.exe Money-Sums.exe Mountain-Range.exe Rectangle-Cutting.exe Removal-Game.exe Removing-Digits.exe Two-Sets-II.exe Point-Location-Test.exe Building-Roads.exe Building-Teams.exe Counting-Rooms.exe Course-Schedule.exe Flight-Routes-Check.exe Game-Routes.exe Investigation.exe Longest-Flight-Route.exe Message-Route.exe Monsters.exe Planets-And-Kingdoms.exe Road-Construction.exe Round-Trip.exe Shortest-Routes-I.exe Shortest-Routes-II.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Grid-Coloring-I.exe Grid-Path-Description.exe Increasing-Array.exe Knight-Moves-Grid.exe Mex-Grid-Construction.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe Counting-Divisors.exe Exponentiation.exe Next-Prime.exe Sliding-Window-Cost.exe Sliding-Window-Minimum.exe Sliding-Window-Sum.exe Apartments.exe Collecting-Numbers-II.exe Collecting-Numbers.exe Concert-Tickets.exe Distinct-Numbers.exe Distinct-Value-Subsequences.exe Distinct-Values-Subarrays.exe Factory-Machines.exe Ferris-Wheel.exe Josephus-Problem-I.exe Maximum-Subarray-Sum-II.exe Maximum-Subarray_Sum.exe Missing-Coin-Sum.exe Movie-Festival-II.exe Movie-Festival.exe Playlist.exe Reading-Books.exe Restaurant-Customers.exe Stick-Lengths.exe Sum-Of-Four-Values.exe Sum-Of-Three-Values.exe Sum-Of-Two-Values.exe Towers.exe Traffic-Lights.exe Tree-Diameter.exe Tree-Distances-I.exe Tree-Distances-II.exe
 
 # =============================================================================
 # Built-in targets
 
 
 #############################################
+# Phony target to force glob verification run.
+
+build C$:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake_force: phony
+
+
+#############################################
+# Re-run CMake to check if globbed directories changed.
+
+build C$:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/cmake.verify_globs: VERIFY_GLOBS | C$:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake_force
+  pool = console
+  restat = 1
+
+
+#############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Users/jacks/CLionProjects/CSES_Solutions/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE C$:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/cmake.verify_globs | C$:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake C$:/Users/jacks/CLionProjects/CSES_Solutions/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/jacks/CLionProjects/CSES_Solutions/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake: phony
+build C$:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake C$:/Users/jacks/CLionProjects/CSES_Solutions/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake D$:/Apps/New$ folder/CLion$ 2024.2.0.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake: phony
 
 
 #############################################

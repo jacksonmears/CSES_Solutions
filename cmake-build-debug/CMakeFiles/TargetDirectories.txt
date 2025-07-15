@@ -1,9 +1,9 @@
-C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/exe.dir
+C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/main.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/All-Subarray-Xors.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Counting-Bits.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Maximum-Xor-Subarray.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Maximum-Xor-Subset.dir
-C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Array_Description.dir
+C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Array-Description.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Book-Shop.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Coin-Combinations_II.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Counting-Towers.dir
@@ -90,6 +90,5 @@ C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Traffic
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Tree-Diameter.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Tree-Distances-I.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Tree-Distances-II.dir
-C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/CMakeCXXCompilerId.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/rebuild_cache.dir
