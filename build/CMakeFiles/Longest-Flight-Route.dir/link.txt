@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Longest-Flight-Route.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Longest-Flight-Route.dir/objects.a @CMakeFiles\Longest-Flight-Route.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Longest-Flight-Route.dir/objects.a -Wl,--no-whole-archive -o Longest-Flight-Route.exe -Wl,--out-implib,libLongest-Flight-Route.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Longest-Flight-Route.dir\linkLibs.rsp

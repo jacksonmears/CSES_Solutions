@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Permutations.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Permutations.dir/objects.a @CMakeFiles\Permutations.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Permutations.dir/objects.a -Wl,--no-whole-archive -o Permutations.exe -Wl,--out-implib,libPermutations.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Permutations.dir\linkLibs.rsp

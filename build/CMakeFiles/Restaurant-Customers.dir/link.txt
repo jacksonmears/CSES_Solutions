@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Restaurant-Customers.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Restaurant-Customers.dir/objects.a @CMakeFiles\Restaurant-Customers.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Restaurant-Customers.dir/objects.a -Wl,--no-whole-archive -o Restaurant-Customers.exe -Wl,--out-implib,libRestaurant-Customers.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Restaurant-Customers.dir\linkLibs.rsp
