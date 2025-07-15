@@ -34,8 +34,6 @@ int main() {
 		else {
 			rep(j, 1, m) dp[i][j] = (dp[i-1][j-1] + dp[i-1][j] + dp[i-1][j+1]) % MOD;
 		}
-		for (auto k : dp[i]) cout << k << " ";
-		cout << endl;
 	}
 	
 	
