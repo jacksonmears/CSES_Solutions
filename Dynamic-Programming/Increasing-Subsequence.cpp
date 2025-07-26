@@ -15,7 +15,6 @@ constexpr ll MOD = 1e9 + 7;
 #define rep(i,a,b) for (ll i = a; i <= b; i++)
 
 
-
 int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
 

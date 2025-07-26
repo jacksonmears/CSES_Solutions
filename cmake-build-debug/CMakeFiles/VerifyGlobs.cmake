@@ -20,6 +20,7 @@ set(OLD_GLOB
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Minimal-Grid-Path.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Money-Sums.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Mountain-Range.cpp"
+  "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Projects.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Rectangle-Cutting.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Removal-Game.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Removing-Digits.cpp"
