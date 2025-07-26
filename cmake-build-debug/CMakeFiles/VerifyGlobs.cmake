@@ -15,6 +15,7 @@ set(OLD_GLOB
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Counting-Towers.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Edit-Distance.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Grid-Paths-I.cpp"
+  "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Increasing-Subsequence.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Longest-Common-Subsequence.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Minimal-Grid-Path.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Money-Sums.cpp"
@@ -96,6 +97,7 @@ set(OLD_GLOB
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Tree-Algorithms/Tree-Diameter.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Tree-Algorithms/Tree-Distances-I.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Tree-Algorithms/Tree-Distances-II.cpp"
+  "C:/Users/jacks/CLionProjects/CSES_Solutions/build/CMakeFiles/4.0.3/CompilerIdCXX/CMakeCXXCompilerId.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/main.cpp"
   )

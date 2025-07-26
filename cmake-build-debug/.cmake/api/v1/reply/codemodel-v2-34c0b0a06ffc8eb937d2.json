@@ -106,7 +106,8 @@
 						88,
 						89,
 						90,
-						91
+						91,
+						92
 					]
 				}
 			],
@@ -212,7 +213,8 @@
 						88,
 						89,
 						90,
-						91
+						91,
+						92
 					]
 				}
 			],
@@ -461,6 +463,13 @@
 					"id" : "Increasing-Array::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-Increasing-Array-Debug-4c6bbf87040b214e66a4.json",
 					"name" : "Increasing-Array",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Increasing-Subsequence::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Increasing-Subsequence-Debug-08ed38276b9f5d1df4e0.json",
+					"name" : "Increasing-Subsequence",
 					"projectIndex" : 0
 				},
 				{
