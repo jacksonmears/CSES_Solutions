@@ -26,6 +26,7 @@ C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Countin
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Course-Schedule.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Flight-Routes-Check.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Game-Routes.dir
+C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/High-Score.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Investigation.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Longest-Flight-Route.dir
 C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/Message-Route.dir
