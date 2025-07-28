@@ -899,6 +899,39 @@ build Course-Schedule.exe: CXX_EXECUTABLE_LINKER__Course-Schedule_Debug CMakeFil
   TARGET_PDB = Course-Schedule.exe.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target Cycle-Finding
+
+
+#############################################
+# Order-only phony target for Cycle-Finding
+
+build cmake_object_order_depends_target_Cycle-Finding: phony || .
+
+build CMakeFiles/Cycle-Finding.dir/Graph-Algorithms/Cycle-Finding.cpp.obj: CXX_COMPILER__Cycle-Finding_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Cycle-Finding.cpp || cmake_object_order_depends_target_Cycle-Finding
+  DEP_FILE = CMakeFiles\Cycle-Finding.dir\Graph-Algorithms\Cycle-Finding.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Cycle-Finding.dir
+  OBJECT_FILE_DIR = CMakeFiles\Cycle-Finding.dir\Graph-Algorithms
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Cycle-Finding
+
+
+#############################################
+# Link the executable Cycle-Finding.exe
+
+build Cycle-Finding.exe: CXX_EXECUTABLE_LINKER__Cycle-Finding_Debug CMakeFiles/Cycle-Finding.dir/Graph-Algorithms/Cycle-Finding.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Cycle-Finding.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Cycle-Finding.exe
+  TARGET_IMPLIB = libCycle-Finding.dll.a
+  TARGET_PDB = Cycle-Finding.exe.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target Flight-Discount
 
 
@@ -3307,6 +3340,8 @@ build Course-Schedule: phony Course-Schedule.exe
 
 build Creating-Strings: phony Creating-Strings.exe
 
+build Cycle-Finding: phony Cycle-Finding.exe
+
 build Digit-Queries: phony Digit-Queries.exe
 
 build Distinct-Numbers: phony Distinct-Numbers.exe
@@ -3469,7 +3504,7 @@ build main: phony main.exe
 #############################################
 # Folder: C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug
 
-build all: phony main.exe All-Subarray-Xors.exe Counting-Bits.exe Maximum-Xor-Subarray.exe Maximum-Xor-Subset.exe Array-Description.exe Book-Shop.exe Coin-Combinations_II.exe Counting-Towers.exe Edit-Distance.exe Grid-Paths-I.exe Increasing-Subsequence.exe Longest-Common-Subsequence.exe Minimal-Grid-Path.exe Money-Sums.exe Mountain-Range.exe Projects.exe Rectangle-Cutting.exe Removal-Game.exe Removing-Digits.exe Two-Sets-II.exe Point-Location-Test.exe Building-Roads.exe Building-Teams.exe Counting-Rooms.exe Course-Schedule.exe Flight-Discount.exe Flight-Routes-Check.exe Game-Routes.exe High-Score.exe Investigation.exe Longest-Flight-Route.exe Message-Route.exe Monsters.exe Planets-And-Kingdoms.exe Road-Construction.exe Round-Trip.exe Shortest-Routes-I.exe Shortest-Routes-II.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Grid-Coloring-I.exe Grid-Path-Description.exe Increasing-Array.exe Knight-Moves-Grid.exe Mex-Grid-Construction.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe Counting-Divisors.exe Exponentiation.exe Next-Prime.exe Static-Range-Minimum-Queries.exe Sliding-Window-Cost.exe Sliding-Window-Minimum.exe Sliding-Window-Sum.exe Apartments.exe Collecting-Numbers-II.exe Collecting-Numbers.exe Concert-Tickets.exe Distinct-Numbers.exe Distinct-Value-Subsequences.exe Distinct-Values-Subarrays.exe Factory-Machines.exe Ferris-Wheel.exe Josephus-Problem-I.exe Maximum-Subarray-Sum-II.exe Maximum-Subarray_Sum.exe Missing-Coin-Sum.exe Movie-Festival-II.exe Movie-Festival.exe Playlist.exe Reading-Books.exe Restaurant-Customers.exe Stick-Lengths.exe Sum-Of-Four-Values.exe Sum-Of-Three-Values.exe Sum-Of-Two-Values.exe Towers.exe Traffic-Lights.exe Tree-Diameter.exe Tree-Distances-I.exe Tree-Distances-II.exe
+build all: phony main.exe All-Subarray-Xors.exe Counting-Bits.exe Maximum-Xor-Subarray.exe Maximum-Xor-Subset.exe Array-Description.exe Book-Shop.exe Coin-Combinations_II.exe Counting-Towers.exe Edit-Distance.exe Grid-Paths-I.exe Increasing-Subsequence.exe Longest-Common-Subsequence.exe Minimal-Grid-Path.exe Money-Sums.exe Mountain-Range.exe Projects.exe Rectangle-Cutting.exe Removal-Game.exe Removing-Digits.exe Two-Sets-II.exe Point-Location-Test.exe Building-Roads.exe Building-Teams.exe Counting-Rooms.exe Course-Schedule.exe Cycle-Finding.exe Flight-Discount.exe Flight-Routes-Check.exe Game-Routes.exe High-Score.exe Investigation.exe Longest-Flight-Route.exe Message-Route.exe Monsters.exe Planets-And-Kingdoms.exe Road-Construction.exe Round-Trip.exe Shortest-Routes-I.exe Shortest-Routes-II.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Grid-Coloring-I.exe Grid-Path-Description.exe Increasing-Array.exe Knight-Moves-Grid.exe Mex-Grid-Construction.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe Counting-Divisors.exe Exponentiation.exe Next-Prime.exe Static-Range-Minimum-Queries.exe Sliding-Window-Cost.exe Sliding-Window-Minimum.exe Sliding-Window-Sum.exe Apartments.exe Collecting-Numbers-II.exe Collecting-Numbers.exe Concert-Tickets.exe Distinct-Numbers.exe Distinct-Value-Subsequences.exe Distinct-Values-Subarrays.exe Factory-Machines.exe Ferris-Wheel.exe Josephus-Problem-I.exe Maximum-Subarray-Sum-II.exe Maximum-Subarray_Sum.exe Missing-Coin-Sum.exe Movie-Festival-II.exe Movie-Festival.exe Playlist.exe Reading-Books.exe Restaurant-Customers.exe Stick-Lengths.exe Sum-Of-Four-Values.exe Sum-Of-Three-Values.exe Sum-Of-Two-Values.exe Towers.exe Traffic-Lights.exe Tree-Diameter.exe Tree-Distances-I.exe Tree-Distances-II.exe
 
 # =============================================================================
 # Built-in targets

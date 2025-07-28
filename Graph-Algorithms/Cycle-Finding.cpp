@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <regex>
 using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
@@ -14,31 +13,48 @@ constexpr ll MOD = 1e9 + 7;
 #define mp make_pair
 #define rep(i,a,b) for (ll i = a; i <= b; i++)
 
-
-
-
 int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll n, q; cin >> n >> q;
-    ll log_n = (ll)log2(n);
+    ll n, m; cin >> n >> m;
+    vector<vector<pl>> adj_matrix(n+1);
+    rep(i, 0, m-1) {
+        ll a, b, c; cin >> a >> b >> c;
+        adj_matrix[a].pb(mp(b, c));
+    }
 
-    vector<vl> sparse_table(log_n + 1, vl(n));
-    rep(i, 0, n-1) cin >> sparse_table[0][i];
+    vl bellman_ford(n+1, 0);
+    vl parent(n+1, -1);
+    ll cycle_found = -1;
 
-    rep(i, 1, log_n) {
-        ll length = 1LL << i;
-        ll half = length >> 1;
-        for (ll j = 0; j + length <= n; j++) {
-            sparse_table[i][j] = min(sparse_table[i-1][j], sparse_table[i-1][j + half]);
+    rep(i, 0, n-1) {
+        cycle_found = -1;
+        rep(node, 1, n) {
+            for (auto &[child, weight] : adj_matrix[node]) {
+                if (bellman_ford[node] + weight < bellman_ford[child]) {
+                    bellman_ford[child] = bellman_ford[node] + weight;
+                    parent[child] = node;
+                    cycle_found = child;
+                }
+            }
         }
     }
 
-    while (q--) {
-        ll a, b; cin >> a >> b; a--; b--;
-        ll log_q = (ll)log2(b-a+1);
-        cout << min(sparse_table[log_q][a], sparse_table[log_q][b-(1<<log_q)+1]) << "\n";
-    }
+    if (cycle_found == -1) return cout << "NO\n", 0;
+
+    rep(i, 0, n-1) cycle_found = parent[cycle_found];
+
+    vl cycle;
+    ll cur = cycle_found;
+    do {
+        cycle.pb(cur);
+        cur = parent[cur];
+    } while (cur != cycle_found);
+    cycle.pb(cycle_found);
+    reverse(cycle.begin(), cycle.end());
+
+    cout << "YES\n";
+    for (auto i : cycle) cout << i << " ";
 
     return 0;
 }
