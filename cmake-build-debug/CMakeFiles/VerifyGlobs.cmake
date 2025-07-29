@@ -68,6 +68,7 @@ set(OLD_GLOB
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Two-Knights.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Two-Sets.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Introductory-Problems/Weird-Algorithm.cpp"
+  "C:/Users/jacks/CLionProjects/CSES_Solutions/Mathematics/Binomial-Coefficients.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Mathematics/Counting-Divisors.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Mathematics/Exponentiation.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Mathematics/Next-Prime.cpp"
