@@ -114,7 +114,8 @@
 						96,
 						97,
 						98,
-						99
+						99,
+						100
 					]
 				}
 			],
@@ -228,7 +229,8 @@
 						96,
 						97,
 						98,
-						99
+						99,
+						100
 					]
 				}
 			],
@@ -540,6 +542,13 @@
 					"id" : "Knight-Moves-Grid::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-Knight-Moves-Grid-Debug-e00602695aafc5047faa.json",
 					"name" : "Knight-Moves-Grid",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Knights-Tour::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Knights-Tour-Debug-5514287c879a678b804e.json",
+					"name" : "Knights-Tour",
 					"projectIndex" : 0
 				},
 				{
