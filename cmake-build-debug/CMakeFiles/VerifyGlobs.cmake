@@ -9,6 +9,7 @@ set(OLD_GLOB
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Bitwise-Operations/Counting-Bits.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Bitwise-Operations/Maximum-Xor-Subarray.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Bitwise-Operations/Maximum-Xor-Subset.cpp"
+  "C:/Users/jacks/CLionProjects/CSES_Solutions/Counting-Problems/Filled-Subgrid-Count-I.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Array-Description.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Book-Shop.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Coin-Combinations_II.cpp"
