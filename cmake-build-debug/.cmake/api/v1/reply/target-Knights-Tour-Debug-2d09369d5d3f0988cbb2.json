@@ -98,7 +98,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Knights-Tour.cpp",
+			"path" : "Graph-Algorithms/Knights-Tour.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
