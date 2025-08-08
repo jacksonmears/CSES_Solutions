@@ -124,7 +124,7 @@
 73	1765	7742517595771318	CMakeFiles/Book-Shop.dir/Dynamic-Programming/Book-Shop.cpp.obj	ae01169e2520cdc6
 77	1709	7753540596946090	CMakeFiles/Projects.dir/Dynamic-Programming/Projects.cpp.obj	2eef436d4c4ca712
 1710	2247	7753540613260441	Projects.exe	8b4c62d0165d5051
-62	516	7762809528019076	build.ninja	5e37fb237d384ec8
+62	516	7763339467482412	build.ninja	5e37fb237d384ec8
 69	1600	7754204533648503	CMakeFiles/Flight-Discount.dir/Graph-Algorithms/Flight-Discount.cpp.obj	911ecdc78ef444d7
 1601	1677	7754204548974939	Flight-Discount.exe	63844f97d9304f4f
 64	1368	7755350173874799	CMakeFiles/Binomial-Coefficients.dir/Mathematics/Binomial-Coefficients.cpp.obj	de593ef6c2656eb2
