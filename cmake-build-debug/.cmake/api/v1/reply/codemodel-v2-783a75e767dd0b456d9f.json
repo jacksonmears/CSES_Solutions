@@ -119,7 +119,8 @@
 						101,
 						102,
 						103,
-						104
+						104,
+						105
 					]
 				}
 			],
@@ -238,7 +239,8 @@
 						101,
 						102,
 						103,
-						104
+						104,
+						105
 					]
 				}
 			],
@@ -312,6 +314,13 @@
 					"id" : "Chessboard-And-Queens::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-Chessboard-And-Queens-Debug-048aec7b976aaedd7c4c.json",
 					"name" : "Chessboard-And-Queens",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Coin-Collector::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Coin-Collector-Debug-54182052afed4d6b345c.json",
+					"name" : "Coin-Collector",
 					"projectIndex" : 0
 				},
 				{
