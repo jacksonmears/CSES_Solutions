@@ -43,6 +43,7 @@ set(OLD_GLOB
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Investigation.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Knights-Tour.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Longest-Flight-Route.cpp"
+  "C:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Mail-Delivery.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Message-Route.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Monsters.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Planets-And-Kingdoms.cpp"

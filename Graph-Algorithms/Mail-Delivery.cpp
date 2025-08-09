@@ -1,9 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-typedef vector<int> vi;
 typedef vector<ll> vl;
 typedef pair<ll,ll> pl;
+typedef vector<bool> vb;
+typedef vector<pl> vp;
 constexpr ll MAX = 9e18;
 constexpr ll MOD = 1e9 + 7;
 
@@ -17,17 +18,17 @@ constexpr ll MOD = 1e9 + 7;
 
 
 ll n, m;
-vector<vector<pl>> adj_matrix;
-vector<bool> seen;
+vector<vp> adj_matrix;
+vb seen;
 vl path;
 
-void dfs(const ll node) {
+
+// eulerian circuits
+void heirholzer(const ll node) {
     while (!adj_matrix[node].empty()) {
-        auto [child, index] = adj_matrix[node].back();
-        adj_matrix[node].pop_back();
-        if (seen[index]) continue;
-        seen[index] = true;
-        dfs(child);
+        auto [child, edgeID] = adj_matrix[node].back(); adj_matrix[node].pop_back();
+        if (seen[edgeID]) continue; seen[edgeID] = true;
+        heirholzer(child);
     }
     path.pb(node);
 }
@@ -37,7 +38,7 @@ int main() {
     cin.tie(nullptr);
 
     cin >> n >> m;
-    adj_matrix = vector(n + 1, vector<pl>({}));
+    adj_matrix = vector(n + 1, vp({}));
     seen = vector(m, false);
     vector degree(n + 1, 0);
 
@@ -48,6 +49,7 @@ int main() {
         degree[a]++; degree[b]++;
     }
 
+    // necessary check. Eulerian circuits on undirected graph require each node to have even indegrees
     rep(i, 1, n) {
         if (degree[i] % 2 != 0) {
             cout << "IMPOSSIBLE\n";
@@ -55,18 +57,21 @@ int main() {
         }
     }
 
+    // another prereq for eulerian curcuit. check if graph is disconnected
     vector visited(n + 1, false);
-    stack<ll> st; st.push(1);
+    stack<ll> street; street.push(1);
     visited[1] = true;
-    while (!st.empty()) {
-        const ll node = st.top(); st.pop();
+    while (!street.empty()) {
+        const ll node = street.top(); street.pop();
         for (auto &[child, _] : adj_matrix[node]) {
             if (!visited[child]) {
                 visited[child] = true;
-                st.push(child);
+                street.push(child);
             }
         }
     }
+
+    // has edges but wasn't visited
     rep(i, 1, n) {
         if (degree[i] > 0 && !visited[i]) {
             cout << "IMPOSSIBLE\n";
@@ -74,14 +79,10 @@ int main() {
         }
     }
 
-    dfs(1);
 
-    if (static_cast<ll>(path.size()) != m + 1) {
-        cout << "IMPOSSIBLE\n";
-        return 0;
-    }
 
-    ranges::reverse(path);
+    heirholzer(1);
+
     for (const ll node : path) cout << node << " ";
     cout << "\n";
 }
