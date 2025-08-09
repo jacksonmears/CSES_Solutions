@@ -31,8 +31,8 @@ void query_tree (ll a, ll b) {
     a += n-1; b += n-1;
     ll sum = 0;
     while (a <= b) {
-        if (a&1) sum += segment_tree[a++]; // right child
-        if (!(b&1)) sum += segment_tree[b--]; // left child
+        if (a&1) sum += segment_tree[a++];
+        if (!(b&1)) sum += segment_tree[b--];
         a /= 2; b /= 2;
     }
     cout << sum << "\n";
