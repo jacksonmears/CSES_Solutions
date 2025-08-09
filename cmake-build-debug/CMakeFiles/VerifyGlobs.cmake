@@ -80,6 +80,7 @@ set(OLD_GLOB
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Mathematics/Counting-Divisors.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Mathematics/Exponentiation.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Mathematics/Next-Prime.cpp"
+  "C:/Users/jacks/CLionProjects/CSES_Solutions/Range-Queries/Dynamic-Range-Sum-Queries.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Range-Queries/Static-Range-Minimum-Queries.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Sliding-Window-Problems/Sliding-Window-Cost.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Sliding-Window-Problems/Sliding-Window-Minimum.cpp"
