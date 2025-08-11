@@ -101,6 +101,7 @@ set(OLD_GLOB
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Missing-Coin-Sum.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Movie-Festival-II.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Movie-Festival.cpp"
+  "C:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Nested-Ranges-Count.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Playlist.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Reading-Books.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Restaurant-Customers.cpp"
