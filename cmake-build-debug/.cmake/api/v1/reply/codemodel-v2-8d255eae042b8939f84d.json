@@ -125,7 +125,8 @@
 						107,
 						108,
 						109,
-						110
+						110,
+						111
 					]
 				}
 			],
@@ -250,7 +251,8 @@
 						107,
 						108,
 						109,
-						110
+						110,
+						111
 					]
 				}
 			],
@@ -422,6 +424,13 @@
 					"id" : "Digit-Queries::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-Digit-Queries-Debug-5bce7ab32e7c55010011.json",
 					"name" : "Digit-Queries",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Distance-Queries::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Distance-Queries-Debug-2028f2e0dc78e6f1f3a7.json",
+					"name" : "Distance-Queries",
 					"projectIndex" : 0
 				},
 				{

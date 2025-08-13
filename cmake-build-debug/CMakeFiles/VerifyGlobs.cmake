@@ -111,6 +111,7 @@ set(OLD_GLOB
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Sum-Of-Two-Values.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Towers.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Traffic-Lights.cpp"
+  "C:/Users/jacks/CLionProjects/CSES_Solutions/Tree-Algorithms/Distance-Queries.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Tree-Algorithms/Tree-Diameter.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Tree-Algorithms/Tree-Distances-I.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Tree-Algorithms/Tree-Distances-II.cpp"
