@@ -20,22 +20,23 @@ int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
     ll n, m, k; cin >> n >> m >> k;
-    vl desiredSizes(n), availableSizes(m);
-    REP(i, 0, n-1)  cin >> desiredSizes[i];
-    REP(i, 0, m-1) cin >> availableSizes[i];
+    vl desired(n), available(m);
 
-    ranges::sort(desiredSizes);
-    ranges::sort(availableSizes);
-    ll counter = 0, currentDesiredSize = n-1, currentAvailableSize = m-1;
+    REP(i, 0, n-1)  cin >> desired[i];
+    REP(i, 0, m-1) cin >> available[i];
 
-    while (currentDesiredSize >= 0 && currentAvailableSize >= 0){
-        if (abs(availableSizes[currentAvailableSize]-desiredSizes[currentDesiredSize]) <= k){
+    ranges::sort(desired); ranges::sort(available);
+
+    ll counter = 0, cur_desired = n-1, cur_available = m-1;
+
+    while (cur_desired >= 0 && cur_available >= 0){
+        if (abs(available[cur_available]-desired[cur_desired]) <= k){
             counter++;
-            currentDesiredSize--;
-            currentAvailableSize--;
+            cur_desired--;
+            cur_available--;
         }
         else {
-            availableSizes[currentAvailableSize] > desiredSizes[currentDesiredSize] ? currentAvailableSize-- : currentDesiredSize--;
+            available[cur_available] > desired[cur_desired] ? cur_available-- : cur_desired--;
         }
     }
 
