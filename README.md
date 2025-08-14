@@ -5,7 +5,7 @@ The focus here is on explaining **how** and **why** each solution works.
 
 ---
 
-## 📜 Table of Contents
+## Table of Contents
 - [Introductory Problems](#introductory-problems)
 - [Sorting and Searching](#sorting-and-searching)
 
@@ -17,7 +17,7 @@ The focus here is on explaining **how** and **why** each solution works.
 <summary>Weird Algorithm</summary>
 
 - Start from `n`.  
-- If `n` is even → divide by 2.  
+- If `n` is even then divide by 2.  
 - If odd → multiply by 3 and add 1.  
 - Continue until `n = 1`.  
 - Since constraints are small, a direct simulation works in O(log n) time.  
