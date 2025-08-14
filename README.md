@@ -13,9 +13,8 @@ The focus here is on explaining **how** and **why** each solution works.
 
 ## Introductory Problems
 
-### Weird Algorithm
 <details>
-<summary>📄 Explanation</summary>
+<summary>Weird Algorithm</summary>
 
 - Start from `n`.  
 - If `n` is even → divide by 2.  
@@ -25,9 +24,8 @@ The focus here is on explaining **how** and **why** each solution works.
 
 </details>
 
-### Missing Number
 <details>
-<summary>📄 Explanation</summary>
+<summary>Missing Number</summary>
 
 We know the sum of numbers from 1 to n is `n*(n+1)/2` total.  
 - Read the n-1 given numbers, compute their sum.  
@@ -36,9 +34,9 @@ We know the sum of numbers from 1 to n is `n*(n+1)/2` total.
 
 </details>
 
-### Repetitions
+
 <details>
-<summary>📄 Explanation</summary>
+<summary>Repetitions</summary>
 
 We iterate through the string, tracking the length of the current run of identical characters.  
 Update the maximum run length whenever it increases.  
@@ -50,9 +48,8 @@ Update the maximum run length whenever it increases.
 
 ## Sorting and Searching
 
-### Distinct Numbers
 <details>
-<summary>📄 Explanation</summary>
+<summary>Distinct Numbers</summary>
 
 - Sort the array and count the number of distinct elements by comparing each to the previous.
 - The most straight forward way to accomplish this is by transforming the input array into a set and printing the size.
@@ -60,9 +57,8 @@ Update the maximum run length whenever it increases.
 
 </details>
 
-### Apartments
 <details>
-<summary>📄 Explanation</summary>
+<summary>Apartments</summary>
 
 We sort both desired sizes and available apartments.  
 Use two pointers to match each applicant with the closest acceptable apartment within `k` size difference.  
