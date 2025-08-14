@@ -5,6 +5,7 @@ cmake_policy(SET CMP0009 NEW)
 # SOURCES at CMakeLists.txt:10 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jacks/CLionProjects/CSES_Solutions/*.cpp")
 set(OLD_GLOB
+  "C:/Users/jacks/CLionProjects/CSES_Solutions/Additional-Problems-II/K-Subset-Sums-I.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Bitwise-Operations/All-Subarray-Xors.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Bitwise-Operations/Counting-Bits.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Bitwise-Operations/Maximum-Xor-Subarray.cpp"
@@ -79,6 +80,7 @@ set(OLD_GLOB
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Mathematics/Binomial-Coefficients.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Mathematics/Counting-Divisors.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Mathematics/Exponentiation.cpp"
+  "C:/Users/jacks/CLionProjects/CSES_Solutions/Mathematics/Josephus-Queries.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Mathematics/Next-Prime.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Range-Queries/Dynamic-Range-Minimum-Queries.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Range-Queries/Dynamic-Range-Sum-Queries.cpp"
