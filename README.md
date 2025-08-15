@@ -14,7 +14,10 @@ The focus here is on explaining **how** and **why** each solution works.
 ## Introductory Problems
 
 <details>
-<summary><span style="color:grey">Weird Algorithm</span></summary>
+<summary>Weird Algorithm</summary>
+
+<br>
+
 
 - Start from `n`.  
 - If `n` is even then divide by 2.  
@@ -22,49 +25,57 @@ The focus here is on explaining **how** and **why** each solution works.
 - Continue until `n = 1`.  
 - O(log n) time.  
 
+<br>
+
 </details>
 
 <details>
-<summary><span style="color:grey">Missing Number</span></summary>
+<summary>Missing Number</summary>
 
-We know the sum of numbers from 1 to n is `n*(n+1)/2` total.  
+<br>
+
+- We know the sum of numbers from 1 to n is `n*(n+1)/2` total.  
 - Read the n-1 given numbers, compute their sum.  
 - Subtract from the total to find the missing number.  
 - Time complexity: O(n). Space: O(1).
-- test
+
+<br>
 
 </details>
 
 
 <details>
-<summary><span style="color:grey">Repetitions</span></summary>
+<summary>Repetitions</summary>
+<br>
 
 - We iterate through the string, tracking the length of the current run of identical characters.  
 - Update the maximum run length whenever it increases and reset counter back to one when it's a different character.
 - Time complexity: O(n). Space: O(1).
-
+<br>
 </details>
 
 
 <details>
 
-<summary><span style="color:grey">Increasing Array</span></summary>
+<summary>Increasing Array</summary>
+<br>
 
 - Iterate through the array tracking the value of the previous element. 
 - If the current element is smaller than the previous then we need to increase the total count by the difference.
 - Time complexity: 0(n)
-
+<br>
 </details>
 
 
 <details>
 
-<summary><span style="color:grey">Permutations</span></summary>
+<summary>Permutations</summary>
+<br>
 
 - impossible solutions for `n = 2` or `n = 3` because any arrangement will have two consecutive numbers differing by 1.
 - For all other `n` we can simply print all even then all odd values.
 - Time complexity: O(n)
-
+<br>
 </details>
 
 
@@ -74,21 +85,21 @@ We know the sum of numbers from 1 to n is `n*(n+1)/2` total.
 ## Sorting and Searching
 
 <details>
-<summary><span style="color:grey">Distinct Numbers</span></summary>
-
+<summary>Distinct Numbers</summary>
+<br>
 - Sort the array and count the number of distinct elements by comparing each to the previous.
 - The most straight forward way to accomplish this is by transforming the input array into a set and printing the size.
 - Time complexity: O(n log n). Space: O(1) extra.
-
+<br>
 </details>
 
 <details>
-<summary><span style="color:grey">Apartments</span></summary>
-
+<summary>Apartments</summary>
+<br>
 We sort both desired sizes and available apartments.  
 Use two pointers to match each applicant with the closest acceptable apartment within `k` size difference.  
 - Time complexity: O(n log n).  
-
+<br>
 </details>
 
 
