@@ -15,14 +15,18 @@ constexpr ll MOD = 1e9 + 7;
 #define REP(i,a,b) for (ll i = a; i <= b; i++)
 
 
-void solve(const ll& y, const ll& x) {
+void solve(const ll& row, const ll& column) {
 
-    if (x >= y) {
-        if (x&1) cout << x * x - y + 1 << '\n';
-        else cout << (x - 1) * (x - 1) + 1 + y - 1 << '\n';
+    if (column >= row) {
+        if (column&1)
+            cout << column * column - row + 1 << '\n';
+        else
+            cout << (column - 1) * (column - 1) + 1 + row - 1 << '\n';
     } else {
-        if (!(y&1)) cout << y * y - x + 1 << '\n';
-        else cout << (y - 1) * (y - 1) + 1 + x - 1 << '\n';
+        if (!(row&1))
+            cout << row * row - column + 1 << '\n';
+        else
+            cout << (row - 1) * (row - 1) + 1 + column - 1 << '\n';
     }
 
 }

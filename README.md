@@ -46,11 +46,13 @@ The focus here is on explaining **how** and **why** each solution works.
 
 <details>
 <summary>Repetitions</summary>
+
 <br><br>
 
 - We iterate through the string, tracking the length of the current run of identical characters.  
 - Update the maximum run length whenever it increases and reset counter back to one when it's a different character.
 - Time complexity: O(n). Space: O(1).
+
 <br>
 </details>
 
@@ -58,11 +60,13 @@ The focus here is on explaining **how** and **why** each solution works.
 <details>
 
 <summary>Increasing Array</summary>
+
 <br><br>
 
 - Iterate through the array tracking the value of the previous element. 
 - If the current element is smaller than the previous then we need to increase the total count by the difference.
 - Time complexity: 0(n)
+
 <br>
 </details>
 
@@ -70,12 +74,33 @@ The focus here is on explaining **how** and **why** each solution works.
 <details>
 
 <summary>Permutations</summary>
+
 <br><br>
 
 - impossible solutions for `n = 2` or `n = 3` because any arrangement will have two consecutive numbers differing by 1.
 - For all other `n` we can simply print all even then all odd values.
 - Time complexity: O(n)
+
 <br>
+</details>
+
+<details>
+
+<summary>Number Spiral</summary>
+
+<br><br>
+
+- compare row and column
+  - if column >= row:
+    - if column is odd the sprials largest value is at the bottom of the column `column^2 - row + 1`
+    - if column is even the spirals largest value is at the top of the column `(column - 1)^2 + row`
+  - if row > column:
+    - if row is even the spirals largest value is at the rightmost cell in the row `row^2 - column + 1`
+    - if row is odd then largest is in leftmost cell in the row `(row - 1)^2 + column`
+- Time complexity: O(1)
+
+<br>
+
 </details>
 
 
@@ -86,21 +111,25 @@ The focus here is on explaining **how** and **why** each solution works.
 
 <details>
 <summary>Distinct Numbers</summary>
+
 <br><br>
 
 - Sort the array and count the number of distinct elements by comparing each to the previous.
 - The most straight forward way to accomplish this is by transforming the input array into a set and printing the size.
 - Time complexity: O(n log n). Space: O(1) extra.
+
 <br>
 </details>
 
 <details>
 <summary>Apartments</summary>
+
 <br><br>
 
 We sort both desired sizes and available apartments.  
 Use two pointers to match each applicant with the closest acceptable apartment within `k` size difference.  
-- Time complexity: O(n log n).  
+- Time complexity: O(n log n). 
+
 <br>
 </details>
 
