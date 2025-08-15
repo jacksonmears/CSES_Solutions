@@ -18,9 +18,9 @@ The focus here is on explaining **how** and **why** each solution works.
 
 - Start from `n`.  
 - If `n` is even then divide by 2.  
-- If odd → multiply by 3 and add 1.  
+- If odd then multiply by 3 and add 1.  
 - Continue until `n = 1`.  
-- Since constraints are small, a direct simulation works in O(log n) time.  
+- O(log n) time.  
 
 </details>
 
@@ -38,8 +38,8 @@ We know the sum of numbers from 1 to n is `n*(n+1)/2` total.
 <details>
 <summary>Repetitions</summary>
 
-We iterate through the string, tracking the length of the current run of identical characters.  
-Update the maximum run length whenever it increases.  
+- We iterate through the string, tracking the length of the current run of identical characters.  
+- Update the maximum run length whenever it increases and reset counter back to one when it's a different character.
 - Time complexity: O(n). Space: O(1).
 
 </details>

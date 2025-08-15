@@ -23,10 +23,13 @@ int main() {
 
 
     ll n; cin >> n;
-    ll cnt = 0; REP(i, 0, n-2) {
-        ll x; cin >> x; cnt += x;
+    ll sum = 0;
+    REP(i, 0, n-2) {
+        ll x; cin >> x;
+        sum += x;
     }
-    cout << n*(n+1)/2 - cnt;
+    const ll expected_total = n*(n+1)/2;
+    cout << expected_total - sum;
 
 
     return 0;

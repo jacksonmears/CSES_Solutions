@@ -23,14 +23,17 @@ int main() {
 
 
     string s; cin >> s;
-    ll mx = 1, cnt = 1;
+    ll max_rep = 1, current_repetitions = 1;
     REP(i, 1, s.size()-1) {
-        if (s[i] == s[i-1]) cnt++, mx = max(cnt, mx);
-        else cnt = 1;
+        if (s[i] == s[i-1]) {
+            current_repetitions++;
+            max_rep = max(current_repetitions, max_rep);
+        }
+        else current_repetitions = 1;
 
     }
 
-    cout << mx;
+    cout << max_rep;
 
     return 0;
 }
