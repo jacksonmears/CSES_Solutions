@@ -20,16 +20,22 @@ int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
     ll n; cin >> n;
-    list<ll> remainingValues; //linked list
-    REP(i, 1, n) remainingValues.push_back(i);
-    auto iterator = remainingValues.begin();
-    while (!remainingValues.empty()) {
-        iterator++;
-        if (iterator == remainingValues.end()) iterator = remainingValues.begin();
-        cout << *iterator << ' ';
-        iterator = remainingValues.erase(iterator);
-        if (iterator == remainingValues.end()) iterator = remainingValues.begin();
+    list<ll> people; //linked list
+    REP(i, 1, n) people.push_back(i);
+
+    auto it = people.begin();
+    while (!people.empty()) {
+        it++;
+        if (it == people.end())
+            it = people.begin();
+
+        cout << *it << ' ';
+
+        it = people.erase(it);
+        if (it == people.end())
+            it = people.begin();
     }
+
 
     return 0;
 }

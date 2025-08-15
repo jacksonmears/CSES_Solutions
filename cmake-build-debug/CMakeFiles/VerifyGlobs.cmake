@@ -98,6 +98,7 @@ set(OLD_GLOB
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Factory-Machines.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Ferris-Wheel.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Josephus-Problem-I.cpp"
+  "C:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Josephus-Problem-II.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Maximum-Subarray-Sum-II.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Maximum-Subarray_Sum.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Sorting-and-Searching/Missing-Coin-Sum.cpp"
