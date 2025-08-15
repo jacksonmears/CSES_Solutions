@@ -16,7 +16,7 @@ The focus here is on explaining **how** and **why** each solution works.
 <details>
 <summary>Weird Algorithm</summary>
 
-<br>
+<br><br>
 
 
 - Start from `n`.  
@@ -32,7 +32,7 @@ The focus here is on explaining **how** and **why** each solution works.
 <details>
 <summary>Missing Number</summary>
 
-<br>
+<br><br>
 
 - We know the sum of numbers from 1 to n is `n*(n+1)/2` total.  
 - Read the n-1 given numbers, compute their sum.  
@@ -46,7 +46,7 @@ The focus here is on explaining **how** and **why** each solution works.
 
 <details>
 <summary>Repetitions</summary>
-<br>
+<br><br>
 
 - We iterate through the string, tracking the length of the current run of identical characters.  
 - Update the maximum run length whenever it increases and reset counter back to one when it's a different character.
@@ -58,7 +58,7 @@ The focus here is on explaining **how** and **why** each solution works.
 <details>
 
 <summary>Increasing Array</summary>
-<br>
+<br><br>
 
 - Iterate through the array tracking the value of the previous element. 
 - If the current element is smaller than the previous then we need to increase the total count by the difference.
@@ -70,7 +70,7 @@ The focus here is on explaining **how** and **why** each solution works.
 <details>
 
 <summary>Permutations</summary>
-<br>
+<br><br>
 
 - impossible solutions for `n = 2` or `n = 3` because any arrangement will have two consecutive numbers differing by 1.
 - For all other `n` we can simply print all even then all odd values.
@@ -86,7 +86,8 @@ The focus here is on explaining **how** and **why** each solution works.
 
 <details>
 <summary>Distinct Numbers</summary>
-<br>
+<br><br>
+
 - Sort the array and count the number of distinct elements by comparing each to the previous.
 - The most straight forward way to accomplish this is by transforming the input array into a set and printing the size.
 - Time complexity: O(n log n). Space: O(1) extra.
@@ -95,7 +96,8 @@ The focus here is on explaining **how** and **why** each solution works.
 
 <details>
 <summary>Apartments</summary>
-<br>
+<br><br>
+
 We sort both desired sizes and available apartments.  
 Use two pointers to match each applicant with the closest acceptable apartment within `k` size difference.  
 - Time complexity: O(n log n).  
