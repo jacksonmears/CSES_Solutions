@@ -14,7 +14,7 @@ The focus here is on explaining **how** and **why** each solution works.
 ## Introductory Problems
 
 <details>
-<summary>Weird Algorithm</summary>
+<summary><span style="color:grey">Weird Algorithm</span></summary>
 
 - Start from `n`.  
 - If `n` is even then divide by 2.  
@@ -25,18 +25,19 @@ The focus here is on explaining **how** and **why** each solution works.
 </details>
 
 <details>
-<summary>Missing Number</summary>
+<summary><span style="color:grey">Missing Number</span></summary>
 
 We know the sum of numbers from 1 to n is `n*(n+1)/2` total.  
 - Read the n-1 given numbers, compute their sum.  
 - Subtract from the total to find the missing number.  
 - Time complexity: O(n). Space: O(1).
+- test
 
 </details>
 
 
 <details>
-<summary>Repetitions</summary>
+<summary><span style="color:grey">Repetitions</span></summary>
 
 - We iterate through the string, tracking the length of the current run of identical characters.  
 - Update the maximum run length whenever it increases and reset counter back to one when it's a different character.
@@ -44,12 +45,26 @@ We know the sum of numbers from 1 to n is `n*(n+1)/2` total.
 
 </details>
 
+
+<details>
+
+<summary><span style="color:grey">Increasing Array</span></summary>
+
+- Iterate through the array tracking the value of the previous element. 
+- If the current element is smaller than the previous then we need to increase the total count by the difference.
+- Time complexity: 0(n)
+
+</details>
+
+
+
+
 ---
 
 ## Sorting and Searching
 
 <details>
-<summary>Distinct Numbers</summary>
+<summary><span style="color:grey">Distinct Numbers</span></summary>
 
 - Sort the array and count the number of distinct elements by comparing each to the previous.
 - The most straight forward way to accomplish this is by transforming the input array into a set and printing the size.
@@ -58,7 +73,7 @@ We know the sum of numbers from 1 to n is `n*(n+1)/2` total.
 </details>
 
 <details>
-<summary>Apartments</summary>
+<summary><span style="color:grey">Apartments</span></summary>
 
 We sort both desired sizes and available apartments.  
 Use two pointers to match each applicant with the closest acceptable apartment within `k` size difference.  

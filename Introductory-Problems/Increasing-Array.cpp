@@ -23,14 +23,14 @@ int main() {
 
 
     ll n; cin >> n;
-    ll prev, cnt = 0;
+    ll previous_value = 0, total = 0;
     REP(i, 0, n-1) {
         ll x; cin >> x;
-        if (i > 0 && x < prev) cnt += prev-x;
-        else prev = x;
+        if (i > 0 && x < previous_value) total += previous_value-x;
+        else previous_value = x;
     }
 
-    cout << cnt;
+    cout << total;
 
     return 0;
 }
