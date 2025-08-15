@@ -57,6 +57,16 @@ We know the sum of numbers from 1 to n is `n*(n+1)/2` total.
 </details>
 
 
+<details>
+
+<summary><span style="color:grey">Permutations</span></summary>
+
+- impossible solutions for `n = 2` or `n = 3` because any arrangement will have two consecutive numbers differing by 1.
+- For all other `n` we can simply print all even then all odd values.
+- Time complexity: O(n)
+
+</details>
+
 
 
 ---
