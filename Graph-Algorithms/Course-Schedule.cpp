@@ -1,54 +1,63 @@
 #include <bits/stdc++.h>
-#include <regex>
 using namespace std;
 typedef long long ll;
-typedef vector<int> vi;
 typedef vector<ll> vl;
 typedef pair<ll,ll> pl;
+typedef vector<bool> vb;
+typedef vector<pl> vp;
+typedef vector<vl> vvl;
 constexpr ll MAX = 9e18;
 constexpr ll MOD = 1e9 + 7;
+constexpr int MAXN = 2e5+1;
 
-#define F first
-#define S second
+#define f first
+#define s second
 #define pb push_back
 #define mp make_pair
-#define REP(i,a,b) for (ll i = a; i <= b; i++)
+#define rep(i,a,b) for (ll i = a; i <= b; i++)
+#define repr(i, a, b) for (ll i = a; i >= b; i--)
 
-vector<vl> relationshipTree;
-unordered_set<ll> parents;
 
-void solve() {
-    vl orderOfCourses;
-    queue<ll> bfs; for (auto course : parents) bfs.push(course);
-    unordered_set<ll> visited;
-    while(!bfs.empty()) {
-        if (!visited.contains(bfs.front())) {
-            orderOfCourses.pb(bfs.front()); visited.insert(bfs.front());
-            for (auto child : relationshipTree[bfs.front()]) bfs.push(child);
-        }
-        bfs.pop();
-    }
-
-    if (orderOfCourses.size() != relationshipTree.size()-1) cout << "IMPOSSIBLE";
-    else {
-        for (auto course : orderOfCourses) cout << course << " ";
-    }
-
-}
+ll n, m;
+vvl courses;
+bool seen[MAXN];
 
 int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll n, m; cin >> n >> m;
-    relationshipTree = vector<vl>(n+1);
-    REP(i, 0, m-1) {
+    cin >> n >> m;
+    courses = vvl(n+1);
+    vl inDegrees(n+1, 0);
+    rep(i, 0, m-1) {
         ll a, b; cin >> a >> b;
-        relationshipTree[a].pb(b);
-        if (parents.contains(b)) parents.erase(b);
-        parents.insert(a);
+        courses[a].pb(b);
+        inDegrees[b]++;
     }
 
-    solve();
+    queue<ll> topography;
+    rep(node, 1, n) {
+        if (!inDegrees[node]) topography.push(node);
+    }
+
+    vl answer;
+
+    while (!topography.empty()) {
+        const ll node = topography.front(); topography.pop();
+        answer.pb(node);
+        seen[node] = true;
+        for (const auto child : courses[node]) if (!seen[child]) {
+            inDegrees[child]--;
+            if (inDegrees[child] == 0) topography.push(child);
+        }
+    }
+
+
+    if (answer.size() == n) {
+        for (const auto node : answer) cout << node << " ";
+    }
+    else cout << "IMPOSSIBLE";
+
 
     return 0;
 }
+
