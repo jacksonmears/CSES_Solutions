@@ -103,6 +103,26 @@ The focus here is on explaining **how** and **why** each solution works.
 
 </details>
 
+<details>
+
+<summary>Two Knights</summary>
+
+<br><br>
+
+- difference between binomial coefficient (k squared chose 2) and points where the two knights could attack each other.
+- total number of ways to place 2 knights on a KxK board is `(k^2 * (k^2 - 1)) / 2)` for k squared chose 2
+- Now we need to subtract all instances where the two knights can attack each other that were included in the binomial coefficient
+- Knights only attack in 2x3 or 3x2 (would be 1x2 and 2x1 in a matrix) rectangles and the number of such rectangles on a KxK board is `(k-1)(k-2)` and `(k-2)(k-1)` OR simply `2(k-1)(k-2)`
+- within each rectangle the knights can attack each other in exactly 2 DISTINCT pairs in a 1x2 grid where knights attack each other (top left/bottom right, top right/bottom left)
+- so the final number of squares to be removed is `4(k-1)(k-2)`
+- entire formula is `(k^2 *(k^2 -1))/2 - 4*(k-1)*(k-2)`
+- Time complexity: O(1)
+
+<br>
+
+
+</details>
+
 
 
 ---

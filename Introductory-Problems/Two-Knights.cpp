@@ -23,7 +23,7 @@ int main() {
     ll n; cin >> n;
 
     REP(k, 1, n) {
-        cout << k*k *(k*k-1)/2 - 8*((k-1)*(k-2)/2) << "\n";
+        cout << (k*k *(k*k-1))/2 - 4*(k-1)*(k-2) << "\n";
     }
 
 
