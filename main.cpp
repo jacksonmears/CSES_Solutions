@@ -10,8 +10,8 @@ constexpr ll MAX = 9e18;
 constexpr ll MOD = 1e9 + 7;
 constexpr int MAXN = 2e5+1;
 
-#define F first
-#define S second
+#define f first
+#define s second
 #define pb push_back
 #define mp make_pair
 #define rep(i,a,b) for (ll i = a; i <= b; i++)

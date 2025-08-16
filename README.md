@@ -6,8 +6,8 @@ The focus here is on explaining **how** and **why** each solution works.
 ---
 
 ## Table of Contents
-- [Introductory Problems](#introductory-problems)
-- [Sorting and Searching](#sorting-and-searching)
+- [Introductory Problems (24/24)](#introductory-problems)
+- [Sorting and Searching (35/35)](#sorting-and-searching)
 
 ---
 
