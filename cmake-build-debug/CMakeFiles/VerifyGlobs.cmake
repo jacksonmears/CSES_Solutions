@@ -15,6 +15,7 @@ set(OLD_GLOB
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Array-Description.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Book-Shop.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Coin-Combinations_II.cpp"
+  "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Counting-Tilings.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Counting-Towers.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Edit-Distance.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Elevator-Rides.cpp"
