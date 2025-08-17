@@ -17,6 +17,7 @@ set(OLD_GLOB
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Coin-Combinations_II.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Counting-Towers.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Edit-Distance.cpp"
+  "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Elevator-Rides.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Grid-Paths-I.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Increasing-Subsequence.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Dynamic-Programming/Longest-Common-Subsequence.cpp"
