@@ -125,11 +125,11 @@
 17	2176	7739570867437100	CMakeFiles/Shortest-Routes-II.dir/Graph_Algorithms/Shortest-Routes-II.cpp.obj	6094d5e283e9aa70
 18	1493	7739765598584587	CMakeFiles/Sum-Of-Four-Values.dir/Sorting_and_Searching/Sum-Of-Four-Values.cpp.obj	6a631446211278f5
 1493	1571	7739765613347029	Sum-Of-Four-Values.exe	46566e4cef319f47
-9	71	7771516232519181	C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/cmake.verify_globs	ba2e52588a406df9
+4	53	7771740174016467	C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/cmake.verify_globs	ba2e52588a406df9
 73	1765	7742517595771318	CMakeFiles/Book-Shop.dir/Dynamic-Programming/Book-Shop.cpp.obj	ae01169e2520cdc6
 77	1709	7753540596946090	CMakeFiles/Projects.dir/Dynamic-Programming/Projects.cpp.obj	2eef436d4c4ca712
 1710	2247	7753540613260441	Projects.exe	8b4c62d0165d5051
-62	516	7771678076226537	build.ninja	5e37fb237d384ec8
+62	516	7772342975813424	build.ninja	5e37fb237d384ec8
 69	1600	7754204533648503	CMakeFiles/Flight-Discount.dir/Graph-Algorithms/Flight-Discount.cpp.obj	911ecdc78ef444d7
 1601	1677	7754204548974939	Flight-Discount.exe	63844f97d9304f4f
 64	1368	7755350173874799	CMakeFiles/Binomial-Coefficients.dir/Mathematics/Binomial-Coefficients.cpp.obj	de593ef6c2656eb2
@@ -154,7 +154,7 @@
 65	1607	7770639673002158	CMakeFiles/Round-Trip-II.dir/Graph-Algorithms/Round-Trip-II.cpp.obj	9551094b8e2caf05
 62	1541	7770662524583315	CMakeFiles/Course-Schedule.dir/Graph-Algorithms/Course-Schedule.cpp.obj	e2925db0a6085704
 72	1842	7771516233148377	CMakeFiles/Elevator-Rides.dir/Dynamic-Programming/Elevator-Rides.cpp.obj	dc9c9ad5830ceac9
-19	87	7771724668412093	C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/cmake.verify_globs	ba2e52588a406df9
-12	66	7771728388052419	C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug/CMakeFiles/cmake.verify_globs	ba2e52588a406df9
 67	1610	7771728388603204	CMakeFiles/Counting-Tilings.dir/Dynamic-Programming/Counting-Tilings.cpp.obj	cba1bf4c6109b59
 1611	1800	7771728404033363	Counting-Tilings.exe	7b7b2cf038170a48
+54	1401	7771740174520032	CMakeFiles/Counting-Numbers.dir/Dynamic-Programming/Counting-Numbers.cpp.obj	31ff0b10f1e9c7e
+1402	1471	7771740187991296	Counting-Numbers.exe	d833b40bea731f0a
