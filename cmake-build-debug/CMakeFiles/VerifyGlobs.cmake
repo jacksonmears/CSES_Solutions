@@ -51,6 +51,7 @@ set(OLD_GLOB
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Mail-Delivery.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Message-Route.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Monsters.cpp"
+  "C:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Planet-Queries-I.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Planets-And-Kingdoms.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Road-Construction.cpp"
   "C:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Round-Trip-II.cpp"
