@@ -34,20 +34,20 @@ int main() {
         inDegrees[b]++;
     }
 
-    queue<ll> topography;
+    queue<ll> topology;
     rep(node, 1, n) {
-        if (!inDegrees[node]) topography.push(node);
+        if (!inDegrees[node]) topology.push(node);
     }
 
     vl answer;
 
-    while (!topography.empty()) {
-        const ll node = topography.front(); topography.pop();
+    while (!topology.empty()) {
+        const ll node = topology.front(); topology.pop();
         answer.pb(node);
         seen[node] = true;
         for (const auto child : courses[node]) if (!seen[child]) {
             inDegrees[child]--;
-            if (inDegrees[child] == 0) topography.push(child);
+            if (inDegrees[child] == 0) topology.push(child);
         }
     }
 

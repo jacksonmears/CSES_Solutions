@@ -37,10 +37,10 @@ int main() {
 
     // typical graph theory has u var as currentNode and v as neighborNode so keep that in mind for this and future graphing solutions.
     // Kahn's algo for topological sort
-    vector<ll> topography;
+    vector<ll> topology;
     while (!bfs.empty()) {
         ll u = bfs.front(); bfs.pop();
-        topography.pb(u);
+        topology.pb(u);
         for (ll v : graph[u]) {
             inDegrees[v]--;
             if (inDegrees[v] == 0) bfs.push(v);
@@ -51,7 +51,7 @@ int main() {
     vector<ll> parent(n + 1, -1);
     dp[1] = 0;
 
-    for (ll u : topography) {
+    for (ll u : topology) {
         for (ll v : graph[u]) {
             if (dp[u] + 1 > dp[v]) {
                 dp[v] = dp[u] + 1;
