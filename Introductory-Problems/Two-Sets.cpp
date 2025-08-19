@@ -14,32 +14,31 @@ constexpr ll MOD = 1e9 + 7;
 #define MP make_pair
 #define REP(i,a,b) for (ll i = a; i <= b; i++)
 
-void printPairs(ll mx, ll mn) {
-    while (mn < mx) cout << mn << ' ' << mx << ' ', mx-=2, mn+=2;
+void printPairs(ll left, ll right) {
+    while (left < right) {
+        cout << left << ' ' << right << ' ';
+        left+=2, right-=2;
+    }
     cout << "\n";
 }
 
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-
     ll n; cin >> n;
-
-    if (n*(n+1)/2&1) return cout << "NO", 0;
+    if (n*(n+1)/2 & 1) return cout << "NO", 0;
     cout << "YES" << "\n";
 
-    ll mx = n, mn = 1;
+    ll left = 1, right = n;
     cout << n/2 << "\n";
     if (n&1) {
-        cout << mx << ' ';
-        mx--;
+        cout << right << ' ';
+        right--;
     }
 
-    printPairs(mx-1, mn+1);
+    printPairs(left+1, right-1);
     cout << n/2 + (n&1) << "\n";
-    printPairs(mx, mn);
-
-
+    printPairs(left, right);
 
     return 0;
 }
