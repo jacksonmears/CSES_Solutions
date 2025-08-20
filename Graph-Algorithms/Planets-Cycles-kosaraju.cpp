@@ -20,11 +20,26 @@ constexpr int MOD = 1e9 + 7;
 #define repr(i, a, b) for (int i = a; i >= b; i--)
 
 
-
 constexpr int MAXN = 2e5+5;
+int component[MAXN];
+vvi edges;
+vvi reverse_edges;
 
 int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
+
+    ll n; cin >> n;
+    edges = vvi(n+1); reverse_edges = vvi(n+1);
+    component[1] = 1;
+    rep(i, 1, n) {
+        int x; cin >> x;
+        edges[i].pb(x);
+        reverse_edges[x].pb(i);
+        if (component[x]) component[i] = component[x];
+        else if (component[i]) component[x] = component[i];
+        else component[x] = i;
+    }
+
 
 
 
