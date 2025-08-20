@@ -1757,6 +1757,39 @@ build Road-Construction.exe: CXX_EXECUTABLE_LINKER__Road-Construction_Debug CMak
   TARGET_PDB = Road-Construction.exe.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target Road-Reparation
+
+
+#############################################
+# Order-only phony target for Road-Reparation
+
+build cmake_object_order_depends_target_Road-Reparation: phony || .
+
+build CMakeFiles/Road-Reparation.dir/Graph-Algorithms/Road-Reparation.cpp.obj: CXX_COMPILER__Road-Reparation_unscanned_Debug C$:/Users/jacks/CLionProjects/CSES_Solutions/Graph-Algorithms/Road-Reparation.cpp || cmake_object_order_depends_target_Road-Reparation
+  DEP_FILE = CMakeFiles\Road-Reparation.dir\Graph-Algorithms\Road-Reparation.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Road-Reparation.dir
+  OBJECT_FILE_DIR = CMakeFiles\Road-Reparation.dir\Graph-Algorithms
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Road-Reparation
+
+
+#############################################
+# Link the executable Road-Reparation.exe
+
+build Road-Reparation.exe: CXX_EXECUTABLE_LINKER__Road-Reparation_Debug CMakeFiles/Road-Reparation.dir/Graph-Algorithms/Road-Reparation.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Road-Reparation.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Road-Reparation.exe
+  TARGET_IMPLIB = libRoad-Reparation.dll.a
+  TARGET_PDB = Road-Reparation.exe.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target Round-Trip-II
 
 
@@ -4319,6 +4352,8 @@ build Restaurant-Customers: phony Restaurant-Customers.exe
 
 build Road-Construction: phony Road-Construction.exe
 
+build Road-Reparation: phony Road-Reparation.exe
+
 build Round-Trip: phony Round-Trip.exe
 
 build Round-Trip-II: phony Round-Trip-II.exe
@@ -4379,7 +4414,7 @@ build main: phony main.exe
 #############################################
 # Folder: C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug
 
-build all: phony main.exe K-Subset-Sums-I.exe All-Subarray-Xors.exe Counting-Bits.exe Maximum-Xor-Subarray.exe Maximum-Xor-Subset.exe Filled-Subgrid-Count-I.exe Filled-Subgrid-Count-II.exe Array-Description.exe Book-Shop.exe Coin-Combinations_II.exe Counting-Numbers.exe Counting-Tilings.exe Counting-Towers.exe Edit-Distance.exe Elevator-Rides.exe Grid-Paths-I.exe Increasing-Subsequence-II.exe Increasing-Subsequence.exe Longest-Common-Subsequence.exe Minimal-Grid-Path.exe Money-Sums.exe Mountain-Range.exe Projects.exe Rectangle-Cutting.exe Removal-Game.exe Removing-Digits.exe Two-Sets-II.exe Point-Location-Test.exe Building-Roads.exe Building-Teams.exe Coin-Collector.exe Counting-Rooms.exe Course-Schedule.exe Cycle-Finding.exe Flight-Discount.exe Flight-Routes-Check.exe Flight-Routes.exe Game-Routes.exe Hamiltonian-Flights.exe High-Score.exe Investigation.exe Knights-Tour.exe Longest-Flight-Route.exe Mail-Delivery.exe Message-Route.exe Monsters.exe Planet-Cycles-DFS.exe Planet-Queries-I.exe Planets-And-Kingdoms.exe Planets-Cycles-kosaraju.exe Road-Construction.exe Round-Trip-II.exe Round-Trip.exe Shortest-Routes-I.exe Shortest-Routes-II.exe Hidden-Integer.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Grid-Coloring-I.exe Grid-Path-Description.exe Increasing-Array.exe Knight-Moves-Grid.exe Mex-Grid-Construction.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe Binomial-Coefficients.exe Counting-Divisors.exe Exponentiation.exe Josephus-Queries.exe Next-Prime.exe Dynamic-Range-Minimum-Queries.exe Dynamic-Range-Sum-Queries.exe Static-Range-Minimum-Queries.exe Sliding-Window-Cost.exe Sliding-Window-Minimum.exe Sliding-Window-Sum.exe Apartments.exe Collecting-Numbers-II.exe Collecting-Numbers.exe Concert-Tickets.exe Distinct-Numbers.exe Distinct-Value-Subsequences.exe Distinct-Values-Subarrays.exe Factory-Machines.exe Ferris-Wheel.exe Josephus-Problem-I.exe Josephus-Problem-II.exe Maximum-Subarray-Sum-II.exe Maximum-Subarray_Sum.exe Missing-Coin-Sum.exe Movie-Festival-II.exe Movie-Festival.exe Nested-Ranges-Count.exe Playlist.exe Reading-Books.exe Restaurant-Customers.exe Stick-Lengths.exe Sum-Of-Four-Values.exe Sum-Of-Three-Values.exe Sum-Of-Two-Values.exe Towers.exe Traffic-Lights.exe Distance-Queries.exe Tree-Diameter.exe Tree-Distances-I.exe Tree-Distances-II.exe Tree-Matching.exe
+build all: phony main.exe K-Subset-Sums-I.exe All-Subarray-Xors.exe Counting-Bits.exe Maximum-Xor-Subarray.exe Maximum-Xor-Subset.exe Filled-Subgrid-Count-I.exe Filled-Subgrid-Count-II.exe Array-Description.exe Book-Shop.exe Coin-Combinations_II.exe Counting-Numbers.exe Counting-Tilings.exe Counting-Towers.exe Edit-Distance.exe Elevator-Rides.exe Grid-Paths-I.exe Increasing-Subsequence-II.exe Increasing-Subsequence.exe Longest-Common-Subsequence.exe Minimal-Grid-Path.exe Money-Sums.exe Mountain-Range.exe Projects.exe Rectangle-Cutting.exe Removal-Game.exe Removing-Digits.exe Two-Sets-II.exe Point-Location-Test.exe Building-Roads.exe Building-Teams.exe Coin-Collector.exe Counting-Rooms.exe Course-Schedule.exe Cycle-Finding.exe Flight-Discount.exe Flight-Routes-Check.exe Flight-Routes.exe Game-Routes.exe Hamiltonian-Flights.exe High-Score.exe Investigation.exe Knights-Tour.exe Longest-Flight-Route.exe Mail-Delivery.exe Message-Route.exe Monsters.exe Planet-Cycles-DFS.exe Planet-Queries-I.exe Planets-And-Kingdoms.exe Planets-Cycles-kosaraju.exe Road-Construction.exe Road-Reparation.exe Round-Trip-II.exe Round-Trip.exe Shortest-Routes-I.exe Shortest-Routes-II.exe Hidden-Integer.exe Apple-Division.exe Bit-Strings.exe Chessboard-And-Queens.exe Coin-Piles.exe Creating-Strings.exe Digit-Queries.exe Gray-Code.exe Grid-Coloring-I.exe Grid-Path-Description.exe Increasing-Array.exe Knight-Moves-Grid.exe Mex-Grid-Construction.exe Missing-Number.exe Number-Spiral.exe Palindrome-Reorder.exe Permutations.exe Raab-Game-I.exe Repititions.exe String-Reorder.exe Tower-Of-Hanoi.exe Trailing-Zeros.exe Two-Knights.exe Two-Sets.exe Weird-Algorithm.exe Binomial-Coefficients.exe Counting-Divisors.exe Exponentiation.exe Josephus-Queries.exe Next-Prime.exe Dynamic-Range-Minimum-Queries.exe Dynamic-Range-Sum-Queries.exe Static-Range-Minimum-Queries.exe Sliding-Window-Cost.exe Sliding-Window-Minimum.exe Sliding-Window-Sum.exe Apartments.exe Collecting-Numbers-II.exe Collecting-Numbers.exe Concert-Tickets.exe Distinct-Numbers.exe Distinct-Value-Subsequences.exe Distinct-Values-Subarrays.exe Factory-Machines.exe Ferris-Wheel.exe Josephus-Problem-I.exe Josephus-Problem-II.exe Maximum-Subarray-Sum-II.exe Maximum-Subarray_Sum.exe Missing-Coin-Sum.exe Movie-Festival-II.exe Movie-Festival.exe Nested-Ranges-Count.exe Playlist.exe Reading-Books.exe Restaurant-Customers.exe Stick-Lengths.exe Sum-Of-Four-Values.exe Sum-Of-Three-Values.exe Sum-Of-Two-Values.exe Towers.exe Traffic-Lights.exe Distance-Queries.exe Tree-Diameter.exe Tree-Distances-I.exe Tree-Distances-II.exe Tree-Matching.exe
 
 # =============================================================================
 # Built-in targets
