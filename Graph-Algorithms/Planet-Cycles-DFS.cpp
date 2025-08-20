@@ -39,14 +39,14 @@ void propogate(const int node){
 }
 
 // finding length of cycle then sharing that length with all nodes that connect with the cycle
-void fetch_distance(const int node, const int distance){
+void fill_dp(const int node, const int distance){
     seen[node] = true;
     int child = edges[node];
     if(seen[child])
         dp[node] = distance;
 
     else {
-        fetch_distance(child, distance+1);
+        fill_dp(child, distance+1);
         dp[node] = dp[child];
     }
     propogate(node);
@@ -81,7 +81,7 @@ int main(){
     // if node is in a cycle (inDegrees > 1) and cycle hasn't been visited we find length of cycle
     rep(node, 1, n)
         if(inDegrees[node] && !seen[node])
-            fetch_distance(node, 1);
+            fill_dp(node, 1);
 
     rep(node, 1, n)
         cout << dp[node] << " ";
