@@ -1,0 +1,1158 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65,
+						66,
+						67,
+						68,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84,
+						85,
+						86,
+						87,
+						88,
+						89,
+						90,
+						91,
+						92,
+						93,
+						94,
+						95,
+						96,
+						97,
+						98,
+						99,
+						100,
+						101,
+						102,
+						103,
+						104,
+						105,
+						106,
+						107,
+						108,
+						109,
+						110,
+						111,
+						112,
+						113,
+						114,
+						115,
+						116,
+						117,
+						118,
+						119,
+						120,
+						121,
+						122
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "CSES",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65,
+						66,
+						67,
+						68,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84,
+						85,
+						86,
+						87,
+						88,
+						89,
+						90,
+						91,
+						92,
+						93,
+						94,
+						95,
+						96,
+						97,
+						98,
+						99,
+						100,
+						101,
+						102,
+						103,
+						104,
+						105,
+						106,
+						107,
+						108,
+						109,
+						110,
+						111,
+						112,
+						113,
+						114,
+						115,
+						116,
+						117,
+						118,
+						119,
+						120,
+						121,
+						122
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "All-Subarray-Xors::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-All-Subarray-Xors-Debug-310da547f121c8eaea07.json",
+					"name" : "All-Subarray-Xors",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Apartments::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Apartments-Debug-fc52d1a84d6ec3e43161.json",
+					"name" : "Apartments",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Apple-Division::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Apple-Division-Debug-3606e6e4daa3517740ab.json",
+					"name" : "Apple-Division",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Array-Description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Array-Description-Debug-28ae4fbf762aea89caea.json",
+					"name" : "Array-Description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Binomial-Coefficients::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Binomial-Coefficients-Debug-25258040b3b397a16755.json",
+					"name" : "Binomial-Coefficients",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Bit-Strings::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Bit-Strings-Debug-bf0072462e3861222d0c.json",
+					"name" : "Bit-Strings",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Book-Shop::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Book-Shop-Debug-f780e1a7b45de98194c4.json",
+					"name" : "Book-Shop",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Building-Roads::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Building-Roads-Debug-a37819f29a632ad1781c.json",
+					"name" : "Building-Roads",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Building-Teams::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Building-Teams-Debug-873a9abf01cd66cf16cd.json",
+					"name" : "Building-Teams",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Chessboard-And-Queens::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Chessboard-And-Queens-Debug-048aec7b976aaedd7c4c.json",
+					"name" : "Chessboard-And-Queens",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Coin-Collector::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Coin-Collector-Debug-54182052afed4d6b345c.json",
+					"name" : "Coin-Collector",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Coin-Combinations_II::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Coin-Combinations_II-Debug-b3029124fc4c5fc28ef0.json",
+					"name" : "Coin-Combinations_II",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Coin-Piles::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Coin-Piles-Debug-40cccd5a333b846d6129.json",
+					"name" : "Coin-Piles",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Collecting-Numbers::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Collecting-Numbers-Debug-aef1a7c6ac7c12411339.json",
+					"name" : "Collecting-Numbers",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Collecting-Numbers-II::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Collecting-Numbers-II-Debug-3027fdd88332b37afb4a.json",
+					"name" : "Collecting-Numbers-II",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Concert-Tickets::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Concert-Tickets-Debug-461c3aee53727aed08b9.json",
+					"name" : "Concert-Tickets",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Counting-Bits::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Counting-Bits-Debug-8d6f7e6540a1df2a6555.json",
+					"name" : "Counting-Bits",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Counting-Divisors::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Counting-Divisors-Debug-47ea85f8198755631033.json",
+					"name" : "Counting-Divisors",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Counting-Numbers::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Counting-Numbers-Debug-95df5c7a5c805c26cec9.json",
+					"name" : "Counting-Numbers",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Counting-Rooms::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Counting-Rooms-Debug-79b7d7ea65c0247d365c.json",
+					"name" : "Counting-Rooms",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Counting-Tilings::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Counting-Tilings-Debug-a147e47904e41f735fd9.json",
+					"name" : "Counting-Tilings",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Counting-Towers::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Counting-Towers-Debug-3eeb5b928d29d91aea99.json",
+					"name" : "Counting-Towers",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Course-Schedule::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Course-Schedule-Debug-137c6f07a08b25bfd644.json",
+					"name" : "Course-Schedule",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Creating-Strings::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Creating-Strings-Debug-fdff2935dc1a1b3071c4.json",
+					"name" : "Creating-Strings",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Cycle-Finding::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Cycle-Finding-Debug-67da20dc6f61a7103898.json",
+					"name" : "Cycle-Finding",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Digit-Queries::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Digit-Queries-Debug-5bce7ab32e7c55010011.json",
+					"name" : "Digit-Queries",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Distance-Queries::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Distance-Queries-Debug-2028f2e0dc78e6f1f3a7.json",
+					"name" : "Distance-Queries",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Distinct-Numbers::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Distinct-Numbers-Debug-457606289d853c1440bd.json",
+					"name" : "Distinct-Numbers",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Distinct-Value-Subsequences::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Distinct-Value-Subsequences-Debug-a6f3560efc8f7a2421a2.json",
+					"name" : "Distinct-Value-Subsequences",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Distinct-Values-Subarrays::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Distinct-Values-Subarrays-Debug-4ce22882692aac63d32a.json",
+					"name" : "Distinct-Values-Subarrays",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Dynamic-Range-Minimum-Queries::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Dynamic-Range-Minimum-Queries-Debug-5b560c17e119a0a649bb.json",
+					"name" : "Dynamic-Range-Minimum-Queries",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Dynamic-Range-Sum-Queries::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Dynamic-Range-Sum-Queries-Debug-8ac97cca1ea693ba9eb3.json",
+					"name" : "Dynamic-Range-Sum-Queries",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Edit-Distance::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Edit-Distance-Debug-cd248d1c6bb0b3d60d03.json",
+					"name" : "Edit-Distance",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Elevator-Rides::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Elevator-Rides-Debug-2d305454de6566fb6f39.json",
+					"name" : "Elevator-Rides",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Exponentiation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Exponentiation-Debug-4ce0f980e08bf0c11575.json",
+					"name" : "Exponentiation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Factory-Machines::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Factory-Machines-Debug-c330fe8821bf1703d529.json",
+					"name" : "Factory-Machines",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ferris-Wheel::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ferris-Wheel-Debug-50755360f9e90df24299.json",
+					"name" : "Ferris-Wheel",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Filled-Subgrid-Count-I::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Filled-Subgrid-Count-I-Debug-a56336d4e5ecc325996a.json",
+					"name" : "Filled-Subgrid-Count-I",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Filled-Subgrid-Count-II::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Filled-Subgrid-Count-II-Debug-7624a859fb5c7933c3b9.json",
+					"name" : "Filled-Subgrid-Count-II",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Flight-Discount::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Flight-Discount-Debug-d62b5fad6edce9cb13c7.json",
+					"name" : "Flight-Discount",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Flight-Routes::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Flight-Routes-Debug-3cfb0bfd53553f872035.json",
+					"name" : "Flight-Routes",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Flight-Routes-Check::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Flight-Routes-Check-Debug-f145f32f10ae84696c12.json",
+					"name" : "Flight-Routes-Check",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Game-Routes::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Game-Routes-Debug-6c0971fb24a1052a394d.json",
+					"name" : "Game-Routes",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Gray-Code::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Gray-Code-Debug-af61d1c598c44317cb17.json",
+					"name" : "Gray-Code",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Grid-Coloring-I::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Grid-Coloring-I-Debug-40a85628a84891fb3d3d.json",
+					"name" : "Grid-Coloring-I",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Grid-Path-Description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Grid-Path-Description-Debug-100fa385b7ff3a895ab4.json",
+					"name" : "Grid-Path-Description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Grid-Paths-I::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Grid-Paths-I-Debug-b3d450b4040ca33df330.json",
+					"name" : "Grid-Paths-I",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Hamiltonian-Flights::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Hamiltonian-Flights-Debug-5f8288ff16a49460e0ff.json",
+					"name" : "Hamiltonian-Flights",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Hidden-Integer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Hidden-Integer-Debug-29bfa0d4daf32ab76174.json",
+					"name" : "Hidden-Integer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "High-Score::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-High-Score-Debug-da161e81a0e991cb19cb.json",
+					"name" : "High-Score",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Increasing-Array::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Increasing-Array-Debug-4c6bbf87040b214e66a4.json",
+					"name" : "Increasing-Array",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Increasing-Subsequence::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Increasing-Subsequence-Debug-08ed38276b9f5d1df4e0.json",
+					"name" : "Increasing-Subsequence",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Increasing-Subsequence-II::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Increasing-Subsequence-II-Debug-fec095c0532a5f31a5ca.json",
+					"name" : "Increasing-Subsequence-II",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Investigation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Investigation-Debug-e050fb8215923a491603.json",
+					"name" : "Investigation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Josephus-Problem-I::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Josephus-Problem-I-Debug-9e6cd4bf537ec7c985b1.json",
+					"name" : "Josephus-Problem-I",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Josephus-Problem-II::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Josephus-Problem-II-Debug-37fd26bb9a1e846a3086.json",
+					"name" : "Josephus-Problem-II",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Josephus-Queries::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Josephus-Queries-Debug-3f5c88ad52d0d60b0185.json",
+					"name" : "Josephus-Queries",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "K-Subset-Sums-I::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-K-Subset-Sums-I-Debug-556b54c7d6b80db90f1b.json",
+					"name" : "K-Subset-Sums-I",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Knight-Moves-Grid::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Knight-Moves-Grid-Debug-e00602695aafc5047faa.json",
+					"name" : "Knight-Moves-Grid",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Knights-Tour::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Knights-Tour-Debug-2d09369d5d3f0988cbb2.json",
+					"name" : "Knights-Tour",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Longest-Common-Subsequence::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Longest-Common-Subsequence-Debug-57416ea2458ce7bab808.json",
+					"name" : "Longest-Common-Subsequence",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Longest-Flight-Route::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Longest-Flight-Route-Debug-e3593b4cd0a7d9ca0b32.json",
+					"name" : "Longest-Flight-Route",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Mail-Delivery::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Mail-Delivery-Debug-305c270ce1f4a2c1700e.json",
+					"name" : "Mail-Delivery",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Maximum-Subarray-Sum-II::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Maximum-Subarray-Sum-II-Debug-8d6be1f57cc6ba72ea36.json",
+					"name" : "Maximum-Subarray-Sum-II",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Maximum-Subarray_Sum::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Maximum-Subarray_Sum-Debug-938e774a75fa8a8c65b6.json",
+					"name" : "Maximum-Subarray_Sum",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Maximum-Xor-Subarray::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Maximum-Xor-Subarray-Debug-3e557c1899ace4dee6fb.json",
+					"name" : "Maximum-Xor-Subarray",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Maximum-Xor-Subset::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Maximum-Xor-Subset-Debug-42ab1853f9aaebe6a5f0.json",
+					"name" : "Maximum-Xor-Subset",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Message-Route::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Message-Route-Debug-384f7c1f5b1ede97192c.json",
+					"name" : "Message-Route",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Mex-Grid-Construction::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Mex-Grid-Construction-Debug-4e711dca8638c594bd5a.json",
+					"name" : "Mex-Grid-Construction",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Minimal-Grid-Path::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Minimal-Grid-Path-Debug-d33a6b4b17476d1bfa0f.json",
+					"name" : "Minimal-Grid-Path",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Missing-Coin-Sum::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Missing-Coin-Sum-Debug-3a7a7297d08317cf6740.json",
+					"name" : "Missing-Coin-Sum",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Missing-Number::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Missing-Number-Debug-351bf723c33060babcfc.json",
+					"name" : "Missing-Number",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Money-Sums::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Money-Sums-Debug-9b81ddfaaef70e5267f5.json",
+					"name" : "Money-Sums",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Monsters::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Monsters-Debug-fef56668e71c59832829.json",
+					"name" : "Monsters",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Mountain-Range::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Mountain-Range-Debug-2de1bf9361e4b03776d6.json",
+					"name" : "Mountain-Range",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Movie-Festival::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Movie-Festival-Debug-23d21ee774828a95d242.json",
+					"name" : "Movie-Festival",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Movie-Festival-II::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Movie-Festival-II-Debug-1cfb9007762bcf371f0a.json",
+					"name" : "Movie-Festival-II",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Nested-Ranges-Count::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Nested-Ranges-Count-Debug-1bcb3b99b1592f04be50.json",
+					"name" : "Nested-Ranges-Count",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Next-Prime::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Next-Prime-Debug-18ed6ebb894c65688c9f.json",
+					"name" : "Next-Prime",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Number-Spiral::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Number-Spiral-Debug-89198590e35dfcf060cc.json",
+					"name" : "Number-Spiral",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Palindrome-Reorder::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Palindrome-Reorder-Debug-4795fcb291d3c1d691ae.json",
+					"name" : "Palindrome-Reorder",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Permutations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Permutations-Debug-df4cff79d45088d1530a.json",
+					"name" : "Permutations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Planet-Cycles-DFS::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Planet-Cycles-DFS-Debug-353f8b27fa96cb88897b.json",
+					"name" : "Planet-Cycles-DFS",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Planet-Queries-I::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Planet-Queries-I-Debug-24a0e79a071a93d5a00f.json",
+					"name" : "Planet-Queries-I",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Planets-And-Kingdoms::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Planets-And-Kingdoms-Debug-d4d47b1a004902155b81.json",
+					"name" : "Planets-And-Kingdoms",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Planets-Cycles-kosaraju::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Planets-Cycles-kosaraju-Debug-d142563a31a002276b1e.json",
+					"name" : "Planets-Cycles-kosaraju",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Playlist::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Playlist-Debug-23ffc31bdce6c6915f4d.json",
+					"name" : "Playlist",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Point-Location-Test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Point-Location-Test-Debug-ad83e8494ec8708bf708.json",
+					"name" : "Point-Location-Test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Projects::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Projects-Debug-8d8b3c996c14992c606b.json",
+					"name" : "Projects",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Raab-Game-I::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Raab-Game-I-Debug-4eb86d0bbb5a5872f316.json",
+					"name" : "Raab-Game-I",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Reading-Books::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Reading-Books-Debug-8acb8cc81b484035ed2f.json",
+					"name" : "Reading-Books",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Rectangle-Cutting::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Rectangle-Cutting-Debug-109328d63ba53db52581.json",
+					"name" : "Rectangle-Cutting",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Removal-Game::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Removal-Game-Debug-b4a3e897d43dbbeec8bd.json",
+					"name" : "Removal-Game",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Removing-Digits::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Removing-Digits-Debug-8624a87c2e0f315396b3.json",
+					"name" : "Removing-Digits",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Repititions::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Repititions-Debug-bb38819e7345c2d65b1d.json",
+					"name" : "Repititions",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Restaurant-Customers::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Restaurant-Customers-Debug-5a3b5ceb4aa63d2dafb6.json",
+					"name" : "Restaurant-Customers",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Road-Construction::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Road-Construction-Debug-af9d81c9f7e987a55aa2.json",
+					"name" : "Road-Construction",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Round-Trip::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Round-Trip-Debug-f9604cb78a057c765d89.json",
+					"name" : "Round-Trip",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Round-Trip-II::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Round-Trip-II-Debug-2e8b80ccf0dc0000b45a.json",
+					"name" : "Round-Trip-II",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Shortest-Routes-I::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Shortest-Routes-I-Debug-7338fba7b1cfc77abaa5.json",
+					"name" : "Shortest-Routes-I",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Shortest-Routes-II::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Shortest-Routes-II-Debug-16ff79f34209bd80861c.json",
+					"name" : "Shortest-Routes-II",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Sliding-Window-Cost::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Sliding-Window-Cost-Debug-58d500fe483ad9241197.json",
+					"name" : "Sliding-Window-Cost",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Sliding-Window-Minimum::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Sliding-Window-Minimum-Debug-c5fa70721b6d85d4eb29.json",
+					"name" : "Sliding-Window-Minimum",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Sliding-Window-Sum::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Sliding-Window-Sum-Debug-f9cdea1487838464d277.json",
+					"name" : "Sliding-Window-Sum",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Static-Range-Minimum-Queries::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Static-Range-Minimum-Queries-Debug-39e97ac87c40415d6dcb.json",
+					"name" : "Static-Range-Minimum-Queries",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Stick-Lengths::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Stick-Lengths-Debug-4b442935ff5b4cdf7a6f.json",
+					"name" : "Stick-Lengths",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "String-Reorder::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-String-Reorder-Debug-5ca0da570e1f6dca1d73.json",
+					"name" : "String-Reorder",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Sum-Of-Four-Values::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Sum-Of-Four-Values-Debug-2f0a1d413e585ed501b1.json",
+					"name" : "Sum-Of-Four-Values",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Sum-Of-Three-Values::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Sum-Of-Three-Values-Debug-9e7f2b79ee74fd47d5d7.json",
+					"name" : "Sum-Of-Three-Values",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Sum-Of-Two-Values::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Sum-Of-Two-Values-Debug-8dfacbea56075b40e99f.json",
+					"name" : "Sum-Of-Two-Values",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Tower-Of-Hanoi::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Tower-Of-Hanoi-Debug-997b24160a62c3599fc7.json",
+					"name" : "Tower-Of-Hanoi",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Towers::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Towers-Debug-23c01aeff1ebe91618d3.json",
+					"name" : "Towers",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Traffic-Lights::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Traffic-Lights-Debug-0ba27cb0189e3c5cf8f4.json",
+					"name" : "Traffic-Lights",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Trailing-Zeros::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Trailing-Zeros-Debug-027a4e82f7d2afa11ea9.json",
+					"name" : "Trailing-Zeros",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Tree-Diameter::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Tree-Diameter-Debug-643658a63db971632255.json",
+					"name" : "Tree-Diameter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Tree-Distances-I::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Tree-Distances-I-Debug-ad14ee74feece982533c.json",
+					"name" : "Tree-Distances-I",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Tree-Distances-II::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Tree-Distances-II-Debug-e2e8e59266d6519801d7.json",
+					"name" : "Tree-Distances-II",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Tree-Matching::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Tree-Matching-Debug-21445b58f1bdf00e0ffe.json",
+					"name" : "Tree-Matching",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Two-Knights::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Two-Knights-Debug-b2da20e301f83da695d8.json",
+					"name" : "Two-Knights",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Two-Sets::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Two-Sets-Debug-0a8cce905b61f7ae6dca.json",
+					"name" : "Two-Sets",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Two-Sets-II::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Two-Sets-II-Debug-eac8d31e14832f7860a5.json",
+					"name" : "Two-Sets-II",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Weird-Algorithm::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Weird-Algorithm-Debug-928f67709e052e23a0f3.json",
+					"name" : "Weird-Algorithm",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-19fe90d9c67173f1bae1.json",
+					"name" : "main",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/jacks/CLionProjects/CSES_Solutions/cmake-build-debug",
+		"source" : "C:/Users/jacks/CLionProjects/CSES_Solutions"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
