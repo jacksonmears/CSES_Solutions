@@ -38,12 +38,14 @@ void propogate(const int node){
     }
 }
 
-void fetch_distance(const int node, const int distance = 1){
+// finding length of cycle then sharing that length with all nodes that connect with the cycle
+void fetch_distance(const int node, const int distance){
     seen[node] = true;
     int child = edges[node];
-    if(seen[child]){
+    if(seen[child])
         dp[node] = distance;
-    } else {
+
+    else {
         fetch_distance(child, distance+1);
         dp[node] = dp[child];
     }
@@ -52,7 +54,6 @@ void fetch_distance(const int node, const int distance = 1){
 
 
 // BABY KOSARAJU implementation !
-
 int main(){
     ios::sync_with_stdio(false); cin.tie(nullptr);
 
@@ -68,6 +69,7 @@ int main(){
         if(inDegrees[node] == 0)
             topological.push(node);
 
+    // kahn's algo to find nodes in cycles (queue will become empty prior to ever entering a cycle)
     while(!topological.empty()){
         const int node = topological.front(); topological.pop();
         const int child = edges[node];
@@ -76,9 +78,10 @@ int main(){
             topological.push(child);
     }
 
+    // if node is in a cycle (inDegrees > 1) and cycle hasn't been visited we find length of cycle
     rep(node, 1, n)
         if(inDegrees[node] && !seen[node])
-            fetch_distance(node);
+            fetch_distance(node, 1);
 
     rep(node, 1, n)
         cout << dp[node] << " ";
