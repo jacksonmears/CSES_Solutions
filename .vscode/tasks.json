@@ -9,7 +9,7 @@
         "-g",
         "${file}",
         "-o",
-        "${fileDirname}/${fileBasenameNoExtension}"
+        "${workspaceFolder}/vs_code_trash/${fileBasenameNoExtension}.exe"  
       ],
       "group": {
         "kind": "build",

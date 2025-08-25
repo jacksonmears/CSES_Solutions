@@ -5,7 +5,7 @@
       "name": "Run C++ file",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "program": "${workspaceFolder}/vs_code_trash/${fileBasenameNoExtension}.exe", // Point to the output .exe
       "args": [],
       "stopAtEntry": false,
       "cwd": "${fileDirname}",
