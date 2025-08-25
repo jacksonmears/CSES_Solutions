@@ -15,14 +15,13 @@ constexpr ll MOD = 1e9 + 7;
 #define REP(i,a,b) for (ll i = a; i <= b; i++)
 
 
-// calculating exponent with binary
-ll binpow(ll a, ll& b) {
+ll binary_exponentiation(int& n) {
     ll result = 1;
-    a %= MOD;
-    while (b) {
-        if (b&1) result = result * a % MOD;
-        a = a * a % MOD;
-        b >>= 1;
+    ll bin = 2;
+    while (n) {
+        if (n&1) result = result * bin % MOD;
+        bin = bin * bin % MOD;
+        n >>= 1;
     }
     return result;
 }
@@ -30,12 +29,9 @@ ll binpow(ll a, ll& b) {
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    // this solution is much easier/simpler in python due to the way python handles large numbers via strings
+    int n; cin >> n;
 
-
-    ll n; cin >> n;
-
-    cout << binpow(2, n);
+    cout << binary_exponentiation(n);
 
 
     return 0;
