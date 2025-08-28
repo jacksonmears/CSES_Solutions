@@ -47,17 +47,17 @@ int main() {
 
     int n, m, k; cin >> n >> m >> k;
 
-    for (int i = 0; i < k; i++) {
+    rep(i, 0, k-1) {
         int a, b; cin >> a >> b;
         edges[a].push_back(b); 
     }
 
-    fill(matchGirl, matchGirl + m + 1, -1);
-    fill(matchBoy, matchBoy + n + 1, -1);
+    ranges::fill(matchGirl, -1);
+    ranges::fill(matchBoy, -1);
 
     int maxPairs = 0;
     rep(boy, 1, n) {
-        fill(visited, visited + m + 1, false);
+        ranges::fill(visited, false);
         if (dfs(boy)) maxPairs++;
     }
 
