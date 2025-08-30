@@ -12,30 +12,27 @@ constexpr ll MOD = 1e9 + 7;
 #define S second
 #define PB push_back
 #define MP make_pair
-#define REP(i,a,b) for (ll i = a; i <= b; i++)
-
-
-string solve() {
-    ll a, b; cin >> a >> b;
-
-    ll mx = max(a, b), mn = min(a, b);
-    if (mx > mn*2) return "NO";
-
-
-    ll d = mx - mn;
-    mx -= d*2, mn -= d;
-    return (!(mx%3) && !(mn%3) || mx%3==2 && mn%3 == 1) ? "YES" : "NO";
-}
-
+#define rep(i,a,b) for (int i = a; i <= b; ++i)
 
 
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll t; cin >> t;
-    while (t--) {
+    int t; cin >> t;
+    rep(i, 0, t-1) {
+        int a, b; cin >> a >> b;
 
-        cout << solve() << '\n';
+        int left = max(a, b), right = min(a, b);
+        if (left > right*2) {
+            cout << "NO\n";
+            continue;
+        }
+
+
+        int difference = left - right;
+        left -= difference*2, right -= difference;
+
+        cout << ((!(left%3) && !(right%3) || left%3==2 && right%3 == 1) ? "YES" : "NO") << "\n";
 
     }
 

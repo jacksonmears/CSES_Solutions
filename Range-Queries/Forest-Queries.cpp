@@ -16,8 +16,8 @@ constexpr int MOD = 1e9 + 7;
 #define s second
 #define pb push_back
 #define mp make_pair
-#define rep(i,a,b) for (int i = a; i <= b; i++)
-#define repr(i, a, b) for (int i = a; i >= b; i--)
+#define rep(i,a,b) for (int i = a; i <= b; ++i)
+#define repr(i, a, b) for (int i = a; i >= b; --i)
 
 
 

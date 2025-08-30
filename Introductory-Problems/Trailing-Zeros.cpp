@@ -19,15 +19,12 @@ constexpr ll MOD = 1e9 + 7;
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll n; cin >> n;
-    ll FACTORIAL = 5; ll cnt = 0;
+    int n; cin >> n;
+    ll factorial = 5; int count = 0;
 
-    while (FACTORIAL <= n) cnt += n/FACTORIAL, FACTORIAL *= 5;
+    while (factorial <= n) count += n/factorial, factorial *= 5;
 
-    cout << cnt;
-
-
-
+    cout << count;
 
 
 

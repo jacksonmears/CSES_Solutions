@@ -12,9 +12,9 @@ constexpr ll MOD = 1e9 + 7;
 #define S second
 #define PB push_back
 #define MP make_pair
-#define REP(i,a,b) for (ll i = a; i <= b; i++)
+#define REP(i,a,b) for (int i = a; i <= b; i++)
 
-void printPairs(ll left, ll right) {
+void printPairs(int left, int right) {
     while (left < right) {
         cout << left << ' ' << right << ' ';
         left+=2, right-=2;
@@ -25,11 +25,11 @@ void printPairs(ll left, ll right) {
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll n; cin >> n;
+    int n; cin >> n;
     if (n*(n+1)/2 & 1) return cout << "NO", 0;
     cout << "YES" << "\n";
 
-    ll left = 1, right = n;
+    int left = 1, right = n;
     cout << n/2 << "\n";
     if (n&1) {
         cout << right << ' ';
