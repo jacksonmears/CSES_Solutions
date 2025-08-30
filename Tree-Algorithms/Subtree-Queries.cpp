@@ -20,15 +20,15 @@ constexpr int MOD = 1e9 + 7;
 #define repr(i, a, b) for (int i = a; i >= b; i--)
 
 
-const int maxN = 2e5+1;
+const int MAXN = 2e5+1;
 
 int n, q, a, b, t, s, timer;
-int in[maxN], out[maxN];
-ll node_values[maxN], fenwick[2*maxN];
-vi edges[maxN];
+int in[MAXN], out[MAXN];
+ll node_values[MAXN], fenwick[2*MAXN];
+vi edges[MAXN];
 
 void update(int index, ll value){
-    for(int i = index; i < 2*maxN; i += i&-i)
+    for(int i = index; i < 2*MAXN; i += i&-i)
         fenwick[i] += value;
 }
 
@@ -47,6 +47,8 @@ void dfs(int node, int parent){
     out[node] = ++timer;
 }
 
+
+// idea is to transfer tree into 1D array where we can quickly perform queries with fenwick/BIT
 int main(){
     ios::sync_with_stdio(false); cin.tie(nullptr);
 
@@ -69,10 +71,10 @@ int main(){
     rep(i, 0, q-1) {
         cin >> t >> s;
         if(t == 1){
-            update(out[s], -node_values[s]);
-            cin >> node_values[s];
-            update(out[s], node_values[s]);
-            
+            int new_value; cin >> new_value;
+            update(out[s], new_value - node_values[s]);
+            node_values[s] = new_value;
+
         } else if(t == 2){
             cout << query(out[s])-query(in[s]) << "\n";
         }
