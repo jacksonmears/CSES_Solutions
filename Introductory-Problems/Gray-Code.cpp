@@ -12,7 +12,7 @@ constexpr ll MOD = 1e9 + 7;
 #define S second
 #define PB push_back
 #define MP make_pair
-#define REP(i,a,b) for (ll i = a; i <= b; i++)
+#define rep(i,a,b) for (int i = a; i <= b; ++i)
 
 
 
@@ -20,11 +20,12 @@ constexpr ll MOD = 1e9 + 7;
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll n; cin >> n;
-    ll total = 1 << n;
+    int n; cin >> n;
+    int total = 1 << n;
 
-    for (ll i = 0; i < total; i++) {
-        ll gray = i ^ (i >> 1);  // gray code formula
+    // bitsets are a super powerful tool in C++ that will be used often later on in the CSES problem set!
+    rep(i, 0, total-1) {
+        int gray = i ^ (i >> 1);          
         bitset<16> b(gray);
         cout << b.to_string().substr(16 - n) << endl;
     }
