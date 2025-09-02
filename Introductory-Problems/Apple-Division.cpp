@@ -1,29 +1,35 @@
 #include <bits/stdc++.h>
-#include <regex>
 using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
+typedef vector<vi> vvi;
+typedef pair<int, int> pi;
+typedef vector<pi> vpi;
 typedef vector<ll> vl;
-typedef pair<int,int> pi;
-constexpr ll MAX = 9e18;
-constexpr ll MOD = 1e9 + 7;
+typedef pair<ll,ll> pl;
+typedef vector<pl> vpl;
+typedef vector<vl> vvl;
+typedef vector<bool> vb;
+constexpr int MOD = 1e9 + 7;
 
-#define F first
-#define S second
-#define PB push_back
-#define MP make_pair
-#define REP(i,a,b) for (ll i = a; i <= b; i++)
+#define f first
+#define s second
+#define pb push_back
+#define mp make_pair
+#define rep(i,a,b) for (int i = a; i <= b; ++i)
+#define repr(i, a, b) for (int i = a; i >= b; --i)
+
+int n;
+ll min_diff = INT_MAX;
+vi weights;
 
 
-ll minimumDifference = INT_MAX;
-
-
-void dfs(ll leftSum, ll rightSum, vl& listOfWeights, ll indexOfWeights) {
-    if (indexOfWeights == listOfWeights.size()) {
-        minimumDifference = min(minimumDifference, abs(leftSum-rightSum));
+void dfs(ll left, ll right, int i) {
+    if (i == weights.size()) {
+        min_diff = min(min_diff, abs(left-right));
     } else {
-        dfs(leftSum+listOfWeights[indexOfWeights], rightSum, listOfWeights, indexOfWeights + 1);
-        dfs(leftSum, rightSum+listOfWeights[indexOfWeights], listOfWeights, indexOfWeights + 1);
+        dfs(left+weights[i], right, i + 1);
+        dfs(left, right+weights[i], i + 1); 
     }
 }
 
@@ -31,12 +37,14 @@ void dfs(ll leftSum, ll rightSum, vl& listOfWeights, ll indexOfWeights) {
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll n; cin >> n;
-    vl listOfWeights(n); REP(i, 0, n-1) cin >> listOfWeights[i];
+    cin >> n;
+    weights.assign(n, 0); 
+    rep(i, 0, n-1) 
+        cin >> weights[i];
 
-    dfs(0, 0, listOfWeights, 0);
+    dfs(weights[0], 0, 1); 
 
-    cout << minimumDifference;
+    cout << min_diff;
 
 
     return 0;

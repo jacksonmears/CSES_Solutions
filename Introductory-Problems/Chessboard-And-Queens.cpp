@@ -1,44 +1,63 @@
 #include <bits/stdc++.h>
-#include <regex>
 using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
+typedef vector<vi> vvi;
+typedef pair<int, int> pi;
+typedef vector<pi> vpi;
 typedef vector<ll> vl;
-typedef pair<int,int> pi;
-constexpr ll MAX = 9e18;
-constexpr ll MOD = 1e9 + 7;
+typedef pair<ll,ll> pl;
+typedef vector<pl> vpl;
+typedef vector<vl> vvl;
+typedef vector<bool> vb;
+constexpr int MOD = 1e9 + 7;
 
-#define F first
-#define S second
-#define PB push_back
-#define MP make_pair
-#define REP(i,a,b) for (ll i = a; i <= b; i++)
-
-
-ll countOfSolutions = 0;
-
-void dfs(const ll row, const ll col, vl& rowCheck, vl& colCheck, vl& diagLeftCheck, vl& diagRightCheck, vector<vl> grid, const ll numQueens){
-    if (col > 7 || row > 7 || numQueens < col) return;
+#define f first
+#define s second
+#define pb push_back
+#define mp make_pair
+#define rep(i,a,b) for (int i = a; i <= b; ++i)
+#define repr(i, a, b) for (int i = a; i >= b; --i)
 
 
-    if (grid[row][col] == 1 || rowCheck[row] == 1 || colCheck[col] == 1 || diagLeftCheck[row+col] == 1 || diagRightCheck[7+row-col] == 1){
-        dfs(row + 1, col, rowCheck, colCheck, diagLeftCheck, diagRightCheck, grid, numQueens);
-    }
+constexpr int N = 8;
+
+int solutions = 0;
+int check_row[N], check_column[N], check_diag_left[N*2], check_diag_right[N*2];
+int grid[N][N];
+
+
+bool check_valid_square(int row, int column) {
+    return grid[row][column] == 1 || check_row[row] == 1 || check_column[column] == 1 || check_diag_left[row+column] == 1 || check_diag_right[N-1+row-column] == 1;
+}
+
+
+void update_checks(int row, int column) {
+    check_row[row] = 1; check_column[column] = 1;
+    check_diag_left[row+column] = 1; check_diag_right[N-1+row-column] = 1;
+}
+
+
+void backtrack(int row, int column) {
+    check_row[row] = 0; check_column[column] = 0;
+    check_diag_left[row+column] = 0; check_diag_right[N-1+row-column] = 0;
+}
+
+
+void dfs(const int row, const int column, const int queen_count){
+    if (column > N-1 || row > N-1 || queen_count < column) return;
+
+
+    if (check_valid_square(row, column))
+        dfs(row + 1, column, queen_count);
 
     else{
-        rowCheck[row] = 1;
-        colCheck[col] = 1;
-        diagLeftCheck[row+col] = 1;
-        diagRightCheck[7+row-col] = 1;
-        if (numQueens == 7){
-            countOfSolutions++;
-        }
-        dfs(0, col + 1, rowCheck, colCheck, diagLeftCheck, diagRightCheck, grid, numQueens + 1);
-        rowCheck[row] = 0;
-        colCheck[col] = 0;
-        diagLeftCheck[row+col] = 0;
-        diagRightCheck[7+row-col] = 0;
-        dfs(row + 1, col, rowCheck, colCheck, diagLeftCheck, diagRightCheck, grid, numQueens);
+        update_checks(row, column);
+        if (queen_count == N-1) ++solutions;
+        
+        dfs(0, column + 1, queen_count + 1);
+        backtrack(row, column);
+        dfs(row + 1, column, queen_count);
 
     }
 }
@@ -48,21 +67,20 @@ void dfs(const ll row, const ll col, vl& rowCheck, vl& colCheck, vl& diagLeftChe
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    vl rowCheck(8,0), colCheck(8,0);
-    vl diagLeftCheck(15,0), diagRightCheck(15,0);
-    vector<vl> grid(8, vl(8));
-    for (ll row = 0; row < 8; row++){
-        for (ll col = 0; col < 8; col++){
-            char ch; cin >> ch;
+    char ch;
+
+    rep(row, 0, N-1) {
+        rep(column, 0, N-1) {
+            cin >> ch;
             if (ch == '*'){
-                grid[row][col] = 1;
+                grid[row][column] = 1;
             }
         }
     }
 
-    ll row = 0; ll col = 0;
-    dfs(row, col, rowCheck, colCheck, diagLeftCheck, diagRightCheck, grid, 0);
-    cout << countOfSolutions;
+    dfs(0, 0, 0);
+
+    cout << solutions;
 
 
     return 0;
