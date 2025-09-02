@@ -1,18 +1,23 @@
 #include <bits/stdc++.h>
-#include <regex>
 using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
+typedef vector<vi> vvi;
+typedef pair<int, int> pi;
+typedef vector<pi> vpi;
 typedef vector<ll> vl;
-typedef pair<int,int> pi;
-constexpr ll MAX = 9e18;
-constexpr ll MOD = 1e9 + 7;
+typedef pair<ll,ll> pl;
+typedef vector<pl> vpl;
+typedef vector<vl> vvl;
+typedef vector<bool> vb;
+constexpr int MOD = 1e9 + 7;
 
-#define F first
-#define S second
-#define PB push_back
-#define MP make_pair
-#define REP(i,a,b) for (ll i = a; i <= b; i++)
+#define f first
+#define s second
+#define pb push_back
+#define mp make_pair
+#define rep(i,a,b) for (int i = a; i <= b; ++i)
+#define repr(i, a, b) for (int i = a; i >= b; --i)
 
 
 void solve() {
@@ -41,7 +46,7 @@ void solve() {
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll q; cin >> q;
+    int q; cin >> q;
     while (q--) {
         solve();
     }

@@ -511,3 +511,355 @@ Start from a number `n` and repeatedly apply the following steps until `n = 1`:
 
 ---
 </details>
+
+
+
+<details>
+<summary>Raab Game</summary>
+
+---
+
+### Idea
+- You are given three integers: `n` (number of players), `a` (number of players with low skill), and `b` (number of players with high skill).  
+- You need to arrange the players in a line such that:
+  - The first group has **strictly increasing numbers** for high-skilled players.  
+  - The second group has **strictly decreasing numbers** for low-skilled players.  
+  - The arrangement satisfies the Raab game rules, or report `NO` if impossible.
+
+### Algo Steps
+1. **Check feasibility**:
+   - The total of `a + b` must be ≤ `n`.  
+   - Both `a` and `b` must be non-zero if one of them is non-zero (special case `a = b = 0` is allowed).  
+2. **Construct the line** based on skill:
+   - If `a <= b`:
+     - Print **low-skilled players in decreasing order** first.  
+     - Print **high-skilled players in increasing order** next.  
+   - If `a > b`:
+     - Print **high-skilled players in increasing order** first.  
+     - Print **low-skilled players in decreasing order** next.  
+3. **Handle the remaining players**:
+   - Fill remaining positions (`n - (a + b)`) with descending numbers before or after the sequences as required to maintain rules.  
+
+### Tricks
+- By arranging the **max-skilled group first or last** and using **decreasing/increasing sequences**, the Raab game constraints are satisfied.  
+- Using separate functions for small (`handleSmall`) and big (`handleBig`) sequences simplifies construction.  
+
+### Time Complexity
+- **O(n)** to construct and print the line.  
+
+### Space Complexity
+- **O(1)** extra space; only a few integers are used.  
+
+---
+</details>
+
+
+
+<details>
+<summary>MEX Grid Construction</summary>
+
+---
+
+### Idea
+- You are given an integer `n`.  
+- Construct an `n x n` grid of integers such that **every row and every column contains distinct numbers starting from 0**, and each number is the **minimum excluded value (MEX)** for its row and column.  
+
+### Algo Steps
+1. Initialize two maps:
+   - `row_values[row]` to track numbers already used in each row.  
+   - `column_values[col]` to track numbers already used in each column.  
+2. Loop through each cell `(row, column)`:
+   - Start with `val = 0`.  
+   - Increment `val` until it is **not present in the current row or column**.  
+   - Assign `val` to the current cell.  
+   - Insert `val` into both `row_values[row]` and `column_values[column]`.  
+3. Print the grid row by row.  
+
+### Tricks
+- By always choosing the **smallest non-used number** for each cell (MEX), the algorithm guarantees that **all row and column constraints are satisfied**.  
+- Using unordered sets ensures **O(1) average lookup** for previously used numbers.  
+
+### Time Complexity
+- **O(n² * n)** in the worst case, because each cell may need to increment `val` up to `n` times.  
+- Practically, the number of increments per cell is small, making it efficient for reasonable `n`.  
+
+### Space Complexity
+- **O(n²)** to store used values for rows and columns.  
+
+---
+</details>
+
+
+<details>
+<summary>Knight Moves Grid</summary>
+
+---
+
+### Idea
+- You are given a chessboard of size `n x n`.  
+- Starting from the top-left corner `(0,0)`, fill the grid with the **minimum number of knight moves** required to reach each square.  
+- A knight in chess moves in an "L-shape": two squares in one direction and one square perpendicular (8 possible moves).
+
+### Algo Steps
+1. Define knight move directions using arrays `dr` and `dc` (8 possibilities).  
+2. Initialize:
+   - `grid[row][col]` to store the minimum number of moves to reach `(row,col)`.  
+   - `seen[row][col]` to mark visited squares.  
+   - A BFS queue starting from `(0,0)` with distance `0`.  
+3. Run **Breadth-First Search (BFS)**:
+   - Pop a cell `(row,col)` from the queue.  
+   - For each of the 8 knight moves, compute `(moveRow, moveColumn)`.  
+   - If the new cell is within bounds and not visited:  
+     - Mark it visited.  
+     - Assign `grid[moveRow][moveColumn] = grid[row][col] + 1`.  
+     - Push it into the BFS queue.  
+4. After BFS completes, print the grid row by row.  
+
+### Tricks
+- BFS guarantees the shortest path in an unweighted graph.  
+- Treating each square as a graph node and knight moves as edges ensures that the first time a square is reached, it's via the **minimum number of moves**.  
+
+### Time Complexity
+- **O(n²)**, since each of the `n²` cells is visited at most once and each cell checks up to 8 moves.  
+
+### Space Complexity
+- **O(n²)** for the grid and visited arrays, plus the BFS queue.  
+
+---
+</details>
+
+
+
+<details>
+<summary>Grid Coloring I</summary>
+
+---
+
+### Idea
+- You are given an `n x m` grid filled with letters `A, B, C, D`.  
+- The task is to **recolor the grid** so that:
+  1. Each cell is replaced with the **next letter cyclically** (`A → B → C → D → A`).  
+  2. No two adjacent cells (above or left) have the same letter.  
+- If it’s not possible (conflict cycles endlessly), output `"IMPOSSIBLE"`.
+
+
+
+### Algo Steps
+1. **Read input dimensions** `n, m` and the initial grid.  
+2. For each cell `(row, column)`:
+   - Shift the current character cyclically using:  
+     ```
+     c = 'A' + (c - 'A' + 1) % 4
+     ```
+   - Check for adjacency conflicts:
+     - If `column > 0` and the new character equals the **left neighbor**.  
+     - If `row > 0` and the new character equals the **top neighbor**.  
+   - If a conflict occurs, keep shifting forward cyclically.  
+   - Track the number of attempts. If more than **4 shifts** are required, print `"IMPOSSIBLE"` and terminate.  
+3. Print the modified grid row by row.  
+
+
+### Tricks
+- Since there are only 4 letters (`A-D`), trying at most 4 shifts ensures we cover all possibilities.  
+- The `count >= 5` guard ensures we don’t get stuck in an infinite loop where no valid letter can be placed.  
+
+
+### Time Complexity
+- **O(n × m × 4)** ≈ **O(n × m)**, since each cell tries at most 4 shifts.  
+
+### Space Complexity
+- **O(n × m)** for storing the grid.  
+
+---
+</details>
+
+
+
+<details>
+<summary>Digit Queries</summary>
+
+---
+
+### Idea
+- Imagine concatenating all positive integers into an infinite sequence:  123456789101112131415...
+- Given an index `k`, find which **digit** appears at that position.
+
+
+### Algo Steps
+1. **Initialization**  
+ - Start with numbers of length `len = 1`.  
+ - The total count of digits in this block = `9` (since numbers `1–9` are single-digit).  
+
+2. **Find the block containing `k`**  
+ - While `k` is greater than the number of digits in the current block (`total * len`), subtract and move to the next block.  
+ - Update:
+   - `len` (digit length of numbers in the block).  
+   - `total` (number of numbers in this block).  
+
+3. **Locate the exact number and digit**  
+ - `start = 10^(len-1)` (first number in this block).  
+ - `numberIndex = (k-1) / len` (which number in this block).  
+ - `digitIndex = (k-1) % len` (which digit inside that number).  
+
+4. **Extract the digit**  
+ - `number = start + numberIndex`.  
+ - Convert to string and take `s[digitIndex]`.  
+
+
+### Example Walkthrough
+- Query: `k = 15`  
+- Sequence: 123456789101112131415...
+- Step 1: len = 1 and digits covered = 9
+   - k = 15 > 9, subtract, k = 6, len = 2
+- Step 2: len = 2, numbers from 10 to 99
+   - Each contributes 2 digits, so block fits.
+- Step 3: start = 10, numberIndex = (6-1)/2 = 2, digitIndex = (6-1)%2 = 1
+   - number = 10 + 2 = 12, "12"
+   - Answer = "12"[1] = 2
+
+So the **15th digit = 2**.
+
+
+### Complexity
+- **Time Complexity**: O(log k), since we jump across digit-length blocks.  
+- **Space Complexity**: O(1), only storing small variables and at most one string.  
+
+---
+</details>
+
+
+
+
+<details>
+<summary>String Reorder</summary>
+
+---
+
+### Idea
+- Given a string `s` consisting of uppercase letters (`A–Z`), reorder its characters to form a new string such that:
+  - **No two identical characters are adjacent**.  
+  - If it is impossible, print `-1`.  
+
+
+### Algor Steps
+1. **Count frequencies**  
+   - Use an array `container[26]` to store the frequency of each letter.  
+   - Keep a set of characters that still have occurrences left.  
+
+2. **Check feasibility**  
+   - If the **most frequent character** occurs more than `ceil(n/2)` times, then it is impossible (output `-1`).  
+
+3. **Greedy construction**  
+   - Start with the lexicographically smallest available character.  
+   - At each step:
+     - Pick a character that is not equal to the previously placed one.  
+     - Append it to the result string.  
+     - Decrease its frequency.  
+     - If the previous character still has remaining count, push it back into the candidate set.  
+
+4. **Handle leftovers**  
+   - If at some point one character still remains in large numbers (e.g., too many `T`s compared to others), then interleave it with the remaining different characters to avoid adjacency.  
+   - Append them alternately until all are used.  
+
+5. **Output result**  
+   - Print the constructed string.  
+
+
+### Example Walkthrough
+Input: AABBB
+
+Steps:  
+- Frequencies: A=2, B=3.  
+- Max frequency = 3, total = 5 → possible.  
+- Build string greedily:  
+  - Pick `A → "A"`  
+  - Pick `B → "AB"`  
+  - Pick `A → "ABA"`  
+  - Remaining `B`s → interleave → `"ABABB"`  
+
+Output: ABABB
+
+### Tricks
+- The greedy approach works because we always ensure the "most dangerous" character (the one with the highest frequency) is spread out.  
+- If at any point it cannot be interleaved, we output `-1`.  
+
+### Complexity
+- **Time Complexity**: O(n log 26)  
+  - `n` = string length.  
+  - alphabet is only 26 characters.  
+  - Dominated by set operations and frequency checks.  
+- **Space Complexity**: O(26), constant.  
+
+
+
+---
+</details>
+
+
+
+<details>
+<summary>Grid Path Description</summary>
+
+---
+
+### Idea
+- You are given a **7×7 grid** (49 cells total).  
+- Start at the **top-left corner (0,0)** and move step by step according to a string `path` of length **48**.  
+- Each character in `path` is either:
+  - A fixed direction (`U`, `D`, `L`, `R`)  
+  - Or a wildcard `?` (you may choose any direction).  
+- You must visit **all 49 cells exactly once** (self-avoiding walk).  
+- Count how many valid paths match the description.  
+
+
+### Algo Steps
+1. **State Representation**  
+   - Track the current cell `(row, column)`.  
+   - Keep `seen[row][column]` to mark visited cells.  
+   - Keep `move_count` to track how many steps have been taken.  
+
+2. **Base Case**  
+   - If you reach the bottom-left cell `(6,0)` **before 48 moves**, the path is invalid.  
+   - If you reach `(6,0)` **exactly at move 48**, increment `result`.  
+
+3. **Pruning (Optimization)**  
+   - If the current cell is “boxed in” (surrounded in such a way that it forces a dead-end split), prune early.  
+   - Example checks:  
+     - If up and down are blocked, but left and right are open → dead end.  
+     - If left and right are blocked, but up and down are open → dead end.  
+
+4. **Recursive DFS**  
+   - Mark the current cell as visited.  
+   - If the next move is a fixed direction:
+     - Move only in that direction if possible.  
+   - If the next move is `?`:
+     - Try all 4 possible directions.  
+   - After exploring, backtrack by unmarking the current cell.  
+
+5. **Output**  
+   - Print the total count of valid paths.  
+
+
+### Tricks
+- The key is **heavy pruning** — without it, the search space is too large.  
+- Ensuring correctness requires careful boundary and dead-end checks.  
+
+
+### Example Walkthrough
+- Input:  ???????????????????????????????????????????????? (all wildcards)
+
+- Steps:  
+   - Start at `(0,0)`.  
+   - At each step, branch into all possible moves.  
+   - Use pruning to avoid exploring dead-end paths.  
+   - After full exploration, result = **88418** (the known answer for the CSES problem).  
+
+
+### Complexity
+- **Worst Case**: Naive recursion explores `4^48` paths (impossible to compute).  
+- **With pruning**: Reduces drastically, making the solution feasible.  
+- **Space Complexity**: O(7×7) = O(49) for the grid.  
+
+
+---
+</details>

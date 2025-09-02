@@ -1,37 +1,48 @@
 #include <bits/stdc++.h>
-#include <regex>
 using namespace std;
 typedef long long ll;
+typedef vector<int> vi;
+typedef vector<vi> vvi;
+typedef pair<int, int> pi;
+typedef vector<pi> vpi;
 typedef vector<ll> vl;
 typedef pair<ll,ll> pl;
-const int maxOfN = 1e5+1;
-constexpr ll MOD = 1e9 + 7;
+typedef vector<pl> vpl;
+typedef vector<vl> vvl;
+typedef vector<bool> vb;
+constexpr int MOD = 1e9 + 7;
 
-#define F first
-#define S second
-#define PB push_back
-#define MP make_pair
-#define REP(i,a,b) for (ll i = a; i <= b; i++)
+#define f first
+#define s second
+#define pb push_back
+#define mp make_pair
+#define rep(i,a,b) for (int i = a; i <= b; ++i)
+#define repr(i, a, b) for (int i = a; i >= b; --i)
 
 
-
+constexpr int MAXN = 500;
+int n, m;
+char c;
+char grid[MAXN][MAXN];
 
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll n, m; cin >> n >> m;
-    vector<vector<char>> grid (n, vector<char>(m));
-    REP(row, 0, n-1) {
-        REP(column, 0, m-1) {
-            char c; cin >> c;
-            ll changeIterator = 1; char newChar = 'A'+(c-'A'+1)%4;
-            while (column > 0 && newChar == grid[row][column-1] || row > 0 && grid[row-1][column] == newChar && changeIterator < 5) {
-                changeIterator++;
-                newChar = 'A'+(c-'A'+changeIterator)%4;
+    cin >> n >> m;
+    
+    rep(row, 0, n-1) {
+        rep(column, 0, m-1) {
+            cin >> c; 
+            c = 'A'+(c-'A'+1)%4;
+            int count = 1;
+            while (column > 0 && c == grid[row][column-1] || row > 0 && grid[row-1][column] == c && count < 5) {
+                ++count;
+                c = 'A'+(c-'A'+count)%4;
             }
-            if (changeIterator >= 5) return cout << "IMPOSSIBLE", 0;
-            cout << newChar;
-            grid[row][column] = newChar;
+            if (count >= 5) return cout << "IMPOSSIBLE", 0;
+
+            cout << c;
+            grid[row][column] = c;
         } cout << endl;
     }
 
