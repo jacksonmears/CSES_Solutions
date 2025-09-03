@@ -47,9 +47,11 @@ int query_forwards(int node, int L, int R, int ql) {
     int qr = resize;  
     if (qr < L || R < ql) return INT_MAX;
     if (ql <= L && R <= qr) return segment_forward[node];
+
     int middle = (L + R)/2;
     int left = query_forwards(2*node, L, middle, ql);
     int right = query_forwards(2*node+1, middle+1, R, ql);
+    
     return min(left, right);
 }
 
@@ -57,9 +59,11 @@ int query_backwards(int node, int L, int R, int qr) {
     int ql = 1;  
     if (qr < L || R < ql) return INT_MAX;
     if (ql <= L && R <= qr) return segment_backward[node];
+
     int middle = (L + R)/2;
     int left = query_backwards(2*node, L, middle, qr);
     int right = query_backwards(2*node+1, middle+1, R, qr);
+
     return min(left, right);
 }
 
@@ -70,17 +74,6 @@ int query_both_segments(int pos) {
     );
 }
 
-
-
-void print_segments() {
-
-    cout << endl;
-    for (auto i : segment_forward) cout << i << " ";
-    cout << endl;
-    for (auto i : segment_backward) cout << i << " ";
-    cout << endl;
-
-}
 
 int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);

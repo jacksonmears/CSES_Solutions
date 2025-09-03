@@ -106,11 +106,11 @@ Start from a number `n` and repeatedly apply the following steps until `n = 1`:
 ### Idea
 - Compare row `r` and column `c` to find the largest value in the spiral for that cell:  
   - If `c >= r`:
-    - If `c` is odd: largest value at bottom of column → `c^2 - r + 1`  
-    - If `c` is even: largest value at top of column → `(c-1)^2 + r`
+    - If `c` is odd: largest value at bottom of column `c^2 - r + 1`  
+    - If `c` is even: largest value at top of column `(c-1)^2 + r`
   - If `r > c`:
-    - If `r` is even: largest value at rightmost of row → `r^2 - c + 1`  
-    - If `r` is odd: largest value at leftmost of row → `(r-1)^2 + c`  
+    - If `r` is even: largest value at rightmost of row `r^2 - c + 1`  
+    - If `r` is odd: largest value at leftmost of row `(r-1)^2 + c`  
 
 ### Time Complexity
 - O(1)
@@ -149,15 +149,15 @@ Start from a number `n` and repeatedly apply the following steps until `n = 1`:
 
 ### Total Sum Check
 - Total sum `S = n*(n+1)/2`.  
-- If `S` is odd → impossible → output `"NO"`.  
-- If `S` is even → target sum per set = `S/2`.  
+- If `S` is odd, impossible, output `"NO"`.  
+- If `S` is even, target sum per set = `S/2`.  
 
 ### Algo Steps
 1. Initialize `left = 1` and `right = n`.  
 2. If `n` is odd, place `right` in the first set and decrement `right`.  
 3. Symmetrically pair remaining numbers:
-   - `printPairs(left+1, right-1)` → first set  
-   - `printPairs(left, right)` → second set  
+   - `printPairs(left+1, right-1)` first set  
+   - `printPairs(left, right)` second set  
 
 ### Key Insight
 - Symmetric pairing `(i,n), (i+1,n-1), ...` ensures equal sums in both sets.
@@ -269,9 +269,9 @@ Start from a number `n` and repeatedly apply the following steps until `n = 1`:
    - `a -= diff`  
 5. Now both piles are equal or nearly equal.  
 6. Check divisibility conditions:  
-   - If `a % 3 == 0` and `b % 3 == 0` → `"YES"`  
-   - Or if `a % 3 == 1` and `b % 3 == 2` → `"YES"`  
-   - Otherwise → `"NO"`
+   - If `a % 3 == 0` and `b % 3 == 0` = `"YES"`  
+   - Or if `a % 3 == 1` and `b % 3 == 2` = `"YES"`  
+   - Otherwise = `"NO"`
 
 ### Tricks
 - Each move reduces the total number of coins by 3.  
@@ -379,12 +379,12 @@ Start from a number `n` and repeatedly apply the following steps until `n = 1`:
 ### Algo Steps
 1. Define a recursive function `solve(from, to, aux, count)` that moves `count` disks:
    - If `count == 0`, return (base case).  
-   - Move `count-1` disks from `from → aux` using `to` as helper.  
-   - Move the largest disk from `from → to`.  
-   - Move `count-1` disks from `aux → to` using `from` as helper.  
+   - Move `count-1` disks from `from = aux` using `to` as helper.  
+   - Move the largest disk from `from = to`.  
+   - Move `count-1` disks from `aux = to` using `from` as helper.  
 2. Read input `n` (the number of disks).  
 3. Print the total number of moves: `2^n - 1`.  
-4. Call `solve(1, 3, 2, n)` to move all disks from rod 1 → rod 3.  
+4. Call `solve(1, 3, 2, n)` to move all disks from rod 1 to rod 3.  
 
 
 ### Tricks
@@ -638,7 +638,7 @@ Start from a number `n` and repeatedly apply the following steps until `n = 1`:
 ### Idea
 - You are given an `n x m` grid filled with letters `A, B, C, D`.  
 - The task is to **recolor the grid** so that:
-  1. Each cell is replaced with the **next letter cyclically** (`A → B → C → D → A`).  
+  1. Each cell is replaced with the **next letter cyclically** (`A to B to C to D to A`).  
   2. No two adjacent cells (above or left) have the same letter.  
 - If it’s not possible (conflict cycles endlessly), output `"IMPOSSIBLE"`.
 
@@ -770,12 +770,12 @@ Input: AABBB
 
 Steps:  
 - Frequencies: A=2, B=3.  
-- Max frequency = 3, total = 5 → possible.  
+- Max frequency = 3, total = 5 is possible.  
 - Build string greedily:  
-  - Pick `A → "A"`  
-  - Pick `B → "AB"`  
-  - Pick `A → "ABA"`  
-  - Remaining `B`s → interleave → `"ABABB"`  
+  - Pick `A "A"`  
+  - Pick `B "AB"`  
+  - Pick `A "ABA"`  
+  - Remaining `B`s trail `"ABABB"`  
 
 Output: ABABB
 
@@ -825,8 +825,8 @@ Output: ABABB
 3. **Pruning (Optimization)**  
    - If the current cell is “boxed in” (surrounded in such a way that it forces a dead-end split), prune early.  
    - Example checks:  
-     - If up and down are blocked, but left and right are open → dead end.  
-     - If left and right are blocked, but up and down are open → dead end.  
+     - If up and down are blocked, but left and right are open, dead end.  
+     - If left and right are blocked, but up and down are open, dead end.  
 
 4. **Recursive DFS**  
    - Mark the current cell as visited.  
@@ -862,4 +862,111 @@ Output: ABABB
 
 
 ---
+</details>
+
+
+
+
+## Sorting and Searching
+
+<details>
+<summary>Distinct Numbers</summary>
+
+---
+
+### Idea
+- You are given **n integers**.  
+- The task is to count how many **distinct numbers** appear in the input.  
+- For example:  
+  - Input: `5` followed by `2 3 2 2 3`  
+  - Distinct values are `{2,3}` and Answer: `2`.
+
+
+### Algo Steps
+1. **Input**  
+   - Read `n` (the number of integers).  
+   - Read the `n` integers into memory.  
+
+2. **Data Structure**  
+   - Use a **set** (ordered, unique container) to automatically remove duplicates.  
+
+3. **Insert Elements**  
+   - Loop over all input integers and insert each into the set.  
+   - Since a set only keeps unique values, duplicates are ignored.  
+
+4. **Result**  
+   - The answer is simply the **size of the set**.  
+
+### Complexity
+- **Time Complexity**:  
+   - Inserting into a set is `O(log n)` per element.  
+   - For `n` elements, total = `O(n log n)`.  
+
+- **Space Complexity**:  
+   - The set holds at most `n` unique integers `O(n)`.  
+
+
+### Tricks
+- Using a set is the **simplest way** to handle duplicates.  
+- Alternatively, an **unordered_set** can reduce time to average `O(n)`, but you run the risk of hash collisions and TLE (which occurs in the last test case!) 
+
+---
+
+</details>
+
+
+
+<details>
+<summary>Apartments</summary>
+
+---
+
+### Idea
+- You are given:  
+  - `n` = number of applicants.  
+  - `m` = number of available apartments.  
+  - `k` = maximum allowed difference in apartment size.  
+- Each applicant requests an apartment of a certain size (`desired[i]`).  
+- Each available apartment has a given size (`available[j]`).  
+- An applicant can take an apartment if the **absolute difference** between the desired size and the apartment size is **≤ k**.  
+- Each apartment can be assigned to **at most one applicant**.  
+- The task: **maximize the number of applicants who get an apartment**.  
+
+
+### Algo Steps
+1. **Input**  
+   - Read integers `n, m, k`.  
+   - Read list `desired` of size `n`.  
+   - Read list `available` of size `m`.  
+
+2. **Sort Both Lists**  
+   - Sort `desired` in ascending order.  
+   - Sort `available` in ascending order.  
+   - Sorting makes it easier to match applicants with apartments greedily.  
+
+3. **Two-Pointer Matching**  
+   - Start from the **largest applicant request** and the **largest apartment**.  
+   - While both lists still have elements:
+     - If `|available[j] - desired[i]| ≤ k`, assign apartment then increment counter, move both pointers.  
+     - If `available[j] > desired[i]`, the apartment is too large so move to a smaller apartment.  
+     - Else, the applicant’s request is too large so move to a smaller request.  
+
+4. **Result**  
+   - After the loop, `counter` holds the maximum number of successful assignments.  
+
+
+### Complexity
+- **Sorting**: `O(n log n + m log m)`  
+- **Two-pointer traversal**: `O(n + m)`  
+- **Total**: `O(n log n + m log m)`  
+
+- **Space Complexity**: `O(n + m)` for storing the input arrays.  
+
+
+### Tricks
+- The **two-pointer approach** is key: always match the largest possible valid pairs before moving down.  
+- Sorting ensures that once a match fails, you can safely move one pointer without missing future opportunities.  
+- This is a standard **greedy matching problem** pattern.  
+
+
 </details>

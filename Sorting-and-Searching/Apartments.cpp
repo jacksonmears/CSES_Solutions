@@ -19,7 +19,8 @@ constexpr ll MOD = 1e9 + 7;
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll n, m, k; cin >> n >> m >> k;
+    int n, m; ll k; 
+    cin >> n >> m >> k;
     vl desired(n), available(m);
 
     REP(i, 0, n-1)  cin >> desired[i];
