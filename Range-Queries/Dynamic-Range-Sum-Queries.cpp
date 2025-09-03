@@ -1,60 +1,68 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
+typedef vector<int> vi;
+typedef vector<vi> vvi;
+typedef pair<int, int> pi;
+typedef vector<pi> vpi;
 typedef vector<ll> vl;
 typedef pair<ll,ll> pl;
+typedef vector<pl> vpl;
+typedef vector<vl> vvl;
 typedef vector<bool> vb;
-typedef vector<pl> vp;
-constexpr ll MAX = 9e18;
-constexpr ll MOD = 1e9 + 7;
+constexpr int MOD = 1e9 + 7;
 
-#define F first
-#define S second
+#define f first
+#define s second
 #define pb push_back
 #define mp make_pair
-#define rep(i,a,b) for (ll i = a; i <= b; i++)
+#define rep(i,a,b) for (int i = a; i <= b; ++i)
+#define repr(i, a, b) for (int i = a; i >= b; --i)
 
 
-ll n;
-vl segment_tree;
+ll n, q, x, a, b;
+vl fenwick;
 
-void update_tree(ll index, const ll new_value) {
-    index += n - 1;
-    segment_tree[index] = new_value;
-    for (index /= 2; index >= 1; index /= 2) {
-        segment_tree[index] = segment_tree[index * 2] + segment_tree[index * 2 + 1];
+void update(ll i, ll value) {
+    while (i < fenwick.size()) {
+        fenwick[i] += value;
+        i += i & -i;
     }
 }
 
-
-void query_tree (ll a, ll b) {
-    a += n-1; b += n-1;
+ll query(ll i) {
     ll sum = 0;
-    while (a <= b) {
-        if (a&1) sum += segment_tree[a++];
-        if (!(b&1)) sum += segment_tree[b--];
-        a /= 2; b /= 2;
+    while (i > 0) {
+        sum += fenwick[i];
+        i -= i & -i;
     }
-    cout << sum << "\n";
+    return sum;
 }
-
 
 int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll q; cin >> n >> q;
-    segment_tree = vl(n*2);
-    rep(i, n, n*2-1) cin >> segment_tree[i];
-    for (ll i = n*2-1; i > 1; i--) {
-        segment_tree[i/2] += segment_tree[i];
+    cin >> n >> q;
+    vl elements(n + 1);
+    rep(i, 1, n)
+        cin >> elements[i];
+
+    fenwick.assign(n + 1, 0);
+
+    rep(i, 1, n)
+        update(i, elements[i]);
+
+    rep(i, 0, q - 1) {
+        cin >> x >> a >> b;
+        if (x == 1) {
+            update(a, -elements[a]);
+            elements[a] = b;
+            update(a, b);
+        } else {
+            if (a < b) swap(a, b); 
+            cout << query(a) - query(b-1) << "\n";
+        }
     }
 
-    rep(i, 0, q-1) {
-        ll k, a, b; cin >> k >> a >> b;
-        if (k&1) update_tree(a, b);
-        else query_tree(a, b);
-    }
-
-
-   return 0;
+    return 0;
 }

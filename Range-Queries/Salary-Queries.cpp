@@ -44,6 +44,12 @@ int query(int index) {
 int rangeQuery(int left, int right) {
     return query(right) - (left ? query(left-1) : 0);
 }
+
+
+int fetch_compressed_value(int x) {
+    return int(lower_bound(vals.begin(), vals.end(), x) - vals.begin());
+}
+
  
 int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
@@ -76,27 +82,22 @@ int main() {
     ranges::sort(vals);
     vals.erase(unique(vals.begin(), vals.end()), vals.end());
  
-    auto compress = [&](int x) {
-        return int(lower_bound(vals.begin(), vals.end(), x) - vals.begin());
-    };
- 
     vals_size = vals.size();
     fenwick.assign(vals_size+1, 0);
  
     rep(i, 0, n-1) 
-        update(compress(salary[i]), 1);
+        update(fetch_compressed_value(salary[i]), 1);
     
  
     for (auto &query : queries) {
         if (query.type_query == "!") {
-            update(compress(salary[query.a]), -1);
- 
+            update(fetch_compressed_value(salary[query.a]), -1);
             salary[query.a] = query.b;
-            update(compress(query.b), 1);
+            update(fetch_compressed_value(query.b), 1);
  
-        } else { // "?"
-            int left = compress(query.a);
-            int right = compress(query.b);
+        } else { 
+            int left = fetch_compressed_value(query.a);
+            int right = fetch_compressed_value(query.b);
  
             cout << rangeQuery(left, right) << "\n";
         }
