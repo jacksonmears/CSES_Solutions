@@ -970,3 +970,274 @@ Output: ABABB
 
 
 </details>
+
+
+
+<details>
+<summary>Ferris Wheel</summary>
+
+---
+
+### Idea
+- You are given:  
+  - `n` = number of children.  
+  - `x` = maximum allowed weight per gondola.  
+- Each child has a weight `listOfWeights[i]`.  
+- Each gondola can carry **at most two children**, and their combined weight cannot exceed `x`.  
+- The task: **minimize the number of gondolas needed** to carry all children.  
+
+
+### Algo Steps
+1. **Input**  
+   - Read integers `n` and `x`.  
+   - Read list `listOfWeights` of size `n`.  
+
+2. **Sort the Weights**  
+   - Sort `listOfWeights` in ascending order.  
+   - Sorting allows pairing the **lightest and heaviest** children efficiently.  
+
+3. **Two-Pointer Pairing**  
+   - Initialize two pointers:  
+     - `left = 0` lightest child.  
+     - `right = n-1` heaviest child.  
+   - Initialize `counter = 0` to count gondolas.  
+   - While `left <= right`:  
+     - If `listOfWeights[left] + listOfWeights[right] ≤ x`, pair them in one gondola (`left++`).  
+     - Always place `right` in a gondola (`right--`).  
+     - Increment `counter` for each gondola used.  
+
+4. **Result**  
+   - After the loop, `counter` holds the **minimum number of gondolas** needed.  
+
+
+### Complexity
+- **Sorting**: `O(n log n)`  
+- **Two-pointer traversal**: `O(n)`  
+- **Total**: `O(n log n)`  
+
+- **Space Complexity**: `O(n)` for storing the weights.  
+
+
+### Tricks
+- The **two-pointer approach** is key: pair the **lightest remaining child with the heaviest** to minimize the number of gondolas.  
+- Sorting ensures that once a child is paired, you can safely move pointers without missing future opportunities.  
+- This is a standard **greedy pairing problem** pattern.  
+
+---
+
+</details>
+
+
+
+
+<details>
+<summary>Concert Tickets</summary>
+
+---
+
+### Idea
+- You are given:  
+  - `n` = number of available tickets.  
+  - `m` = number of customers.  
+- Each ticket has a price `ticket_prices[i]`.  
+- Each customer has a maximum price `t` they are willing to pay.  
+- Each customer can buy **at most one ticket**, and each ticket can be sold **at most once**.  
+- The task: **for each customer, assign the most expensive ticket ≤ their budget** or `-1` if no such ticket exists.  
+
+
+### Algo Steps
+1. **Input**  
+   - Read integers `n` and `m`.  
+   - Read `n` ticket prices and store them in a `multiset` (allows duplicates and fast removals).  
+   - Read `m` customer budgets.  
+
+2. **Process Each Customer**  
+   - For each customer with budget `t`:  
+     - Use `lower_bound(t+1)` on the `multiset` to find the first ticket **greater than `t`**.  
+     - If the iterator points to the beginning, no ticket ≤ `t` exists → output `-1`.  
+     - Otherwise, move the iterator one step back to get the **largest ticket ≤ t**.  
+     - Output the ticket price and remove it from the `multiset` (sold).  
+
+
+### Complexity
+- **Insert `n` tickets into multiset**: `O(n log n)`  
+- **Process each of `m` customers**: each `lower_bound` + erase = `O(log n)`  
+- **Total**: `O((n+m) log n)`  
+
+- **Space Complexity**: `O(n)` for storing ticket prices.  
+
+
+### Tricks
+- Using a `multiset` allows:  
+  - Fast search for the largest ticket ≤ budget.  
+  - Automatic handling of duplicate ticket prices.  
+- The `lower_bound(t+1)` trick ensures you get the **largest ticket ≤ t** efficiently.  
+- Erasing the ticket from the `multiset` prevents it from being sold twice.  
+
+---
+
+</details>
+
+
+
+<details>
+<summary>Restaurant Customers</summary>
+
+---
+
+### Idea
+- You are given:  
+  - `n` = number of customer groups.  
+- Each group has:  
+  - `a` = arrival time.  
+  - `b` = departure time.  
+- The task: **find the maximum number of customers present in the restaurant at any moment**.  
+
+
+### Algo Steps
+1. **Input**  
+   - Read integer `n`.  
+   - For each customer group, read arrival `a` and departure `b`.  
+
+2. **Create Events**  
+   - Represent each arrival as `(time, +1)` and each departure as `(time, -1)`.  
+   - Store all events in a single list `customers`.  
+
+3. **Sort Events**  
+   - Sort the events by time:  
+     - If two events have the same time, **arrivals (+1) come before departures (-1)**.  
+   - Sorting ensures that overlapping intervals are counted correctly.  
+
+4. **Sweep Through Events**  
+   - Initialize `cur = 0` (current number of customers) and `mx = 0` (maximum).  
+   - Iterate through the events:  
+     - Add the event type (`+1` for arrival, `-1` for departure) to `cur`.  
+     - Update `mx = max(mx, cur)`.  
+
+5. **Result**  
+   - After processing all events, `mx` holds the **maximum number of customers simultaneously in the restaurant**.  
+
+
+### Complexity
+- **Creating events**: `O(n)`  
+- **Sorting events**: `O(n log n)`  
+- **Sweeping through events**: `O(n)`  
+- **Total**: `O(n log n)`  
+
+- **Space Complexity**: `O(n)` for storing events.  
+
+
+### Tricks
+- Use a **sweep line / event-based approach**: arrivals increase count, departures decrease count.  
+- Sorting events carefully ensures correct handling when arrivals and departures happen at the same time.  
+- Representing events as `(time, type)` pairs simplifies both sorting and iteration.  
+
+---
+
+</details>
+
+
+
+
+<details>
+<summary>Movie Festival</summary>
+
+---
+
+### Idea
+- You are given:  
+  - `n` = number of movies.  
+- Each movie has:  
+  - `start` = start time.  
+  - `end` = end time.  
+- Each movie takes exactly the interval `[start, end)`.  
+- The task: **attend the maximum number of non-overlapping movies**.  
+
+
+### Algo Steps
+1. **Input**  
+   - Read integer `n`.  
+   - For each movie, read `start` and `end` times.  
+
+2. **Store Movies**  
+   - Use a `struct Movie` with `start` and `end`.  
+   - Store all movies in a `vector<Movie>` called `movies`.  
+
+3. **Sort Movies by End Time**  
+   - Sort `movies` in ascending order of `end` time.  
+   - If two movies end at the same time, sort by `start` time.  
+   - Sorting ensures the greedy approach works correctly (always pick the movie that ends earliest).  
+
+4. **Greedy Selection**  
+   - Initialize `prev = 0` (end time of the last attended movie) and `counter = 0`.  
+   - Iterate through the sorted movies:  
+     - If `movie.start >= prev`, you can attend this movie.  
+       - Increment `counter`.  
+       - Set `prev = movie.end`.  
+     - Otherwise, skip the movie.  
+
+5. **Result**  
+   - After iterating through all movies, `counter` holds the **maximum number of non-overlapping movies** you can attend.  
+
+
+### Complexity
+- **Sorting**: `O(n log n)`  
+- **Greedy traversal**: `O(n)`  
+- **Total**: `O(n log n)`  
+
+- **Space Complexity**: `O(n)` for storing the movies.  
+
+
+### Tricks
+- Always **sort by end time** first — this is the core of the greedy approach.  
+- Using a struct with `start` and `end` makes the code more readable, but using `pair<end,start>` works as well.  
+- Once a movie is selected, update `prev` to its **end time**, not start.  
+- This is a classic **interval scheduling problem** pattern in competitive programming.  
+
+---
+
+</details>
+
+
+
+<details>
+<summary>Sum of Two Values</summary>
+
+---
+
+### Idea
+- You are given:  
+  - `n` = number of elements in the array.  
+  - `x` = target sum.  
+- You need to find **two distinct elements** in the array whose sum is exactly `x`.  
+- If such a pair exists, output their **1-based indices**. Otherwise, output `"IMPOSSIBLE"`.  
+
+
+### Algo Steps
+1. **Input**  
+   - Read integers `n` and `x`.  
+   - Read array of `n` elements.  
+
+2. **Use a Map to Track Seen Values**  
+   - Create a map `seen` that stores `value -> index`.  
+   - Iterate through the array:  
+     - For each element `a[i]`, check if `x - a[i]` exists in `seen`.  
+       - If it does, you have found a valid pair: output the indices.  
+     - Otherwise, add `a[i]` to `seen` with its index.  
+
+3. **Output Result**  
+   - If no pair is found after iterating through the array, print `"IMPOSSIBLE"`.  
+
+
+### Complexity
+- **Time Complexity**: `O(n)`  
+  - Each lookup and insertion in `map` is amortized `O(log n)`.  
+- **Space Complexity**: `O(n)` for storing the map of seen elements.  
+
+
+### Tricks
+- Using a **hash map** (or `std::map`) allows checking in `O(log n)` whether a complement exists.  
+- Store **indices** in the map to output the solution directly.  
+- This is a classic **two-sum problem** pattern in competitive programming.  
+
+</details>

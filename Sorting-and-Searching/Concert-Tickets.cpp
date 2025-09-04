@@ -14,27 +14,29 @@ constexpr ll MOD = 1e9 + 7;
 #define MP make_pair
 #define REP(i,a,b) for (ll i = a; i <= b; i++)
 
+int n, m;
+ll h, t;
 
 
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll n, m; cin >> n >> m;
-    multiset<ll> priceOfTickets;
+    cin >> n >> m;
+    multiset<ll> ticket_prices;
     REP(i, 0, n-1) {
-        ll newPrice; cin >> newPrice;
-        priceOfTickets.insert(newPrice);
+        cin >> h;
+        ticket_prices.insert(h);
     }
 
     REP(i, 0, m-1) {
-        ll desiredPrice; cin >> desiredPrice;
-        auto iterator = priceOfTickets.lower_bound(desiredPrice+1);
-        if (iterator == priceOfTickets.begin()) cout << "-1" << "\n";
+        cin >> t;
+        auto it = ticket_prices.lower_bound(t+1);
+        if (it == ticket_prices.begin()) cout << "-1" << "\n";
 
         else{
-            iterator--;
-            cout << *iterator << "\n";
-            priceOfTickets.erase(iterator);
+            it--;
+            cout << *it << "\n";
+            ticket_prices.erase(it);
         }
     }
 

@@ -1,41 +1,59 @@
 #include <bits/stdc++.h>
-#include <regex>
 using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
+typedef vector<vi> vvi;
+typedef pair<int, int> pi;
+typedef vector<pi> vpi;
 typedef vector<ll> vl;
 typedef pair<ll,ll> pl;
-constexpr ll MAX = 9e18;
-constexpr ll MOD = 1e9 + 7;
+typedef vector<pl> vpl;
+typedef vector<vl> vvl;
+typedef vector<bool> vb;
+constexpr int MOD = 1e9 + 7;
 
-#define F first
-#define S second
-#define PB push_back
-#define MP make_pair
-#define REP(i,a,b) for (ll i = a; i <= b; i++)
+#define f first
+#define s second
+#define pb push_back
+#define mp make_pair
+#define rep(i,a,b) for (int i = a; i <= b; ++i)
+#define repr(i, a, b) for (int i = a; i >= b; --i)
 
 
+int n;
+ll a, b;
+
+struct Movie {
+    ll start, end;
+};
 
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll n; cin >> n; set<pl> movies;
-    REP(i, 0, n-1) {
-        ll a, b; cin >> a >> b;
-        movies.insert(MP(b, a));
+    cin >> n; 
+    vector<Movie> movies(n);
+    rep(i, 0, n-1) {
+        cin >> a >> b;
+        Movie x = {a, b};
+        movies[i] = x;
     }
 
-    auto iterator = movies.begin();
-    ll endOfPreviousMovie = 0, movieCounter = 0;
-    while (iterator != movies.end()) {
-        if (iterator->second >= endOfPreviousMovie) {
-            movieCounter++;
-            endOfPreviousMovie = iterator->first;
+    ranges::sort(movies, [](Movie m1, Movie m2) {
+        if (m1.end != m2.end) return m1.end < m2.end;
+        return m1.start < m2.start;
+    });
+
+    auto it = movies.begin();
+    ll prev = 0, counter = 0;
+    while (it != movies.end()) {
+        if (it->start >= prev) {
+            ++counter;
+            prev = it->end;
         }
-        iterator++;
+        ++it;
     }
 
-    cout << movieCounter;
+    cout << counter;
 
     return 0;
 }
