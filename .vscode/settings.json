@@ -17,6 +17,8 @@
         "tuple": "cpp",
         "type_traits": "cpp",
         "utility": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "flat_map": "cpp",
+        "flat_set": "cpp"
     }
 }

@@ -1,43 +1,48 @@
 #include <bits/stdc++.h>
-#include <regex>
 using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
+typedef vector<vi> vvi;
+typedef pair<int, int> pi;
+typedef vector<pi> vpi;
 typedef vector<ll> vl;
 typedef pair<ll,ll> pl;
-constexpr ll MAX = 9e18;
-constexpr ll MOD = 1e9 + 7;
+typedef vector<pl> vpl;
+typedef vector<vl> vvl;
+typedef vector<bool> vb;
+constexpr int MOD = 1e9 + 7;
 
-#define F first
-#define S second
-#define PB push_back
-#define MP make_pair
-#define REP(i,a,b) for (ll i = a; i <= b; i++)
+#define f first
+#define s second
+#define pb push_back
+#define mp make_pair
+#define rep(i,a,b) for (int i = a; i <= b; ++i)
+#define repr(i, a, b) for (int i = a; i >= b; --i)
 
-
-
+constexpr int MAXN = 2e5+1;
+int n, songs[MAXN], mx = 0, counter = 0, j;
+ll k;
 
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll n; cin >> n;
-    vl songs(n);
-    REP(i, 0, n-1) cin >> songs[i];
-
+    cin >> n;
     set<ll> seen;
-    ll left = 0, maximumUniqueSubarrayLength = 0;
-
-    REP(right, 0, n-1) {
-        while (seen.count(songs[right])) {
-            seen.erase(songs[left]);
-            left++;
+    rep(i, 0, n-1) 
+        cin >> songs[i];
+    
+    rep(i, 0, n-1) {
+        while (seen.contains(songs[i])) {
+            --counter;
+            seen.erase(songs[j]);
+            ++j;
         }
-        seen.insert(songs[right]);
-        maximumUniqueSubarrayLength = max(maximumUniqueSubarrayLength, right - left + 1);
+        ++counter;
+        mx = max(mx, counter);
+        seen.insert(songs[i]);
     }
 
-    cout << maximumUniqueSubarrayLength << '\n';
-
+    cout << mx;
 
     return 0;
 }

@@ -15,25 +15,28 @@ constexpr ll MOD = 1e9 + 7;
 #define REP(i,a,b) for (ll i = a; i <= b; i++)
 
 
+int n;
+ll x, p;
 
 
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
 
-    ll x, n; cin >> x >> n;
-    multiset<ll> trafficLights; set<ll> streets;
-    streets.insert(0); streets.insert(x); trafficLights.insert(x);
+    cin >> x >> n;
+    multiset<ll> lights; set<ll> streets;
+    streets.insert(0); streets.insert(x); 
+    lights.insert(x);
 
     REP(i, 0, n-1) {
-        ll e; cin >> e;
-        streets.insert(e);
-        auto it = streets.find(e);
+        cin >> p;
+        streets.insert(p);
+        auto it = streets.find(p);
         auto up = *next(it);
         auto down = *prev(it);
-        trafficLights.erase(trafficLights.find(up-down));
-        trafficLights.insert(up-e); trafficLights.insert(e-down);
-        cout << *trafficLights.rbegin() << " ";
+        lights.erase(lights.find(up-down));
+        lights.insert(up-p); lights.insert(p-down);
+        cout << *lights.rbegin() << " ";
     }
 
 

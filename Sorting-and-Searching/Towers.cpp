@@ -15,28 +15,27 @@ constexpr ll MOD = 1e9 + 7;
 #define REP(i,a,b) for (ll i = a; i <= b; i++)
 
 
+int n;
+ll k;
 
 
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll n; cin >> n;
-    set<pl> cubes;
-    ll towerCounter = 0;
+    cin >> n;
+    multiset<ll> cubes;
     REP(i, 0, n-1) {
-        ll e; cin >> e;
-        auto it = cubes.lower_bound(MP(e+1, 0));
+        cin >> k;
+        auto it = cubes.lower_bound(k+1);
 
-        if (it == cubes.end() || it->first == e) {
-            towerCounter++;
-        } else cubes.erase(it);
-        if (e != 1) {cubes.insert(MP(e, i));}
+        if (it != cubes.end()) 
+            cubes.erase(it);
+        
+        cubes.insert(k);
+        
     }
 
-    cout << towerCounter << endl;
-
-
-
+    cout << cubes.size() << endl;
 
     return 0;
 }

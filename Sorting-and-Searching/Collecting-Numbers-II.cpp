@@ -1,64 +1,67 @@
 #include <bits/stdc++.h>
-#include <regex>
 using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
+typedef vector<vi> vvi;
+typedef pair<int, int> pi;
+typedef vector<pi> vpi;
 typedef vector<ll> vl;
 typedef pair<ll,ll> pl;
-constexpr ll MAX = 9e18;
-constexpr ll MOD = 1e9 + 7;
+typedef vector<pl> vpl;
+typedef vector<vl> vvl;
+typedef vector<bool> vb;
+constexpr int MOD = 1e9 + 7;
 
-#define F first
-#define S second
-#define PB push_back
-#define MP make_pair
-#define REP(i,a,b) for (ll i = a; i <= b; i++)
+#define f first
+#define s second
+#define pb push_back
+#define mp make_pair
+#define rep(i,a,b) for (int i = a; i <= b; ++i)
+#define repr(i, a, b) for (int i = a; i >= b; --i)
 
 
+constexpr int MAXN = 2e5+1;
+int n, m, a, b, counter = 1;
+int elements[MAXN], pos[MAXN];
+
+
+void update(int a, int b){
+    if(pos[elements[a]-1] <= pos[elements[a]] && b < pos[elements[a]-1]) ++counter;
+    if(pos[elements[a]-1] > pos[elements[a]] && b >= pos[elements[a]-1]) --counter;
+    if(pos[elements[a]+1] >= pos[elements[a]] && b > pos[elements[a]+1]) ++counter;
+    if(pos[elements[a]+1] < pos[elements[a]] && b <= pos[elements[a]+1]) --counter;
+    pos[elements[a]] = b;
+
+    if(pos[elements[b]-1] <= pos[elements[b]] && a < pos[elements[b]-1]) ++counter;
+    if(pos[elements[b]-1] > pos[elements[b]] && a >= pos[elements[b]-1]) --counter;
+    if(pos[elements[b]+1] >= pos[elements[b]] && a > pos[elements[b]+1]) ++counter;
+    if(pos[elements[b]+1] < pos[elements[b]] && a <= pos[elements[b]+1]) --counter;
+    pos[elements[b]] = a;
+
+    swap(elements[a], elements[b]);
+}
 
 
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll n, m; cin >> n >> m;
-    vl numbers(n), position(n+2);
-
-    REP(i, 0, n-1) {
-        cin >> numbers[i];
-        position[numbers[i]] = i;
+    cin >> n >> m;
+    rep(i, 1, n) {
+        cin >> elements[i];
+        pos[elements[i]] = i;
     }
 
-    ll rounds = 1;
-    REP(i, 2, n) if (position[i] < position[i - 1]) rounds++;
+    rep(i, 2, n) 
+        if (pos[i] < pos[i - 1]) 
+            ++counter;
 
-    while (m--) {
-        ll a, b; cin >> a >> b;
-        a--; b--;
 
-        ll x = numbers[a], y = numbers[b];
-        if (x == y) {
-            cout << rounds << '\n';
-            continue;
-        }
-
-        set<ll> affected;
-        for (ll val : {x - 1, x, x + 1, y - 1, y, y + 1}) {
-            if (val >= 1 && val <= n) affected.insert(val);
-        }
-
-        for (ll i : affected) {
-            if (i > 1 && position[i] < position[i - 1]) rounds--;
-        }
-
-        swap(numbers[a], numbers[b]);
-        swap(position[x], position[y]);
-
-        for (ll i : affected) {
-            if (i > 1 && position[i] < position[i - 1]) rounds++;
-        }
-
-        cout << rounds << '\n';
+    rep(i, 0, m-1) {
+        cin >> a >> b;
+        update(a, b);
+        cout << counter << "\n";
     }
+
 
     return 0;
 }

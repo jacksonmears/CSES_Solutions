@@ -1240,4 +1240,553 @@ Output: ABABB
 - Store **indices** in the map to output the solution directly.  
 - This is a classic **two-sum problem** pattern in competitive programming.  
 
+---
+
+</details>
+
+
+
+
+<details>
+<summary>Maximum Subarray Sum</summary>
+
+---
+
+### Idea
+- You are given:  
+  - `n` = number of elements in the array.  
+  - An array of integers of length `n`.  
+- The task: **find the maximum sum of any contiguous subarray**.  
+
+
+### Algo Steps
+1. **Input**  
+   - Read integer `n`.  
+   - Read array of `n` integers.  
+
+2. **Kadane’s Algorithm**  
+   - Initialize two variables:  
+     - `cur` = current subarray sum, initially `0`.  
+     - `mx` = maximum subarray sum, initially `-∞`.  
+   - Iterate through the array:  
+     - Add the current element to `cur`.  
+     - Update `mx = max(mx, cur)`.  
+     - If `cur < 0`, reset `cur = 0` (start a new subarray).  
+
+3. **Output Result**  
+   - After iterating, `mx` contains the **maximum subarray sum**.  
+
+
+### Complexity
+- **Time Complexity**: `O(n)` — single pass through the array.  
+- **Space Complexity**: `O(1)` — only a few variables are used.  
+
+
+### Tricks
+- Kadane’s algorithm works by keeping track of the **current running sum** and **resetting it when it becomes negative**.  
+- This is a standard **greedy + dynamic programming** pattern for maximum subarray problems.  
+- Handles arrays with negative numbers correctly by initializing `mx` to `-∞`.  
+
+---
+
+</details>
+
+
+
+
+<details>
+<summary>Stick Lengths</summary>
+
+---
+
+### Idea
+- You are given:  
+  - `n` = number of sticks.  
+  - An array of stick lengths `sticks[i]`.  
+- The task: **make all sticks the same length** with the **minimum total cost**, where changing a stick’s length costs the absolute difference.  
+
+- Key observation: the **median** of the stick lengths minimizes the sum of absolute differences.  
+
+
+### Algo Steps
+1. **Input**  
+   - Read integer `n`.  
+   - Read array `sticks` of length `n`.  
+
+2. **Sort the Stick Lengths**  
+   - Sort `sticks` in ascending order.  
+   - The median is at index `n / 2`.  
+
+3. **Compute Minimum Cost**  
+   - Initialize `mn = 0`.  
+   - For each stick length `stick`:  
+     - Add `abs(stick - median)` to `mn`.  
+
+4. **Output Result**  
+   - Print `mn`, the minimum total adjustment cost.  
+
+
+### Complexity
+- **Sorting**: `O(n log n)`  
+- **Sum calculation**: `O(n)`  
+- **Total**: `O(n log n)`  
+
+- **Space Complexity**: `O(n)` for storing stick lengths.  
+
+
+### Tricks
+- Choosing the **median** as the target minimizes the sum of absolute differences (a standard property in statistics).  
+- Sorting is necessary to find the median efficiently.  
+- This is a **greedy / statistical observation** problem common in CSES and competitive programming.  
+
+---
+
+</details>
+
+
+
+<details>
+<summary>Missing Coin Sum</summary>
+
+---
+
+### Idea
+- You are given:  
+  - `n` = number of coins.  
+  - An array `coins[i]` of positive integer coin values.  
+- The task: **find the smallest positive integer that cannot be formed as a sum of any subset of coins**.  
+
+- Key observation: if you process the coins in **ascending order** and maintain a running `prefix` sum of constructible values:  
+  - If a coin is greater than `prefix`, then `prefix` cannot be formed.  
+  - Otherwise, add the coin to `prefix` to extend the range of sums.  
+
+
+### Algo Steps
+1. **Input**  
+   - Read integer `n`.  
+   - Read array `coins` of length `n`.  
+
+2. **Sort Coins**  
+   - Sort `coins` in ascending order.  
+   - This ensures that you always extend the range of constructible sums in order.  
+
+3. **Find Missing Sum**  
+   - Initialize `prefix = 1` (smallest positive sum to construct).  
+   - Iterate through `coins`:  
+     - If `coins[i] > prefix`, output `prefix` and terminate — it's the smallest missing sum.  
+     - Otherwise, update `prefix += coins[i]`.  
+
+4. **Output Result**  
+   - After iterating all coins, print `prefix` (smallest unconstructible sum).  
+
+
+### Complexity
+- **Sorting**: `O(n log n)`  
+- **Prefix computation**: `O(n)`  
+- **Total**: `O(n log n)`  
+
+- **Space Complexity**: `O(n)` for storing coins.  
+
+
+### Tricks
+- Sorting is key: ensures that you always try to build sums from smallest to largest.  
+- The **prefix sum approach** is greedy: it always keeps track of the largest sum that can be formed with coins processed so far.  
+- This is a classic **constructive greedy problem** in competitive programming.  
+
+
+---
+
+</details>
+
+
+<details>
+<summary>Collecting Numbers</summary>
+
+---
+
+### Idea
+- You are given:  
+  - `n` = number of cards, numbered `1` to `n`.  
+  - A sequence of `n` integers representing the order in which cards appear.  
+- The task: **determine the minimum number of rounds required to collect all cards in increasing order**.  
+  - In one round, you can take a contiguous subsequence of cards in **strictly increasing order**.  
+
+
+### Algo Steps
+1. **Input**  
+   - Read integer `n`.  
+   - Read array of length `n` representing card order.  
+
+2. **Track Seen Cards**  
+   - Use a boolean array `seen` of size `n+1`.  
+   - Iterate through the cards:  
+     - If the previous card (`x-1`) has **not been seen yet**, increment `counter` (new round required).  
+     - Mark the current card `x` as seen.  
+
+3. **Output Result**  
+   - Print `counter`, the **minimum number of rounds** needed.  
+
+
+### Complexity
+- **Time Complexity**: `O(n)` — single pass through the array.  
+- **Space Complexity**: `O(n)` — for `seen` array.  
+
+
+### Tricks
+- The key observation: a **new round** is needed whenever the previous number has not been collected yet.  
+- Using a **boolean array** allows constant-time checks for previous numbers.  
+- This is a classic **greedy approach** for sequence-based collection problems.  
+
+
+---
+
+</details>
+
+
+
+<details>
+<summary>Collecting Numbers II</summary>
+
+---
+
+### Idea
+- You are given:
+  - `n` numbers arranged in an array `elements[1..n]` (1-based indexing).  
+  - `m` swap operations `(a, b)` that swap two positions in the array.  
+- Define a **round** as collecting numbers in increasing order starting from 1.  
+- The task: **after each swap, determine the minimum number of rounds needed to collect all numbers**.
+
+
+### Observations
+- A round is defined by **contiguous increasing sequences**.  
+- Only neighbors `x-1` and `x+1` matter for counting new rounds.  
+- You can track **positions of each number** using a `pos[number]` array.  
+- Initially, the number of rounds is `1` plus the count of numbers whose **position is less than the previous number**.
+
+
+### Algorithm Steps
+
+1. **Input & Initialization**
+   - Read integers `n` and `m`.
+   - Read array `elements[1..n]`.  
+   - Initialize `pos[number]` as the current position of each number.  
+   - Initialize `counter = 1`.  
+   - Count initial rounds:
+     ```cpp
+     rep(i, 2, n) 
+         if (pos[i] < pos[i - 1]) 
+             ++counter;
+     ```
+
+2. **Update Function**
+   - For a swap `(a, b)`:
+     - Check neighbors of `elements[a]` (`elements[a]-1` and `elements[a]+1`) and update `counter` if the relative order changes.  
+     - Repeat for `elements[b]`.  
+     - Update `pos[elements[a]]` and `pos[elements[b]]`.  
+     - Swap the elements in the array.
+
+3. **Process Queries**
+   - For each swap `(a, b)`:
+     - Call `update(a, b)`.
+     - Output the current `counter` (minimum rounds after the swap).
+
+
+### Complexity
+- **Initialization**: `O(n)` to populate `pos` and count initial rounds.  
+- **Each swap**: `O(1)` since only neighbors are checked.  
+- **Total**: `O(n + m)`  
+- **Space Complexity**: `O(n)` for `elements` and `pos` arrays.
+
+
+### Tricks
+- Use **1-based indexing** for simplicity when checking neighbors.  
+- Only **neighbors matter**; no need to check the entire array after each swap.  
+- Maintaining the `pos` array allows **constant-time updates** of rounds.
+
+
+---
+
+</details>
+
+
+
+<details>
+<summary>Playlist</summary>
+
+---
+
+### Idea
+- You are given:
+  - A playlist of `n` songs, each represented by an integer.  
+- The task: **find the length of the longest contiguous subsequence with all distinct songs**.  
+
+This is equivalent to finding the **longest subarray with unique elements**.
+
+
+### Observations
+- A brute-force approach (checking all subarrays) would be `O(n²)` and too slow.  
+- Use the **two pointers / sliding window technique** with a set:
+  - Pointer `i` → right boundary of the window (current song being added).  
+  - Pointer `j` → left boundary of the window (used to remove duplicates).  
+- Maintain a `set` of seen songs inside the current window.  
+- When a duplicate is found:
+  - Move `j` forward and erase songs until the duplicate is removed.  
+- Track the current window size (`counter`) and update the maximum length (`mx`).  
+
+
+### Algorithm Steps
+
+1. **Input & Initialization**
+   - Read integer `n` (number of songs).  
+   - Read array `songs[0..n-1]`.  
+   - Initialize an empty set `seen`.  
+   - Initialize pointers `j = 0`, `counter = 0`, `mx = 0`.  
+
+2. **Sliding Window**
+   - For each index `i` from `0..n-1`:  
+     - While `songs[i]` is already in `seen`:  
+       - Remove `songs[j]` from the set.  
+       - Increment `j` and decrement `counter`.  
+     - Add `songs[i]` to `seen`.  
+     - Increment `counter`.  
+     - Update `mx = max(mx, counter)`.  
+
+3. **Output**
+   - Print `mx` (the maximum window size with all distinct songs).  
+
+
+### Complexity
+- **Time Complexity:**  
+  - Each song is added once and removed once → `O(n log n)` (because of `set` operations).  
+  - If `unordered_set` is used, average complexity improves to `O(n)`.  
+- **Space Complexity:**  
+  - `O(n)` for storing the set of songs.  
+
+
+### Tricks
+- The **two pointers** technique is crucial to avoid `O(n²)` checking.  
+- Using a set allows **fast duplicate detection and removal**.  
+- Alternative: `unordered_set` can optimize constant factors for faster runtime.  
+
+---
+
+</details>
+
+
+<details>
+<summary>Cubes</summary>
+
+---
+
+### Idea
+- You are given:
+  - An integer `n` (number of cubes).
+  - A sequence of cube sizes `k₁, k₂, …, kₙ`.  
+- The task: **build the tallest possible tower by stacking cubes** such that:
+  - Each new cube must be placed on top of a cube **strictly larger** than it.  
+
+This reduces to simulating the tower construction with greedy logic.
+
+
+### Observations
+- The problem is equivalent to maintaining the **top cube of each tower**:
+  - If there exists a tower whose top cube is **greater than `k`**, replace that top with `k`.
+  - Otherwise, start a new tower with `k`.  
+- This is essentially the **patience sorting** technique (also used in LIS problems).
+- A `multiset` maintains current tower tops in sorted order:
+  - `lower_bound(k+1)` finds the smallest tower top strictly greater than `k`.
+  - If such a tower exists → replace its top with `k` (erase old top, insert `k`).
+  - If not → insert `k` as a new tower.
+
+
+### Algorithm Steps
+
+1. **Input & Initialization**
+   - Read integer `n`.  
+   - Initialize an empty multiset `cubes`.  
+
+2. **Processing Cubes**
+   - For each cube size `k`:  
+     - Use `it = cubes.lower_bound(k+1)` to find the smallest top strictly greater than `k`.  
+     - If `it != cubes.end()`:
+       - Remove that tower top (`cubes.erase(it)`).
+     - Insert `k` into the multiset.  
+
+3. **Output**
+   - The number of towers is equal to the size of the multiset:  
+     ```cpp
+     cout << cubes.size() << endl;
+     ```
+
+
+### Complexity
+- **Time Complexity:**  
+  - Each cube requires one `lower_bound` and at most one `erase` and `insert`.  
+  - Each operation is `O(log n)`.  
+  - Total complexity: `O(n log n)`.  
+
+- **Space Complexity:**  
+  - `O(n)` in the worst case (all cubes form separate towers).  
+
+
+### Tricks
+- Using `lower_bound(k+1)` instead of `lower_bound(k)` ensures **strictly larger** matching.  
+- `multiset` allows duplicate tower tops, which is important when multiple towers can have the same size.  
+- This is the same idea behind the **LIS patience sorting algorithm**, but here we directly need the number of piles (towers), not their length.  
+
+---
+
+</details>
+
+
+<details>
+<summary>Traffic Lights</summary>
+
+---
+
+### Idea
+- You are given:
+  - A street of length `x`.
+  - `n` traffic light placements at positions `p₁, p₂, …, pₙ`.  
+- The task: **after each light is added, output the length of the longest segment without traffic lights**.  
+
+This simulates splitting the street into intervals as new lights are placed.
+
+
+### Observations
+- Initially, the street is a single segment `[0, x]` of length `x`.  
+- Each time a new light is placed at position `p`:
+  - It **splits an existing segment** `[down, up]` into two segments: `[down, p]` and `[p, up]`.  
+- To efficiently track:
+  - A `set` of positions of lights (including `0` and `x`).
+  - A `multiset` of segment lengths.
+- When inserting a new light:
+  1. Find the neighbors `down = prev(p)` and `up = next(p)` from the `set`.  
+  2. Remove the old segment `(up - down)` from the `multiset`.  
+  3. Insert the two new segments `(p - down)` and `(up - p)` into the `multiset`.  
+- The maximum segment length is always the last element of the `multiset`.
+
+
+### Algorithm Steps
+
+1. **Input & Initialization**
+   - Read integers `x` (street length) and `n` (number of lights).  
+   - Initialize a `set streets` with `{0, x}` (endpoints).  
+   - Initialize a `multiset lights` with `{x}` (the full street length).  
+
+2. **Process Each Light**
+   - For each new light position `p`:  
+     - Insert `p` into `streets`.  
+     - Find its neighbors:  
+       ```cpp
+       auto it = streets.find(p);
+       auto up = *next(it);
+       auto down = *prev(it);
+       ```
+     - Remove old segment: `lights.erase(lights.find(up - down))`.  
+     - Add new segments:  
+       ```cpp
+       lights.insert(up - p);
+       lights.insert(p - down);
+       ```
+     - Print the maximum segment: `*lights.rbegin()`.  
+
+3. **Output**
+   - After each light insertion, output the maximum segment length, separated by spaces.  
+
+
+### Complexity
+- **Time Complexity:**  
+  - Each light insertion requires:
+    - One `set` insertion (`O(log n)`).
+    - Neighbor lookup via `prev`/`next` (`O(1)`).
+    - Up to two `multiset` insertions and one erase (`O(log n)` each).  
+  - Total: `O(n log n)`.  
+
+- **Space Complexity:**  
+  - `O(n)` for storing light positions and segment lengths.  
+
+
+### Tricks
+- Using `set` ensures lights are always stored in sorted order for neighbor lookup.  
+- `multiset` handles multiple segments of the same length and allows easy removal of just one occurrence.  
+- `*lights.rbegin()` is a neat way to always get the current maximum segment length in constant time.  
+
+---
+
+</details>
+
+
+
+<details>
+<summary>Distinct Values Subarrays</summary>
+
+---
+
+### Idea
+- You are given:
+  - An array of `n` integers.  
+- The task: **count the total number of subarrays that contain only distinct elements**.  
+
+This is equivalent to summing the lengths of all windows that contain unique elements.
+
+
+### Observations
+- A brute-force approach (checking all subarrays) would be `O(n²)`, too slow for `n = 2e5`.  
+- Instead, use a **two pointers / sliding window** approach with a hash map (`unordered_map`).  
+- Maintain:
+  - `left` → left boundary of the current window.
+  - `right` → right boundary as we iterate through the array.
+  - `seen[x]` → the most recent index where `x` was found.  
+- When a duplicate appears:
+  - Move `left` to `max(left, seen[x] + 1)` to ensure uniqueness.  
+- For each position `right`, the number of distinct subarrays ending at `right` is `(right - left + 1)`.  
+- Accumulate this count into `sum`.
+
+
+
+### Algorithm Steps
+
+1. **Input & Initialization**
+   - Read integer `n` (array length).  
+   - Initialize:
+     - `unordered_map<ll, ll> seen` → last index of each element.  
+     - `left = 0`, `sum = 0`.  
+
+2. **Sliding Window**
+   - For each index `right` from `0..n-1`:  
+     - Read element `x`.  
+     - If `x` has been seen before and its last index is inside the window:  
+       ```cpp
+       if (seen.count(x)) 
+           left = max(left, seen[x] + 1);
+       ```
+     - Update last occurrence: `seen[x] = right`.  
+     - Count distinct subarrays ending at `right`:  
+       ```cpp
+       sum += right - left + 1;
+       ```
+
+3. **Output**
+   - Print `sum`.  
+
+
+### Complexity
+- **Time Complexity:**  
+  - Each element is processed once as `right`, and `left` only moves forward.  
+  - Hash map lookups/updates are `O(1)` average.  
+  - Total: `O(n)`.  
+
+- **Space Complexity:**  
+  - `O(n)` for storing last seen positions in the hash map.  
+
+
+### Tricks
+- The trick is realizing that **each index contributes to multiple subarrays**.  
+  - By counting `(right - left + 1)`, you efficiently account for all distinct subarrays ending at `right`.  
+- Using `unordered_map` ensures fast lookups for last occurrences.  
+- The sliding window ensures we don’t double-count duplicates.  
+
+---
+
 </details>
