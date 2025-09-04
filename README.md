@@ -11,8 +11,12 @@ The focus here is on explaining **how** and **why** each solution works.
 
 ---
 
+
+
 ## Introductory Problems
 
+<details>
+<summary>solutions</summary>
 <details>
 <summary>Weird Algorithm</summary>
 
@@ -863,12 +867,14 @@ Output: ABABB
 
 ---
 </details>
-
+</details>
 
 
 
 ## Sorting and Searching
 
+<details>
+<summary>solutions</summary>
 <details>
 <summary>Distinct Numbers</summary>
 
@@ -1788,5 +1794,7 @@ This is equivalent to summing the lengths of all windows that contain unique ele
 - The sliding window ensures we don’t double-count duplicates.  
 
 ---
+
+</details>
 
 </details>
