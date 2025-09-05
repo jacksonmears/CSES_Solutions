@@ -11,37 +11,37 @@ typedef vector<pl> vpl;
 typedef vector<vl> vvl;
 typedef vector<bool> vb;
 constexpr int MOD = 1e9 + 7;
-
+ 
 #define f first
 #define s second
 #define pb push_back
 #define mp make_pair
 #define rep(i,a,b) for (int i = a; i <= b; ++i)
 #define repr(i, a, b) for (int i = a; i >= b; --i)
+ 
 
-
-int n;
+int n, a, d;
+ll duration = 0, counter = 0;
 
 
 int main() {
-    ios_base::sync_with_stdio(false); cin.tie(nullptr);
-
+    ios::sync_with_stdio(false); cin.tie(nullptr);
+ 
+    
     cin >> n;
-    list<int> people;
-    rep(i, 1, n) people.pb(i);
-
-    auto it = people.begin();
-    while (!people.empty()) {
-        it++;
-        if (it == people.end())
-            it = people.begin();
-
-        cout << *it << ' ';
-
-        it = people.erase(it);
-        if (it == people.end()) it = people.begin();
+    multiset<pi> tasks;
+    rep(i, 0, n-1) {
+        cin >> a >> d;
+        tasks.insert({a, d});
     }
 
+    for (auto task : tasks){
+        duration += task.first;
+        counter += task.second - duration;
+    }
 
+    cout << counter;
+
+    
     return 0;
 }

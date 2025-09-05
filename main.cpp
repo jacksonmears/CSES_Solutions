@@ -11,24 +11,20 @@ typedef vector<pl> vpl;
 typedef vector<vl> vvl;
 typedef vector<bool> vb;
 constexpr int MOD = 1e9 + 7;
-
+ 
 #define f first
 #define s second
 #define pb push_back
 #define mp make_pair
 #define rep(i,a,b) for (int i = a; i <= b; ++i)
 #define repr(i, a, b) for (int i = a; i >= b; --i)
-
-
+ 
 
 int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
-
-
+ 
     
-
     
     
     return 0;
 }
-

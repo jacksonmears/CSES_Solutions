@@ -14,20 +14,20 @@ constexpr ll MOD = 1e9 + 7;
 #define REP(i,a,b) for (ll i = a; i <= b; i++)
 
 
-
+int n;
+ll x, result = 1;
 
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll n; cin >> n;
-    unordered_map<ll, ll> distinctValueFrequency;
+    cin >> n;
+    unordered_map<ll, int> seen;
     REP(i, 0, n-1) {
-        ll x; cin >> x;
-        distinctValueFrequency[x]++;
+        cin >> x;
+        seen[x]++;
     }
 
-    ll result = 1;
-    for (auto &[key, frequency] : distinctValueFrequency) {
+    for (auto &[key, frequency] : seen) {
         result = result * (frequency + 1) % MOD;
     }
 

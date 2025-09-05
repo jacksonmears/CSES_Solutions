@@ -28,22 +28,25 @@ typedef tree<ll, null_type, less<ll>, rb_tree_tag, tree_order_statistics_node_up
 
 // solution comes from https://github.com/Jonathan-Uy they're a genius fr fr I couldn't figure this one out
 
+int n;
+ll k;
+
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    ll n, k; cin >> n >> k;
+    cin >> n >> k;
 
     ordered_set people;
-    rep(i, 1, n) {
+    rep(i, 1, n) 
         people.insert(i);
-    }
+
 
     ll index = k % n; // current position in 0-based order
     while (!people.empty()) {
         auto it = people.find_by_order(index);
         cout << *it << " ";
         people.erase(it);
-        if (!people.empty())
+        if (!people.empty()) 
             index = (index + k) % people.size();
     }
 

@@ -83,9 +83,9 @@ int main(){
     }
 
 
-    rep(i, 0, n-1) cout << ans[0][i] << " ";
+    rep(i, 0, n-1) cout << (ans[0][i] ? 1 : 0) << " ";
     cout << "\n";
-    rep(i, 0, n-1) cout << ans[1][i] << " ";
+    rep(i, 0, n-1) cout << (ans[1][i] ? 1 : 0) << " ";
 
 
     return 0;

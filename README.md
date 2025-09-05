@@ -15,8 +15,7 @@ The focus here is on explaining **how** and **why** each solution works.
 
 ## Introductory Problems
 
-<details>
-<summary>solutions</summary>
+
 <details>
 <summary>Weird Algorithm</summary>
 
@@ -867,14 +866,12 @@ Output: ABABB
 
 ---
 </details>
-</details>
 
 
 
 ## Sorting and Searching
 
-<details>
-<summary>solutions</summary>
+
 <details>
 <summary>Distinct Numbers</summary>
 
@@ -1796,5 +1793,547 @@ This is equivalent to summing the lengths of all windows that contain unique ele
 ---
 
 </details>
+
+
+
+<details>
+<summary>Distinct Value Subsequences</summary>
+
+---
+
+### Idea
+- You are given:
+  - An array of `n` integers.
+- The task: **count the number of distinct subsequences** that can be formed from the array.  
+- Important:
+  - Subsequences are not required to be contiguous (unlike subarrays).
+  - The empty subsequence is excluded from the final count.  
+
+This is equivalent to calculating the product of `(frequency + 1)` for each distinct element, because each element can be:
+- **Not chosen at all**, or  
+- **Chosen once, twice, … up to its frequency**.  
+
+
+### Observations
+- For each unique element with frequency `f`:
+  - It contributes `(f + 1)` choices (skip it, or include it in different counts).  
+- Multiplying across all distinct elements gives the **total number of subsequences including the empty one**.  
+- Subtract `1` at the end to remove the empty subsequence.  
+
+
+### Algorithm Steps
+
+1. **Input & Initialization**
+   - Read integer `n` (array length).  
+   - Use `unordered_map<ll, int> seen` to count frequencies of each element.  
+
+2. **Count Frequencies**
+   - For each element `x` in the array:
+     ```cpp
+     seen[x]++;
+     ```
+
+3. **Compute Subsequences**
+   - Initialize result as `1`.  
+   - For each distinct element `(key, frequency)` in the map:  
+     ```cpp
+     result = result * (frequency + 1) % MOD;
+     ```
+   - Subtract `1` to exclude the empty subsequence:  
+     ```cpp
+     cout << (result - 1 + MOD) % MOD;
+     ```
+
+4. **Output**
+   - Print the total count modulo `1e9+7`.  
+
+
+### Complexity
+- **Time Complexity:**  
+  - Counting frequencies: `O(n)`.  
+  - Multiplying results: `O(k)` where `k` is the number of distinct elements.  
+  - Total: `O(n)`.  
+
+- **Space Complexity:**  
+  - `O(k)` for storing frequency counts in the hash map.  
+
+
+### Tricks
+- The trick is realizing each distinct element contributes a **multiplicative factor** `(f + 1)` to the subsequence count.  
+- Using modulo ensures we avoid overflow (since subsequence counts grow exponentially).  
+- Subtracting `1` neatly removes the empty subsequence without extra logic.  
+
+---
+
+</details>
+
+
+<details>
+<summary>Josephus Problem I</summary>
+
+---
+
+### Idea
+- You are given:
+  - `n` people standing in a circle, numbered `1` through `n`.  
+- The task: **eliminate every second person** in the circle, moving clockwise, until no one remains.  
+- Print the order in which people are eliminated.  
+
+This is the classical **Josephus problem** with `k = 2` (every 2nd person).  
+
+
+### Observations
+- A brute force simulation is feasible here because:
+  - At each step, one person is eliminated.
+  - Using a data structure that supports **efficient removal and iteration** is key.  
+- A `list<int>` (doubly linked list) is ideal:
+  - Supports O(1) erasure at a given iterator.
+  - Supports circular movement via iterators.  
+
+
+### Algorithm Steps
+
+1. **Input & Initialization**
+   - Read integer `n`.  
+   - Fill a `list<int>` with values `1..n` (the people).  
+   - Set an iterator `it = people.begin()`.  
+
+2. **Simulation**
+   - While the list is not empty:
+     - Move to the next person:
+       ```cpp
+       it++;
+       if (it == people.end())
+           it = people.begin();
+       ```
+     - Print the person at `*it` (they are eliminated).  
+     - Erase them:
+       ```cpp
+       it = people.erase(it);
+       ```
+     - If `it` reaches `end()`, wrap around to `begin()`.  
+
+3. **Output**
+   - Print elimination order as the algorithm proceeds.  
+
+
+### Complexity
+- **Time Complexity:**  
+  - Each person is eliminated exactly once (`n` operations).  
+  - Each erase/advance operation is O(1).  
+  - Total: `O(n)`.  
+
+- **Space Complexity:**  
+  - `O(n)` for storing the list of people.  
+
+
+### Tricks
+- Using a `list<int>` avoids costly `O(n)` removals (which would occur with `vector` or `deque`).  
+- Wrapping the iterator back to `begin()` simulates the circle.  
+- Directly printing each eliminated person avoids storing the result in a separate container.  
+
+---
+
+</details>
+
+
+<details>
+<summary>Josephus Problem II</summary>
+
+---
+
+### Idea
+- You are given:
+  - `n` people standing in a circle, numbered `1..n`.  
+  - An integer `k`.  
+- The task: **eliminate every k-th person** in the circle until no one remains.  
+- Print the order of elimination.  
+
+This generalizes **Josephus Problem I** (`k=2`) to any value of `k`.  
+
+
+### Observations
+- A direct simulation with `vector` or `list` would take `O(n²)` in the worst case, since finding the `k`-th element repeatedly is costly.  
+- Instead, use a **policy-based ordered set (PBDS)**:
+  - Supports finding the element at a given index (`find_by_order`) in `O(log n)`.  
+  - Supports insertion and deletion in `O(log n)`.  
+- This allows efficient "circular elimination" while maintaining order.  
+
+
+### Algo Steps
+
+1. **Input & Initialization**
+   - Read integers `n` and `k`.  
+   - Insert values `1..n` into an `ordered_set`.  
+   - Initialize `index = k % n` (the first elimination position in 0-based indexing).  
+
+2. **Simulation**
+   - While the set is not empty:
+     - Get the person at position `index`:
+       ```cpp
+       auto it = people.find_by_order(index);
+       ```
+     - Print `*it` (eliminated person).  
+     - Remove them from the set.  
+     - Update `index` for the next elimination:
+       ```cpp
+       if (!people.empty())
+           index = (index + k) % people.size();
+       ```
+
+3. **Output**
+   - Print the elimination order as the process runs.  
+
+
+### Complexity
+- **Time Complexity:**  
+  - Each elimination requires:
+    - `find_by_order` → `O(log n)`.  
+    - `erase` → `O(log n)`.  
+  - Total: `O(n log n)`.  
+
+- **Space Complexity:**  
+  - `O(n)` for storing the `ordered_set`.  
+
+
+### Tricks
+- The key is using **policy-based data structures (PBDS)**:  
+  - They extend sets with order-statistics (`find_by_order`, `order_of_key`).  
+  - Perfect for problems needing both index access and dynamic insertion/deletion.  
+- Using modulo (`index = (index + k) % size`) handles the circle wrap-around efficiently.  
+
+---
+
+</details>
+
+
+
+
+<details>
+<summary>Nested Ranges Count</summary>
+
+---
+
+### Idea
+- A naive `O(n²)` check (comparing all pairs) is too slow for `n ≤ 2⋅10⁵`.  
+- Key ideas:
+  - Sort intervals by **left endpoint ascending**, and if equal, by **right endpoint descending**.  
+  - Use a **Fenwick Tree (Binary Indexed Tree)** with coordinate compression on right endpoints to count efficiently.  
+
+
+### Algo Steps
+
+1. **Input & Preparation**
+   - Read all intervals `(l, r, index)`.  
+   - Store their coordinates in a set for compression.  
+   - Sort intervals:
+     - Primary key: `left` ascending.  
+     - Secondary key: `right` descending.  
+
+2. **Coordinate Compression**
+   - Map each unique `right` endpoint to a compressed index `1..M`.  
+   - Needed since Fenwick tree indices must be in a small range.  
+
+3. **First Pass (Contains another interval)**
+   - Traverse intervals **from right to left**.  
+   - Query how many intervals with `right ≤ current.right` have already been processed.  
+   - If count > 0 → mark current as **contains another**.  
+   - Update Fenwick tree with `right`.  
+
+4. **Second Pass (Is contained by another interval)**
+   - Reset Fenwick tree.  
+   - Traverse intervals **from left to right**.  
+   - Query how many intervals with `right < current.right` have already been seen.  
+   - If count < current position index → mark current as **is contained**.  
+   - Update Fenwick tree with `right`.  
+
+5. **Output**
+   - Print two arrays in the original input order.  
+
+
+### Complexity
+- **Sorting:** `O(n log n)`  
+- **Fenwick updates/queries:** Each `O(log n)` → `O(n log n)` total  
+- **Space:** `O(n)`  
+
+
+### Tricks
+- Sorting by `(left asc, right desc)` ensures:
+  - Containing intervals appear **before** contained ones.  
+  - Prevents false positives when `left` values are equal.  
+- Coordinate compression prevents large memory usage for Fenwick tree.  
+- Two passes (right-to-left and left-to-right) cleanly separate the two conditions.  
+
+---
+
+</details>
+
+
+<details>
+<summary>Nested Ranges Count</summary>
+
+---
+
+
+This is literally the exact same solution to the ranges-check but in the final print instead of checking if value exists we print the sum!
+
+---
+
+</details>
+
+
+<details>
+<summary>Factory Machines (Minimum Time)</summary>
+
+---
+
+### Idea
+- Naive simulation is too slow for large `t` (up to 10¹⁸).  
+- Key ideas:
+  - **Binary search** over time to find the earliest moment where the total produced items ≥ `t`.  
+  - For a candidate time `mid`, calculate total items as `sum(mid / machines[i])`.
+
+
+### Algo Steps
+
+1. **Input & Preparation**
+   - Read `n` and `t`.  
+   - Read `machines[i]` for `i = 0..n-1`.  
+
+2. **Binary Search**
+   - Initialize `left = 0` and `right = 1e18`.  
+   - While `left < right`:
+     1. Set `mid = (left + right) / 2`.  
+     2. Compute `current = sum(mid / machines[i])` for all machines.  
+     3. If `current >= t` → set `right = mid`.  
+     4. Else → set `left = mid + 1`.  
+
+3. **Result**
+   - When the loop finishes, `left` (or `middle`) is the minimum time to reach `t` items.  
+   - Print `left`.
+
+
+### Complexity
+- **Time per query:** `O(n)` → summing items for each candidate time.  
+- **Binary search steps:** `O(log 1e18)` ≈ 60  
+- **Total:** `O(n log t)`  
+- **Space:** `O(n)` for machine times array.
+
+
+### Tricks
+- Avoid iterating over **uninitialized elements** if using a static array.  
+- Use `long long` to handle large numbers (`1e18`).  
+- Early break in summation if `sum >= t` to save computation.  
+- Using a vector instead of a raw array can prevent runtime errors.
+
+---
+</details>
+
+
+
+
+<details>
+<summary>Tasks and Deadlines</summary>
+
+---
+
+### Idea
+- This is a variant of **scheduling with deadlines**.  
+- Tasks with **shorter durations** should generally be done first to maximize leftover time relative to deadlines.  
+- Sorting tasks by `a_i` (duration) ensures you minimize the cumulative finish time at each step.
+
+
+### Algo Steps
+
+1. **Input & Preparation**
+   - Read `n`.  
+   - Store tasks as pairs `(a_i, d_i)` in a multiset or vector.
+
+2. **Sorting**
+   - Insert tasks into a **multiset**, which automatically sorts by `a_i` ascending.  
+   - This guarantees we always pick the shortest task next.
+
+3. **Compute Total Score**
+   - Initialize `duration = 0` → total time spent so far.  
+   - Initialize `counter = 0` → total sum of `d_i − finish_time_i`.  
+   - For each task in sorted order:
+     1. Add `a_i` to `duration` (current finish time).  
+     2. Add `d_i − duration` to `counter`.
+
+4. **Output**
+   - Print `counter` → the maximum sum achievable.
+
+
+### Complexity
+- **Sorting (multiset insertions):** `O(n log n)`  
+- **Traversal:** `O(n)`  
+- **Total:** `O(n log n)`  
+- **Space:** `O(n)` for task storage.
+
+
+### Tricks
+- Sorting tasks by duration is a greedy strategy to minimize finish times.  
+- Using a `multiset` allows automatic ordering during insertion.  
+- Keep `duration` as a running sum to avoid recomputation.  
+- The solution works even if some tasks have `d_i < a_i` → negative contributions are automatically included.
+
+---
+</details>
+
+
+
+<details>
+<summary>Reading Books</summary>
+
+---
+
+### Idea
+- If all books are read sequentially, total time = `sum(t_i)`  
+- If we could read books in parallel, the total time would never be less than **the longest single book**.  
+- Therefore, the optimal total time is `max(sum(t_i), 2 * max(t_i))`.  
+  - `sum(t_i)` → total work  
+  - `2 * max(t_i)` → ensures the longest book doesn't dominate the total time if others could overlap.
+
+
+### Algo Steps
+
+1. **Input & Preparation**
+   - Read `n` → number of books  
+   - Initialize `prefix = 0` → cumulative reading time  
+   - Initialize `mx = 0` → longest single book time
+
+2. **Iterate Through Books**
+   - For each book `i`:
+     1. Read `t_i`  
+     2. Add `t_i` to `prefix`  
+     3. Update `mx = max(mx, t_i)`
+
+3. **Compute Minimum Total Time**
+   - Answer = `max(prefix, 2 * mx)`  
+
+4. **Output**
+   - Print the computed minimum total time
+
+
+### Complexity
+- **Time:** `O(n)` → single pass through all books  
+- **Space:** `O(1)` → only two variables (`prefix` and `mx`) required
+
+
+### Tricks
+- The formula `max(sum, 2*max)` is a **greedy observation**:  
+  - Either total work dominates, or the longest single book dominates.  
+- No sorting needed; a single pass suffices.  
+- Works for large values of `t_i` since `ll` is used.
+
+---
+</details>
+
+
+
+<details>
+<summary>Sum of Three Values</summary>
+
+---
+
+### Idea
+- Brute-force checking all triples is `O(n³)` → too slow for `n ≤ 5000`.  
+- Sorting the elements by value and storing their original indices allows efficient search.  
+- For each pair `(i, j)`, the third element can be found using **binary search**.  
+- Sorting ensures binary search works correctly.
+
+### Algo Steps
+
+1. **Input & Preparation**
+   - Read `n` and `x`.  
+   - Store elements with both value and original index in a struct or pair.  
+
+2. **Sort**
+   - Sort elements by `value` (and by `index` if values are equal).  
+
+3. **Iterate Through Pairs**
+   - For each `i` from `0` to `n-1`:  
+     - Skip duplicates if needed.  
+     - For each `j` from `i+1` to `n-1`:  
+       - Compute `need = x - elements[i].value - elements[j].value`  
+       - Use **binary search** on the remaining array to find `need`.  
+
+4. **Check and Output**
+   - If a valid element is found, print its original index along with `i` and `j`.  
+   - If no such triple exists after checking all pairs, print `IMPOSSIBLE`.
+
+### Complexity
+- **Time:** `O(n² log n)` → iterating over all pairs + binary search  
+- **Space:** `O(n)` → storing elements and indices
+
+### Tricks
+- Storing original indices lets you sort by value without losing reference.  
+- Binary search drastically reduces the time from `O(n³)` to `O(n² log n)`.  
+- Careful handling of duplicates avoids reporting invalid triples.
+
+---
+</details>
+
+
+
+<details>
+<summary>Sum of Four Values</summary>
+
+---
+
+### Idea
+- You are given:  
+  - `n` → number of elements in the array.  
+  - An array `elements` of `n` integers.  
+  - A target sum `x`.  
+- The task: **find four distinct indices** `i, j, k, l` such that:
+
+\[
+elements[i] + elements[j] + elements[k] + elements[l] = x
+\]
+
+- If no such combination exists, output `IMPOSSIBLE`.
+
+### Observations
+- Brute-force checking all quadruples is `O(n⁴)` → too slow for `n ≈ 1000`.  
+- Key idea: **store sums of all pairs** in a vector.  
+- Then, for each pair sum, check if the complement to `x` exists among previously seen pair sums.  
+- Ensure that all four indices are **distinct**.
+
+### Algorithm Steps
+
+1. **Input & Preparation**  
+   - Read integers `n` and `x`.  
+   - Read the array `elements` of length `n`.  
+   - Initialize an empty vector `pair_sums` to store all pairs:  
+     - Each pair stores `pair_sum` and the two indices `(idx1, idx2)`.
+
+2. **Generate All Pairs**  
+   - Loop over all pairs `(i, j)` with `i < j`.  
+   - Store each pair's sum and indices as a struct in `pair_sums`.
+
+3. **Use Hash Map for Complement Lookup**  
+   - Initialize an unordered map `seen` that maps `pair_sum → list of index pairs`.  
+   - For each pair in `pair_sums`:  
+     - Compute `need = x - pair_sum`.  
+     - If `need` exists in `seen`:  
+       - Iterate through all previously stored index pairs for `need`.  
+       - Check that all four indices are distinct.  
+       - If so, **output the four 1-based indices** and exit.  
+     - Otherwise, store the current pair in `seen` under its `pair_sum`.
+
+4. **Output**  
+   - If no quadruple is found, print `IMPOSSIBLE`.
+
+### Complexity
+- **Time Complexity:** `O(n²)` → generating all pairs + hash map lookups.  
+- **Space Complexity:** `O(n²)` → storing all pairs in `pair_sums` and `seen` map.
+
+### Tricks
+- Use a **struct** to store both the pair sum and the original indices.  
+- Use a **hash map** to store previously seen pair sums for efficient complement search.  
+- Always check that the four indices are **distinct** before printing.  
+
+---
 
 </details>
