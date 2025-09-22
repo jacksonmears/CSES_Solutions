@@ -86,8 +86,9 @@ int main() {
         }
         answer[query_index] = query(right) - query(left-1);
     }
+    
 
-    rep(i, 0, q-1) cout << answer[i] << "\n"
+    rep(i, 0, q-1) cout << answer[i] << "\n";
 
 
 
