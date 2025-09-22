@@ -40,6 +40,7 @@ long long cross(const Node& a, const Node& b, const Node& c) {
 }
 
 
+// Andrews Algorithm (Monotone Chain for Convex Hulls)
 int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
 
