@@ -1,4 +1,5 @@
 #pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -20,12 +21,12 @@ constexpr int MOD = 1e9 + 7;
 #define rep(i,a,b) for (int i = a; i <= b; ++i)
 #define repr(i, a, b) for (int i = a; i >= b; --i)
  
-
+ 
+ 
 int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
  
-    
-    
-    
+
+
     return 0;
 }
