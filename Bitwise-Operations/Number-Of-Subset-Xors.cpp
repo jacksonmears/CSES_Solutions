@@ -1,4 +1,5 @@
 #pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -19,13 +20,29 @@ constexpr int MOD = 1e9 + 7;
 #define mp make_pair
 #define rep(i,a,b) for (int i = a; i <= b; ++i)
 #define repr(i, a, b) for (int i = a; i >= b; --i)
- 
+
+ll x;
+ll basis[32];
+int n, k = 0;
+
+void insert_basis(ll x) {
+    rep(b, 0, k) {
+        x = min(x, x ^ basis[b]);
+    }
+    if (x) 
+        basis[k++] = x;
+    
+}
 
 int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
- 
-    
-    
-    
-    return 0;
+
+    cin >> n;
+    rep(i, 0, n-1) {
+        cin >> x;
+        insert_basis(x);
+    }
+
+    cout << (1 << k) << "\n";
 }
+
