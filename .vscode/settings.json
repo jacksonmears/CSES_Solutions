@@ -21,6 +21,7 @@
         "flat_map": "cpp",
         "flat_set": "cpp",
         "ostream": "cpp",
-        "finding-borders": "cpp"
+        "finding-borders": "cpp",
+        "bitset": "cpp"
     }
 }
