@@ -1,3 +1,5 @@
+#pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -19,42 +21,30 @@ constexpr int MOD = 1e9 + 7;
 #define rep(i,a,b) for (int i = a; i <= b; ++i)
 #define repr(i, a, b) for (int i = a; i >= b; --i)
 
-constexpr int MAXN = 3000;
-int n, k;
-bitset<26> handled;
-string grid[MAXN];
 
-int main() {
-    ios::sync_with_stdio(false); cin.tie(nullptr);
+
+constexpr int N = 3005;
+int n;
+string s;
+bitset<N> bsets[N];
+ll cnt = 0, t;
  
-    cin >> n >> k;
-    rep(i, 0, n-1) cin >> grid[i];
+int main(){
+    ios_base::sync_with_stdio(false); cin.tie(NULL);
 
-
-    vector<vb> sets(26, vb((n*(n-1))/2, false));
-    rep(row, 0, n-1) {
-        vvi seen(26); 
-        rep(i, 0, 25) seen[i].reserve(n);
-
-        rep(col, 0, n-1) {
-            int c = grid[row][col]-'A';
-            if (handled[c]) continue;
-            for (int p : seen[c]) {
-                int calc = p*n - (p*(p+1))/2 + (col-p-1);
-                if (sets[c][calc]) {
-                    handled.set(c);
-                    break;
-                }
-                sets[c][calc] = true;
-            }
-
-            seen[c].pb(col);
-        }
+    cin >> n;
+    rep(i, 0, n-1) {
+        cin >> s;
+        rep(j, 0, n-1)
+            bsets[i][j] = s[j] == '1';
     }
 
-    rep(i, 0, k-1) cout << (handled[i] ? "YES" : "NO") << "\n"; 
-
-
-    
-    return 0;
+    rep(i, 1, n-1) {
+        rep(j, 0, i-1) {
+            t = (bsets[i]&bsets[j]).count();
+            cnt += t*(t-1)/2;
+        }
+ 
+    }
+    cout << cnt << endl;
 }
