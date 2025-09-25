@@ -1,64 +1,58 @@
-#pragma GCC optimize("O3,unroll-loops")
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
-typedef vector<int> vi;
-typedef vector<vi> vvi;
-typedef pair<int, int> pi;
-typedef vector<pi> vpi;
-typedef vector<ll> vl;
-typedef pair<ll,ll> pl;
-typedef vector<pl> vpl;
-typedef vector<vl> vvl;
-typedef vector<bool> vb;
-constexpr int MOD = 1e9 + 7;
- 
-#define f first
-#define s second
-#define pb push_back
-#define mp make_pair
-#define rep(i,a,b) for (int i = a; i <= b; ++i)
-#define repr(i, a, b) for (int i = a; i >= b; --i)
 
+struct TrieNode {
+    TrieNode* child[2];
+    TrieNode() { child[0] = child[1] = nullptr; }
+};
 
-vector<ll> basis;
-
-void insert_basis(ll x) {
-    for (auto b : basis)
-        x = min(x, x ^ b);
-    if (x) basis.push_back(x);
+void insert(TrieNode* root, int num) {
+    TrieNode* node = root;
+    for (int i = 31; i >= 0; --i) {
+        int bit = (num >> i) & 1;
+        if (!node->child[bit]) node->child[bit] = new TrieNode();
+        node = node->child[bit];
+    }
 }
 
-void generate_all_xors(int idx, ll current, vector<ll> &basis, vector<ll> &result) {
-    if (idx == (int)basis.size()) {
-        result.push_back(current);
+// DFS to collect all numbers in trie
+void dfs(TrieNode* node, int val, vector<int>& ans) {
+    if (!node) return;
+    if (!node->child[0] && !node->child[1]) {
+        ans.push_back(val);
         return;
     }
-    generate_all_xors(idx+1, current, basis, result);
-    generate_all_xors(idx+1, current ^ basis[idx], basis, result);
+    if (node->child[0]) dfs(node->child[0], val << 1, ans);
+    if (node->child[1]) dfs(node->child[1], (val << 1) | 1, ans);
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n; cin >> n;
-    ll prefix = 0;
-    insert_basis(prefix);  // Insert 0
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
 
-    for (int i = 0; i < n; i++) {
-        ll x; cin >> x;
-        prefix ^= x;
-        insert_basis(prefix);
-    }
+    vector<int> prefix(n+1, 0);
+    for (int i = 0; i < n; ++i) prefix[i+1] = prefix[i] ^ a[i];
 
-    vector<ll> result;
-    generate_all_xors(0, 0, basis, result);
+    TrieNode* root = new TrieNode();
+    insert(root, 0); // insert 0 prefix
 
-    sort(result.begin(), result.end());
+    // Insert all prefix XORs into trie
+    for (int i = 1; i <= n; ++i)
+        insert(root, prefix[i]);
 
-    cout << (int)result.size() << "\n";
-    for (auto &x : result) cout << x << " ";
+    // Collect all unique prefix XORs
+    vector<int> unique_prefix_xors;
+    dfs(root, 0, unique_prefix_xors);
+
+    sort(unique_prefix_xors.begin(), unique_prefix_xors.end());
+
+    cout << unique_prefix_xors.size() << "\n";
+    for (auto x : unique_prefix_xors) cout << x << " ";
     cout << "\n";
 
     return 0;
