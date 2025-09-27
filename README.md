@@ -2443,3 +2443,55 @@ for each coin `c`.
 
 
 </details>
+
+
+<details>
+
+
+<summary>Coin Combinations I</summary>
+
+---
+
+### Problem
+- Given `n` coin denominations and a target sum `x`.  
+- Task: **find the number of ordered ways** to make sum `x` using the given coins.  
+- Each coin can be used **unlimited times**.  
+- Output the result modulo `10^9 + 7`.
+
+### Idea
+- Use **dynamic programming**:  
+  - `dp[i]` = number of ways to make sum `i`.
+- Base case: `dp[0] = 1` (one way to make sum 0: use no coins).  
+- For each sum `i` and coin `c`, update: dp[i + c] += dp[i] (modulo `10^9+7`)
+
+
+### Algorithm Steps
+1. **Input & Preparation**  
+ - Read `n` and `x`.  
+ - Read the coin denominations into a vector `coins`.  
+ - Sort the coins (allows early break in inner loop).
+
+2. **Dynamic Programming**  
+ - Initialize `dp[0] = 1`.  
+ - Loop `i = 0 … x`:  
+   - If `dp[i] > 0`:  
+     - For each coin `c` in `coins`:  
+       - If `i + c > x` → break.  
+       - Else: `dp[i + c] = (dp[i + c] + dp[i]) % MOD`.
+
+3. **Output**  
+ - Print `dp[x]`.
+
+### Complexity
+- **Time:** `O(n * x)`  
+- **Space:** `O(x)`
+
+### Notes
+- Sorting coins allows **early termination** in inner loop for efficiency.  
+- Using a global array of size `MAXN = x+1` ensures **no out-of-bounds errors**.  
+- Modulo arithmetic prevents overflow for large counts.
+
+---
+
+
+</details>
