@@ -21,32 +21,25 @@ constexpr int MOD = 1e9 + 7;
 #define rep(i,a,b) for (int i = a; i <= b; ++i)
 #define repr(i, a, b) for (int i = a; i >= b; --i)
  
-
-
+ 
+constexpr int MAXN = 1e6;
+int dp[MAXN]; 
+ 
 int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
-    
+ 
+
     int n; cin >> n;
-    vl elements(n);
     
-    rep(i, 0, n-1)
-        cin >> elements[i];
-
-    ll ans = 0;
-    int m = n - 1;
-    rep(i, 0, n-1) {
-        // Think of m in binary as a “mask of allowed positions.”
-        // If 𝑖 tries to use a bit that 𝑚 doesn’t have → binomial coefficient is even → exclude.
-        // If all bits of 𝑖 fit inside the bits of 𝑚 → coefficient is odd → include.
-        // That’s why (i & m) == i captures the parity.
-
-        
-        // include a[i] iff (i) (which is i-1 in 1-based -> we use zero-based)
-        // satisfies (i & m) == i
-        if ((i & m) == i) ans ^= elements[i];
+    dp[0] = 1;
+    rep(i, 0, n) {
+        rep(j, 1, 6) {
+            dp[i+j] = (dp[i+j] + dp[i]) % MOD;
+        }
     }
 
-    cout << ans;
+    cout << dp[n];
     
+
     return 0;
 }

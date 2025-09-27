@@ -1,3 +1,4 @@
+
 #pragma GCC optimize("O3,unroll-loops")
 // #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 #include <bits/stdc++.h>
@@ -21,32 +22,31 @@ constexpr int MOD = 1e9 + 7;
 #define rep(i,a,b) for (int i = a; i <= b; ++i)
 #define repr(i, a, b) for (int i = a; i >= b; --i)
  
-
-
+ 
+constexpr int MAXN = 1e6;
+int n, x, dp[MAXN];
+ 
 int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
-    
-    int n; cin >> n;
-    vl elements(n);
-    
-    rep(i, 0, n-1)
-        cin >> elements[i];
+ 
 
-    ll ans = 0;
-    int m = n - 1;
+    cin >> n >> x;
+    vi coins(n);
     rep(i, 0, n-1) {
-        // Think of m in binary as a “mask of allowed positions.”
-        // If 𝑖 tries to use a bit that 𝑚 doesn’t have → binomial coefficient is even → exclude.
-        // If all bits of 𝑖 fit inside the bits of 𝑚 → coefficient is odd → include.
-        // That’s why (i & m) == i captures the parity.
-
-        
-        // include a[i] iff (i) (which is i-1 in 1-based -> we use zero-based)
-        // satisfies (i & m) == i
-        if ((i & m) == i) ans ^= elements[i];
+        cin >> coins[i];
     }
 
-    cout << ans;
+    fill(dp, dp + x+1, INT_MAX);
+    dp[0] = 0;
+    rep(i, 0, x+1) if (dp[i] != INT_MAX) {
+        for (auto coin : coins) {
+            if (i + coin > x+1) continue;
+            dp[i + coin] = min(dp[i + coin], dp[i] + 1);
+        }
+    }
+
+    cout << (dp[x] == INT_MAX ? -1 : dp[x]);
     
+
     return 0;
 }

@@ -8,6 +8,7 @@ The focus here is on explaining **how** and **why** each solution works.
 ## Table of Contents
 - [Introductory Problems (24/24)](#introductory-problems)
 - [Sorting and Searching (35/35)](#sorting-and-searching)
+- [Dynamic Programming (22/23)](#dynamic-programming)
 
 ---
 
@@ -2335,5 +2336,110 @@ elements[i] + elements[j] + elements[k] + elements[l] = x
 - Always check that the four indices are **distinct** before printing.  
 
 ---
+
+</details>
+
+
+
+
+## Dynamic Programming
+
+
+<details>
+<summary>Dice Combinations</summary>
+
+---
+
+### Idea
+- You are given:  
+  - `n` → the target sum you want to reach.  
+- You have a standard 6-sided dice (faces numbered `1` through `6`).  
+- The task: **count the number of distinct ordered ways** to roll dice so that the sum equals `n`.  
+- Since the number of ways can be very large, output the result modulo:  
+
+\[
+MOD = 10^9 + 7
+\]
+
+### Observations
+- For each state `dp[x]` = number of ways to form sum `x`.  
+- To reach `x`, the **last dice roll** could be `1, 2, 3, 4, 5, or 6`.  
+- That means:
+
+\[
+dp[x] = dp[x-1] + dp[x-2] + dp[x-3] + dp[x-4] + dp[x-5] + dp[x-6]
+\]
+
+- Base case: `dp[0] = 1` (there’s exactly one way to form sum `0`: no dice rolls).  
+
+### Algorithm Steps
+
+1. **Input & Initialization**  
+   - Read integer `n`.  
+   - Create an array `dp` of size `n+6` initialized to `0`.  
+   - Set `dp[0] = 1`.  
+
+2. **Dynamic Programming Transition**  
+   - Loop `i` from `0` to `n`.  
+   - For each dice outcome `j` from `1` to `6`:  
+     - Update `dp[i + j] += dp[i] (mod MOD)`.  
+
+3. **Result**  
+   - The answer is `dp[n]`.  
+
+### Complexity
+- **Time Complexity:** `O(6n)` → each state checks 6 dice rolls.  
+- **Space Complexity:** `O(n)` → storing the DP table.  
+
+### Tricks
+- The problem is essentially counting **ordered partitions** of `n` with parts in `[1,6]`.  
+- Modulo arithmetic (`% MOD`) is required to avoid overflow.  
+- Rolling dice of size `k` generalizes easily by replacing `6` with `k`.  
+
+---
+
+</details>
+
+<details>
+<summary>Minimizing Coins</summary>
+
+---
+
+### Idea
+- You are given:  
+  - `n` → number of coin types.  
+  - A list `coins[]` of coin values.  
+  - A target sum `x`.  
+- Task: **find the minimum number of coins needed** to make sum `x`.  
+- If it’s impossible, output `-1`.
+
+### Observations
+- Classic **unbounded knapsack / coin change** problem.  
+- Use **DP**:  
+  - `dp[i]` = minimum number of coins needed to form value `i`.  
+  - Transition:  
+
+\[
+dp[i + c] = \min(dp[i + c], dp[i] + 1)
+\]
+
+for each coin `c`.  
+- Initialize `dp[0] = 0`, everything else = `∞` (here `INT_MAX`).  
+
+### Algorithm Steps
+1. Read `n` and `x`, then the list of `coins`.  
+2. Initialize array `dp[0..x]` with `INT_MAX`; set `dp[0] = 0`.  
+3. For each value `i` from `0..x`:  
+   - If `dp[i]` is finite, try adding each coin `c`.  
+   - Update `dp[i + c]` with the better result (if within bounds).  
+4. Answer = `dp[x]` if finite, else `-1`.
+
+### Complexity
+- **Time:** `O(n * x)` — each state considers all `n` coins.  
+- **Space:** `O(x)` for DP array.
+
+---
+
+
 
 </details>
