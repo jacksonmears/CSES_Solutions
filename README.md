@@ -8,7 +8,7 @@ The focus here is on explaining **how** and **why** each solution works.
 ## Table of Contents
 - [Introductory Problems (24/24)](#introductory-problems)
 - [Sorting and Searching (35/35)](#sorting-and-searching)
-- [Dynamic Programming (22/23)](#dynamic-programming)
+- [Dynamic Programming (23/23)](#dynamic-programming)
 
 ---
 
@@ -2493,5 +2493,60 @@ for each coin `c`.
 
 ---
 
+
+</details>
+
+
+
+<details>
+<summary>Coin Combinations II</summary>
+
+---
+
+### Problem
+- Given `n` coin denominations and a target sum `x`.  
+- Task: **find the number of unordered ways** to make sum `x` using the given coins.  
+- Each coin can be used **unlimited times**.  
+- Output the result modulo `10^9 + 7`.
+
+**Difference from Coin Combinations I:**  
+- **Order does not matter.**  
+  - Example: `2+3` and `3+2` are the **same combination**.  
+
+
+### Idea
+- Use **dynamic programming**:  
+  - `dp[i]` = number of ways to make sum `i`.  
+- Base case: `dp[0] = 1` (one way to make sum 0: use no coins).  
+- Process **coins in the outer loop**, sums in the inner loop.  
+  - Ensures each coin contributes to combinations **without counting permutations**.  
+
+
+### Algorithm Steps
+1. **Input & Preparation**  
+ - Read `n` and `x`.  
+ - Read the coin denominations into a vector `coins`.  
+
+2. **Dynamic Programming**  
+ - Initialize `dp[0] = 1`.  
+ - For each coin `c` in `coins`:  
+   - Loop `i = c … x`:  
+     - `dp[i] = (dp[i] + dp[i - c]) % MOD`.  
+
+3. **Output**  
+ - Print `dp[x]`.  
+
+
+### Complexity
+- **Time:** `O(n * x)`  
+- **Space:** `O(x)`  
+
+
+### Notes
+- Outer loop on coins ensures each set of coins is counted only once.  
+- Using modulo prevents overflow.  
+- The array `dp` has size `x+1` to safely represent all sums up to `x`.  
+
+---
 
 </details>
