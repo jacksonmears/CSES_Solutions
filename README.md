@@ -870,6 +870,62 @@ Output: ABABB
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Sorting and Searching
 
 
@@ -2338,6 +2394,117 @@ elements[i] + elements[j] + elements[k] + elements[l] = x
 ---
 
 </details>
+
+
+<details>
+<summary>Nearest Smaller Values</summary>
+
+---
+
+### Problem
+- You are given an array of `n` integers.  
+- For each position `i` (1-indexed), find the index of the **nearest element to the left** of `i` that is **smaller** than `a[i]`.  
+- If no such element exists, output `0`.  
+
+
+### Idea
+- Use a **monotonic stack** to keep track of candidate elements:  
+  - The stack stores pairs `(value, index)`.  
+  - Before processing the current element `x`, pop elements from the stack while `stack.top().value >= x`.  
+  - After popping, the stack’s top (if any) is the nearest smaller element.  
+- Push `(x, i)` into the stack after processing.  
+
+
+### Algorithm Steps
+1. **Input**  
+ - Read `n`.  
+ - Read the array of length `n`.  
+
+2. **Processing with Stack**  
+ - Initialize an empty stack of pairs `(value, index)`.  
+ - For each index `i = 1 … n`:  
+   - While stack is not empty and `stack.top().value >= a[i]`:  
+     - Pop the stack.  
+   - If the stack is empty → print `0`.  
+   - Else → print `stack.top().index`.  
+   - Push `(a[i], i)` into the stack.  
+
+3. **Output**  
+ - Print results separated by spaces.  
+
+
+### Complexity
+- **Time:** `O(n)` (each element pushed/popped at most once).  
+- **Space:** `O(n)` (stack storage).  
+
+
+### Notes
+- This is a classic **monotonic stack** problem.  
+- Using 1-indexed positions matches the problem requirement.  
+- Output `0` when no smaller element exists on the left.  
+
+---
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
