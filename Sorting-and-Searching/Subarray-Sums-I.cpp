@@ -20,31 +20,31 @@ constexpr int MOD = 1e9 + 7;
 #define mp make_pair
 #define rep(i,a,b) for (int i = a; i <= b; ++i)
 #define repr(i, a, b) for (int i = a; i >= b; --i)
-
-
-constexpr int MAXN = 1e6+1;
-int n, dp[MAXN];
-
+ 
+ 
+ 
 int main() {
-    ios_base::sync_with_stdio(false); cin.tie(nullptr);
+    ios::sync_with_stdio(false); cin.tie(nullptr);
 
-    cin >> n;
+    int n; ll x;
+    cin >> n >> x;
 
-    rep(i, 1, n) {
-        vi digits;
-        for (int temp = i; temp > 0; temp /= 10) {
-            digits.pb(temp%10);
+    vl a(n);
+    rep(i, 0, n-1)
+        cin >> a[i];
+
+    unordered_map<ll, ll> seen; 
+    seen[0] = 1; 
+    ll prefix = 0, count = 0;
+
+    rep(i, 0, n-1) {
+        prefix += a[i];
+        if (seen.find(prefix - x) != seen.end()) {
+            count += seen[prefix - x]; 
         }
-
-        int mn = INT_MAX;
-        for (int d : digits) if (d) {
-            mn = min(mn, dp[i-d]);
-        }
-        dp[i] = mn+1;
+        seen[prefix]++;
     }
 
-    std::cout << dp[n];
-
-
+    cout << count << "\n";
     return 0;
 }
