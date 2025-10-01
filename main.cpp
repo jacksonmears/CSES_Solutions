@@ -12,6 +12,7 @@ typedef pair<ll,ll> pl;
 typedef vector<pl> vpl;
 typedef vector<vl> vvl;
 typedef vector<bool> vb;
+typedef vector<char> vc;
 constexpr int MOD = 1e9 + 7;
  
 #define f first
@@ -26,7 +27,8 @@ constexpr int MOD = 1e9 + 7;
 int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
  
-
+    float x = 1.055445;
+    cout << (int)(x*1000);
     
 
     return 0;

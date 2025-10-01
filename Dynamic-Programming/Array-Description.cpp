@@ -1,45 +1,62 @@
+#pragma GCC optimize("O3,unroll-loops")
+// #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 #include <bits/stdc++.h>
-#include <regex>
 using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
+typedef vector<vi> vvi;
+typedef pair<int, int> pi;
+typedef vector<pi> vpi;
 typedef vector<ll> vl;
 typedef pair<ll,ll> pl;
-constexpr ll MAX = 9e18;
-constexpr ll MOD = 1e9 + 7;
-
-#define F first
-#define S second
+typedef vector<pl> vpl;
+typedef vector<vl> vvl;
+typedef vector<bool> vb;
+typedef vector<char> vc;
+constexpr int MOD = 1e9 + 7;
+ 
+#define f first
+#define s second
 #define pb push_back
 #define mp make_pair
-#define rep(i,a,b) for (ll i = a; i <= b; i++)
-
+#define rep(i,a,b) for (int i = a; i <= b; ++i)
+#define repr(i, a, b) for (int i = a; i >= b; --i)
 
 
 
 int main() {
-    	ios::sync_with_stdio(false); cin.tie(nullptr);
+    ios::sync_with_stdio(false); cin.tie(nullptr);
 
-	ll n, m; cin >> n >> m;
-	vl elements(n); rep(i, 0, n-1) cin >> elements[i];
+	int n, m; cin >> n >> m;
+	vi elements(n); 
+	rep(i, 0, n-1) 
+		cin >> elements[i];
 	
-	vector<vl> dp(n, vl(m+2, 0)); 
-	if(elements[0]) dp[0][elements[0]] = 1;
-	else rep(i, 1, m) dp[0][i] = 1;	
-	rep(i, 1, n-1) {
-		ll v = elements[i];
-		if(v) {
-			dp[i][v] = (dp[i-1][v-1] + dp[i-1][v] + dp[i-1][v+1]) % MOD;		
-		}
-		else {
-			rep(j, 1, m) dp[i][j] = (dp[i-1][j-1] + dp[i-1][j] + dp[i-1][j+1]) % MOD;
-		}
+	vl prev(m+2, 0), cur(m+2, 0);
+
+	if (elements[0]) {
+		prev[elements[0]] = 1;
+	} else {
+		rep(i, 1, m) 
+			prev[i] = 1;
 	}
-	
-	
-	ll total = 0;
-	for (auto i : dp[n-1]) total = (total + i) % MOD;
-	cout << total;
+
+	rep(i, 1, n-1) {
+		fill(cur.begin(), cur.end(), 0);
+		int x = elements[i];
+		if (x) {
+			cur[x] = (prev[x-1] + prev[x] + prev[x+1]) % MOD;
+		} else {
+			rep(j, 1, m) 
+				cur[j] = (prev[j-1] + prev[j] + prev[j+1]) % MOD;
+		}
+		swap(prev, cur);
+	}
+
+	ll ans = 0;
+	rep(i, 1, m)
+		ans = (ans + prev[i]) % MOD;
+	cout << ans << "\n";
 
 
     return 0;
