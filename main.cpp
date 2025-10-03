@@ -22,13 +22,15 @@ constexpr int MOD = 1e9 + 7;
 #define rep(i,a,b) for (int i = a; i <= b; ++i)
 #define repr(i, a, b) for (int i = a; i >= b; --i)
  
- 
- 
+
+
+
+
+
+
 int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
- 
-    float x = 1.055445;
-    cout << (int)(x*1000);
+
     
 
     return 0;
