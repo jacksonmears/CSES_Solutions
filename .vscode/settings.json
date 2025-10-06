@@ -24,6 +24,9 @@
         "finding-borders": "cpp",
         "bitset": "cpp",
         "span": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp"
     }
 }

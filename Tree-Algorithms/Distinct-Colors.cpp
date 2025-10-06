@@ -24,7 +24,6 @@ constexpr int MOD = 1e9 + 7;
  
 
 
-
 set<int>* dfs(const int u, const int p, const vi& color, const vvi& edges, vi& ans) {
     set<int>* myset = new set<int>();
     myset->insert(color[u]);
