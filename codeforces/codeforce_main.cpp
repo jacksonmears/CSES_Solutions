@@ -23,41 +23,28 @@ constexpr int MOD = 1e9 + 7;
 #define repr(i, a, b) for (int i = a; i >= b; --i)
  
 
-
 void solve() {
-    int n, k; cin >> n >> k;
-
-    int total_pairs = n * (n - 1) / 2;
-    int need = total_pairs - k;  
-
-    vi blocks;
-    blocks.reserve(total_pairs+1);
-    int remaining = n;
-
-    while (remaining > 0) {
-        int L = 1;
-        while (L + 1 <= remaining && (L + 1) * L / 2 <= need) ++L;
-        blocks.push_back(L);
-        need -= L * (L - 1) / 2;
-        remaining -= L;
+    int n, m; cin >> n >> m;
+    string str; cin >> str;
+    unordered_map<int, int> black;
+    rep(i, 0, n-1) {
+        int a; cin >> a;
+        black[a+1] ? black[a] = black[a+1] : black[a] = a+1;
     }
 
-    if (need != 0) {  
-        cout << 0 << '\n';
-        return;
+    rep(i, 1, n) {
+        int index = 1;
+        rep(c, 0, i-1) {
+            if (str[c] == 'A') ++index;
+            else {
+                if (black.find(index+1) == black.end()) ++index;
+                else {
+                    index = *upper_bound(black.begin(), black.end(), index);
+                }
+            }
+        }
     }
 
-    vi perm;
-    int cur = n;
-    for (int L : blocks) {
-        vi segment; segment.reserve(blocks.size());
-        for (int i = cur - L + 1; i <= cur; ++i) segment.push_back(i);
-        perm.insert(perm.end(), segment.begin(), segment.end());
-        cur -= L;
-    }
-
-    for (int x : perm) cout << x << ' ';
-    cout << '\n';
 }
 
 
@@ -65,8 +52,9 @@ int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
 
     int t; cin >> t;
-
     while (t--) {
         solve();
     }
+ 
+    return 0;
 }
