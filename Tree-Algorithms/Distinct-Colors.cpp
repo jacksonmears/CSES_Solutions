@@ -24,20 +24,20 @@ constexpr int MOD = 1e9 + 7;
  
 
 
-set<int>* dfs(const int u, const int p, const vi& color, const vvi& edges, vi& ans) {
+set<int>* dfs(const int node, const int parent, const vi& color, const vvi& edges, vi& ans) {
     set<int>* myset = new set<int>();
-    myset->insert(color[u]);
+    myset->insert(color[node]);
 
-    for (int v : edges[u]) {
-        if (v == p) continue;
-        set<int>* child = dfs(v, u, color, edges, ans);
+    for (int child : edges[node]) {
+        if (child == parent) continue;
+        set<int>* childSet = dfs(child, node, color, edges, ans);
 
-        if (child->size() > myset->size()) swap(child, myset);
-        myset->insert(child->begin(), child->end());
-        delete child;
+        if (childSet->size() > myset->size()) swap(childSet, myset);
+        myset->insert(childSet->begin(), childSet->end());
+        delete childSet;
     }
 
-    ans[u] = myset->size();
+    ans[node] = myset->size();
     return myset;
 }
 
