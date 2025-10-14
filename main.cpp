@@ -28,7 +28,9 @@ int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
 
 
-
+    int x = 4;
+    // cout << 31 - __builtin_clz(x);
+    cout << (1<<0) << " " << (1<<1) << " " << (1<<2);
 
 
 
