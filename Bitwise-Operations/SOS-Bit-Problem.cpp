@@ -50,18 +50,18 @@ int main() {
                 supermask[mask] += supermask[mask | (1 << i)];
  
     // (x & y) != 0
-    vi disjoint = freq;
+    // can use pointer OR std::move api here rather than copy entire freq because we don't need freq anymore. essentially changing ownership (could also just set submask to freq!!!! but it's not any faster and isn't as clear)
+    vi* disjoint = &freq;
     rep(i, 0, MAX_BIT-1)
         rep(mask, 0, MAXX-1)
             if (mask & (1 << i))
-                disjoint[mask] = submask[((1<<MAX_BIT)-1) ^ mask];
- 
+                (*disjoint)[mask] = submask[((1<<MAX_BIT)-1) ^ mask];
     
     
     for (int x : elements) {
         int XOR = submask[x];                       // (x | y) == x
         int AND = supermask[x];                     // (x & y) == x
-        int and_nonzero = n-disjoint[x];            // (x & y) != 0
+        int and_nonzero = n-(*disjoint)[x];            // (x & y) != 0
         cout << XOR << " " << AND << " " << and_nonzero << "\n";
     }
 }
