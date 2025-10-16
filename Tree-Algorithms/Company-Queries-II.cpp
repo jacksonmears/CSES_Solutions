@@ -37,7 +37,7 @@ int main() {
         cin >> binary_lifting[i][0];
         distance[i] = distance[binary_lifting[i][0]]+1;
     }
-
+ 
 	rep(i, 1, LOG2-1) {
 		rep(node, 2, n) {
 			binary_lifting[node][i] = binary_lifting[binary_lifting[node][i-1]][i-1];
@@ -55,8 +55,8 @@ int main() {
                 b = binary_lifting[b][bit];
             }
         }
-
-
+ 
+ 
         while (a != b) {
             rep(bit, 1, LOG2-1) {
                 if (binary_lifting[a][bit] == binary_lifting[b][bit]) {
@@ -68,7 +68,7 @@ int main() {
         }
         cout << a << "\n";
     }   
-
+ 
     
     return 0;
 }
