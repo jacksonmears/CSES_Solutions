@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Reading-Books.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Reading-Books.dir/objects.a @CMakeFiles\Reading-Books.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Reading-Books.dir/objects.a -Wl,--no-whole-archive -o Reading-Books.exe -Wl,--out-implib,libReading-Books.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Reading-Books.dir\linkLibs.rsp

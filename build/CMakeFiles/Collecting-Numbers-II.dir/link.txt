@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Collecting-Numbers-II.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Collecting-Numbers-II.dir/objects.a @CMakeFiles\Collecting-Numbers-II.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Collecting-Numbers-II.dir/objects.a -Wl,--no-whole-archive -o Collecting-Numbers-II.exe -Wl,--out-implib,libCollecting-Numbers-II.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Collecting-Numbers-II.dir\linkLibs.rsp

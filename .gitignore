@@ -1,2 +1,11 @@
+.vscode/
+.idea/
+
+build/
+/exe
+/codeforces
+
+*.o
+*.obj
 *.exe
-/build
+*.out

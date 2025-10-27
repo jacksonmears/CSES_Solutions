@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Coin-Combinations_II.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Coin-Combinations_II.dir/objects.a @CMakeFiles\Coin-Combinations_II.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Coin-Combinations_II.dir/objects.a -Wl,--no-whole-archive -o Coin-Combinations_II.exe -Wl,--out-implib,libCoin-Combinations_II.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Coin-Combinations_II.dir\linkLibs.rsp

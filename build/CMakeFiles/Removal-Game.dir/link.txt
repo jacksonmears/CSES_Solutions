@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Removal-Game.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Removal-Game.dir/objects.a @CMakeFiles\Removal-Game.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Removal-Game.dir/objects.a -Wl,--no-whole-archive -o Removal-Game.exe -Wl,--out-implib,libRemoval-Game.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Removal-Game.dir\linkLibs.rsp

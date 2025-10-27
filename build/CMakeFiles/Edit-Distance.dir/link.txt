@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Edit-Distance.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Edit-Distance.dir/objects.a @CMakeFiles\Edit-Distance.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Edit-Distance.dir/objects.a -Wl,--no-whole-archive -o Edit-Distance.exe -Wl,--out-implib,libEdit-Distance.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Edit-Distance.dir\linkLibs.rsp

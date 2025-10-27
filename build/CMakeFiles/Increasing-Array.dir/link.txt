@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Increasing-Array.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Increasing-Array.dir/objects.a @CMakeFiles\Increasing-Array.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Increasing-Array.dir/objects.a -Wl,--no-whole-archive -o Increasing-Array.exe -Wl,--out-implib,libIncreasing-Array.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Increasing-Array.dir\linkLibs.rsp

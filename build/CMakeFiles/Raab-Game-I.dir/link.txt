@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Raab-Game-I.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Raab-Game-I.dir/objects.a @CMakeFiles\Raab-Game-I.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Raab-Game-I.dir/objects.a -Wl,--no-whole-archive -o Raab-Game-I.exe -Wl,--out-implib,libRaab-Game-I.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Raab-Game-I.dir\linkLibs.rsp

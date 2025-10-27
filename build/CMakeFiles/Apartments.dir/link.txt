@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Apartments.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Apartments.dir/objects.a @CMakeFiles\Apartments.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Apartments.dir/objects.a -Wl,--no-whole-archive -o Apartments.exe -Wl,--out-implib,libApartments.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Apartments.dir\linkLibs.rsp

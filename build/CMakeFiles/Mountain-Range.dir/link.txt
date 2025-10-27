@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Mountain-Range.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Mountain-Range.dir/objects.a @CMakeFiles\Mountain-Range.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Mountain-Range.dir/objects.a -Wl,--no-whole-archive -o Mountain-Range.exe -Wl,--out-implib,libMountain-Range.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Mountain-Range.dir\linkLibs.rsp

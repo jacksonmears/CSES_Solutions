@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Array-Description.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Array-Description.dir/objects.a @CMakeFiles\Array-Description.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Array-Description.dir/objects.a -Wl,--no-whole-archive -o Array-Description.exe -Wl,--out-implib,libArray-Description.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Array-Description.dir\linkLibs.rsp

@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Book-Shop.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Book-Shop.dir/objects.a @CMakeFiles\Book-Shop.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Book-Shop.dir/objects.a -Wl,--no-whole-archive -o Book-Shop.exe -Wl,--out-implib,libBook-Shop.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Book-Shop.dir\linkLibs.rsp

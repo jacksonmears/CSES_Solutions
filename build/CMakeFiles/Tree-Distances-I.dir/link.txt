@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Tree-Distances-I.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Tree-Distances-I.dir/objects.a @CMakeFiles\Tree-Distances-I.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Tree-Distances-I.dir/objects.a -Wl,--no-whole-archive -o Tree-Distances-I.exe -Wl,--out-implib,libTree-Distances-I.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Tree-Distances-I.dir\linkLibs.rsp

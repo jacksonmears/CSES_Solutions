@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Flight-Routes-Check.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Flight-Routes-Check.dir/objects.a @CMakeFiles\Flight-Routes-Check.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Flight-Routes-Check.dir/objects.a -Wl,--no-whole-archive -o Flight-Routes-Check.exe -Wl,--out-implib,libFlight-Routes-Check.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Flight-Routes-Check.dir\linkLibs.rsp

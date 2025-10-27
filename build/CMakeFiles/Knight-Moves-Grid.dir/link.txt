@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Knight-Moves-Grid.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Knight-Moves-Grid.dir/objects.a @CMakeFiles\Knight-Moves-Grid.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Knight-Moves-Grid.dir/objects.a -Wl,--no-whole-archive -o Knight-Moves-Grid.exe -Wl,--out-implib,libKnight-Moves-Grid.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Knight-Moves-Grid.dir\linkLibs.rsp
