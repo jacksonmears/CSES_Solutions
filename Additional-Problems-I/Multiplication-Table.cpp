@@ -29,6 +29,7 @@ int main() {
 
     ll n; cin >> n;
 
+    //target is COUNT of numbers (target represents the number m such that at least "target" numbers in the table are <= m) (i.e. the middle most number has target numbers less)
     ll target = (n * n + 1) / 2;
     ll low = 1, high = n * n, ans = 0;
 
@@ -36,6 +37,7 @@ int main() {
         ll mid = (low + high) / 2;
         ll cnt = 0;
 
+        // homw many numbers in the entire table are <= mid?
         rep(i, 1, n)
             cnt += min(n, mid / i);
 
