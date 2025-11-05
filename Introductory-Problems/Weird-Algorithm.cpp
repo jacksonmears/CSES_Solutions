@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
-#include <regex>
+#if __has_include("../include/print_ostream.h")
+    #include "../include/print_ostream.h"
+#endif
 using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
@@ -27,7 +29,8 @@ int main() {
 
     while (n > 1) {
         n = !(n&1) ? n/2 : n*3 + 1;
-        cout << n << ' ';
+        // jack::print(n);
+        std::cout << n << " ";
      }
 
 

@@ -1,6 +1,9 @@
 #pragma GCC optimize("O3,unroll-loops")
 // #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 #include <bits/stdc++.h>
+#if __has_include("../include/print_ostream.h")
+    #include "../include/print_ostream.h"
+#endif
 using namespace std;
 
 using ll = int64_t;
@@ -23,15 +26,8 @@ using vc = vector<char>;
 constexpr uint32_t MOD = 1e9 + 7;
 
 
-
 int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
-
-
-    int x = 4;
-    // cout << 31 - __builtin_clz(x);
-    cout << (1<<0) << " " << (1<<1) << " " << (1<<2);
-
 
 
     
