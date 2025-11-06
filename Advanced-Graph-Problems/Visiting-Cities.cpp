@@ -23,7 +23,8 @@ using vc = vector<char>;
 #define rep(i,a,b) for (int i = a; i <= b; ++i)
 #define repr(i,a,b) for (int i = a; i >= b; --i)
  
- 
+// using only a single modulos allows for two distinct conuts to produce the same remainder in a hash collision and using two decreases the probability of that happening to an astronomically tiny chance
+// random moduli ensure that test case creators can't ensure specific moduli pairs don't work. Mod is now unpredictable and the randomness makes solution probabilistically correct 
 mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());
 uniform_int_distribution<ll> distrib((ll) 1e9, (ll) 2e9);
 const ll MOD1 = distrib(rng);
