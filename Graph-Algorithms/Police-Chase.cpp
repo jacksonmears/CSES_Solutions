@@ -27,25 +27,23 @@ constexpr uint32_t MOD = 1e9 + 7;
  
 const int MAXN = 501;
 vi edges[MAXN];
-ll capacity[MAXN][MAXN]; 
+int capacity[MAXN][MAXN]; 
 int parent[MAXN];
 bitset<MAXN> reachable;
 bitset<MAXN> seen;
  
-ll maxFlowBFS(int start, int sink) { 
+int maxFlowBFS(int sink) { 
     ranges::fill(parent, -1);
-    parent[start] = -2;
+    parent[1] = -2;
  
-    queue<pair<int,ll>> bfs; bfs.push({start, LLONG_MAX}); 
+    queue<pi> bfs; bfs.emplace(1, INT_MAX); 
     while(!bfs.empty()) {
-        int node = bfs.front().first;
-        ll flow = bfs.front().second;
-        bfs.pop();
+        auto [node, flow] = bfs.front(); bfs.pop();
  
         for(int child : edges[node]) {
-            if(parent[child] == -1 && capacity[node][child] > 0) {
+            if(parent[child] == -1 && capacity[node][child]) {
                 parent[child] = node;
-                ll new_flow = min(flow, capacity[node][child]);
+                int new_flow = min(flow, capacity[node][child]);
                 if(child == sink) return new_flow;
                 bfs.push({child, new_flow});
             }
@@ -55,10 +53,10 @@ ll maxFlowBFS(int start, int sink) {
 }
  
  
-void updateCapacities(ll& flow, ll new_flow, int start, int sink) {
+void updateCapacities(int& flow, int new_flow, int sink) {
     flow += new_flow;
     int node = sink;
-    while(node != start) {
+    while(node != 1) {
         int prev = parent[node];
         capacity[prev][node] -= new_flow;
         capacity[node][prev] += new_flow;
@@ -67,13 +65,12 @@ void updateCapacities(ll& flow, ll new_flow, int start, int sink) {
 }
  
  
-ll maxflow(int start, int sink) { 
-    ll flow = 0, new_flow;
+void maxflow(int sink) { 
+    int flow = 0, new_flow;
  
-    while((new_flow = maxFlowBFS(start, sink))) 
-        updateCapacities(flow, new_flow, start, sink);
-    
-    return flow;
+    while((new_flow = maxFlowBFS(sink))) 
+        updateCapacities(flow, new_flow, sink);
+
 }
  
  
@@ -102,6 +99,8 @@ vpi getAns(bitset<MAXN>& reachable) {
         if (seen[node]) continue;
  
         seen.set(node);
+
+        
         for (int child : edges[node]) {
             if (!reachable[child])
                 ans.emplace_back(node, child);
@@ -126,7 +125,7 @@ int main() {
         capacity[b][a] = 1; 
     }
  
-    maxflow(1, n);
+    maxflow(n);
  
     fillReachable();
  
