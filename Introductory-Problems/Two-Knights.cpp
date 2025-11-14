@@ -1,31 +1,62 @@
+#pragma GCC optimize("O3,unroll-loops")
+// #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 #include <bits/stdc++.h>
-#include <regex>
+#if __has_include("../include/print_ostream.h")
+    #include "../include/print_ostream.h"
+#endif
 using namespace std;
-typedef long long ll;
-typedef vector<int> vi;
-typedef vector<ll> vl;
-typedef pair<int,int> pi;
-constexpr ll MAX = 9e18;
-constexpr ll MOD = 1e9 + 7;
 
-#define F first
-#define S second
-#define PB push_back
-#define MP make_pair
-#define REP(i,a,b) for (ll i = a; i <= b; i++)
+using ll = int64_t;
+
+using vi = vector<int32_t>;
+using vvi = vector<vi>;
+using pi = pair<int32_t, int32_t>;
+using vpi = vector<pi>;
+using vl = vector<ll>;
+using vvl = vector<vl>;
+using pl = pair<ll, ll>;
+using vpl = vector<pl>;
+using vb = vector<bool>;
+using vc = vector<char>;
+
+#define pb push_back
+#define rep(i,a,b) for (int i = a; i <= b; ++i)
+#define repr(i,a,b) for (int i = a; i >= b; --i)
+
+constexpr uint32_t MOD = 1e9 + 7;
+
+
+
+template<size_t N>
+struct Vector {
+    ll data[N]{};
+};
+
+
+
+template<size_t N>
+constexpr Vector<N+1> precompute() {
+    Vector<N+1> d;
+
+    rep(i, 1, N) d.data[i] = (1LL*i*i * (i*i - 1)) / 2 - 4LL*(i-1)*(i-2);
+
+    return d;
+}
+
+
+
+constexpr Vector two_knights = precompute<10'000>();
 
 
 
 int main() {
-    ios_base::sync_with_stdio(false); cin.tie(nullptr);
+    ios::sync_with_stdio(false); cin.tie(nullptr);
 
 
-    ll n; cin >> n;
-
-    REP(k, 1, n) {
-        cout << (k*k *(k*k-1))/2 - 4*(k-1)*(k-2) << "\n";
-    }
-
+    int n; cin >> n;
+    
+    rep(i, 1, n) cout << two_knights.data[i] << "\n";
+    
 
     return 0;
 }

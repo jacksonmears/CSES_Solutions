@@ -9,3 +9,7 @@ build/
 *.obj
 *.exe
 *.out
+
+
+dp.cpp
+sieve.cpp

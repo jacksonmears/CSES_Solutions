@@ -23,7 +23,7 @@ using vc = vector<char>;
 #define rep(i,a,b) for (int i = a; i <= b; ++i)
 #define repr(i,a,b) for (int i = a; i >= b; --i)
 
-constexpr uint32_t MOD = 1e9 + 7;
+constexpr uint32_t MOD = 1e9 + 7;  
 
 constexpr int MAXN = 16+1;
 
@@ -42,8 +42,9 @@ public:
 
 
     bool valid(int node, int c) {
-        for (int nb : edges[node])
-            if (color[nb] == c) return false;
+        for (int child : edges[node])
+            if (color[child] == c) 
+                return false;
         return true;
     }
 

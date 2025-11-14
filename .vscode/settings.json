@@ -101,7 +101,7 @@
     },
 
     "code-runner.executorMap": {
-        "cpp": "g++ -std=c++20 \"$fullFileName\" -o \"C:/Users/jacks/CSES_Solutions/exe/$fileNameWithoutExt.exe\" ; if ($?) { & \"C:/Users/jacks/CSES_Solutions/exe/$fileNameWithoutExt.exe\" }"
+        "cpp": "g++ -std=c++20 \"$fullFileName\" -fconstexpr-loop-limit=2147483647 -fconstexpr-ops-limit=2147483647 -o \"C:/Users/jacks/CSES_Solutions/exe/$fileNameWithoutExt.exe\" ; if ($?) { & \"C:/Users/jacks/CSES_Solutions/exe/$fileNameWithoutExt.exe\" }"
     },
     "code-runner.runInTerminal": true
 }
