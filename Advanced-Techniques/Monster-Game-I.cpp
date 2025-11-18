@@ -32,6 +32,8 @@ using vc = vector<char>;
 constexpr uint32_t MOD = 1e9 + 7;
 constexpr ll infl = 1e10;
 
+// couldn't figure this one out on my own so I did some research and found an incredible solution below!
+// refactored solution for enhanced readability from TamimEhsan github repo: https://github.com/TamimEhsan/CSES-Solutions/blob/master/Advanced%20Techniques/Monster%20Game%20I.cpp
 
 class Line{
 public:
@@ -40,13 +42,14 @@ public:
     Line(){slope=intercept=infl;}
     Line(ll m, ll c) : slope(m), intercept(c){}
 
+    // returns the y value for a given x for this->line
     ll operator()(ll x){ return this->slope*x + this->intercept; }
 
-    // check for parallel slopes
+    // check for lines with parallel slop
     bool operator==(Line& other) { return this->slope == other.slope; }
 
-    //assuming not parallel
-    pldld intersect(Line& other)
+    //returns the xy-coordinates of intersection between two lines
+    pldld operator>>(Line& other)
     {
         ld x,y;
         x=(ld)(other.intercept - this->intercept)/(this->slope - other.slope);
@@ -59,77 +62,48 @@ public:
 class MonotoneCHT{
 private:
     deque<Line> Q;
-    int type;
 
-
-    //handle parallel line insertion (front AND back),there cannot be more than one parallel line to new line currently inside Q;
-    void insertBack(Line& nl)
-    {
-        if(!Q.empty() && Q.back()==nl)
-        {
-            if((type<2 && Q.back().intercept > nl.intercept) || (type>=2 && Q.back().intercept<nl.intercept))
-                Q.pop_back();
-            else
-                return;
-        }
-
-        while(Q.size()>1 && Q.back().intersect(nl) < Q[Q.size()-2].intersect(nl))
-            Q.pop_back();
-
-        Q.push_back(nl);
-    }
-
-
-    void insertFront(Line& nl)
-    {
-        if(!Q.empty() && Q[0]==nl)
-        {
-            if((type<2 && Q[0].intercept>nl.intercept) || (type>=2 && Q[0].intercept<nl.intercept))
-                Q.pop_front();
-            else
-                return;
-        }
-
-        while(Q.size()>1 && Q[0].intersect(nl) > Q[1].intersect(nl))
-            Q.pop_front();
-
-        Q.push_front(nl);
-    }
-
-
-    // binary search
+    //Binary search over intersections to find the interval where x lies, {l, r} are the indices of the lines that define that interval
     pii bs(ll x)
     {
-        if(Q.size()==1 || Q[0].intersect(Q[1]).first >= x) return {0,0};
-
-        int l = 1, r = (int)Q.size()-1;
+        int l = 0, r = (int)Q.size()-1;
         while(l+1 < r)
         {
             int mid=(l+r)/2;
-            (Q[mid].intersect(Q[mid-1]).first < x) ? l=mid : r=mid;
+            int intersection_x_value = (Q[mid-1]>>Q[mid]).first; 
+            (intersection_x_value < x) ? l=mid : r=mid;
         }
+
         return {l,r};
     }
 
-
 public:
-    //slope increasing or decreasing(not query point,query point is arbitrary),querying for maximum or minimum
-    MonotoneCHT(bool increasing, bool maximum)
+    //handle parallel line insertion (front AND back),there cannot be more than one parallel line to new line currently inside Q;
+    void insertBack(Line& nl)
     {
-        type=increasing;
-        if(maximum) type|=2;
+        // check for parallel line, if parallel and previous intercept is greater than pop_back (same slope and guarenteed worse result) or SKIP if vise versa for same reason of being unable to be better
+        if(!Q.empty() && Q.back()==nl)
+        {
+            if(Q.back().intercept > nl.intercept) Q.pop_back();
+            else return;
+        }
+
+        // while there are more than 1 lines check if intersection of last line and new line is less than intersection of second to last line and new line
+        while(Q.size()>1 && (Q.back()>>nl) < (Q[Q.size()-2]>>nl))
+            Q.pop_back();
+
+        Q.emplace_back(nl);
     }
 
 
-    inline void insert(Line& nl){(type==3||type==0) ? insertBack(nl) : insertFront(nl);}
-
-
+    // find the min y-slope value for an interval that contains the given x
     ll query(ll x)
     {
-        pii index = bs(x);
+        // find interval
+        auto [l, r] = bs(x);
 
-        if(type<2) return min(Q[index.first](x), Q[index.second](x));
-        return max(Q[index.first](x), Q[index.second](x));
+        // find min y value from interval
+        return min(Q[l](x), Q[r](x));
     }
 
 
@@ -140,22 +114,26 @@ public:
 int main(){
     ios::sync_with_stdio(false); cin.tie(nullptr);
 
-    int n,x; cin>> n >> x;
+    int n, x; cin>> n >> x;
 
     int monster[n], skill[n];
 
     rep(i, 0, n-1) cin >> monster[i];
     rep(i, 0, n-1) cin >> skill[i];
 
-    MonotoneCHT cht(false,false);
+    MonotoneCHT cht{};
     Line base{x, 0};
-    cht.insert(base);
+    cht.insertBack(base);
 
     rep(i, 0, n-2){
+        // init line with given skill[i] (slope) and optimal monster[i] (intercept)
         Line nl {skill[i], cht.query(monster[i])};
-        cht.insert(nl);
+
+        // remove obsolete lines and push this to deque
+        cht.insertBack(nl);
     }
 
+    // return optimal value for monster[n-1] value
     cout << cht.query(monster[n-1]);
 
 

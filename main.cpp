@@ -1,3 +1,4 @@
+
 #pragma GCC optimize("O3,unroll-loops")
 // #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 #include <bits/stdc++.h>
@@ -6,16 +7,22 @@
 #endif
 using namespace std;
 
-using ll = int64_t;
+using ll = long long;
+using d = double;
+using ld = long double;
 
-using vi = vector<int32_t>;
+using vi = vector<int>;
 using vvi = vector<vi>;
-using pi = pair<int32_t, int32_t>;
-using vpi = vector<pi>;
 using vl = vector<ll>;
+using vd = vector<d>;
+using vld = vector<ld>;
+using pii = pair<int, int>;
+using pll = pair<ll, ll>;
+using pdd = pair<double, double>;
+using pldld = pair<ld, ld>;
+using vpii = vector<pii>;
 using vvl = vector<vl>;
-using pl = pair<ll, ll>;
-using vpl = vector<pl>;
+using vpl = vector<pll>;
 using vb = vector<bool>;
 using vc = vector<char>;
 
@@ -24,6 +31,8 @@ using vc = vector<char>;
 #define repr(i,a,b) for (int i = a; i >= b; --i)
 
 constexpr uint32_t MOD = 1e9 + 7;
+constexpr ll infl = 1e10;
+
 
 
 int main() {
