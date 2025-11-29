@@ -5,7 +5,7 @@
       "name": "Run C++ file",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/exe/${fileBasenameNoExtension}.exe",
+      "program": "${workspaceFolder}/exe/${fileBasenameNoExtension}",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${fileDirname}",
