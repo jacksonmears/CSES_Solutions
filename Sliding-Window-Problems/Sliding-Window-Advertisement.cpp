@@ -31,13 +31,13 @@ using vc = vector<char>;
  
 constexpr uint32_t MOD = 1e9 + 7;
 constexpr ll INF = 9e18;
-constexpr ll NEG_INF = -9e18;
  
  
 #define LEFT_STACK 0
 #define RIGHT_STACK 1
  
  
+// use monotonic stack to find less than values efficiently o(N)
 void fill_data(vi* v, vi* d, int n, int flag) {
     stack<int> st;
     int default_val = (!flag*-1)+(flag*n); 
@@ -63,52 +63,38 @@ void fill_data(vi* v, vi* d, int n, int flag) {
  * Supports:
  *   - Adding a line y = m*x + b across a segment [l, r]
  *   - Querying maximum value at x
- *
- * This version uses explicit descriptive names and detailed documentation.
+ * 
+ * differs from CHT because it does NOT require monotonic inputs
  */
-
 class LiChao {
 private:
 
-    /**
-     * Represents a linear function y = slope * x + intercept.
-     * Default line returns NEG_INF for all x.
-     */
     struct Line {
-        long long slope;
-        long long intercept;
+        ll slope;
+        ll intercept;
 
-        Line(long long m = 0, long long b = NEG_INF)
+        Line() {slope = 0, intercept = 0;};
+        Line(long long m, long long b)
             : slope(m), intercept(b) {}
 
-        inline long long evaluate(int x) const {
-            return slope * (long long)x + intercept;
+        inline ll evaluate(int x) const {
+            return slope * (ll)x + intercept;
         }
     };
 
-    /**
-     * Node of the Li Chao segment tree.
-     * Each node contains:
-     *   - A line that is the current best for this segment
-     *   - Indices of left and right children
-     */
+
     struct TreeNode {
-        Line storedLine;
-        int leftChild = -1;
-        int rightChild = -1;
+        Line storedLine;                // line information
+        int leftChild = -1;             // index of leftChild Node in tree vector
+        int rightChild = -1;            // index of rightChild Node in tree vector
     };
 
-private:
-    int domainSize;             // Number of x-values the tree spans (0 to domainSize-1)
-    int rootIndex;              // Index of the root node
-    vector<TreeNode> tree;      // Dynamic array of nodes
 
-private:
+    int domainSize;                 // Number of x-values the tree spans (0 to domainSize-1)
+    vector<TreeNode> tree;          // Dynamic array of nodes
 
-    /**
-     * Allocates a new tree node initialized with the provided line.
-     */
-    int createNode(const Line& line) {
+    // adds new node to tree and returns the index of it's position in the segment tree
+    int createNode(Line&& line) {
         tree.emplace_back(TreeNode{line});
         return tree.size() - 1;
     }
@@ -117,10 +103,10 @@ private:
      * Internal recursive function to add a line over an interval.
      *
      * Parameters:
-     *   nodeIndex – current node in the segment tree
-     *   leftBound, rightBound – segment covered by this node
-     *   queryLeft, queryRight – the interval where the new line applies
-     *   newLine – the line to insert
+     *   nodeIndex                  – current node in the segment tree
+     *   leftBound, rightBound      – segment interval covered by the current node
+     *   queryLeft, queryRight      – the interval where we want to add the new line
+     *   newLine                    – the line to insert
      */
     void addLineSegmentRecursive(
         int nodeIndex,
@@ -128,14 +114,14 @@ private:
         int queryLeft, int queryRight,
         Line newLine
     ) {
-        // No overlap
-        if (queryRight < leftBound || rightBound < queryLeft) {
+        // No overlap (recurssive function went narrowed to far in one direction and now we can prune this path)
+        if (queryRight < leftBound || rightBound < queryLeft)
             return;
-        }
+        
 
-        // Full cover: we attempt to insert into this node
-        if (queryLeft <= leftBound && rightBound <= queryRight) {
-
+        // Full cover: we attempt to insert into this node (current node interval matches interval needed for new line)
+        if (queryLeft <= leftBound && rightBound <= queryRight) 
+        {
             int mid = (leftBound + rightBound) >> 1;
 
             Line lowLine = tree[nodeIndex].storedLine;
@@ -145,33 +131,41 @@ private:
             if (lowLine.evaluate(leftBound) < highLine.evaluate(leftBound))
                 swap(lowLine, highLine);
 
-            // If lowLine is better everywhere on this interval, keep it
+            // If lowLine is better everywhere on this interval, keep it (we already know that lowline is greater at leftbound from previous if statement so if it's also better here then it's obviously better everywhere!)
             if (lowLine.evaluate(rightBound) >= highLine.evaluate(rightBound)) {
                 tree[nodeIndex].storedLine = lowLine;
                 return;
             }
 
-            // They cross inside the interval
-            if (lowLine.evaluate(mid) >= highLine.evaluate(mid)) {
-                // lowLine is better on left half
+            // They cross inside the interval (lowLine is greater at left bound and highLine is greater at right bound) so we check the middle and set storeLine to greater value
+            // whichever value is lesser will be sent to respective child to compete for a spot later on
+            if (lowLine.evaluate(mid) >= highLine.evaluate(mid)) 
+            {
+                // lowLine is better on left half so we set stored line as we outlined in the comments above
                 tree[nodeIndex].storedLine = lowLine;
 
-                if (tree[nodeIndex].rightChild == -1)
-                    tree[nodeIndex].rightChild = createNode(Line());
+                // no child to compare to so the lesser Line gets inserted and returned
+                if (tree[nodeIndex].rightChild == -1) 
+                    tree[nodeIndex].rightChild = createNode(Line{});
 
+                // recurssively find the best node for highLine in the right child node
                 addLineSegmentRecursive(
                     tree[nodeIndex].rightChild,
                     mid + 1, rightBound,
                     queryLeft, queryRight,
                     highLine
                 );
-            } else {
+            } 
+            else 
+            {
                 // highLine is better on left half
                 tree[nodeIndex].storedLine = highLine;
 
+                // now we check the LEFT child and if no line then we can merely append Line
                 if (tree[nodeIndex].leftChild == -1)
-                    tree[nodeIndex].leftChild = createNode(Line());
+                    tree[nodeIndex].leftChild = createNode(Line{});
 
+                // recurssively find the best node for lowLine the left child node
                 addLineSegmentRecursive(
                     tree[nodeIndex].leftChild,
                     leftBound, mid,
@@ -183,15 +177,18 @@ private:
             return;
         }
 
-        // Partial coverage → push down both sides
+
+        // Partial coverage → push down both sides (typically segment tree recurssion to find the intervals to add line)
         int mid = (leftBound + rightBound) >> 1;
 
+        // add empty line for each child if their childs are empty so when we recurssively call them in a second it doesn't fail
         if (tree[nodeIndex].leftChild == -1)
-            tree[nodeIndex].leftChild = createNode(Line());
+            tree[nodeIndex].leftChild = createNode(Line{});
 
         if (tree[nodeIndex].rightChild == -1)
-            tree[nodeIndex].rightChild = createNode(Line());
+            tree[nodeIndex].rightChild = createNode(Line{});
 
+        // use typical segment tree traversal for invertval [left, mid]
         addLineSegmentRecursive(
             tree[nodeIndex].leftChild,
             leftBound, mid,
@@ -199,6 +196,7 @@ private:
             newLine
         );
 
+        // same idea but [mid+1, right]
         addLineSegmentRecursive(
             tree[nodeIndex].rightChild,
             mid + 1, rightBound,
@@ -212,61 +210,106 @@ private:
      *
      * Returns the maximum y-value reachable at x among all stored lines.
      */
-    long long queryRecursive(int nodeIndex, int leftBound, int rightBound, int x) const {
+    ll queryRecursive(int nodeIndex, int leftBound, int rightBound, int x) const {
         if (nodeIndex == -1)
-            return NEG_INF;
+            return 0;
 
-        long long bestValue = tree[nodeIndex].storedLine.evaluate(x);
-
+        ll bestValue = tree[nodeIndex].storedLine.evaluate(x);
         if (leftBound == rightBound)
             return bestValue;
 
         int mid = (leftBound + rightBound) >> 1;
 
-        if (x <= mid) {
-            if (tree[nodeIndex].leftChild == -1)
-                return bestValue;
+        if (x <= mid) 
             return max(bestValue, queryRecursive(tree[nodeIndex].leftChild, leftBound, mid, x));
-        } else {
-            if (tree[nodeIndex].rightChild == -1)
-                return bestValue;
+
+        else 
             return max(bestValue, queryRecursive(tree[nodeIndex].rightChild, mid + 1, rightBound, x));
-        }
     }
 
 public:
 
-    /**
-     * Constructor.
-     *
-     * domainSize: number of X positions, valid x ∈ [0, domainSize - 1]
-     */
-    LiChao(int domainSize = 0) : domainSize(domainSize) {
-        tree.reserve(max(4, 4 * domainSize + 50));
+
+    // domainSize: number of X positions, valid x ∈ [0, domainSize - 1]
+    LiChao(int _domainSize) : domainSize(_domainSize) {
         tree.emplace_back(TreeNode{});  // root node with default line
-        rootIndex = 0;
     }
 
-    /**
-     * Adds a line y = m*x + b over interval [l, r].
-     */
-    void addLineSegment(int l, int r, const Line& line) {
-        if (l > r || domainSize <= 0) return;
-        addLineSegmentRecursive(rootIndex, 0, domainSize - 1, l, r, line);
+    // adds a line y = m*x + b over interval [l, r].
+    void addLineSegment(int l, int r, Line&& line) {
+        addLineSegmentRecursive(0, 0, domainSize - 1, l, r, line);
     }
 
-    /**
-     * Queries the maximum value at the single point x.
-     *
-     * Returns 0 if no line covers x (instead of -inf for convenience).
-     */
-    long long query(int x) const {
-        if (domainSize <= 0) return 0;
-        long long result = queryRecursive(rootIndex, 0, domainSize - 1, x);
-        return (result == NEG_INF ? 0 : result);
+    // Queries the maximum value at the single point x.
+    ll query(int x) const {
+        ll result = queryRecursive(0, 0, domainSize - 1, x);
+        return result;
     }
 };
 
+
+
+
+class Index_Input{ 
+private:
+    ll current_height;                  // Height of the current index
+    int left_min_index;                 // Leftmost index where height v[i] is the minimum;
+    int right_min_index;                // Rightmost index where height v[i] is the minimum; 
+    int left_window_index;              // clamp earliest/latest to valid indicies
+    int k;
+    LiChao* lichao;
+
+
+
+public:
+    Index_Input(ll _ch, int _lmi, int _rmi, int _k, LiChao* _lichao) : current_height(_ch), left_min_index(_lmi+1), right_min_index(_rmi-1), k(_k), lichao(_lichao)
+    {
+        int Wlow = left_min_index - k + 1;
+        left_window_index = max(0, Wlow);
+    }
+
+    void left_increasing() {
+        int start_of_left_partial_overlap   = left_window_index;                                                            // the first index where the baord will increase in area (about to enter the window)
+        int end_of_left_partial_overlap     = min(left_min_index-1, right_min_index - k + 1);                               // the last index where the board will increase in area
+ 
+        if (start_of_left_partial_overlap <= end_of_left_partial_overlap) { 
+            ll line_slope       = current_height;                                                                                   // area grows by h as window moves right (length increases)
+            ll line_intercept   = current_height * (k - left_min_index);                                                            // Intercept: initial area at window start 
+            (*lichao).addLineSegment(start_of_left_partial_overlap, end_of_left_partial_overlap, {line_slope, line_intercept});     // Add line to Li Chao tree for this segment
+        }
+    }
+
+
+    void constant_full() {
+        if (left_min_index + k > right_min_index) {
+            ll constant_area = current_height * (right_min_index - left_min_index + 1);                         // Constant area: full segment covered but less than k
+            (*lichao).addLineSegment(right_min_index-k+2, left_min_index-1, {0, constant_area});                // Add horizontal line to Li Chao tree
+        }
+    }
+
+    void constant_cutoff() {
+        int full_window_start = max(left_window_index, left_min_index);                                 // Earliest window start that fully covers this board
+        int full_window_end   = min(right_min_index, right_min_index - k + 1);                          // Latest window start for full coverage
+ 
+        if (full_window_start <= full_window_end) {                                                     // Only add if there exists a starting window index that captures the entire board
+            ll constant_area = current_height * k;                                                      // Area = height * window length
+            (*lichao).addLineSegment(full_window_start, full_window_end, {0, constant_area});           // Horizontal line for this interval
+        }
+    }
+
+    void right_decreasing() {
+        int start_of_right_partial_overlap  = max(left_min_index, right_min_index - k + 2);                     // the first index where the board will decrease in area
+        int end_of_right_partial_overlap    = right_min_index;                                                  // the last index where the board will decrease in area (about to leave the window)
+ 
+        if (start_of_right_partial_overlap <= right_min_index) {
+            ll line_slope       = -current_height; 
+            ll line_intercept   = current_height * (end_of_right_partial_overlap + 1); 
+            (*lichao).addLineSegment(start_of_right_partial_overlap, end_of_right_partial_overlap, {line_slope, line_intercept});
+        }
+    }
+
+
+};
 
 
  
@@ -278,7 +321,7 @@ int main() {
     vi v(n), L(n), R(n);
     rep(i, 0, n-1) cin >> v[i];
  
-    // monotonic stack for first values (v[i]) left and right of i stored in L[i] and R[i]
+    // find first values left and right of i stored in L[i] and R[i] that are less than v[i]
     fill_data(&v, &L, n, LEFT_STACK);
     fill_data(&v, &R, n, RIGHT_STACK);
  
@@ -286,65 +329,31 @@ int main() {
     int m = n - k + 1; 
  
     // instantiate lichao 
-    LiChao lichao {m};
+    LiChao lichao{m};
  
     rep(i, 0, n-1) { 
-        ll current_height = v[i];                               // Height of the current index
- 
-        int left_min_index      =   L[i] + 1;                   // Leftmost index where height v[i] is the minimum;
-        int right_min_index     =   R[i] - 1;                   // Rightmost index where height v[i] is the minimum; 
-        int Wlow                =   left_min_index - k + 1;    // Earliest possible inclusion in a window
-        int left_window_index   =   max(0, Wlow);               // clamp earliest/latest to valid indicies
- 
- 
+        Index_Input idx{v[i], L[i], R[i], k, &lichao};
+
         // board will be referred to the range where current_height is the min value
+
         // window partially covers the board from the left side but will add more when window slides to the right
-        int start_of_left_partial_overlap   = left_window_index;                                                            // the first index where the baord will increase in area (about to enter the window)
-        int end_of_left_partial_overlap     = min(left_min_index-1, right_min_index - k + 1);                               // the last index where the board will increase in area
+        idx.left_increasing();
  
-        if (start_of_left_partial_overlap <= end_of_left_partial_overlap) { 
-            ll line_slope       = current_height;                                                                     // area grows by h as window moves right (length increases)
-            ll line_intercept   = current_height * (k - left_min_index);                                          // Intercept: initial area at window start 
-            lichao.addLineSegment(start_of_left_partial_overlap, end_of_left_partial_overlap, {line_slope, line_intercept});       // Add line to Li Chao tree for this segment
-        }
+        // window fully covers board - board is SMALLER than window in size/length (entire line segment is added to lichao)
+        idx.constant_full();
  
- 
-        // window fully covers board AND board is SMALLER than window in size/length
-        if (left_min_index + k > right_min_index) {
-            ll constant_area = current_height * (right_min_index - left_min_index + 1);                      // Constant area: full segment covered but less than k
-            lichao.addLineSegment(right_min_index-k+2, left_min_index-1, {0, constant_area});               // Add horizontal line to Li Chao tree
-        }
- 
-        // --- Middle-constant interval ---
-        // This interval represents all windows of length k that fully cover the board at index i.
-        // The area is constant because the entire board of height 'current_height' is fully inside the window.
- 
-        int full_window_start = max(left_window_index, left_min_index);                             // Earliest window start that fully covers this board
-        int full_window_end   = min(right_min_index, right_min_index - k + 1);                      // Latest window start for full coverage
- 
-        if (full_window_start <= full_window_end) {                                                 // Only add if there exists a starting window index that captures the entire board
-            ll constant_area = current_height * k;                                                  // Area = height * window length
-            lichao.addLineSegment(full_window_start, full_window_end, {0, constant_area});         // Horizontal line for this interval
-        }
- 
+        // board fully covers window - board is EQUAL TO OR BIGGER than window in size (the value of v[i]*window length is added to lichao) 
+        idx.constant_cutoff();
  
         // same concept as the first segment but reversed. Window partially covers board but on the right side so as it moves away the area of the board will decrease.
-        int start_of_right_partial_overlap  = max(left_min_index, right_min_index - k + 2);                     // the first index where the board will decrease in area
-        int end_of_right_partial_overlap    = right_min_index;                                                  // the last index where the board will decrease in area (about to leave the window)
- 
-        if (start_of_right_partial_overlap <= right_min_index) {
-            ll line_slope       = -current_height; 
-            ll line_intercept   = current_height * (end_of_right_partial_overlap + 1); 
-            lichao.addLineSegment(start_of_right_partial_overlap, end_of_right_partial_overlap, {line_slope, line_intercept});
-        }
+        idx.right_decreasing();
     }
  
  
  
-    rep(w, 0, m-1) {
-        if (w) cout << ' ';
-        cout << lichao.query(w);
-    }
+    rep(w, 0, m-1) 
+        cout << lichao.query(w) << ' ';
+    
  
     return 0;
 }
