@@ -1,63 +1,69 @@
+#pragma GCC optimize("O3,unroll-loops")
+// #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 #include <bits/stdc++.h>
+#if __has_include("../include/print_ostream.h")
+    #include "../include/print_ostream.h"
+#endif
 using namespace std;
-typedef long long ll;
-typedef vector<ll> vl;
-typedef pair<ll,ll> pl;
-typedef vector<bool> vb;
-typedef vector<pl> vp;
-typedef vector<vl> vvl;
-constexpr ll MAX = 9e18;
-constexpr ll MOD = 1e9 + 7;
-constexpr int MAXN = 2e5+1;
 
-#define f first
-#define s second
+using ll = long long;
+using d = double;
+using ld = long double;
+
+using vi = vector<int>;
+using vvi = vector<vi>;
+using vl = vector<ll>;
+using vd = vector<d>;
+using vld = vector<ld>;
+using pii = pair<int, int>;
+using pll = pair<ll, ll>;
+using pdd = pair<double, double>;
+using pldld = pair<ld, ld>;
+using vpii = vector<pii>;
+using vvl = vector<vl>;
+using vpl = vector<pll>;
+using vb = vector<bool>;
+using vc = vector<char>;
+
 #define pb push_back
-#define mp make_pair
-#define rep(i,a,b) for (ll i = a; i <= b; i++)
-#define repr(i, a, b) for (ll i = a; i >= b; i--)
+#define rep(i,a,b) for (int i = a; i <= b; ++i)
+#define repr(i,a,b) for (int i = a; i >= b; --i)
 
+constexpr uint32_t MOD = 1e9 + 7;
+constexpr ll infl = 1e10;
 
-ll n, m;
-vvl courses;
-bool seen[MAXN];
+constexpr int MAXN = 1e5+1;
+
 
 int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
 
-    cin >> n >> m;
-    courses = vvl(n+1);
-    vl inDegrees(n+1, 0);
-    rep(i, 0, m-1) {
-        ll a, b; cin >> a >> b;
-        courses[a].pb(b);
-        inDegrees[b]++;
+
+    int n, m; cin >> n >> m;
+
+    int inDegrees[n+1] = {};
+    vvi graph(n+1, vi{});
+
+    rep(i, 1, m) {
+        int a, b; cin >> a >> b;
+        graph[a].pb(b);
+        ++inDegrees[b];
     }
 
-    queue<ll> topology;
-    rep(node, 1, n) {
-        if (!inDegrees[node]) topology.push(node);
+    bitset<MAXN> seen;
+    queue<int> q; 
+
+    rep(i, 1, n) if (!inDegrees[i]) q.push(i);
+
+    while (!q.empty()) {
+        int node = q.front(); q.pop();
+        cout << node << " ";
+        for (int child : graph[node]) 
+            if (--inDegrees[child] == 0) 
+                q.push(child);
     }
 
-    vl answer;
-
-    while (!topology.empty()) {
-        const ll node = topology.front(); topology.pop();
-        answer.pb(node);
-        seen[node] = true;
-        for (const auto child : courses[node]) if (!seen[child]) {
-            inDegrees[child]--;
-            if (inDegrees[child] == 0) topology.push(child);
-        }
-    }
-
-
-    if (answer.size() == n) {
-        for (const auto node : answer) cout << node << " ";
-    }
-    else cout << "IMPOSSIBLE";
-
-
+    
+    
     return 0;
 }
-

@@ -1,4 +1,3 @@
-
 #pragma GCC optimize("O3,unroll-loops")
 // #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 #include <bits/stdc++.h>
@@ -39,7 +38,13 @@ int main() {
     ios::sync_with_stdio(false); cin.tie(nullptr);
 
 
-    
+    int x = 4;
+    for (int i = 0; i < 10; ++i) {
+        x *= i;
+        cout << x << "\n";
+    }
 
+    
+    
     return 0;
 }
